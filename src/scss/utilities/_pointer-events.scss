@@ -1,0 +1,11 @@
+.pointer-events {
+    &-all {
+        pointer-events: all !important;
+    }
+    &-none {
+        pointer-events: none !important;
+    }
+    &-fill {
+        pointer-events: fill !important;
+    }
+}

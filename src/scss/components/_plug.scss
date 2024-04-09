@@ -1,0 +1,39 @@
+:root {
+    --plug-backgrund-color: var(--black-rgb);
+    --plug-backdrop-filter: blur(0.5rem);
+    --plug-content-gap: 1rem;
+}
+
+.plug {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--plug-backgrund-color), 0.85);
+    backdrop-filter: var(--plug-backdrop-filter);
+    overflow: hidden;
+    & > * {
+        flex: 1;
+        min-height: 100%;
+    }
+    & ~ .wrapper {
+        max-height: 100vh;
+        min-height: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: var(--plug-content-gap);
+        column-gap: var(--plug-content-gap);
+        width: 100%;
+        height: 100%;
+    }
+}

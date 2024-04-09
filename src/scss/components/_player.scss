@@ -1,0 +1,103 @@
+:root {
+    --player-pos-bottom: 2.63rem;
+    --player-zindex: 100;
+    --player-body-padding-x: 1rem;
+    --player-body-padding-y: 1rem;
+    --player-background-color: var(--dark-grey);
+    --player-color: var(--grey);
+    --player-font-size: 1rem;
+    --player-border-radius: 1rem;
+    --player-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
+        0rem -0.0625rem 0.0469rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
+    --player-range-border-radius: 0.5rem;
+    --player-range-bg-opacity: 1;
+    --player-range-bg: rgba(var(--secondary-rgb), var(--player-range-bg-opacity));
+    --player-range-bg-current: var(--normal-grey);
+    --player-range-thumb-size: 1rem;
+    --player-range-thumb-bg: rgba(var(--grey-rgb), var(--player-range-bg-opacity));
+}
+
+.player {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    position: fixed;
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: var(--player-pos-bottom);
+    display: block;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    z-index: -100;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, 0);
+    transition: all 0.6s;
+    @media (min-width: 992px) {
+        width: calc(100% - var(--bs-gutter-x));
+        max-width: calc(48.375rem + 1.5rem);
+    }
+    &:not(.show) {
+        animation: modal-hide-in-bottom 0.6s ease backwards;
+    }
+    &.show {
+        animation: modal-show-in-top 0.6s ease backwards;
+        z-index: var(--player-zindex);
+        opacity: 1;
+        visibility: visible;
+    }
+    &-body {
+        padding: var(--player-body-padding-y) var(--player-body-padding-x);
+        background: var(--player-background-color);
+        border-radius: var(--player-border-radius);
+        box-shadow: var(--player-box-shadow);
+        color: var(--player-color);
+        font-size: var(--player-font-size);
+    }
+    &-primary {
+        & > .row {
+            --bs-gutter-x: 1rem;
+            --bs-gutter-y: 1rem;
+            align-items: center;
+        }
+    }
+    &-context {
+        line-height: 100%;
+        & > .row {
+            --bs-gutter-x: 0.25rem;
+            --bs-gutter-y: 0.25rem;
+        }
+    }
+    &-progressbar {
+        & input[type="range"] {
+            width: 100%;
+            height: 0.25rem;
+        }
+        & input[type="range"] {
+            -webkit-appearance: none;
+            background: var(--player-range-bg);
+            border-radius: var(--player-range-border-radius);
+            background-image: linear-gradient(var(--player-range-bg-current), var(--player-range-bg-current));
+            background-size: 0 0;
+            background-repeat: no-repeat;
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                height: var(--player-range-thumb-size);
+                width: var(--player-range-thumb-size);
+                border-radius: 50%;
+                background: var(--player-range-thumb-bg);
+                cursor: grab;
+                transition: background 0.3s ease-in-out;
+            }
+            &::-webkit-slider-runnable-track {
+                -webkit-appearance: none;
+                box-shadow: none;
+                border: none;
+                background: transparent;
+            }
+        }
+    }
+}

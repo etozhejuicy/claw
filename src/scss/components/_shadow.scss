@@ -1,0 +1,18 @@
+:root {
+    --shadow-initial: var(--card-box-shadow);
+    --shadow-none: none;
+}
+
+$shadow-initial: var(--shadow-initial);
+$shadow-none: var(--shadow-none);
+
+$shadows: (
+    $shadow-initial: "initial",
+    $shadow-none: "none"
+);
+
+@each $shadow, $value in $shadows {
+    .shadow-#{$value} {
+        box-shadow: var(--shadow-#{$value}) !important;
+    }
+}

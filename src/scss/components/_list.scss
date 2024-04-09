@@ -1,0 +1,289 @@
+:root {
+    --list-padding-x: 1rem;
+    --list-padding-y: 0;
+    --list-item-margin-y: 0.5rem;
+    --list-item-margin-x: 0;
+    --list-item-padding-y: 0;
+    --list-item-padding-x: 2rem;
+}
+
+.list {
+    position: relative;
+    margin-top: 0.75rem;
+    &:is(ul) {
+        padding: var(--list-padding-y) var(--list-padding-x);
+        &:is(.list-inputs) {
+            padding: unset;
+            padding: var(--list-item-margin-y) 0 0 var(--list-item-padding-x);
+            & li {
+                padding: var(--list-item-padding-y) 0 0 0;
+                &::marker {
+                    color: var(--normal-grey);
+                    padding-right: 2rem;
+                }
+            }
+        }
+    }
+    &:is(ol) {
+        padding: var(--list-padding-y) var(--list-padding-x);
+        &:is(.list-inputs) {
+            list-style: none;
+            counter-reset: item;
+            padding: unset;
+            & li {
+                padding: var(--list-item-padding-y) 0 0 var(--list-item-padding-x);
+                &::marker {
+                    font-size: 0;
+                }
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 2rem;
+                    display: inline-block;
+                    content: counter(item);
+                    counter-increment: item;
+                    width: 2rem;
+                    color: var(--normal-grey);
+                    margin-left: -2rem;
+                    text-align: center;
+                    transform: translateY(-50%);
+                }
+                &:is(.ui-state-highlight) {
+                    --list-item-margin-x: 2rem;
+                    margin-left: var(--list-item-margin-x);
+                    margin-right: unset;
+                }
+            }
+        }
+        &:is(.list-custom-disc) {
+            list-style: none;
+            counter-reset: item;
+            padding: unset;
+            & li {
+                padding: var(--list-item-padding-y) 0 0 calc(var(--list-item-padding-x) + 1rem);
+                margin: calc(var(--list-item-margin-y) + 0.75rem) var(--list-item-margin-x);
+                &::marker {
+                    font-size: 0;
+                }
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 2rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    content: counter(item, decimal-leading-zero);
+                    counter-increment: item;
+                    width: 2.25rem;
+                    height: 2.25rem;
+                    font-size: 1.125rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 100%;
+                    border-radius: 2.5rem;
+                    box-shadow:
+                        0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
+                        0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
+                    margin-left: -2rem;
+                    text-align: center;
+                    transform: translateY(-50%);
+                }
+                &:is(.list-item-top) {
+                    &::before {
+                        top: 2rem;
+                        transform: translate(0%, -2rem);
+                        @media (min-width: 768px) {
+                            top: 2rem;
+                            transform: translate(0%, calc(-100% - 0.125rem));
+                        }
+                    }
+                }
+                &:is(.list-item-bottom) {
+                    &::before {
+                        top: auto;
+                        bottom: 2rem;
+                        transform: translate(0%, 2rem);
+                        @media (min-width: 768px) {
+                            bottom: 2rem;
+                            transform: translate(0%, calc(100% + 0.125rem));
+                        }
+                    }
+                }
+            }
+        }
+        &:is(.list-number-marker) {
+            list-style: none;
+            counter-reset: item;
+            padding: unset;
+            & li {
+                padding: var(--list-item-padding-y) 0 0 calc(var(--list-item-padding-x));
+                margin: calc(var(--list-item-margin-y) + 0.75rem) var(--list-item-margin-x);
+                &::marker {
+                    font-size: 0;
+                }
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 1.75rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: stretch;
+                    content: counter(item, decimal-leading-zero);
+                    counter-increment: item;
+                    width: 1.75rem;
+                    height: 1.25rem;
+                    font-size: 1rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 120%;
+                    color: var(--normal-grey);
+                    margin-left: -1.75rem;
+                    text-align: left;
+                    transform: translateY(-50%);
+                }
+                &:is(.list-item-top) {
+                    &::before {
+                        top: 1.8rem;
+                        transform: translate(0%, -1.75rem);
+                        @media (min-width: 768px) {
+                            top: 1.55rem;
+                            transform: translate(0%, calc(-100% - 0.125rem));
+                        }
+                    }
+                }
+                &:is(.list-item-bottom) {
+                    &::before {
+                        top: auto;
+                        bottom: 1.8rem;
+                        transform: translate(0%, 1.8rem);
+                        @media (min-width: 768px) {
+                            bottom: 1.55rem;
+                            transform: translate(0%, calc(100% + 0.125rem));
+                        }
+                    }
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        & li {
+            &::marker {
+                color: var(--normal-grey);
+                font-variant-numeric: lining-nums !important;
+                text-align: center !important;
+            }
+        }
+    }
+    // margin: 0;
+    &-item {
+        position: relative;
+        margin: var(--list-item-margin-y) var(--list-item-margin-x);
+        &:first-of-type {
+            margin: unset !important;
+        }
+        &:is(:disabled),
+        &:is(.disabled) {
+            opacity: 0.5;
+            pointer-events: none;
+            & .form-icon {
+                cursor: default;
+                pointer-events: none;
+            }
+        }
+        &:is(.item-list-beyond) {
+            opacity: 0.5;
+        }
+    }
+    &-nobullet {
+        list-style-type: none;
+        padding-left: unset !important;
+    }
+    &:is(.list-separated) {
+        &:is(.list-separated-dottes) {
+        }
+        &:is(.list-separated-solid) {
+            &:is(.list-separated-checkboxes) {
+                & .list-item {
+                    &:first-of-type {
+                        margin: var(--list-item-margin-y) var(--list-item-margin-x) !important;
+                        margin-top: unset !important;
+                    }
+                    &:last-of-type {
+                        margin: var(--list-item-margin-y) var(--list-item-margin-x) !important;
+                        margin-bottom: unset !important;
+                        & .form-check {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                    & .form-check {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: calc((var(--list-item-margin-y) * -1) / 2);
+                            z-index: -1;
+                            width: calc(100% - (var(--bs-checkbox-size) + var(--bs-form-check-label-padding-left)));
+                            border-bottom: 0.0625rem solid var(--secondary);
+                            margin-left: calc(var(--bs-checkbox-size) + var(--bs-form-check-label-padding-left));
+                        }
+                    }
+                }
+            }
+        }
+        &:is(.list-separated-dashed) {
+            &:is(.list-separated-checkboxes) {
+                & .list-item {
+                    &:first-of-type {
+                        margin: var(--list-item-margin-y) var(--list-item-margin-x) !important;
+                        margin-top: unset !important;
+                    }
+                    &:last-of-type {
+                        margin: var(--list-item-margin-y) var(--list-item-margin-x) !important;
+                        margin-bottom: unset !important;
+                        & .form-check {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                    & .form-check {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: calc((var(--list-item-margin-y) * -1) / 2);
+                            z-index: -1;
+                            width: calc(100% - (var(--bs-checkbox-size) + var(--bs-form-check-label-padding-left)));
+                            border-bottom: 0.0625rem dashed var(--secondary);
+                            margin-left: calc(var(--bs-checkbox-size) + var(--bs-form-check-label-padding-left));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@each $color, $value in $colors {
+    .list-custom-#{$value} {
+        & li {
+            &::before {
+                background-color: var(--#{$value});
+                @if $value == "primary" {
+                    color: var(--black);
+                }
+                @if $value == "warning" {
+                    color: var(--black);
+                }
+                @if $value == "white" {
+                    color: var(--black);
+                }
+            }
+        }
+    }
+}

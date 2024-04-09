@@ -1,0 +1,81 @@
+.screensaver {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--grey);
+    padding: 25vh 10vw;
+    @media (min-width: 1200px) {
+        padding: 20vh 15vw;
+    }
+    &-hide {
+        animation-name: hideScreensaver;
+        animation-duration: 1s;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        transition: animation 1s ease, opacity 1s ease, visibility 1s ease;
+    }
+    &-inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &-text {
+        display: none;
+        text-align: center;
+        @media (min-width: 1200px) {
+            display: block;
+        }
+    }
+    &-logo {
+        min-width: 160px;
+        min-height: 160px;
+        width: 18vh;
+        height: 18vh;
+        margin: 18vh auto;
+        @media (min-width: 1200px) {
+            margin: 0 auto 30px;
+        }
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &-elem {
+        display: block;
+        @media (min-width: 1200px) {
+            display: none;
+        }
+        &-one {
+            min-width: 146px;
+            min-height: 42px;
+            width: 18vh;
+            height: 5.85vh;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        &-two {
+            min-width: 132px;
+            min-height: 42px;
+            width: 15vh;
+            height: 5.85vh;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.devider {
+    &-horizontal {
+        width: 100%;
+        height: fit-content;
+        border-top: 0.0625rem solid;
+    }
+    &-vertical {
+        width: fit-content;
+        height: 100%;
+        border-left: 0.0625rem solid;
+    }
+    &--light {
+        border-color: var(--grey);
+    }
+}

@@ -1,0 +1,9 @@
+@each $color, $value in $colors {
+    $color: $value;
+}
+
+@each $color, $value in $colors {
+    .bg-#{$value} {
+        background-color: rgba(var(--#{$value}-rgb), 1) !important;
+    }
+}

@@ -1,0 +1,30 @@
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+
+.ui-state-highlight {
+    background-color: var(--card-background-color);
+    border-radius: var(--card-border-radius);
+    outline: 0.125rem dashed var(--primary);
+
+    min-height: 3.3rem;
+    margin: var(--list-item-margin-y) var(--list-item-margin-x);
+
+    &::before {
+        display: none !important;
+    }
+}
+
+.draggable {
+    cursor: move;
+    & .form-icon {
+        pointer-events: visibleFill;
+        cursor: move;
+    }
+}

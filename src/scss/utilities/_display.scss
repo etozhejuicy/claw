@@ -1,0 +1,110 @@
+.d {
+    &-block {
+        display: block !important;
+    }
+    &-inline {
+        display: inline !important;
+    }
+    &-flex {
+        display: flex !important;
+    }
+    &-none {
+        display: none !important;
+    }
+    &-xs {
+        @media screen and (max-width: 575.98px) {
+            &-block {
+                display: block !important;
+            }
+            &-inline {
+                display: inline !important;
+            }
+            &-flex {
+                display: flex !important;
+            }
+            &-none {
+                display: none !important;
+            }
+        }
+    }
+    &-sm {
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            &-block {
+                display: block !important;
+            }
+            &-inline {
+                display: inline !important;
+            }
+            &-flex {
+                display: flex !important;
+            }
+            &-none {
+                display: none !important;
+            }
+        }
+    }
+    &-md {
+        @media (min-width: 768px) {
+            &-block {
+                display: block !important;
+            }
+            &-inline {
+                display: inline !important;
+            }
+            &-flex {
+                display: flex !important;
+            }
+            &-none {
+                display: none !important;
+            }
+        }
+    }
+    &-lg {
+        @media (min-width: 992px) {
+            &-block {
+                display: block !important;
+            }
+            &-inline {
+                display: inline !important;
+            }
+            &-flex {
+                display: flex !important;
+            }
+            &-none {
+                display: none !important;
+            }
+        }
+    }
+    &-xl {
+        @media (min-width: 1200px) {
+            &-block {
+                display: block !important;
+            }
+            &-inline {
+                display: inline !important;
+            }
+            &-flex {
+                display: flex !important;
+            }
+            &-none {
+                display: none !important;
+            }
+        }
+    }
+    &-xxl {
+        @media (min-width: 1440px) {
+            &-block {
+                display: block !important;
+            }
+            &-inline {
+                display: inline !important;
+            }
+            &-flex {
+                display: flex !important;
+            }
+            &-none {
+                display: none !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@use "sass:math";
+@import "./_variables.scss";
+
+// Breakpoint
+@mixin breakpoint-xs {
+    @media screen and (max-width: #{$breakpoint-xs}) {
+        @content;
+    }
+}
+
+@mixin breakpoint-sm {
+    @media (min-width: #{$breakpoint-xs}) and (max-width: #{$breakpoint-sm}) {
+        @content;
+    }
+}
+
+@mixin breakpoint-md {
+    @media (min-width: #{$breakpoint-md}) {
+        @content;
+    }
+}
+
+@mixin breakpoint-lg {
+    @media (min-width: #{$breakpoint-lg}) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xl {
+    @media (min-width: #{$breakpoint-xl}) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xxl {
+    @media (min-width: #{$breakpoint-xxl}) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xxxl {
+    @media (min-width: #{$breakpoint-xxxl}) {
+        @content;
+    }
+}
+
+@mixin hover {
+    @media (hover: hover) {
+        @content;
+    }
+}

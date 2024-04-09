@@ -1,0 +1,41 @@
+:root {
+    --timer-padding-x: 0;
+    --timer-padding-y: 0;
+    --timer-border-radius: var(--bs-border-radius);
+    --timer-background-color: rgba(var(--dark-rgb), 0.5);
+    --timer-backdrop-filter: blur(0.625rem);
+    --timer-border-width: 0.0625rem;
+    --timer-border-color: var(--dark-grey);
+    --timer-box-shadow: 0rem 0.25rem 1.5rem 0rem rgba(var(--true-black), 0.66);
+    --timer-body-padding-x: 1rem;
+    --timer-body-padding-y: 1rem;
+    --timer-font-size: 0.875rem;
+    --timer-font-weight: 600;
+    --timer-font-line-height: 120%;
+    --timer-font-letter-spacing: -0.0175rem;
+}
+
+.timer {
+    position: relative;
+    width: fit-content;
+    display: block;
+    margin: auto;
+    padding: var(--timer-padding-y) var(--timer-padding-x);
+    border-radius: var(--timer-border-radius);
+    background-color: var(--timer-background-color);
+    border: var(--timer-border-width) solid var(--timer-border-color);
+    box-shadow: var(--timer-box-shadow);
+    backdrop-filter: var(--timer-backdrop-filter);
+    font-feature-settings:
+        "clig" off,
+        "liga" off;
+    font-size: var(--timer-font-size);
+    font-style: normal;
+    font-weight: var(--timer-font-weight);
+    line-height: var(--timer-font-line-height); /* 1.05rem */
+    letter-spacing: var(--timer-font-letter-spacing);
+    text-align: center;
+    &-body {
+        padding: var(--timer-body-padding-y) var(--timer-body-padding-x);
+    }
+}

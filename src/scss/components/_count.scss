@@ -1,0 +1,29 @@
+.count {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: darken($red, 20);
+    border-radius: 50%;
+    font-family: "Stratos LC Web";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.3125rem;
+    font-size: 0.625rem;
+    color: var(--white);
+    &-top {
+        top: -5px;
+    }
+    &-bottom {
+        bottom: -5px;
+    }
+    &-start {
+        left: -5px;
+    }
+    &-end {
+        right: -5px;
+    }
+}

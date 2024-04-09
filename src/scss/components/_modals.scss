@@ -1,0 +1,209 @@
+:root {
+    --modal-translate: 0%;
+}
+
+.modal {
+    --bs-modal-backdrop-bg: rgba(var(--true-black-rgb), 0.5);
+    --bs-modal-border-radius: 0;
+    --bs-modal-padding-y: 1rem;
+    --bs-modal-padding-x: 0;
+    --bs-modal-content-padding-y: 1rem;
+    --bs-modal-content-padding-x: 1rem;
+    --bs-modal-content-background-color: var(--card-background-color);
+    --bs-modal-content-color: var(--card-text-color);
+    --bs-modal-content-border-radius: 1.5rem;
+    --bs-modal-backdrop-filter: blur(2.8606rem);
+    --bs-modal-header-padding-y: 1rem;
+    --bs-modal-header-padding-x: 0;
+    --bs-modal-body-padding-y: 1rem;
+    --bs-modal-body-padding-x: 0;
+    --bs-modal-footer-padding-y: 2rem;
+    --bs-modal-footer-padding-x: 0;
+    --bs-modal-zindex: 1050;
+    position: fixed;
+    background-color: var(--bs-modal-backdrop-bg);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    // backdrop-filter: var(--bs-modal-backdrop-filter);
+    z-index: -100;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: all;
+    overflow: hidden;
+    transition: all 0.6s;
+    &-is {
+        &-open {
+            position: static;
+            touch-action: none;
+            overflow: hidden;
+            & .modal-dialog {
+                animation: modal-show-in-top 0.6s ease backwards;
+                opacity: 1;
+            }
+        }
+    }
+    &:not(.show) {
+        & .modal-dialog {
+            animation: modal-hide-in-bottom 0.6s ease backwards;
+        }
+    }
+    &.show {
+        z-index: var(--bs-modal-zindex);
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        & .modal-dialog {
+            animation: modal-show-in-top 0.6s ease backwards;
+            opacity: 1;
+        }
+    }
+    &-dialog {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 22.375rem;
+        height: fit-content;
+        margin: auto auto 0 auto;
+        padding: var(--bs-modal-padding-y) var(--bs-modal-padding-x);
+        transform: translateY(var(--modal-translate));
+        transition: 0.05s ease;
+    }
+    &-content {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: calc(var(--bs-modal-content-padding-y) + 0.5rem) var(--bs-modal-content-padding-x)
+            var(--bs-modal-content-padding-y);
+        border-radius: var(--bs-modal-border-radius);
+        color: var(--bs-modal-content-color);
+        background-color: var(--bs-modal-content-background-color);
+        border-radius: var(--bs-modal-content-border-radius);
+        overflow: hidden;
+        cursor: grab;
+        touch-action: pan-y;
+    }
+    &-inner {
+        & > * {
+            &:first-child {
+                &:is(:not(.modal-close)):is(:not(.modal-icon)) {
+                    padding: 0 var(--bs-modal-header-padding-x);
+                    & ~ .modal-footer {
+                        --bs-modal-footer-padding-y: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    &-header {
+        padding: var(--bs-modal-header-padding-y) var(--bs-modal-header-padding-x) 0;
+        & > .row {
+            --bs-gutter-x: 0.5rem;
+            --bs-gutter-y: 0.5rem;
+        }
+    }
+    &-title {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    &-body {
+        padding: var(--bs-modal-body-padding-y) var(--bs-modal-body-padding-x) 0;
+        text-align: center;
+        &-text {
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%; /* 1.2rem */
+            letter-spacing: -0.02rem;
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+    }
+    &-footer {
+        padding: var(--bs-modal-footer-padding-y) var(--bs-modal-footer-padding-x) 0;
+        & > .row {
+            --bs-gutter-x: 0.5rem;
+            --bs-gutter-y: 0.5rem;
+        }
+    }
+    &-translating {
+        user-select: none;
+    }
+    &-icon {
+        --bs-icon-width: 2rem;
+        --bs-icon-height: 2rem;
+        position: relative;
+        width: var(--bs-icon-width);
+        height: var(--bs-icon-height);
+        z-index: 1;
+        appearance: none;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: unset;
+        margin: auto;
+        padding: 0;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        & svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        &-sphere {
+            --bs-icon-width: 4rem;
+            --bs-icon-height: 4rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+    &-close {
+        --bs-btn-padding-x: 0.75rem;
+        --bs-btn-padding-y: 0.75rem;
+        --bs-btn-top: 0;
+        --bs-btn-left: 50%;
+        --bs-modal-close-w: 2.75rem;
+        --bs-modal-close-h: 0.25rem;
+        --bs-modal-close-border-radius: 7.6875rem;
+        --bs-modal-close-background-color: var(--grey);
+        position: relative;
+        z-index: 1;
+        appearance: none;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: unset;
+        margin: -1.5rem auto auto auto;
+        padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        pointer-events: fill;
+        cursor: grab;
+        user-select: none;
+        &::before {
+            content: "";
+            width: var(--bs-modal-close-w);
+            height: var(--bs-modal-close-h);
+            background-color: var(--bs-modal-close-background-color);
+            border-radius: var(--bs-modal-close-border-radius);
+            color: var(--bs-modal-close-color);
+        }
+        & svg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

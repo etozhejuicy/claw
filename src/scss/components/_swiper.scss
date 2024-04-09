@@ -1,0 +1,20 @@
+@import "swiper/css/bundle";
+
+:root {
+    --swiper-scrollbar-bg-color: rgba(var(--grey-rgb), 0.1);
+    --swiper-scrollbar-drag-bg-color: rgba(var(--white-rgb), 0.5);
+}
+
+.swiper-wrapper {
+    .swiper-slide,
+    swiper-slide {
+        width: fit-content !important;
+    }
+}
+
+.swiper-map {
+    .swiper-slide,
+    swiper-slide {
+        width: auto !important;
+    }
+}

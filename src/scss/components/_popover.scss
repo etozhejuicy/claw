@@ -1,0 +1,104 @@
+.popover {
+    --bs-popover-zindex: 1070;
+    --bs-popover-max-width: 276px;
+    --bs-popover-font-size: 0.875rem;
+    --bs-popover-bg: var(--white);
+    --bs-popover-border-width: var(--bs-border-width);
+    --bs-popover-border-color: var(--bs-border-color-translucent);
+    --bs-popover-border-radius: var(--bs-border-radius-lg);
+    --bs-popover-inner-border-radius: calc(var(--bs-border-radius-lg) - var(--bs-border-width));
+    --bs-popover-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --bs-popover-header-padding-x: 1rem;
+    --bs-popover-header-padding-y: 0.5rem;
+    --bs-popover-header-font-size: 1rem;
+    --bs-popover-header-color: ;
+    --bs-popover-header-bg: var(--bs-secondary-bg);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: 1rem;
+    --bs-popover-body-color: var(--bs-body-color);
+    --bs-popover-arrow-width: 1rem;
+    --bs-popover-arrow-height: 0.5rem;
+    --bs-popover-arrow-border: var(--bs-popover-border-color);
+    z-index: var(--bs-popover-zindex);
+    display: block;
+    max-width: var(--bs-popover-max-width);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(var(--primary-rgb), 0.75);
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-break: normal;
+    white-space: normal;
+    word-spacing: normal;
+    line-break: auto;
+    font-size: var(--bs-popover-font-size);
+    word-wrap: break-word;
+    background-color: var(--bs-popover-bg);
+    background-clip: padding-box;
+    border: var(--bs-popover-border-width) solid var(--bs-popover-border-color);
+    border-radius: var(--bs-popover-border-radius);
+    &:not([show-popper]) {
+        display: none;
+    }
+    &-myportfolio {
+        width: 100%;
+        --bs-popover-max-width: 577px;
+    }
+    &-list {
+        width: 100%;
+        --bs-popover-max-width: 577px;
+    }
+    &[id="legalStatus"],
+    &[id="aboutTeam"],
+    &[id="teamPortfolio"],
+    &[id="motivationTeam"],
+    &[id="myContest"],
+    &[id="videoMessage"] {
+        width: 100%;
+        --bs-popover-max-width: 577px;
+        @media (min-width: 768px) {
+            --bs-popover-max-width: 338px;
+        }
+        @media (min-width: 992px) {
+            --bs-popover-max-width: 458px;
+        }
+        @media (min-width: 1200px) {
+            --bs-popover-max-width: 378px;
+        }
+    }
+    &[id="personalPortfolio"] {
+        width: 100%;
+        --bs-popover-max-width: 577px;
+        @media (min-width: 768px) {
+            --bs-popover-max-width: 428px;
+        }
+        @media (min-width: 992px) {
+            --bs-popover-max-width: 458px;
+        }
+        @media (min-width: 1200px) {
+            --bs-popover-max-width: 428px;
+        }
+    }
+    &-header {
+        padding: var(--bs-popover-header-padding-y) var(--bs-popover-header-padding-x);
+        margin-bottom: 0;
+        font-size: var(--bs-popover-header-font-size);
+        color: var(--bs-popover-header-color);
+        background-color: var(--bs-popover-header-bg);
+        border-bottom: var(--bs-popover-border-width) solid var(--bs-popover-border-color);
+        border-top-left-radius: var(--bs-popover-inner-border-radius);
+        border-top-right-radius: var(--bs-popover-inner-border-radius);
+    }
+    &-header:empty {
+        display: none;
+    }
+    &-body {
+        padding: var(--bs-popover-body-padding-y) var(--bs-popover-body-padding-x);
+        color: var(--bs-popover-body-color);
+    }
+}

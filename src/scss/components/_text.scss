@@ -1,0 +1,100 @@
+* {
+  & p {
+    margin-block-start: 0.75rem;
+    margin-block-end: unset;
+    margin-top: 0.75rem;
+    margin-bottom: unset;
+    letter-spacing: -0.02rem;
+    line-height: 130%;
+    // временно скрыто
+    // &:first-of-type {
+    //     margin-top: unset;
+    // }
+    &:last-of-type {
+      margin-bottom: unset;
+    }
+  }
+}
+
+h,
+.h- {
+  &1 {
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.035rem;
+  }
+  &2 {
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 2.85rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.035rem;
+  }
+  &3 {
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 2.1rem */
+    letter-spacing: -0.035rem;
+  }
+  &4 {
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 2.1rem */
+    letter-spacing: -0.035rem;
+  }
+  &5 {
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 2.1rem */
+    letter-spacing: -0.035rem;
+  }
+  &6 {
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 2.1rem */
+    letter-spacing: -0.035rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.heading {
+  &-2 {
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -0.04rem;
+  }
+}
+
+@each $color, $value in $colors {
+  .text-#{$value} {
+    color: rgba(var(--#{$value}-rgb), 1) !important;
+  }
+}
+
+.text-muted {
+  color: rgba(var(--grey-rgb), 0.5) !important;
+}

@@ -1,0 +1,445 @@
+:root {
+    --map-item-size: 0.75rem;
+    --map-item-sphere-size: 0.75rem;
+    --map-item-spiral-w: 2.5rem;
+    --map-item-spiral-y: 1.5rem;
+    --map-item-spiral-direction: 0.75rem;
+    --map-result-circle-height: 3.875rem;
+    --map-item-vector-width: initial;
+}
+
+.map {
+    position: relative;
+    z-index: 1;
+    height: 22.25rem;
+    &-fullsize {
+        width: 68.125rem;
+        height: 22.25rem;
+        @media screen and (max-width: 1199.98px) {
+            margin-left: 4rem;
+        }
+        & .map-line {
+            // height: 17.5rem;
+            height: 100%;
+        }
+    }
+    &-centered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & .map-inner {
+            width: 20rem;
+        }
+    }
+    &-inner {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+    &-group {
+        position: relative;
+        top: 50%;
+        left: 3.125rem;
+        z-index: 1;
+        width: 7.25rem;
+        height: 18.125rem;
+        transform: translate(0, -50%);
+    }
+    &-ring {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        transform: translate(0, 0);
+        & > * {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &-line {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 1;
+        // width: max-content;
+        width: 100%;
+        min-width: 53.875rem;
+        height: 1.5rem;
+        pointer-events: none;
+        transform: translate(0, -50%);
+        & > * {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: left center;
+        }
+    }
+    &-image {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        & > * {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &-item {
+        position: relative;
+        z-index: 5;
+        width: var(--map-item-size);
+        height: var(--map-item-size);
+        transform-origin: calc(var(--map-item-size) / 2);
+        transition: transform 0.8s ease-in-out;
+        &-0 {
+            --map-item-size: 0.75rem !important;
+            width: var(--map-item-size);
+            height: var(--map-item-size);
+        }
+        &-1 {
+            --map-item-size: 1rem !important;
+            width: var(--map-item-size);
+            height: var(--map-item-size);
+        }
+        &-2 {
+            --map-item-size: 1.25rem !important;
+            width: var(--map-item-size);
+            height: var(--map-item-size);
+        }
+        &-3 {
+            --map-item-size: 1.5rem !important;
+            width: var(--map-item-size);
+            height: var(--map-item-size);
+        }
+        &-sphere {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            width: var(--map-item-size);
+            height: var(--map-item-size);
+            border-radius: 100%;
+            & > * {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                overflow: visible;
+                image-rendering: optimizeQuality;
+            }
+        }
+        &-spiral {
+            position: absolute;
+            top: calc(var(--map-item-size) / 1.65);
+            // left: calc(var(--map-item-sphere-size) + 0.25rem);
+            left: calc(var(--map-item-size) + 0.125rem);
+            z-index: -1;
+            opacity: 0.65;
+            transform-origin: left center;
+            transform: translate(0, -50%);
+            &-0 {
+                --map-item-spiral-w: 2.5rem;
+                --map-item-spiral-y: 1.5rem;
+                width: var(--map-item-spiral-w);
+                height: var(--map-item-spiral-y);
+            }
+            &-1 {
+                --map-item-spiral-w: 3.75rem;
+                --map-item-spiral-y: 2rem;
+                width: var(--map-item-spiral-w);
+                height: var(--map-item-spiral-y);
+            }
+            &-2 {
+                --map-item-spiral-w: 5rem;
+                --map-item-spiral-y: 3rem;
+                width: var(--map-item-spiral-w);
+                height: var(--map-item-spiral-y);
+            }
+            &-3 {
+                --map-item-spiral-w: 6.25rem;
+                --map-item-spiral-y: 3.75rem;
+                width: var(--map-item-spiral-w);
+                height: var(--map-item-spiral-y);
+            }
+            &-4 {
+                --map-item-spiral-w: 7.5rem;
+                --map-item-spiral-y: 4.5rem;
+                width: var(--map-item-spiral-w);
+                height: var(--map-item-spiral-y);
+            }
+            & > * {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                overflow: visible;
+            }
+        }
+        &-spiraldirection {
+            &-0 {
+                & svg {
+                    & use {
+                        opacity: 0;
+                        visibility: hidden;
+                        &:nth-child(1) {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+            &-1 {
+                & svg {
+                    & use {
+                        opacity: 0;
+                        visibility: hidden;
+                        &:nth-child(2) {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+            &-2 {
+                & svg {
+                    & use {
+                        opacity: 0;
+                        visibility: hidden;
+                        &:nth-child(3) {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+        &-vector {
+            position: absolute;
+            top: calc(var(--map-item-size) / 2);
+            left: calc(var(--map-item-size) / 2);
+            z-index: 1;
+            height: 1.688rem;
+            display: flex;
+            transform-origin: left center;
+            transform: translate(0, -50%);
+            & svg {
+                position: absolute;
+                left: 100%;
+                top: 50%;
+                height: 100%;
+                object-fit: cover;
+                object-position: right center;
+                overflow: visible;
+                transform: translate(-100%, -50%);
+                transform-origin: right;
+                & use {
+                    object-position: right;
+                }
+            }
+            &-thickness {
+                &-0 {
+                    // height: 0.5rem;
+                    & svg {
+                        & use {
+                            opacity: 0;
+                            visibility: hidden;
+                            &:nth-child(1) {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+                &-1 {
+                    // height: 0.75rem;
+                    & svg {
+                        & use {
+                            opacity: 0;
+                            visibility: hidden;
+                            &:nth-child(2) {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+                &-2 {
+                    // height: 1rem;
+                    & svg {
+                        & use {
+                            opacity: 0;
+                            visibility: hidden;
+                            &:nth-child(3) {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+                &-3 {
+                    // height: 1.25rem;
+                    & svg {
+                        & use {
+                            opacity: 0;
+                            visibility: hidden;
+                            &:nth-child(4) {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+            &-width {
+                &-0 {
+                    width: 2.5rem;
+                    & > svg {
+                        width: 7.5rem;
+                        object-position: -50%;
+                    }
+                }
+                &-1 {
+                    width: 3.75rem;
+                    & > svg {
+                        width: 7.5rem;
+                    }
+                }
+                &-2 {
+                    width: 5rem;
+                    & > svg {
+                        width: 7.5rem;
+                    }
+                }
+                &-3 {
+                    width: 6.25rem;
+                    & > svg {
+                        width: 7.5rem;
+                    }
+                }
+                &-4 {
+                    width: 7.5rem;
+                    & > svg {
+                        width: 7.5rem;
+                    }
+                }
+            }
+        }
+        &-angle {
+            &-0 {
+                transform: rotate(-180deg);
+            }
+            &-1 {
+                transform: rotate(-200deg);
+            }
+            &-2 {
+                transform: rotate(-20deg);
+            }
+            &-3 {
+                transform: rotate(0deg);
+            }
+        }
+        // Положения всех сфер вдоль кольца
+        &:nth-child(2) {
+            top: calc(1.85rem - var(--map-item-size) / 2);
+            left: calc(3rem - var(--map-item-size) / 2);
+        }
+        &:nth-child(3) {
+            top: calc(3.35rem - var(--map-item-size) / 2);
+            left: calc(5.65rem - var(--map-item-size) / 2);
+        }
+        &:nth-child(4) {
+            top: calc(9.65rem - var(--map-item-size) / 2);
+            left: calc(6.25rem - var(--map-item-size) / 2);
+        }
+        &:nth-child(5) {
+            top: calc(13.45rem - var(--map-item-size) / 2);
+            left: calc(4.25rem - var(--map-item-size) / 2);
+        }
+        &:nth-child(6) {
+            top: calc(10.45rem - var(--map-item-size) / 2);
+            left: calc(1.65rem - var(--map-item-size) / 2);
+        }
+        &:nth-child(7) {
+            top: calc(2rem - var(--map-item-size) / 2);
+            left: calc(1rem - var(--map-item-size) / 2);
+        }
+        &:nth-child(8) {
+            top: calc(3.05rem - var(--map-item-size) / 2);
+            left: calc(3.75rem - var(--map-item-size) / 2);
+        }
+    }
+    &-result {
+        position: absolute;
+        top: 50%;
+        left: 22.5rem;
+        z-index: 2;
+        display: flex;
+        width: 7.875rem;
+        height: var(--map-result-circle-height);
+        transform: translate(0, -50%) rotate(calc(var(--map-result-angle) * 1deg));
+        transform-origin: calc(var(--map-result-circle-height) / 2);
+        & > * {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: visible;
+        }
+        &-hint {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: fit-content;
+            height: auto;
+            font-size: 0.625rem;
+            line-height: 120%;
+            text-align: center;
+            transform: translate(-50%, -100%);
+        }
+    }
+}
+
+@each $color, $value in $colors {
+    .map-item-#{$value} {
+        color: rgba(var(--#{$value}-rgb), 1);
+    }
+
+    .map-item-mask {
+        &:is(.map-item-#{$value}) {
+            color: rgba(var(--#{$value}-rgb), 1);
+            & .map-item-sphere {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                    background: radial-gradient(
+                            37.07% 37.07% at 61.64% 39.66%,
+                            var(--white) 0%,
+                            rgba(var(--white-rgb), 0) 100%
+                        ),
+                        var(--#{$value});
+                    box-shadow:
+                        -0.313rem 0.313rem 0.407rem rgba(var(--#{$value}-rgb), 0.113852),
+                        // внешние блики
+                        -0.188rem
+                            0.188rem
+                            0.25rem
+                            rgba(var(--#{$value}-rgb), 0.0698148),
+                        // внешние блики
+                        inset
+                            0.188rem -0.25rem
+                            0.625rem
+                            lighten($color, 15); // внутренний блик
+                }
+            }
+            & .map-item-vector {
+                mask-image: linear-gradient(240deg, rgba(0, 0, 0, 1), transparent 95%);
+            }
+        }
+    }
+}

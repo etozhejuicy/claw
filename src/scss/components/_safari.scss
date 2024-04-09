@@ -1,0 +1,10 @@
+.isSafari {
+    & .btn {
+        padding: calc(var(--bs-btn-padding-y) + 0.0625rem) var(--bs-btn-padding-x) var(--bs-btn-padding-y);
+    }
+    & .card-team-description {
+        @media (min-width: 1200px) {
+            letter-spacing: -0.02em;
+        }
+    }
+}

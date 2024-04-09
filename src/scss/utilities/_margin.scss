@@ -1,0 +1,53 @@
+$m-0: 0rem;
+$m-1: 0.25rem;
+$m-2: 0.5rem;
+$m-3: 0.75rem;
+$m-4: 1rem;
+$m-5: 1.25rem;
+$m-6: 1.5rem;
+$m-7: 1.75rem;
+$m-8: 2rem;
+$m-9: 2.25rem;
+$m-auto: auto;
+
+$sizes: (
+    $m-0: "0",
+    $m-1: "1",
+    $m-2: "2",
+    $m-3: "3",
+    $m-4: "4",
+    $m-5: "5",
+    $m-6: "6",
+    $m-7: "7",
+    $m-8: "8",
+    $m-9: "9",
+    $m-auto: "auto"
+);
+
+@each $size, $value in $sizes {
+    .m {
+        &-#{$value} {
+            margin: $size !important;
+        }
+        &t-#{$value} {
+            margin-top: $size !important;
+        }
+        &b-#{$value} {
+            margin-bottom: $size !important;
+        }
+        &l-#{$value} {
+            margin-left: $size !important;
+        }
+        &r-#{$value} {
+            margin-right: $size !important;
+        }
+        &y-#{$value} {
+            margin-top: $size !important;
+            margin-bottom: $size !important;
+        }
+        &x-#{$value} {
+            margin-left: $size !important;
+            margin-right: $size !important;
+        }
+    }
+}

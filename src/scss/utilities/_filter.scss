@@ -1,0 +1,31 @@
+$bf-blur-0: 0rem;
+$bf-blur-1: 0.0625rem;
+$bf-blur-2: 0.125rem;
+$bf-blur-3: 0.1875rem;
+$bf-blur-4: 0.25rem;
+$bf-blur-5: 0.3125rem;
+$bf-blur-6: 0.375rem;
+$bf-blur-7: 0.4375rem;
+$bf-blur-8: 0.5rem;
+$bf-blur-9: 0.5625rem;
+$bf-blur-10: 0.625rem;
+
+$blurs: (
+    $bf-blur-0: "0",
+    $bf-blur-1: "1",
+    $bf-blur-2: "2",
+    $bf-blur-3: "3",
+    $bf-blur-4: "4",
+    $bf-blur-5: "5",
+    $bf-blur-6: "6",
+    $bf-blur-7: "7",
+    $bf-blur-8: "8",
+    $bf-blur-9: "9",
+    $bf-blur-10: "10"
+);
+
+@each $blur, $value in $blurs {
+    .bdf-blur-#{$value} {
+        backdrop-filter: blur(#{$blur}) !important;
+    }
+}

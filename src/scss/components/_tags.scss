@@ -1,0 +1,145 @@
+.tag {
+  --bs-tag-padding-x: 0.5rem;
+  --bs-tag-padding-y: 0.25rem;
+  --bs-tag-font-family: Verdana, Geneva, sans-serif;
+  --bs-tag-font-size: 0.875rem;
+  --bs-tag-font-weight: 600;
+  --bs-tag-line-height: 120%;
+  --bs-tag-color: var(--dark);
+  --bs-tag-bg: transparent;
+  --bs-tag-border-width: 0.0625rem;
+  --bs-tag-border-color: transparent;
+  --bs-border-radius: 1rem;
+  --bs-tag-box-shadow: none;
+  --bs-tag-disabled-opacity: 0.65;
+  --bs-tag-letter-spacing: -0.02rem;
+  display: inline-block;
+  padding: var(--bs-tag-padding-y) var(--bs-tag-padding-x);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: var(--bs-tag-font-family);
+  font-size: var(--bs-tag-font-size);
+  font-weight: var(--bs-tag-font-weight);
+  line-height: var(--bs-tag-line-height);
+  color: var(--bs-tag-color);
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: var(--bs-tag-letter-spacing);
+  vertical-align: middle;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  text-transform: none;
+  border: var(--bs-tag-border-width) solid var(--bs-tag-border-color);
+  border-radius: var(--bs-border-radius);
+  background-color: var(--bs-tag-bg);
+  box-shadow: var(--bs-tag-box-shadow);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+@each $color, $value in $colors {
+  .tag-#{$value} {
+    --bs-tag-color: var(--white);
+    --bs-tag-bg: var(--#{$value});
+    --bs-tag-border-color: var(--#{$value});
+    --bs-tag-hover-color: var(--white);
+    --bs-tag-hover-bg: #{lighten($color, 15%)};
+    --bs-tag-hover-border-color: #{lighten($color, 15%)};
+    --bs-tag-focus-shadow-rgb: rgba(var(--#{$value}-rgb), 1);
+    --bs-tag-active-color: var(--white);
+    --bs-tag-active-bg: #{darken($color, 10%)};
+    --bs-tag-active-border-color: #{darken($color, 10%)};
+    --bs-tag-active-shadow: inset 0 3px 5px rgba(var(--#{$value}-rgb), 0.125);
+    --bs-tag-disabled-color: rgba(var(--dark-rgb), 0.3);
+    --bs-tag-disabled-bg: var(--grey);
+    --bs-tag-disabled-border-color: var(--grey);
+    &.tag-voluminous {
+      --bs-tag-box-shadow: 0rem
+          0.0625rem
+          0.0469rem
+          0rem
+          rgba(var(--white-rgb), 0.15)
+          inset,
+        0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
+    }
+    &-shadow {
+      filter: drop-shadow(0rem 0.125rem 1rem rgba(var(--#{$value}-rgb), 0.5));
+    }
+    @if $value == "primary" {
+      --bs-tag-color: var(--black);
+      --bs-tag-hover-color: var(--black);
+      --bs-tag-active-color: var(--black);
+      --bs-tag-active-bg: #{darken($color, 25%)};
+      --bs-tag-active-border-color: #{darken($color, 25%)};
+    }
+    @if $value == "secondary" {
+      --bs-tag-active-bg: #{darken($color, 1%)};
+      --bs-tag-active-border-color: #{darken($color, 1%)};
+    }
+    @if $value == "warning" {
+      --bs-tag-color: var(--black);
+      --bs-tag-hover-color: var(--black);
+      --bs-tag-active-color: var(--black);
+    }
+    @if $value == "white" {
+      --bs-tag-color: var(--black);
+      --bs-tag-hover-color: var(--black);
+      --bs-tag-active-color: var(--black);
+      --bs-tag-active-bg: #{darken($color, 25%)};
+      --bs-tag-active-border-color: #{darken($color, 25%)};
+    }
+  }
+  .tag-outline-#{$value} {
+    &:not(.tag-colored),
+    &:not(.tag-dimmed) {
+      --bs-tag-color: var(--white);
+    }
+    --bs-tag-color: var(--#{$value});
+    --bs-tag-bg: transparent;
+    --bs-tag-border-color: var(--#{$value});
+    --bs-tag-hover-bg: var(--#{$value});
+    --bs-tag-hover-border-color: var(--#{$value});
+    --bs-tag-border-width: 0.0625rem;
+    --bs-tag-box-shadow: unset;
+    --bs-tag-focus-shadow-rgb: unset;
+    --bs-tag-active-bg: #{darken($color, 15%)};
+    --bs-tag-active-border-color: #{darken($color, 15%)};
+    @if $value == "primary" {
+      --bs-tag-active-bg: #{darken($color, 25%)};
+      --bs-tag-active-border-color: #{darken($color, 25%)};
+    }
+    @if $value == "secondary" {
+      --bs-tag-color: #{lighten($color, 50%)};
+      --bs-tag-border-color: #{lighten($color, 10%)};
+      --bs-tag-active-bg: #{darken($color, 5%)};
+      --bs-tag-active-border-color: #{darken($color, 5%)};
+    }
+  }
+  .tag-colored {
+    &:is(.tag-#{$value}),
+    &:is(.tag-outline-#{$value}) {
+      --bs-tag-color: #{$color};
+      @if $value == "secondary" {
+        --bs-tag-color: #{lighten($color, 50%)};
+        --bs-tag-border-color: #{lighten($color, 10%)};
+      }
+    }
+  }
+  .tag-dimmed {
+    --bs-tag-box-shadow: unset;
+    --bs-tag-focus-shadow-rgb: unset;
+    &:is(.tag-#{$value}),
+    &:is(.tag-outline-#{$value}) {
+      --bs-tag-bg: rgba(var(--#{$value}-rgb), 0.1);
+      --bs-tag-hover-bg: rgba(var(--#{$value}-rgb), 1);
+      @if $value == "secondary" {
+        --bs-tag-color: #{lighten($color, 50%)};
+        --bs-tag-bg: rgba(var(--#{$value}-rgb), 0.8);
+      }
+    }
+  }
+}

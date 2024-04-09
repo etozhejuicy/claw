@@ -1,0 +1,24 @@
+* {
+    &:is(.lazyload) {
+        position: relative;
+        overflow: hidden;
+        background-color: rgba(var(--true-black-rgb), 0.15);
+        border-radius: 0.35rem;
+        &::before {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, rgba(var(--normal-grey-rgb), 0.65), transparent);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            animation: skeleton-animation 1.2s linear infinite;
+        }
+        & * {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

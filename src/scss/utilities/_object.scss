@@ -1,0 +1,88 @@
+.object {
+    &-position {
+        &-top {
+            object-position: top;
+            &-left {
+                object-position: top left;
+            }
+            &-right {
+                object-position: top right;
+            }
+            &-center {
+                object-position: top center;
+            }
+        }
+        &-left {
+            object-position: left;
+            &-top {
+                object-position: left top;
+            }
+            &-bottom {
+                object-position: left bottom;
+            }
+            &-center {
+                object-position: left center;
+            }
+        }
+        &-right {
+            object-position: right;
+            &-top {
+                object-position: right top;
+            }
+            &-bottom {
+                object-position: right bottom;
+            }
+            &-center {
+                object-position: right center;
+            }
+        }
+        &-bottom {
+            object-position: bottom;
+            &-left {
+                object-position: bottom left;
+            }
+            &-right {
+                object-position: bottom right;
+            }
+            &-center {
+                object-position: bottom center;
+            }
+        }
+        &-center {
+            object-position: center;
+            &-top {
+                object-position: center top;
+            }
+            &-left {
+                object-position: center left;
+            }
+            &-right {
+                object-position: center right;
+            }
+            &-bottom {
+                object-position: center bottom;
+            }
+        }
+    }
+    &-fit {
+        &-contain {
+            object-fit: contain !important;
+        }
+
+        &-cover {
+            object-fit: cover !important;
+        }
+
+        &-fill {
+            object-fit: fill !important;
+        }
+
+        &-scale {
+            object-fit: scale-down !important;
+        }
+
+        &-none {
+            object-fit: none !important;
+        }
+    }
+}

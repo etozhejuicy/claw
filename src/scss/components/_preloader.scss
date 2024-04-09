@@ -1,0 +1,23 @@
+:root {
+    --preloader-width: 100%;
+    --preloader-height: 100%;
+}
+
+.preloader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: var(--preloader-width);
+    height: var(--preloader-height);
+    & .visually-hidden {
+        visibility: hidden;
+    }
+    &-container {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: calc(85svh - (var(--header-height) + var(--footer-height)) - 1.5rem);
+    }
+}

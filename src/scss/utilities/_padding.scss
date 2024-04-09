@@ -1,0 +1,51 @@
+$p-0: 0rem;
+$p-1: 0.25rem;
+$p-2: 0.5rem;
+$p-3: 0.75rem;
+$p-4: 1rem;
+$p-5: 1.25rem;
+$p-6: 1.5rem;
+$p-7: 1.75rem;
+$p-8: 2rem;
+$p-9: 2.25rem;
+
+$sizes: (
+    $p-0: "0",
+    $p-1: "1",
+    $p-2: "2",
+    $p-3: "3",
+    $p-4: "4",
+    $p-5: "5",
+    $p-6: "6",
+    $p-7: "7",
+    $p-8: "8",
+    $p-9: "9"
+);
+
+@each $size, $value in $sizes {
+    .p {
+        &-#{$value} {
+            padding: $size !important;
+        }
+        &t-#{$value} {
+            padding-top: $size !important;
+        }
+        &b-#{$value} {
+            padding-bottom: $size !important;
+        }
+        &l-#{$value} {
+            padding-left: $size !important;
+        }
+        &r-#{$value} {
+            padding-right: $size !important;
+        }
+        &y-#{$value} {
+            padding-top: $size !important;
+            padding-bottom: $size !important;
+        }
+        &x-#{$value} {
+            padding-left: $size !important;
+            padding-right: $size !important;
+        }
+    }
+}

@@ -1,0 +1,349 @@
+:root {
+    --sphere-size: 7.5rem;
+    --sphere-accent-color: var(--card-elements-accent-color, var(--grey-rgb));
+    --sphere-background-color: var(--dark-grey-rgb);
+    --sphere-background-color-opacity: 1;
+    --sphere-border-radius: 100%;
+    --sphere-padding-x: 0.35rem;
+    --sphere-padding-y: 0.35rem;
+    --sphere-box-shadow: 0rem 0.0625rem 0.0469rem 0rem
+            rgba(var(--white-rgb), 0.15) inset,
+        0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
+    --sphere-content-gap: 0.25rem;
+    --sphere-accent-gradient: conic-gradient(
+        from 180deg at 50% 50%,
+        #ffa629 -58.98deg,
+        #fccf19 0.15deg,
+        #3eaf2e 62.84deg,
+        #02a6e6 119.45deg,
+        #9747ff 179.51deg,
+        #f24822 240.2deg,
+        #ffa629 301.02deg,
+        #fccf19 360.15deg
+    );
+}
+
+.sphere {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--sphere-size);
+    height: var(--sphere-size);
+    padding: var(--sphere-padding-y) var(--sphere-padding-x);
+    color: rgba(var(--sphere-accent-color), 1);
+    background-color: rgba(
+        var(--sphere-background-color),
+        var(--sphere-background-color-opacity)
+    );
+    border-radius: var(--sphere-border-radius);
+    box-shadow: var(--sphere-box-shadow);
+    &-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: var(--sphere-content-gap);
+        column-gap: var(--sphere-content-gap);
+        text-align: center;
+        &-title {
+            font-size: 0.875rem;
+            line-height: 1.05rem;
+            letter-spacing: -2%;
+        }
+        &-text {
+            font-size: 0.75rem;
+            line-height: 0.975rem;
+            letter-spacing: -2%;
+        }
+    }
+    &:not(.sphere-gradient) {
+        overflow: hidden;
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            z-index: 1;
+            width: calc(var(--sphere-size) / 4);
+            height: calc(var(--sphere-size) / 4);
+            border-radius: var(--sphere-border-radius);
+            background-color: rgba(var(--sphere-accent-color), 1);
+            transform: translate(-50%, 50%);
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+        }
+    }
+    &:is(.sphere-colored) {
+        color: rgba(var(--sphere-accent-color), 1);
+        &::before {
+            background-color: rgba(var(--sphere-accent-color), 1);
+        }
+    }
+    &-once {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-gradient {
+        --sphere-size: 8.75rem;
+        --sphere-background-color-opacity: 0.1;
+        background-image: radial-gradient(
+            150% 150% at 50% 50%,
+            rgba(
+                    var(--sphere-accent-color),
+                    var(--sphere-background-color-opacity)
+                )
+                0%,
+            #ff000000 100%
+        );
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--sphere-border-radius);
+            border: 0.0625rem solid rgba(var(--sphere-accent-color), 0.2);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--sphere-border-radius);
+            filter: blur(1.5rem);
+            background-image: conic-gradient(
+                from 180deg at 50% 50%,
+                #ffa629 -58.98deg,
+                #fccf19 0.15deg,
+                #3eaf2e 62.84deg,
+                #02a6e6 119.45deg,
+                #9747ff 179.51deg,
+                #f24822 240.2deg,
+                #ffa629 301.02deg,
+                #fccf19 360.15deg
+            );
+            transform: translate(-50%, -50%);
+        }
+    }
+    &-main {
+        position: absolute;
+        z-index: 0;
+        user-select: none;
+        cursor: pointer;
+    }
+    &-semicvetik {
+        --sphere-size: 7.75rem;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(var(--sphere-size) * 2.85);
+        height: calc(var(--sphere-size) * 3.15);
+        border-radius: var(--sphere-border-radius);
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+            width: calc((var(--sphere-size) * 2.85) / 1.3);
+            height: calc((var(--sphere-size) * 2.85) / 1.3);
+            border: 0.0625rem solid rgba(var(--sphere-accent-color), 0.5);
+            border-radius: var(--sphere-border-radius);
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: translate(-50%, -50%);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+            width: calc((var(--sphere-size) * 2.85) / 1.25);
+            height: calc((var(--sphere-size) * 2.85) / 1.25);
+            border: 0.0625rem solid rgba(var(--sphere-accent-color), 0.4);
+            border-radius: var(--sphere-border-radius);
+            transform: translate(-50%, -50%);
+        }
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: -1;
+                width: calc((var(--sphere-size) * 2.85) / 1.2);
+                height: calc((var(--sphere-size) * 2.85) / 1.2);
+                border: 0.0625rem solid rgba(var(--sphere-accent-color), 0.2);
+                border-radius: var(--sphere-border-radius);
+                transform: translate(-50%, -50%);
+            }
+        }
+        & .sphere-item {
+            &:nth-child(2) > * {
+                transform: rotate(-60deg);
+            }
+            &:nth-child(3) > * {
+                transform: rotate(-120deg);
+            }
+            &:nth-child(4) > * {
+                transform: rotate(-180deg);
+            }
+            &:nth-child(5) > * {
+                transform: rotate(-240deg);
+            }
+            &:nth-child(6) > * {
+                transform: rotate(-300deg);
+            }
+        }
+        & .sphere-gradient {
+            &:is(.sphere-main) {
+                --sphere-background-color-opacity: 0.1;
+                background-color: transparent;
+                background-image: radial-gradient(
+                    49% 49% at 50% 50%,
+                    rgba(
+                            var(--sphere-accent-color),
+                            var(--sphere-background-color-opacity)
+                        )
+                        89%,
+                    #ff000000 90%
+                );
+                box-shadow: none;
+                transform: scale(0.925);
+                &::before {
+                    filter: blur(2.5rem);
+                    z-index: -1;
+                    transform: translate(-50%, -50%) scale(1.25);
+                }
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-ripple {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0.0625rem solid rgba(var(--sphere-accent-color), 0.06);
+        border-radius: var(--sphere-border-radius);
+        transform: scale(0.95);
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0.0625rem solid rgba(var(--sphere-accent-color), 0.1);
+            border-radius: var(--sphere-border-radius);
+            transform: scale(1.06);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0.0625rem solid rgba(var(--sphere-accent-color), 0.2);
+            border-radius: var(--sphere-border-radius);
+            transform: scale(1.125);
+        }
+    }
+    &-item {
+        --sphere-size-lg: 7.75rem;
+        --sphere-size: 7.75rem;
+        position: absolute;
+        // left: calc(50% - var(--sphere-size));
+        height: calc(var(--sphere-size) * 1.05);
+        transform-origin: 50% 150%;
+        user-select: none;
+        cursor: pointer;
+        &:nth-child(2) {
+            transform: rotate(60deg);
+        }
+        &:nth-child(3) {
+            transform: rotate(120deg);
+        }
+        &:nth-child(4) {
+            transform: rotate(180deg);
+        }
+        &:nth-child(5) {
+            transform: rotate(240deg);
+        }
+        &:nth-child(6) {
+            transform: rotate(300deg);
+        }
+    }
+    &-icon {
+        --sphere-modal-icon-size: 4rem;
+        position: relative;
+        z-index: 1;
+        width: var(--sphere-modal-icon-size);
+        height: var(--sphere-modal-icon-size);
+        flex: 1 0 auto;
+        border-radius: var(--sphere-border-radius);
+        background-color: rgba(
+            var(--sphere-accent-color, var(--primary-rgb)),
+            1
+        );
+        box-shadow: 0 calc(var(--sphere-modal-icon-size) / 2)
+            calc(var(--sphere-modal-icon-size) * 0.5) 0
+            rgba(var(--sphere-accent-color, var(--primary-rgb)), 0.5);
+        &-wrapper {
+            position: relative;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--sphere-border-radius);
+            overflow: hidden;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                background: var(--sphere-accent-gradient);
+                border-radius: var(--sphere-border-radius);
+                filter: blur(0.75rem) brightness(1.15);
+                transform: scale(1.5);
+            }
+        }
+    }
+}
+
+@each $color, $value in $colors {
+    .sphere-accent-#{$value} {
+        --sphere-accent-color: var(--#{$value}-rgb) !important;
+    }
+    .sphere-icon-#{$value} {
+        --sphere-accent-color: var(--#{$value}-rgb) !important;
+        --sphere-accent-gradient: none !important;
+    }
+}
