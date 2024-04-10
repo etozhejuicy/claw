@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#buttons").innerHTML = `
+    document.querySelector("#buttons").innerHTML = `
     <div class="row g-3">
     <!-- Кнопки обычные -->
     <div class="col-12">
@@ -41,14 +41,14 @@ window.addEventListener("DOMContentLoaded", () => {
     <div class="col-12">
         <div class="row g-3">
             <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row g-3">
+                        <div class="col-12">
                 <h3 class="h-3">
                     Кнопки (с подсветкой)
                 </h3>
             </div>
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row g-3">
                             <div class="col-auto">
                                 <button type="button" class="btn btn-primary btn-primary-shadow">Кнопка 1 с подсветкой</button>
                             </div>
@@ -77,14 +77,14 @@ window.addEventListener("DOMContentLoaded", () => {
     <div class="col-12">
         <div class="row g-3">
             <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row g-3">
+                        <div class="col-12">
                 <h3 class="h-3">
                     Кнопки (с обводкой)
                 </h3>
             </div>
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row g-3">
                             <div class="col-auto">
                                 <button type="button" class="btn btn-primary btn-outline-primary">Кнопка 1 с обводкой</button>
                             </div>

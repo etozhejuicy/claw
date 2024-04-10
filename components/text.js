@@ -1,33 +1,39 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#text").innerHTML = `
+    document.querySelector("#text").innerHTML = `
     <div class="row g-3">
     <!-- Заголовки -->
     <div class="col-12">
-        <div class="row g-3">
-            <div class="col-12">
-                <h3 class="h4">
-                    Система заголовков
-                </h3>
-            </div>
-            <div class="col-12">
-                <h1 class="h-1">Заголовок 1</h1>
-                <h2 class="h-2">Заголовок 2</h2>
-                <h3 class="h-3">Заголовок 3</h3>
-                <h4 class="h-4">Заголовок 4</h4>
-                <h5 class="h-5">Заголовок 5</h5>
-                <h6 class="h-6">Заголовок 6</h6>
+        <div class="card">
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <h4 class="h4">
+                            Система заголовков
+                        </h4>
+                    </div>
+                    <div class="col-12">
+                        <h1 class="h-1">Заголовок 1</h1>
+                        <h2 class="h-2">Заголовок 2</h2>
+                        <h3 class="h-3">Заголовок 3</h3>
+                        <h4 class="h-4">Заголовок 4</h4>
+                        <h5 class="h-5">Заголовок 5</h5>
+                        <h6 class="h-6">Заголовок 6</h6>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     
     <!-- Обычный текст -->
     <div class="col-12">
-        <div class="row g-3">
-            <div class="col-12">
-                <h3 class="h4">
+    <div class="card">
+    <div class="card-header">
+        <h4 class="h4">
                     Обычный текст (параграф)
-                </h3>
-            </div>
+                </h4>
+    </div>
+                    <div class="card-body">
+        <div class="row g-3">
             <div class="col-12">
                 <p>
                     Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
@@ -103,7 +109,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 </p>
             </div>
         </div>
+        </div>
+        </div>
     </div>
-    </div>
+</div>
   `;
 });
