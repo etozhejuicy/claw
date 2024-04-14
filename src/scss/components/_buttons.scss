@@ -252,18 +252,6 @@
     --bs-btn-disabled-color: rgba(var(--dark-rgb), 0.3);
     --bs-btn-disabled-bg: var(--grey);
     --bs-btn-disabled-border-color: var(--grey);
-    &.btn-voluminous {
-      --bs-btn-box-shadow: 0rem
-          0.0625rem
-          0.0469rem
-          0rem
-          rgba(var(--white-rgb), 0.15)
-          inset,
-        0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
-    }
-    &-shadow {
-      filter: drop-shadow(0rem 0.125rem 1rem rgba(var(--#{$value}-rgb), 0.5));
-    }
     @if $value == "warning" {
       --bs-btn-color: var(--black);
       --bs-btn-hover-color: var(--black);
@@ -276,6 +264,18 @@
       --bs-btn-active-bg: #{darken($color, 25%)};
       --bs-btn-active-border-color: #{darken($color, 25%)};
     }
+  }
+  .btn-#{$value}-shadow {
+    filter: drop-shadow(0rem 0.125rem 1rem rgba(var(--#{$value}-rgb), 0.5));
+  }
+  .btn-voluminous {
+    --bs-btn-box-shadow: 0rem
+        0.0625rem
+        0.0469rem
+        0rem
+        rgba(var(--white-rgb), 0.15)
+        inset,
+      0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
   }
   .btn-outline-#{$value} {
     &:not(.btn-colored),
@@ -309,7 +309,7 @@
       --bs-btn-color: #{$color};
       @if $value == "secondary" {
         // --bs-btn-color: #{lighten($color, 50%)}; // временно удалено
-        --bs-btn-border-color: #{lighten($color, 10%)};
+        // --bs-btn-border-color: #{lighten($color, 10%)}; // временно удалено
       }
     }
   }
@@ -321,8 +321,8 @@
       --bs-btn-bg: rgba(var(--#{$value}-rgb), 0.1);
       --bs-btn-hover-bg: rgba(var(--#{$value}-rgb), 1);
       @if $value == "secondary" {
-        --bs-btn-color: #{lighten($color, 35%)};
-        --bs-btn-bg: rgba(var(--#{$value}-rgb), 0.8);
+        //   --bs-btn-color: #{lighten($color, 35%)}; // временно удалено
+        //   --bs-btn-bg: rgba(var(--#{$value}-rgb), 0.8); // временно удалено
       }
     }
   }
