@@ -1,6 +1,3 @@
-// styles
-import "./src/scss/app.scss";
-
 // components
 import "./components/colors";
 import "./components/text";
