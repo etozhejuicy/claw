@@ -264,17 +264,6 @@
     &-shadow {
       filter: drop-shadow(0rem 0.125rem 1rem rgba(var(--#{$value}-rgb), 0.5));
     }
-    // @if $value == "primary" {
-    //   --bs-btn-color: var(--black);
-    //   --bs-btn-hover-color: var(--black);
-    //   --bs-btn-active-color: var(--black);
-    //   --bs-btn-active-bg: #{darken($color, 25%)};
-    //   --bs-btn-active-border-color: #{darken($color, 25%)};
-    // }
-    // @if $value == "secondary" {
-    //   --bs-btn-active-bg: #{darken($color, 1%)};
-    //   --bs-btn-active-border-color: #{darken($color, 1%)};
-    // }
     @if $value == "warning" {
       --bs-btn-color: var(--black);
       --bs-btn-hover-color: var(--black);
@@ -319,7 +308,7 @@
     &:is(.btn-outline-#{$value}) {
       --bs-btn-color: #{$color};
       @if $value == "secondary" {
-        --bs-btn-color: #{lighten($color, 50%)};
+        // --bs-btn-color: #{lighten($color, 50%)}; // временно удалено
         --bs-btn-border-color: #{lighten($color, 10%)};
       }
     }
@@ -332,7 +321,7 @@
       --bs-btn-bg: rgba(var(--#{$value}-rgb), 0.1);
       --bs-btn-hover-bg: rgba(var(--#{$value}-rgb), 1);
       @if $value == "secondary" {
-        --bs-btn-color: #{lighten($color, 50%)};
+        --bs-btn-color: #{lighten($color, 35%)};
         --bs-btn-bg: rgba(var(--#{$value}-rgb), 0.8);
       }
     }
