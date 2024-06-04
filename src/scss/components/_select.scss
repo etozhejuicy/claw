@@ -1,32 +1,32 @@
 .form-select {
-    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-    --bs-border-width: 0.125rem;
-    --bs-form-select-bg: var(--white);
-    --bs-form-select-bg-size: 1rem 0.75rem;
-    --bs-form-select-color: var(--green);
-    --bs-border-color: var(--green);
-    --bs-form-select-border-radius: 0.9375rem;
-    --bs-form-select-padding-left: 0.9375rem;
-    --bs-form-select-padding-top: 0.8125rem;
-    --bs-form-select-padding-right: 2.25rem;
-    --bs-form-select-padding-bottom: 0.8125rem;
-    --bs-form-select-font-size: 1rem;
+    --cl-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    --cl-border-width: 0.125rem;
+    --cl-form-select-bg: var(--white);
+    --cl-form-select-bg-size: 1rem 0.75rem;
+    --cl-form-select-color: var(--green);
+    --cl-border-color: var(--green);
+    --cl-form-select-border-radius: 0.9375rem;
+    --cl-form-select-padding-left: 0.9375rem;
+    --cl-form-select-padding-top: 0.8125rem;
+    --cl-form-select-padding-right: 2.25rem;
+    --cl-form-select-padding-bottom: 0.8125rem;
+    --cl-form-select-font-size: 1rem;
     display: block;
     width: 100%;
-    padding: var(--bs-form-select-padding-top) var(--bs-form-select-padding-right) var(--bs-form-select-padding-bottom)
-        var(--bs-form-select-padding-left);
+    padding: var(--cl-form-select-padding-top) var(--cl-form-select-padding-right) var(--cl-form-select-padding-bottom)
+        var(--cl-form-select-padding-left);
     font-style: normal;
-    font-size: var(--bs-form-select-font-size);
+    font-size: var(--cl-form-select-font-size);
     font-weight: bold;
     line-height: 1.5;
-    color: var(--bs-form-select-color);
-    background-color: var(--bs-form-select-bg);
-    background-image: var(--bs-form-select-bg-img), var(--bs-form-select-bg-icon, none);
+    color: var(--cl-form-select-color);
+    background-color: var(--cl-form-select-bg);
+    background-image: var(--cl-form-select-bg-img), var(--cl-form-select-bg-icon, none);
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
-    background-size: var(--bs-form-select-bg-size);
-    border: var(--bs-border-width) solid var(--bs-border-color);
-    border-radius: var(--bs-form-select-border-radius);
+    background-size: var(--cl-form-select-bg-size);
+    border: var(--cl-border-width) solid var(--cl-border-color);
+    border-radius: var(--cl-form-select-border-radius);
     transition:
         border-color 0.15s ease-in-out,
         box-shadow 0.15s ease-in-out;
@@ -46,20 +46,20 @@
         background-image: none;
     }
     &:disabled {
-        background-color: var(--bs-secondary-bg);
+        background-color: var(--cl-secondary-bg);
     }
     &:-moz-focusring {
         color: transparent;
-        text-shadow: 0 0 0 var(--bs-body-color);
+        text-shadow: 0 0 0 var(--cl-body-color);
     }
     &-sm {
-        --bs-form-select-font-size: 0.875rem;
+        --cl-form-select-font-size: 0.875rem;
     }
     &-lg {
-        --bs-form-select-font-size: 1.25rem;
+        --cl-form-select-font-size: 1.25rem;
     }
 }
 
 [data-bs-theme="dark"] .form-select {
-    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23adb5bd' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    --cl-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23adb5bd' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }

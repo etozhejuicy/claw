@@ -1,15 +1,15 @@
 .notification {
     &-inner {
         & > .row {
-            --bs-gutter-x: 25px;
-            --bs-gutter-y: 0;
+            --cl-gutter-x: 25px;
+            --cl-gutter-y: 0;
             align-items: center;
         }
     }
     &-information {
         & > .row {
-            --bs-gutter-x: 5px;
-            --bs-gutter-y: 5px;
+            --cl-gutter-x: 5px;
+            --cl-gutter-y: 5px;
         }
     }
     &-icon {

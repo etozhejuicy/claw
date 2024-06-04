@@ -9,8 +9,7 @@
   --card-border-radius: 1rem;
   --card-background-image: initial;
   --card-background-color: var(--white);
-  --card-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15)
-      inset,
+  --card-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
     0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
   --card-backdrop-filter: unset;
   --card-header-color: var(--body-text-color);
@@ -109,8 +108,7 @@
       --card-header-color: rgba(var(--grey-rgb), 0.5);
       --card-background-color: transparent;
       --card-text-color: rgba(var(--grey-rgb), 0.5);
-      --card-box-shadow: -0.0625rem 0 0rem 0rem rgba(var(--white-rgb), 0.15)
-          inset,
+      --card-box-shadow: -0.0625rem 0 0rem 0rem rgba(var(--white-rgb), 0.15) inset,
         0.0625rem 0 0rem 0rem rgba(var(--white-rgb), 0.15) inset,
         0 -0.0625rem 0rem 0rem rgba(var(--white-rgb), 0.15) inset,
         0 0.0625rem 0rem 0rem rgba(var(--white-rgb), 0.15) inset;
@@ -118,8 +116,7 @@
   }
   &-outline {
     background-color: unset;
-    --card-box-shadow: 0rem 0.0625rem 0.0469rem 0rem
-      rgba(var(--white-rgb), 0.15) inset;
+    --card-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset;
   }
   &-glass {
     --card-background-color: rgba(var(--dark-grey-rgb), 0.8);
@@ -134,12 +131,10 @@
     min-height: var(--card-minh);
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        0deg,
-        rgba(var(--card-background-color), 0.4) 0%,
-        rgba(var(--card-background-color), 0.4) 100%
-      ),
-      var(--card-background-image), lightgray 50%;
+    background:
+      linear-gradient(0deg, rgba(var(--card-background-color), 0.4) 0%, rgba(var(--card-background-color), 0.4) 100%),
+      var(--card-background-image),
+      lightgray 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -258,15 +253,15 @@
         &:is(.btn-colored),
         &:is(.btn-dimmed) {
           --card-elements-accent-color: var(--grey-rgb);
-          --bs-btn-color: rgba(var(--card-elements-accent-color), 1);
-          --bs-btn-bg: rgba(var(--card-elements-accent-color), 0.1);
-          --bs-btn-border-color: rgba(var(--card-elements-accent-color), 0.1);
-          --bs-btn-hover-color: var(--bs-btn-color);
-          --bs-btn-hover-bg: var(--bs-btn-bg);
-          --bs-btn-border-hover-color: var(--bs-btn-border-color);
-          --bs-btn-active-color: var(--bs-btn-color);
-          --bs-btn-active-bg: var(--bs-btn-bg);
-          --bs-btn-border-active-color: var(--bs-btn-border-color);
+          --cl-btn-color: rgba(var(--card-elements-accent-color), 1);
+          --cl-btn-bg: rgba(var(--card-elements-accent-color), 0.1);
+          --cl-btn-border-color: rgba(var(--card-elements-accent-color), 0.1);
+          --cl-btn-hover-color: var(--cl-btn-color);
+          --cl-btn-hover-bg: var(--cl-btn-bg);
+          --cl-btn-border-hover-color: var(--cl-btn-border-color);
+          --cl-btn-active-color: var(--cl-btn-color);
+          --cl-btn-active-bg: var(--cl-btn-bg);
+          --cl-btn-border-active-color: var(--cl-btn-border-color);
         }
       }
     }
@@ -452,8 +447,7 @@
           left: 0;
           width: var(--map-item-vector-width);
           transform-origin: center;
-          transform: translate(0, 0)
-            rotate(calc(var(--map-result-angle) * 1deg));
+          transform: translate(0, 0) rotate(calc(var(--map-result-angle) * 1deg));
         }
       }
     }
@@ -538,9 +532,9 @@
       & .btn-tag {
         &:is(.btn-colored),
         &:is(.btn-dimmed) {
-          --bs-btn-color: rgba(var(--card-elements-accent-color), 1);
-          --bs-btn-bg: rgba(var(--card-elements-accent-color), 0.1);
-          --bs-btn-border-color: rgba(var(--card-elements-accent-color), 0.1);
+          --cl-btn-color: rgba(var(--card-elements-accent-color), 1);
+          --cl-btn-bg: rgba(var(--card-elements-accent-color), 0.1);
+          --cl-btn-border-color: rgba(var(--card-elements-accent-color), 0.1);
         }
       }
     }
@@ -549,12 +543,9 @@
     --card-elements-accent-color: var(--#{$value}-rgb);
     & .card-interesting-tags {
       & .btn-interesting {
-        --bs-btn-active-color: rgba(var(--card-elements-accent-color), 1);
-        --bs-btn-active-bg: rgba(var(--card-elements-accent-color), 0.1);
-        --bs-btn-active-border-color: rgba(
-          var(--card-elements-accent-color),
-          0.1
-        );
+        --cl-btn-active-color: rgba(var(--card-elements-accent-color), 1);
+        --cl-btn-active-bg: rgba(var(--card-elements-accent-color), 0.1);
+        --cl-btn-active-border-color: rgba(var(--card-elements-accent-color), 0.1);
       }
     }
   }
@@ -594,7 +585,7 @@
 }
 .card-block > :not(.card-check:first-child) + .card,
 .card-block > .card-block:not(:first-child) {
-  margin-left: calc(var(--bs-border-width) * -1);
+  margin-left: calc(var(--cl-border-width) * -1);
   border-top: 0;
   border-right: 0;
   border-bottom: 0;
@@ -640,7 +631,7 @@
 }
 .card-block-vertical > .card:not(:first-child),
 .card-block-vertical > .card-block:not(:first-child) {
-  margin-top: calc(var(--bs-border-width) * -1);
+  margin-top: calc(var(--cl-border-width) * -1);
 }
 .card-block-vertical > .card:not(:last-child):not(.dropdown-toggle),
 .card-block-vertical > .card-block:not(:last-child) > .card {

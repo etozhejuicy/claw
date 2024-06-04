@@ -1,12 +1,12 @@
 :root {
-    --bs-progress-height: 0.5rem;
-    --bs-progress-font-size: 0.75rem;
-    --bs-progress-bg: var(--dark-grey);
-    --bs-progress-border-radius: 7.69rem;
-    --bs-progress-box-shadow: var(--bs-box-shadow-inset);
-    --bs-progress-bar-color: var(--black);
-    --bs-progress-bar-bg: var(--white);
-    --bs-progress-bar-transition: width 0.6s ease;
+    --cl-progress-height: 0.5rem;
+    --cl-progress-font-size: 0.75rem;
+    --cl-progress-bg: var(--dark-grey);
+    --cl-progress-border-radius: 7.69rem;
+    --cl-progress-box-shadow: var(--cl-box-shadow-inset);
+    --cl-progress-bar-color: var(--black);
+    --cl-progress-bar-bg: var(--white);
+    --cl-progress-bar-transition: width 0.6s ease;
 }
 
 @keyframes progress-bar-stripes {
@@ -17,11 +17,11 @@
 .progress,
 .progress-stacked {
     display: flex;
-    height: var(--bs-progress-height);
+    height: var(--cl-progress-height);
     overflow: hidden;
-    font-size: var(--bs-progress-font-size);
-    background-color: var(--bs-progress-bg);
-    border-radius: var(--bs-progress-border-radius);
+    font-size: var(--cl-progress-font-size);
+    background-color: var(--cl-progress-bg);
+    border-radius: var(--cl-progress-border-radius);
 }
 
 .progress-bar {
@@ -29,12 +29,12 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    color: var(--bs-progress-bar-color);
+    color: var(--cl-progress-bar-color);
     text-align: center;
     white-space: nowrap;
-    background-color: var(--bs-progress-bar-bg);
-    border-radius: var(--bs-progress-border-radius);
-    transition: var(--bs-progress-bar-transition);
+    background-color: var(--cl-progress-bar-bg);
+    border-radius: var(--cl-progress-border-radius);
+    transition: var(--cl-progress-bar-transition);
 }
 @media (prefers-reduced-motion: reduce) {
     .progress-bar {
@@ -53,7 +53,7 @@
         transparent 75%,
         transparent
     );
-    background-size: var(--bs-progress-height) var(--bs-progress-height);
+    background-size: var(--cl-progress-height) var(--cl-progress-height);
 }
 
 .progress-stacked > .progress {

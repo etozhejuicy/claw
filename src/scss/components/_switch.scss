@@ -1,18 +1,18 @@
 .form-switch {
     padding-left: 2.5rem;
     & .form-check-input {
-        --bs-form-switch-bg: var(--black);
-        --bs-border-color: var(--black);
-        --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
-        --bs-border-width: 0.0625rem;
+        --cl-form-switch-bg: var(--black);
+        --cl-border-color: var(--black);
+        --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+        --cl-border-width: 0.0625rem;
         width: 2.25rem;
         height: 1.25rem;
         margin-left: -2.5rem;
-        background-image: var(--bs-form-switch-image);
+        background-image: var(--cl-form-switch-image);
         background-position: 0.15rem 0.1rem;
         background-size: 0.95rem 0.95rem;
-        background-color: var(--bs-form-switch-bg);
-        border-color: var(--bs-border-color);
+        background-color: var(--cl-form-switch-bg);
+        border-color: var(--cl-border-color);
         border-radius: 2rem;
         transition:
             background-position 0.15s ease-in-out,
@@ -24,9 +24,9 @@
             opacity: 0.95;
         }
         &:checked {
-            --bs-form-switch-bg: var(--black);
-            --bs-border-color: var(--black);
-            --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+            --cl-form-switch-bg: var(--black);
+            --cl-border-color: var(--black);
+            --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
             background-position: 1.05rem 0.1rem;
             background-size: 0.95rem 0.95rem;
         }
@@ -44,46 +44,46 @@
 @each $color, $value in $colors {
     .form-switch-#{$value} {
         & .form-check-input {
-            --bs-form-switch-bg: rgba(var(--#{$value}-rgb), 0.25);
-            --bs-border-color: transparent;
+            --cl-form-switch-bg: rgba(var(--#{$value}-rgb), 0.25);
+            --cl-border-color: transparent;
             @if $value == "primary" {
-                --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%2344fff4'/%3E%3C/svg%3E%0A");
+                --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%2344fff4'/%3E%3C/svg%3E%0A");
             }
             @if $value == "secondary" {
-                --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23444444'/%3E%3C/svg%3E%0A");
+                --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23444444'/%3E%3C/svg%3E%0A");
             }
             @if $value == "success" {
-                --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%233eaf2e'/%3E%3C/svg%3E%0A");
+                --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%233eaf2e'/%3E%3C/svg%3E%0A");
             }
             @if $value == "warning" {
-                --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23fccf19'/%3E%3C/svg%3E%0A");
+                --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23fccf19'/%3E%3C/svg%3E%0A");
             }
             @if $value == "danger" {
-                --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23f24822'/%3E%3C/svg%3E%0A");
+                --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23f24822'/%3E%3C/svg%3E%0A");
             }
             @if $value == "white" {
-                --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+                --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
             }
             &:checked {
-                --bs-form-switch-bg: rgba(var(--#{$value}-rgb), 0.25);
-                --bs-border-color: transparent;
+                --cl-form-switch-bg: rgba(var(--#{$value}-rgb), 0.25);
+                --cl-border-color: transparent;
                 @if $value == "primary" {
-                    --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%2344fff4'/%3E%3C/svg%3E%0A");
+                    --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%2344fff4'/%3E%3C/svg%3E%0A");
                 }
                 @if $value == "secondary" {
-                    --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23444444'/%3E%3C/svg%3E%0A");
+                    --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23444444'/%3E%3C/svg%3E%0A");
                 }
                 @if $value == "success" {
-                    --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%233eaf2e'/%3E%3C/svg%3E%0A");
+                    --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%233eaf2e'/%3E%3C/svg%3E%0A");
                 }
                 @if $value == "warning" {
-                    --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23fccf19'/%3E%3C/svg%3E%0A");
+                    --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23fccf19'/%3E%3C/svg%3E%0A");
                 }
                 @if $value == "danger" {
-                    --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23f24822'/%3E%3C/svg%3E%0A");
+                    --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23f24822'/%3E%3C/svg%3E%0A");
                 }
                 @if $value == "white" {
-                    --bs-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+                    --cl-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
                 }
             }
         }
@@ -92,11 +92,11 @@
     .form-switch-outline {
         &:is(.form-switch-#{$value}) {
             & .form-check-input {
-                --bs-form-switch-bg: transparent;
-                --bs-border-color: var(--#{$value});
+                --cl-form-switch-bg: transparent;
+                --cl-border-color: var(--#{$value});
                 &:checked {
-                    --bs-form-switch-bg: rgba(var(--#{$value}-rgb), 0.25);
-                    --bs-border-color: var(--#{$value});
+                    --cl-form-switch-bg: rgba(var(--#{$value}-rgb), 0.25);
+                    --cl-border-color: var(--#{$value});
                 }
             }
         }

@@ -19,54 +19,57 @@
   }
   &-nav {
     &-link {
-      --bs-btn-padding-x: 0.5rem;
-      --bs-btn-padding-y: 0.5rem;
-      --bs-btn-font-family: Verdana, Geneva, sans-serif;
-      --bs-btn-font-size: 1rem;
-      --bs-btn-font-weight: 400;
-      --bs-btn-line-height: 120%;
-      --bs-btn-color: var(--white);
-      --bs-btn-bg: var(--secondary);
-      --bs-btn-border-width: 0;
-      --bs-btn-border-color: var(--secondary);
-      --bs-btn-border-radius: 1rem;
-      --bs-btn-hover-border-color: var(--secondary);
-      --bs-btn-box-shadow: 0rem 0.0625rem 0.0469rem 0rem
-          rgba(var(--white-rgb), 0.15) inset,
+      --cl-btn-padding-x: 0.5rem;
+      --cl-btn-padding-y: 0.5rem;
+      --cl-btn-font-family: Verdana, Geneva, sans-serif;
+      --cl-btn-font-size: 1rem;
+      --cl-btn-font-weight: 400;
+      --cl-btn-line-height: 120%;
+      --cl-btn-color: var(--white);
+      --cl-btn-bg: var(--secondary);
+      --cl-btn-border-width: 0;
+      --cl-btn-border-color: var(--secondary);
+      --cl-btn-border-radius: 1rem;
+      --cl-btn-hover-border-color: var(--secondary);
+      --cl-btn-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
         0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
-      --bs-btn-disabled-opacity: 0.65;
-      --bs-btn-focus-box-shadow: 0 0 0 0.25rem
-        rgba(var(--bs-btn-focus-shadow-rgb), 0.5);
-      --bs-btn-letter-spacing: -0.02rem;
+      --cl-btn-disabled-opacity: 0.65;
+      --cl-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--cl-btn-focus-shadow-rgb), 0.5);
+      --cl-btn-letter-spacing: -0.02rem;
       display: inline-block;
-      padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
-      font-feature-settings: "clig" off, "liga" off;
-      font-family: var(--bs-btn-font-family);
-      font-size: var(--bs-btn-font-size);
-      font-weight: var(--bs-btn-font-weight);
-      line-height: var(--bs-btn-line-height);
-      color: var(--bs-btn-color);
+      padding: var(--cl-btn-padding-y) var(--cl-btn-padding-x);
+      font-feature-settings:
+        "clig" off,
+        "liga" off;
+      font-family: var(--cl-btn-font-family);
+      font-size: var(--cl-btn-font-size);
+      font-weight: var(--cl-btn-font-weight);
+      line-height: var(--cl-btn-line-height);
+      color: var(--cl-btn-color);
       text-align: center;
       text-decoration: none;
-      letter-spacing: var(--bs-btn-letter-spacing);
+      letter-spacing: var(--cl-btn-letter-spacing);
       vertical-align: middle;
       cursor: pointer;
       -webkit-user-select: none;
       -moz-user-select: none;
       user-select: none;
       text-transform: none;
-      border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
-      border-radius: var(--bs-btn-border-radius);
+      border: var(--cl-btn-border-width) solid var(--cl-btn-border-color);
+      border-radius: var(--cl-btn-border-radius);
       background-color: transparent;
       box-shadow: none;
-      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      transition:
+        color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
       @media (prefers-reduced-motion: reduce) {
         transition: none;
       }
       &.active {
-        background-color: var(--bs-btn-bg);
-        box-shadow: var(--bs-btn-box-shadow);
+        background-color: var(--cl-btn-bg);
+        box-shadow: var(--cl-btn-box-shadow);
       }
     }
   }
@@ -95,50 +98,53 @@
       position: relative;
       z-index: 1;
       & > label {
-        --bs-btn-padding-x: 0.5rem;
-        --bs-btn-padding-y: 0.5rem;
-        --bs-btn-font-family: Verdana, Geneva, sans-serif;
-        --bs-btn-font-size: 1rem;
-        --bs-btn-font-weight: 400;
-        --bs-btn-line-height: 120%;
-        --bs-btn-color: var(--white);
-        --bs-btn-bg: var(--secondary);
-        --bs-btn-border-width: 0;
-        --bs-btn-border-color: var(--secondary);
-        --bs-btn-border-radius: 1rem;
-        --bs-btn-hover-border-color: var(--secondary);
-        --bs-btn-box-shadow: 0rem 0.0625rem 0.0469rem 0rem
-            rgba(var(--white-rgb), 0.15) inset,
+        --cl-btn-padding-x: 0.5rem;
+        --cl-btn-padding-y: 0.5rem;
+        --cl-btn-font-family: Verdana, Geneva, sans-serif;
+        --cl-btn-font-size: 1rem;
+        --cl-btn-font-weight: 400;
+        --cl-btn-line-height: 120%;
+        --cl-btn-color: var(--white);
+        --cl-btn-bg: var(--secondary);
+        --cl-btn-border-width: 0;
+        --cl-btn-border-color: var(--secondary);
+        --cl-btn-border-radius: 1rem;
+        --cl-btn-hover-border-color: var(--secondary);
+        --cl-btn-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
           0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
-        --bs-btn-disabled-opacity: 0.65;
-        --bs-btn-focus-box-shadow: 0 0 0 0.25rem
-          rgba(var(--bs-btn-focus-shadow-rgb), 0.5);
-        --bs-btn-letter-spacing: -0.02rem;
+        --cl-btn-disabled-opacity: 0.65;
+        --cl-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--cl-btn-focus-shadow-rgb), 0.5);
+        --cl-btn-letter-spacing: -0.02rem;
         display: inline-block;
         width: 100%;
         height: 100%;
-        padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
-        font-feature-settings: "clig" off, "liga" off;
-        font-family: var(--bs-btn-font-family);
-        font-size: var(--bs-btn-font-size);
-        font-weight: var(--bs-btn-font-weight);
-        line-height: var(--bs-btn-line-height);
-        color: var(--bs-btn-color);
+        padding: var(--cl-btn-padding-y) var(--cl-btn-padding-x);
+        font-feature-settings:
+          "clig" off,
+          "liga" off;
+        font-family: var(--cl-btn-font-family);
+        font-size: var(--cl-btn-font-size);
+        font-weight: var(--cl-btn-font-weight);
+        line-height: var(--cl-btn-line-height);
+        color: var(--cl-btn-color);
         text-align: center;
         text-decoration: none;
-        letter-spacing: var(--bs-btn-letter-spacing);
+        letter-spacing: var(--cl-btn-letter-spacing);
         vertical-align: middle;
         cursor: pointer;
         -webkit-user-select: none;
         -moz-user-select: none;
         user-select: none;
         text-transform: none;
-        border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+        border: var(--cl-btn-border-width) solid var(--cl-btn-border-color);
         border-radius: calc(var(--tab-block-border-radius) - 0.25rem);
         background-color: transparent;
         box-shadow: none;
-        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        transition:
+          color 0.15s ease-in-out,
+          background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out,
+          box-shadow 0.15s ease-in-out;
         @media (prefers-reduced-motion: reduce) {
           transition: none;
         }
@@ -155,8 +161,8 @@
         &:checked,
         &.checked {
           & ~ label {
-            background-color: var(--bs-btn-bg);
-            box-shadow: var(--bs-btn-box-shadow);
+            background-color: var(--cl-btn-bg);
+            box-shadow: var(--cl-btn-box-shadow);
           }
         }
       }
@@ -193,7 +199,7 @@
 }
 .tab-block > :not(.btn-check:first-child) + .btn,
 .tab-block > .tab-block:not(:first-child) {
-  margin-left: calc(var(--bs-border-width) * -1);
+  margin-left: calc(var(--cl-border-width) * -1);
 }
 .tab-block > .btn:not(:last-child):not(.dropdown-toggle),
 .tab-block > .btn.dropdown-toggle-split:first-child,
@@ -231,7 +237,7 @@
 }
 .tab-block-vertical > .btn:not(:first-child),
 .tab-block-vertical > .tab-block:not(:first-child) {
-  margin-top: calc(var(--bs-border-width) * -1);
+  margin-top: calc(var(--cl-border-width) * -1);
 }
 .tab-block-vertical > .btn:not(:last-child):not(.dropdown-toggle),
 .tab-block-vertical > .tab-block:not(:last-child) > .btn {

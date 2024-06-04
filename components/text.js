@@ -1,9 +1,9 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#text").innerHTML = `
+    document.querySelector("#text").innerHTML = `
     <div class="row g-5">
     <!-- Заголовки -->
     <div class="col-12">
-        <div class="card">
+        <div class="card shadow-none">
             <div class="card-body">
                 <div class="row g-3">
                     <div class="col-12">
@@ -42,7 +42,7 @@ window.addEventListener("DOMContentLoaded", () => {
     
     <!-- Обычный текст -->
     <div class="col-12">
-        <div class="card">
+        <div class="card shadow-none">
             <div class="card-header">
                 <h5 class="h-5">
                     Обычный текст (параграф)

@@ -3,7 +3,7 @@
     width: 100%;
     &::before {
         display: block;
-        padding-top: var(--bs-aspect-ratio);
+        padding-top: var(--cl-aspect-ratio);
         content: "";
     }
     & > * {
@@ -14,15 +14,15 @@
         height: 100%;
     }
     &-1x1 {
-        --bs-aspect-ratio: 100%;
+        --cl-aspect-ratio: 100%;
     }
     &-4x3 {
-        --bs-aspect-ratio: 75%;
+        --cl-aspect-ratio: 75%;
     }
     &-16x9 {
-        --bs-aspect-ratio: 56.25%;
+        --cl-aspect-ratio: 56.25%;
     }
     &-21x9 {
-        --bs-aspect-ratio: 42.8571428571%;
+        --cl-aspect-ratio: 42.8571428571%;
     }
 }

@@ -1,6 +1,6 @@
 .isSafari {
     & .btn {
-        padding: calc(var(--bs-btn-padding-y) + 0.0625rem) var(--bs-btn-padding-x) var(--bs-btn-padding-y);
+        padding: calc(var(--cl-btn-padding-y) + 0.0625rem) var(--cl-btn-padding-x) var(--cl-btn-padding-y);
     }
     & .card-team-description {
         @media (min-width: 1200px) {

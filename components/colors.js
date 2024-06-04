@@ -1,9 +1,9 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#colors").innerHTML = `
+    document.querySelector("#colors").innerHTML = `
 <!-- Палитра цветов -->
 <div class="row g-5">
     <div class="col-12">
-        <div class="card">
+        <div class="card shadow-none">
             <div class="card-body">
                 <div class="row g-3">
                     <div class="col-12">

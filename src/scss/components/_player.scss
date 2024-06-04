@@ -18,16 +18,16 @@
 }
 
 .player {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
+    --cl-gutter-x: 1.5rem;
+    --cl-gutter-y: 0;
     position: fixed;
     top: auto;
     right: 0;
     left: 0;
     bottom: var(--player-pos-bottom);
     display: block;
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--cl-gutter-x) * 0.5);
+    padding-left: calc(var(--cl-gutter-x) * 0.5);
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
@@ -37,7 +37,7 @@
     transform: translate(0, 0);
     transition: all 0.6s;
     @media (min-width: 992px) {
-        width: calc(100% - var(--bs-gutter-x));
+        width: calc(100% - var(--cl-gutter-x));
         max-width: calc(48.375rem + 1.5rem);
     }
     &:not(.show) {
@@ -59,16 +59,16 @@
     }
     &-primary {
         & > .row {
-            --bs-gutter-x: 1rem;
-            --bs-gutter-y: 1rem;
+            --cl-gutter-x: 1rem;
+            --cl-gutter-y: 1rem;
             align-items: center;
         }
     }
     &-context {
         line-height: 100%;
         & > .row {
-            --bs-gutter-x: 0.25rem;
-            --bs-gutter-y: 0.25rem;
+            --cl-gutter-x: 0.25rem;
+            --cl-gutter-y: 0.25rem;
         }
     }
     &-progressbar {
