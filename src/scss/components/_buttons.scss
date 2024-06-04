@@ -113,7 +113,7 @@
     --cl-border-radius: 50rem;
   }
   &-icon {
-    --cl-btn-size: 1rem;
+    --cl-btn-size: var(--cl-btn-font-size);
     --cl-btn-gap: 0.5rem;
     --cl-btn-padding-x: 1rem;
     --cl-btn-padding-y: 1rem;
@@ -264,11 +264,31 @@
     //   --cl-btn-active-bg: #{darken($color, 5%)};
     //   --cl-btn-active-border-color: #{darken($color, 5%)};
     // }
+    @if $value == "white" {
+      --cl-btn-color: #{darken($color, 50%)};
+      --cl-btn-border-color: #{darken($color, 5%)};
+      --cl-btn-hover-bg: #{darken($color, 2.5%)};
+      --cl-btn-hover-border-color: #{darken($color, 2.5%)};
+      --cl-btn-hover-color: #{darken($color, 75%)};
+      --cl-btn-active-color: #{darken($color, 75%)};
+      --cl-btn-active-bg: #{darken($color, 10%)};
+      --cl-btn-active-border-color: #{darken($color, 10%)};
+    }
   }
   .btn-colored {
     &:is(.btn-#{$value}),
     &:is(.btn-outline-#{$value}) {
       --cl-btn-color: #{$color};
+      @if $value == "white" {
+        --cl-btn-color: #{darken($color, 50%)};
+        --cl-btn-border-color: #{darken($color, 5%)};
+        --cl-btn-hover-bg: #{darken($color, 2.5%)};
+        --cl-btn-hover-border-color: #{darken($color, 2.5%)};
+        --cl-btn-hover-color: #{darken($color, 75%)};
+        --cl-btn-active-color: #{darken($color, 75%)};
+        --cl-btn-active-bg: #{darken($color, 10%)};
+        --cl-btn-active-border-color: #{darken($color, 10%)};
+      }
     }
   }
   .btn-dimmed {
@@ -278,6 +298,16 @@
     &:is(.btn-outline-#{$value}) {
       --cl-btn-bg: rgba(var(--#{$value}-rgb), 0.1);
       --cl-btn-hover-bg: rgba(var(--#{$value}-rgb), 1);
+      @if $value == "white" {
+        --cl-btn-color: #{darken($color, 50%)};
+        --cl-btn-border-color: #{darken($color, 5%)};
+        --cl-btn-hover-bg: #{darken($color, 2.5%)};
+        --cl-btn-hover-border-color: #{darken($color, 2.5%)};
+        --cl-btn-hover-color: #{darken($color, 75%)};
+        --cl-btn-active-color: #{darken($color, 75%)};
+        --cl-btn-active-bg: #{darken($color, 10%)};
+        --cl-btn-active-border-color: #{darken($color, 10%)};
+      }
     }
   }
   .btn-interesting {
