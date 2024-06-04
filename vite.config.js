@@ -1,5 +1,12 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
 export default defineConfig({
-    refresh: true,
+  build: {
+    rollupOptions: {
+      input: {
+        index: "/index.html",
+      },
+    },
+  },
+  refresh: true,
 });
