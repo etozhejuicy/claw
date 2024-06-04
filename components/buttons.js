@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#buttons").innerHTML = `
+  document.querySelector("#buttons").innerHTML = `
     <div class="row g-5">
     <!-- Кнопки обычные -->
     <div class="col-12">
