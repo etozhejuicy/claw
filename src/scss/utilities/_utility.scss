@@ -1,3 +1,4 @@
+@import "./functions";
 @import "./colors";
 @import "./align";
 @import "./border";
@@ -20,8 +21,3 @@
 @import "./text";
 @import "./visually";
 @import "./childrens-no-margin";
-
-:root {
-    --header-height-sm: 6.1312rem;
-    --header-height-md: 6.5475rem;
-}

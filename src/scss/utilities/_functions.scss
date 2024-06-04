@@ -1,6 +1,15 @@
 @use "sass:math";
 @import "./_variables.scss";
 
+// sum numbers
+@function sum($numbers...) {
+    $sum: 0;
+    @each $number in $numbers {
+        $sum: $sum + $number;
+    }
+    @return $sum;
+}
+
 // Breakpoint
 @mixin breakpoint-xs {
     @media screen and (max-width: #{$breakpoint-xs}) {

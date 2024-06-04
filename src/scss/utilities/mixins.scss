@@ -42,7 +42,7 @@
         --card-body-padding-x: 0.75rem;
         --card-box-shadow: none !important;
         --card-border-radius: 0.25rem;
-        --cl-border-width: 0.0625rem;
+        --bs-border-width: 0.0625rem;
         font-size: calc(2.875rem * var(--percent));
         line-height: 100%;
         font-weight: var(--card-body-font-weight);
@@ -51,9 +51,9 @@
         box-shadow: var(--card-box-shadow) !important;
         padding: calc(var(--card-body-padding-y) * var(--percent)) calc(var(--card-body-padding-x) * var(--percent)) !important;
         border-top: 0;
-        border-left: calc((var(--cl-border-width) * var(--percent)) - 0.0125rem);
-        border-right: calc((var(--cl-border-width) * var(--percent)) - 0.0125rem);
-        border-bottom: calc(var(--cl-border-width) * var(--percent));
+        border-left: calc((var(--bs-border-width) * var(--percent)) - 0.0125rem);
+        border-right: calc((var(--bs-border-width) * var(--percent)) - 0.0125rem);
+        border-bottom: calc(var(--bs-border-width) * var(--percent));
         border-style: solid;
         border-color: rgba(0, 0, 0, 0.33);
         &-label {

@@ -288,6 +288,15 @@
     }
 }
 
+// autosize fix
+[data-autosize] {
+    @for $rows from 1 to 10 {
+        &[rows*="#{$rows}"] {
+            min-height: calc((var(--form-line-height) * $rows) + (var(--padding-input-y) * 2));
+        }
+    }
+}
+
 textarea {
     resize: none;
 }
