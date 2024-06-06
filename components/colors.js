@@ -18,9 +18,9 @@ window.addEventListener("DOMContentLoaded", () => {
                         <p>
                             Цветовые решения базируются на методологии БЭМ и представляют структуру в селекторах:
                         </p>
-                        <blockquote class="quote">
-                            <div class="quote-content">
-                                <div class="quote-body text-danger">.bg-{color}-{level}</div>
+                        <blockquote class="blockquote">
+                            <div class="blockquote-content">
+                                <div class="blockquote-body text-warning">.bg-{color}-{level}</div>
                             </div>
                         </blockquote>
                         <p>

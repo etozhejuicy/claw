@@ -23,10 +23,10 @@
   --secondary-rgb: 157, 157, 157;
   --success: #3eaf2e;
   --success-rgb: 62, 175, 46;
-  --danger: #f24822;
-  --danger-rgb: 242, 72, 33;
-  --warning: #fccf19;
-  --warning-rgb: 252, 207, 25;
+  --warning: #f24822;
+  --warning-rgb: 242, 72, 33;
+  --danger: #fccf19;
+  --danger-rgb: 252, 207, 25;
   --orange: #ffa629;
   --orange-rgb: 255, 166, 41;
   --blue: #02a6e6;
@@ -40,7 +40,7 @@
   --red: #ec7a7a;
   --red-rgb: 236, 122, 122;
 
-  --body-bg-color: var(--grey-rgb);
+  --body-bg-color: var(--white-rgb);
   --body-text-color: var(--black-rgb);
 }
 
@@ -57,8 +57,8 @@ $cyan: #44fff4 !default;
 $primary: #5144dd !default;
 $secondary: #aaaaaa !default;
 $success: #3eaf2e !default;
-$danger: #f24822 !default;
-$warning: #fccf19 !default;
+$warning: #f24822 !default;
+$danger: #fccf19 !default;
 $orange: #ffa629 !default;
 $purple: #9747ff !default;
 $blue: #02a6e6 !default;

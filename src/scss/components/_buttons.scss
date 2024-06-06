@@ -10,16 +10,16 @@
   --cl-btn-border-color: transparent;
   --cl-border-radius: 1rem;
   --cl-btn-hover-border-color: transparent;
-  --cl-btn-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
+  --cl-btn-box-shadow: 0rem 0.0625rem 0.0469rem 0rem
+      rgba(var(--white-rgb), 0.15) inset,
     0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
   --cl-btn-disabled-opacity: 0.65;
-  --cl-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--cl-btn-focus-shadow-rgb), 0.5);
+  --cl-btn-focus-box-shadow: 0 0 0 0.25rem
+    rgba(var(--cl-btn-focus-shadow-rgb), 0.5);
   --cl-btn-letter-spacing: -0.02rem;
   display: inline-block;
   padding: var(--cl-btn-padding-y) var(--cl-btn-padding-x);
-  font-feature-settings:
-    "clig" off,
-    "liga" off;
+  font-feature-settings: "clig" off, "liga" off;
   font-family: var(--cl-btn-font-family);
   font-size: var(--cl-btn-font-size);
   font-weight: var(--cl-btn-font-weight);
@@ -38,11 +38,8 @@
   border-radius: var(--cl-border-radius);
   background-color: var(--cl-btn-bg);
   box-shadow: var(--cl-btn-box-shadow);
-  transition:
-    color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   @media (prefers-reduced-motion: reduce) {
     transition: none;
   }
@@ -105,10 +102,12 @@
     cursor: not-allowed;
   }
   &-sm {
-    padding: calc(var(--cl-btn-padding-y) - 0.25rem) calc(var(--cl-btn-padding-x) - 0.25rem);
+    padding: calc(var(--cl-btn-padding-y) - 0.25rem)
+      calc(var(--cl-btn-padding-x) - 0.25rem);
   }
   &-lg {
-    padding: calc(var(--cl-btn-padding-y) + 0.56rem) calc(var(--cl-btn-padding-x) + 0.25rem);
+    padding: calc(var(--cl-btn-padding-y) + 0.56rem)
+      calc(var(--cl-btn-padding-x) + 0.25rem);
   }
   &-rounded {
     --cl-border-radius: 50rem;
@@ -193,7 +192,7 @@
     --cl-btn-disabled-color: rgba(var(--dark-rgb), 0.3);
     --cl-btn-disabled-bg: var(--grey);
     --cl-btn-disabled-border-color: var(--grey);
-    @if $value == "warning" {
+    @if $value == "danger" {
       --cl-btn-color: #{darken($color, 90%)};
       --cl-btn-hover-color: #{darken($color, 50%)};
       --cl-btn-active-color: #{darken($color, 90%)};
@@ -210,7 +209,12 @@
     filter: drop-shadow(0rem 0.125rem 1rem rgba(var(--#{$value}-rgb), 0.5));
   }
   .btn-voluminous {
-    --cl-btn-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
+    --cl-btn-box-shadow: 0rem
+        0.0625rem
+        0.0469rem
+        0rem
+        rgba(var(--white-rgb), 0.15)
+        inset,
       0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
   }
   .btn-outline-#{$value} {
@@ -280,13 +284,27 @@
       & .btn-progress-round {
         mix-blend-mode: hue;
         border-radius: inherit;
-        background: radial-gradient(closest-side, transparent 79%, transparent 80% 100%),
-          conic-gradient(rgba(var(--#{$value}-rgb), 0.75) calc(var(--finish-value) * 1%), transparent 0);
+        background: radial-gradient(
+            closest-side,
+            transparent 79%,
+            transparent 80% 100%
+          ),
+          conic-gradient(
+            rgba(var(--#{$value}-rgb), 0.75) calc(var(--finish-value) * 1%),
+            transparent 0
+          );
       }
       @if $value == "secondary" {
         & .btn-progress-round {
-          background: radial-gradient(closest-side, transparent 79%, transparent 80% 100%),
-            conic-gradient(lighten($color, 15) calc(var(--finish-value) * 1%), transparent 0);
+          background: radial-gradient(
+              closest-side,
+              transparent 79%,
+              transparent 80% 100%
+            ),
+            conic-gradient(
+              lighten($color, 15) calc(var(--finish-value) * 1%),
+              transparent 0
+            );
         }
       }
     }
@@ -318,7 +336,7 @@
       --cl-btn-hover-border-color: #{lighten($color, 50%)};
       --cl-btn-active-border-color: #{lighten($color, 50%)};
     }
-    @if $value == "warning" {
+    @if $value == "danger" {
       --cl-btn-active-color: var(--black);
     }
     @if $value == "white" {
