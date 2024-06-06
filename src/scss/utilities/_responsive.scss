@@ -1,0 +1,22 @@
+// responsive config
+:root {
+  font-size: calc(100vw / 375 * 16);
+  @media (min-width: 768px) {
+    font-size: calc(100vw / 768 * 16);
+  }
+  @media (min-width: 992px) {
+    font-size: calc(100vw / 992 * 16);
+  }
+  @media (min-width: 1200px) {
+    font-size: calc(100vw / 1440 * 16);
+  }
+  @media (min-width: 1440px) {
+    font-size: calc(100vw / 1440 * 16);
+  }
+  @media (min-width: 1600px) {
+    font-size: calc(100vw / 1440 * 16);
+  }
+  @media (min-width: 1920px) {
+    font-size: calc(100vw / 1600 * 16);
+  }
+}
