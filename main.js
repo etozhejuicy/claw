@@ -1,8 +1,8 @@
 // components
-import "/components/start";
-import "/components/colors";
-import "/components/text";
-import "/components/buttons";
+import "./src/js/site/components/start";
+import "./src/js/site/components/colors";
+import "./src/js/site/components/text";
+import "./src/js/site/components/buttons";
 
 document.querySelector("#app").innerHTML = `
 <main class="content">
