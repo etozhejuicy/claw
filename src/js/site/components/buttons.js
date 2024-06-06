@@ -281,7 +281,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     <div class="col-auto">
                         <button type="button" class="btn btn-icon btn-danger rounded-circle">
                             <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <use xlink:href="sprite.svg#play"></use>
+                                <use xlink:href="./sprite.svg#play"></use>
                             </svg>
                         </button>
                     </div>
@@ -338,7 +338,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                 </div>
                                 <div class="code-body">&lt;button type="button" class="btn btn-primary btn-dimmed btn-colored btn-outline-primary"&gt;
                                         &lt;svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"&gt;
-                                            &lt;use xlink:href="sprite.svg#play">&lt;/use&gt;
+                                            &lt;use xlink:href="./sprite.svg#play">&lt;/use&gt;
                                         &lt;/svg&gt;
                                     &lt;/button&gt;
                                 </div>
@@ -362,7 +362,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     <div class="col-auto">
                         <button type="button" class="btn btn-icon btn-primary">
                             <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <use xlink:href="sprite.svg#play"></use>
+                                <use xlink:href="./sprite.svg#play"></use>
                             </svg>
                             <span class="btn-icon-text">Кнопка 1</span>
                         </button>
@@ -375,7 +375,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                 </div>
                                 <div class="code-body">&lt;button type="button" class="btn btn-icon btn-primary">
                                         &lt;svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"&gt;
-                                            &lt;use xlink:href="sprite.svg#play"&gt;&lt;/use&gt;
+                                            &lt;use xlink:href="./sprite.svg#play"&gt;&lt;/use&gt;
                                             &lt;/svg&gt;
                                         &lt;span class="btn-icon-text">Кнопка 1&lt;/span&gt;
                                     &lt;/button&gt;
@@ -387,7 +387,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         <button type="button" class="btn btn-icon btn-secondary">
                             <span class="btn-icon-text">Кнопка 2</span>
                             <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <use xlink:href="sprite.svg#play"></use>
+                                <use xlink:href="./sprite.svg#play"></use>
                             </svg>
                         </button>
                     </div>
@@ -400,7 +400,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                 <div class="code-body">&lt;button type="button" class="btn btn-icon btn-primary">
                                         &lt;span class="btn-icon-text">Кнопка 2&lt;/span&gt;
                                         &lt;svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"&gt;
-                                            &lt;use xlink:href="sprite.svg#play"&gt;&lt;/use&gt;
+                                            &lt;use xlink:href="./sprite.svg#play"&gt;&lt;/use&gt;
                                             &lt;/svg&gt;
                                     &lt;/button&gt;
                                 </div>
@@ -410,11 +410,11 @@ window.addEventListener("DOMContentLoaded", () => {
                     <div class="col-auto">
                         <button type="button" class="btn btn-icon btn-danger">
                             <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <use xlink:href="sprite.svg#play"></use>
+                                <use xlink:href="./sprite.svg#play"></use>
                             </svg>
                             <span class="btn-icon-text">Кнопка 3</span>
                             <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <use xlink:href="sprite.svg#play"></use>
+                                <use xlink:href="./sprite.svg#play"></use>
                             </svg>
                         </button>
                     </div>
@@ -426,11 +426,11 @@ window.addEventListener("DOMContentLoaded", () => {
                                 </div>
                                 <div class="code-body">&lt;button type="button" class="btn btn-icon btn-primary">
                                         &lt;svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"&gt;
-                                        &lt;use xlink:href="sprite.svg#play"&gt;&lt;/use&gt;
+                                        &lt;use xlink:href="./sprite.svg#play"&gt;&lt;/use&gt;
                                         &lt;/svg&gt;
                                         &lt;span class="btn-icon-text">Кнопка 3&lt;/span&gt;
                                         &lt;svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"&gt;
-                                            &lt;use xlink:href="sprite.svg#play"&gt;&lt;/use&gt;
+                                            &lt;use xlink:href="./sprite.svg#play"&gt;&lt;/use&gt;
                                             &lt;/svg&gt;
                                     &lt;/button&gt;
                                 </div>
