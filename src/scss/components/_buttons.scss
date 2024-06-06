@@ -10,16 +10,16 @@
   --cl-btn-border-color: transparent;
   --cl-border-radius: 1rem;
   --cl-btn-hover-border-color: transparent;
-  --cl-btn-box-shadow: 0rem 0.0625rem 0.0469rem 0rem
-      rgba(var(--white-rgb), 0.15) inset,
+  --cl-btn-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
     0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
   --cl-btn-disabled-opacity: 0.65;
-  --cl-btn-focus-box-shadow: 0 0 0 0.25rem
-    rgba(var(--cl-btn-focus-shadow-rgb), 0.5);
+  --cl-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--cl-btn-focus-shadow-rgb), 0.5);
   --cl-btn-letter-spacing: -0.02rem;
   display: inline-block;
   padding: var(--cl-btn-padding-y) var(--cl-btn-padding-x);
-  font-feature-settings: "clig" off, "liga" off;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
   font-family: var(--cl-btn-font-family);
   font-size: var(--cl-btn-font-size);
   font-weight: var(--cl-btn-font-weight);
@@ -38,8 +38,11 @@
   border-radius: var(--cl-border-radius);
   background-color: var(--cl-btn-bg);
   box-shadow: var(--cl-btn-box-shadow);
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   @media (prefers-reduced-motion: reduce) {
     transition: none;
   }
@@ -102,12 +105,10 @@
     cursor: not-allowed;
   }
   &-sm {
-    padding: calc(var(--cl-btn-padding-y) - 0.25rem)
-      calc(var(--cl-btn-padding-x) - 0.25rem);
+    padding: calc(var(--cl-btn-padding-y) - 0.25rem) calc(var(--cl-btn-padding-x) - 0.25rem);
   }
   &-lg {
-    padding: calc(var(--cl-btn-padding-y) + 0.56rem)
-      calc(var(--cl-btn-padding-x) + 0.25rem);
+    padding: calc(var(--cl-btn-padding-y) + 0.56rem) calc(var(--cl-btn-padding-x) + 0.25rem);
   }
   &-rounded {
     --cl-border-radius: 50rem;
@@ -175,35 +176,13 @@
   }
 }
 
-.btn-player {
-  --cl-btn-font-size: 100%;
-  --cl-btn-font-size: 1rem;
-  --cl-btn-font-weight: 700;
-  --cl-btn-bg: unset;
-  --cl-btn-color: var(--grey);
-  --cl-btn-box-shadow: unset;
-  --cl-btn-padding-x: 0.25rem;
-  --cl-btn-padding-y: 0.25rem;
-  --cl-btn-size: 1.5rem;
-  position: relative;
-  z-index: 1;
-  width: var(--cl-btn-size);
-  height: var(--cl-btn-size);
-  & > * {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
 // exp
 @each $color, $value in $colors {
   .btn-#{$value} {
     --cl-btn-color: #{lighten($color, 100%)};
     --cl-btn-bg: var(--#{$value});
     --cl-btn-border-color: var(--#{$value});
-    --cl-btn-hover-color: var(--white);
+    --cl-btn-hover-color: #{lighten($color, 100%)};
     --cl-btn-hover-bg: #{lighten($color, 15%)};
     --cl-btn-hover-border-color: #{lighten($color, 15%)};
     --cl-btn-focus-shadow-rgb: rgba(var(--#{$value}-rgb), 1);
@@ -231,12 +210,7 @@
     filter: drop-shadow(0rem 0.125rem 1rem rgba(var(--#{$value}-rgb), 0.5));
   }
   .btn-voluminous {
-    --cl-btn-box-shadow: 0rem
-        0.0625rem
-        0.0469rem
-        0rem
-        rgba(var(--white-rgb), 0.15)
-        inset,
+    --cl-btn-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
       0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
   }
   .btn-outline-#{$value} {
@@ -254,16 +228,6 @@
     --cl-btn-focus-shadow-rgb: unset;
     --cl-btn-active-bg: #{darken($color, 15%)};
     --cl-btn-active-border-color: #{darken($color, 15%)};
-    // @if $value == "primary" {
-    //   --cl-btn-active-bg: #{darken($color, 25%)};
-    //   --cl-btn-active-border-color: #{darken($color, 25%)};
-    // }
-    // @if $value == "secondary" {
-    //   --cl-btn-color: #{darken($color, 50%)};
-    //   --cl-btn-border-color: #{darken($color, 10%)};
-    //   --cl-btn-active-bg: #{darken($color, 5%)};
-    //   --cl-btn-active-border-color: #{darken($color, 5%)};
-    // }
     @if $value == "white" {
       --cl-btn-color: #{darken($color, 50%)};
       --cl-btn-border-color: #{darken($color, 5%)};
@@ -310,45 +274,19 @@
       }
     }
   }
-  .btn-interesting {
-    &:not(.active) {
-      --cl-btn-color: #{lighten($secondary, 50%)} !important;
-      --cl-btn-bg: rgba(var(--secondary-rgb), 0.45) !important;
-      --cl-btn-border-color: rgba(var(--secondary-rgb), 0.45) !important;
-      --cl-btn-hover-color: #{lighten($secondary, 50%)} !important;
-      --cl-btn-hover-bg: rgba(var(--secondary-rgb), 0.45) !important;
-      --cl-btn-hover-border-color: rgba(var(--secondary-rgb), 0.8) !important;
-      --cl-btn-box-shadow: unset !important;
-      --cl-btn-focus-shadow-rgb: unset !important;
-    }
-  }
   .btn-progress {
     &:is(.btn-#{$value}),
     &:is(.btn-outline-#{$value}) {
       & .btn-progress-round {
         mix-blend-mode: hue;
         border-radius: inherit;
-        background: radial-gradient(
-            closest-side,
-            transparent 79%,
-            transparent 80% 100%
-          ),
-          conic-gradient(
-            rgba(var(--#{$value}-rgb), 0.75) calc(var(--finish-value) * 1%),
-            transparent 0
-          );
+        background: radial-gradient(closest-side, transparent 79%, transparent 80% 100%),
+          conic-gradient(rgba(var(--#{$value}-rgb), 0.75) calc(var(--finish-value) * 1%), transparent 0);
       }
       @if $value == "secondary" {
         & .btn-progress-round {
-          background: radial-gradient(
-              closest-side,
-              transparent 79%,
-              transparent 80% 100%
-            ),
-            conic-gradient(
-              lighten($color, 15) calc(var(--finish-value) * 1%),
-              transparent 0
-            );
+          background: radial-gradient(closest-side, transparent 79%, transparent 80% 100%),
+            conic-gradient(lighten($color, 15) calc(var(--finish-value) * 1%), transparent 0);
         }
       }
     }

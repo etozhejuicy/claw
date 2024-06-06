@@ -1,0 +1,41 @@
+:root {
+    --quote-content-border-radius: 0.5rem;
+    --quote-title-font-weight: 700;
+    --quote-title-color: var(--white);
+    --quote-title-background-color: var(--primary-rgb);
+    --quote-title-background-opacity: 1;
+    --quote-title-padding: 0.5rem;
+    --quote-body-padding: 0.5rem;
+    --quote-body-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --quote-body-font-weight: 500;
+    --quote-body-font-size: 0.875rem;
+    --quote-body-font-style: italic;
+    --quote-body-background-color: var(--grey-rgb);
+    --quote-body-background-opacity: 0.5;
+    --quote-body-white-space: pre-line;
+}
+
+.quote,
+blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    &-content {
+        border-radius: var(--quote-content-border-radius);
+        overflow: hidden;
+    }
+    &-title {
+        font-weight: var(--quote-title-font-weight);
+        background-color: rgba(var(--quote-title-background-color), var(--quote-title-background-opacity));
+        color: var(--quote-title-color);
+        padding: var(--quote-title-padding);
+    }
+    &-body {
+        background-color: rgba(var(--quote-body-background-color), var(--quote-body-background-opacity));
+        font-family: var(--quote-body-font-family);
+        font-weight: var(--quote-body-font-weight);
+        font-size: var(--quote-body-font-size);
+        font-style: var(--quote-body-font-style);
+        padding: var(--quote-body-padding);
+        white-space: var(--quote-body-white-space);
+    }
+}

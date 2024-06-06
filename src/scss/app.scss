@@ -46,6 +46,7 @@
 @import "./components/map";
 @import "./components/timer";
 @import "./components/swiper";
+@import "./components/quote";
 
 // responsive design
 :root {
@@ -85,9 +86,21 @@ body {
   position: relative;
   z-index: 1;
   height: 100%;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -98,11 +111,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   &:is(.body-rating) {
-    background-image: radial-gradient(
-        87.08% 87.08% at 0% 0%,
-        rgba(149, 255, 147, 0.53) 0%,
-        rgba(2, 254, 245, 0) 100%
-      ),
+    background-image: radial-gradient(87.08% 87.08% at 0% 0%, rgba(149, 255, 147, 0.53) 0%, rgba(2, 254, 245, 0) 100%),
       linear-gradient(180deg, #ff8125 0%, rgba(19, 141, 254, 0) 75%);
     background-size: cover;
     background-position: top center;
@@ -127,8 +136,7 @@ body {
   flex-direction: column;
   width: 100%;
   flex: 1;
-  padding: calc(var(--header-height) + 1.5rem) 0 calc(var(--footer-height) * 2)
-    0;
+  padding: calc(var(--header-height) + 1.5rem) 0 calc(var(--footer-height) * 2) 0;
 }
 
 .section {

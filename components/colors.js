@@ -12,6 +12,22 @@ window.addEventListener("DOMContentLoaded", () => {
                         </h5>
                     </div>
                     <div class="col-12">
+                        <p class="m-0">
+                            <b>Клешня</b> содержит богатую цветовую палитру, которая задает тон нашим стилям и компонентам. Это позволяет проводить более полную и детальную настройку для любого проекта.
+                        </p>
+                        <p>
+                            Цветовые решения базируются на методологии БЭМ и представляют структуру в селекторах:
+                        </p>
+                        <blockquote class="quote">
+                            <div class="quote-content">
+                                <div class="quote-body">.bg-{color}-{level}</div>
+                            </div>
+                        </blockquote>
+                        <p>
+                            Пример основной палитры цветов представлен ниже:
+                        </p>
+                    </div>
+                    <div class="col-12">
                         <div class="d-flex flex-row">
                             <div style="display:block;width:3rem;height:3rem;" class="bg-primary"></div>
                             <div style="display:block;width:3rem;height:3rem;" class="bg-secondary"></div>
