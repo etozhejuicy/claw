@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#start").innerHTML = `
+    document.querySelector("#start").innerHTML = `
     <div class="row g-5">
         <div class="col-12">
             <div class="card shadow-none">
@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         <div class="col-12">
                             <code class="code">
                                 <div class="code-content">
-                                    <div class="code-body">$ npm i claw-css</div>
+                                    <div class="code-body">npm i claw-css</div>
                                 </div>
                             </code>
                         </div>
@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     <div class="code-title">
                                         Пример использования
                                     </div>
-                                    <div class="code-body">Дока в процессе написания</div>
+                                    <div class="code-body"><div id="target-div"></div></div>
                                 </div>
                             </code>
                         </div>

@@ -6,36 +6,28 @@
   --code-title-background-opacity: 1;
   --code-title-padding: 0.5rem;
   --code-body-padding: 0.5rem;
-  --code-body-font-family: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  --code-body-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --code-body-font-weight: 500;
   --code-body-font-size: 0.875rem;
   --code-body-background-color: var(--grey-rgb);
   --code-body-background-opacity: 0.5;
-  --code-body-white-space: pre-line;
+  --code-body-white-space: unset;
 }
 
 .code,
 code {
-  font-size: var(--code-body-font-size);
   &-content {
     border-radius: var(--code-content-border-radius);
     overflow: hidden;
   }
   &-title {
     font-weight: var(--code-title-font-weight);
-    background-color: rgba(
-      var(--code-title-background-color),
-      var(--code-title-background-opacity)
-    );
+    background-color: rgba(var(--code-title-background-color), var(--code-title-background-opacity));
     color: var(--code-title-color);
     padding: var(--code-title-padding);
   }
   &-body {
-    background-color: rgba(
-      var(--code-body-background-color),
-      var(--code-body-background-opacity)
-    );
+    background-color: rgba(var(--code-body-background-color), var(--code-body-background-opacity));
     font-family: var(--code-body-font-family);
     font-weight: var(--code-body-font-weight);
     font-size: var(--code-body-font-size);

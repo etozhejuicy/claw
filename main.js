@@ -1,3 +1,7 @@
+// modules
+import "./src/js/modules/jquery.js";
+import "./src/js/modules/code.js";
+
 // components
 import "./src/js/site/components/start.js";
 import "./src/js/site/components/colors.js";
