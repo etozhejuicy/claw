@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         <div class="col">
                             <nav class="nav nav-horizontal">
                                 <div class="nav-item">
-                                    <a href="/installation.html" class="nav-link">
+                                    <a href="./installation.html" class="nav-link">
                                         <div class="nav-link-inner">
                                             <div class="nav-link-text">
                                                 Установка
@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     </a>
                                 </div>
                                 <div class="nav-item">
-                                    <a href="/components.html" class="nav-link">
+                                    <a href="./components.html" class="nav-link">
                                         <div class="nav-link-inner">
                                             <div class="nav-link-text">
                                                 Компоненты
