@@ -7,9 +7,9 @@ export default defineConfig({
         index: "/index.html",
       },
       output: {
-        outDir: '.',
+        outDir: './',
         publicDir: 'public',
-        assetsDir: './assets',
+        assetsDir: 'assets',
       }
     },
   },
