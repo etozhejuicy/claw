@@ -9,7 +9,7 @@ export default defineConfig({
       output: {
         outDir: '.',
         publicDir: 'public',
-        assetsDir: 'assets',
+        assetsDir: './assets',
       }
     },
   },
