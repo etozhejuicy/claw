@@ -5,8 +5,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: "/index.html",
-        js: "/app.js",
-        css: "/src/scss/app.scss",
       },
     },
   },
