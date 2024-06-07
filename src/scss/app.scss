@@ -51,6 +51,10 @@
 @import "./components/swiper";
 @import "./components/quote";
 
+// site
+@import "./site/layouts/header";
+@import "./site/layouts/nav";
+
 *,
 *::before,
 *::after {
@@ -110,7 +114,7 @@ body {
   flex-direction: column;
   width: 100%;
   flex: 1;
-  padding: 2rem 0;
+  padding: calc(var(--header-height) + (var(--header-padding-y) * 2)) 0;
 }
 
 .section {
