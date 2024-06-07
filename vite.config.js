@@ -1,12 +1,16 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  publicDir: 'public',
   build: {
     rollupOptions: {
       input: {
         index: "/index.html",
       },
+      output: {
+        outDir: '.',
+        publicDir: 'public',
+        assetsDir: 'assets',
+      }
     },
   },
   refresh: true,
