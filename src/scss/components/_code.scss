@@ -16,6 +16,8 @@
 
 .code,
 code {
+  position: relative;
+  overflow: auto;
   &-content {
     border-radius: var(--code-content-border-radius);
     overflow: hidden;

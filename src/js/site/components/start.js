@@ -16,24 +16,48 @@ window.addEventListener("DOMContentLoaded", () => {
                             </p>
                         </div>
                         <div class="col-12">
-                            <code class="code">
+                            <code class="code" data-clipboard-target="#npm-i">
                                 <div class="code-content">
-                                    <div class="code-body">npm i claw-css</div>
+                                    <div class="code-body" id="npm-i">npm i claw-css</div>
+                                </div>
+                            </code>
+                            <p>
+                                Далее необходимо подключить библиотеку, чтобы вы смогли работать с ней в проекте.
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                Интегрируйте стили в post-css файл вашего проекта при помощи @import:
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <code class="code" data-clipboard-target="#npm-i">
+                                <div class="code-content">
+                                    <div class="code-body" id="npm-i">@import "claw-css.min";</div>
                                 </div>
                             </code>
                         </div>
-                        <p>
-                            Теперь мы можем создать скелет HTML-страницы, которую необходимо стилизовать:
-                        </p>
                         <div class="col-12">
-                            <code class="code">
+                            <p>
+                                Если вам не требуется установка из NPM и необходима быстрая интеграция с проектом, то просто вставьте этот код в <code>&lthead&gt&lt/head&gt</code>:
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <code class="code" data-clipboard-target="#npm-i">
                                 <div class="code-content">
-                                    <div class="code-title">
-                                        Пример использования
-                                    </div>
-                                    <div class="code-body"><div id="target-div"></div></div>
+                                    <div class="code-body" id="npm-i">&ltlink rel="stylesheet" crossorigin href="https://unpkg.com/browse/claw-css@0.0.1/dist/bundle.min.css" /&gt</div>
                                 </div>
                             </code>
+                        </div>
+                        <div class="col-12">
+                            <div class="badge badge-primary badge-colored w-100 ln-lg">
+                                Внимание! Такой импорт уже содержит build.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <a href="" class="btn btn-primary w-100 w-xs-100 w-sm-100 w-md-auto">
+                                Перейти в компоненты
+                            </a>
                         </div>
                     </div>
                 </div>

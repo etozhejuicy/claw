@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#colors").innerHTML = `
+    document.querySelector("#colors").innerHTML = `
 <!-- Палитра цветов -->
 <div class="row g-5">
     <div class="col-12">
@@ -48,15 +48,6 @@ window.addEventListener("DOMContentLoaded", () => {
                                     Пример использования
                                 </div>
                                 <div class="code-body">&lt;div style="display:block;width:3rem;height:3rem;" class="bg-primary"&gt;&lt;/div&gt;
-                                    &lt;div style="display:block;width:3rem;height:3rem;" class="bg-secondary"&gt;&lt;/div&gt;
-                                    &lt;div style="display:block;width:3rem;height:3rem;" class="bg-success"&gt;&lt;/div&gt;
-                                    &lt;div style="display:block;width:3rem;height:3rem;" class="bg-danger"&gt;&lt;/div&gt;
-                                    &lt;div style="display:block;width:3rem;height:3rem;" class="bg-warning"&gt;&lt;/div&gt;
-                                    &lt;div style="display:block;width:3rem;height:3rem;" class="bg-white"&gt;&lt;/div&gt;
-                                    &lt;div style="display:block;width:3rem;height:3rem;" class="bg-black"&gt;&lt;/div&gt;
-                                    &lt;div style="display:block;width:3rem;height:3rem;" class="bg-orange"&gt;&lt;/div&gt;
-                                    &lt;div style="display:block;width:3rem;height:3rem;" class="bg-purple"&gt;&lt;/div&gt;
-                                    &lt;div style="display:block;width:3rem;height:3rem;" class="bg-blue"&gt;&lt;/div&gt;
                                 </div>
                             </div>
                         </code>
