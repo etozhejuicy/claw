@@ -1,10 +1,10 @@
 :root {
   --header-height: 3.75rem;
   --header-backdrop-filter: blur(0.5rem);
-  --header-background-color: rgba(var(--body-bg-color), 0.6);
-  --header-box-shadow: 2.7461934089660645px 2.7461934089660645px
-      1.8307956457138062px 0px rgba(255, 255, 255, 0.03) inset,
-    -1.8307956457138062px 0px 1.8307956457138062px 0px rgba(255, 255, 255, 0.2) inset;
+  --header-background-color: var(--white-rgb);
+  --header-box-shadow: 0rem 0.0625rem 0.0469rem 0rem
+      rgba(var(--white-rgb), 0.15) inset,
+    0rem -0.0625rem 0.0625rem 0rem rgba(var(--black-rgb), 0.15) inset;
   --header-padding-y: 0.5rem;
   --header-padding-x: 0;
 }
@@ -18,7 +18,7 @@
   left: 0;
   padding: var(--header-padding-y) var(--header-padding-x)
     calc(var(--header-padding-y) + 0.25rem);
-  background-color: var(--header-background-color);
+  background-color: rgba(var(--header-background-color), 0.75);
   backdrop-filter: var(--header-backdrop-filter);
   box-shadow: var(--header-box-shadow);
   overflow: hidden;
@@ -43,24 +43,12 @@
       align-items: center;
     }
   }
-  &-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 120%;
-    letter-spacing: -0.02rem;
-    transform: translate(-50%, -50%);
-  }
   &-logo {
     position: relative;
     z-index: 1;
     display: flex;
-    width: max-content;
-    height: 2.5rem;
+    width: 2.15rem;
+    height: 2.15rem;
     & > svg,
     & > img {
       width: 100%;

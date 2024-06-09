@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#start").innerHTML = `
+  document.querySelector("#start").innerHTML = `
     <div class="row g-5">
         <div class="col-12">
             <div class="card shadow-none">
@@ -54,7 +54,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                 Внимание! Такой импорт уже содержит build.
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 text-center">
                             <a href="./components.html" class="btn btn-primary w-100 w-xs-100 w-sm-100 w-md-auto">
                                 Перейти в компоненты
                             </a>
