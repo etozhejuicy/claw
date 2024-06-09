@@ -28,14 +28,5 @@
     "lazysizes": "^5.3.2",
     "swiper": "^11.1.1",
     "wow.js": "^1.2.2"
-  },
-  "npmName": "claw-css",
-  "npmFileMap": [
-    {
-      "basePath": "",
-      "files": [
-        "claw.min.css"
-      ]
-    }
-  ]
+  }
 }
