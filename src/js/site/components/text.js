@@ -12,6 +12,11 @@ window.addEventListener("DOMContentLoaded", () => {
                         </h5>
                     </div>
                     <div class="col-12">
+                        <p>
+                            Для всех элементов заголовка —<code>&lt;h1&gt—&lt;h6&gt</code> - убрано как верхнее, так и нижнее поле.
+                        </p>
+                    </div>
+                    <div class="col-12">
                         <h1 class="h-1">Заголовок 1</h1>
                         <h2 class="h-2">Заголовок 2</h2>
                         <h3 class="h-3">Заголовок 3</h3>
@@ -25,15 +30,28 @@ window.addEventListener("DOMContentLoaded", () => {
                                 <div class="code-title">
                                     Пример использования
                                 </div>
-                                <div class="code-body">&lt;h1 class="h-1"&gt; Заголовок 1 &lt;/h1&gt;
-                                    &lt;h2 class="h-2"&gt; Заголовок 2 &lt;/h2&gt;
-                                    &lt;h3 class="h-3"&gt; Заголовок 3 &lt;/h3&gt;
-                                    &lt;h4 class="h-4"&gt; Заголовок 4 &lt;/h4&gt;
-                                    &lt;h5 class="h-5"&gt; Заголовок 5 &lt;/h5&gt;
-                                    &lt;h6 class="h-6"&gt; Заголовок 6 &lt;/h6&gt;
-                                </div>
+                                <div class="code-body">&lt;h1 class="h-1"&gt; Заголовок 1 &lt;/h1&gt;</div>
                             </div>
                         </code>
+                    </div>
+                    <div class="col-12">
+                        <p>
+                            Градация элементов заголовка представлена ниже:
+                        </p>
+                        <blockquote class="blockquote">
+                            <div class="blockquote-content">
+                                <div class="blockquote-body">
+                                    <ul class="list list-nobullet m-0">
+                                        <li class="list-item">.h-1</li>
+                                        <li class="list-item">.h-2</li>
+                                        <li class="list-item">.h-3</li>
+                                        <li class="list-item">.h-4</li>
+                                        <li class="list-item">.h-5</li>
+                                        <li class="list-item">.h-6</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </blockquote>
                     </div>
                 </div>
             </div>
@@ -50,6 +68,24 @@ window.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="card-body">
                 <div class="row g-3">
+                    <div class="col-12">
+                        <p>
+                            Это параграф.
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <code class="code">
+                            <div class="code-content">
+                                <div class="code-title">
+                                    Пример использования
+                                </div>
+                                <div class="code-body">&lt;p&gt;
+                                        Это параграф.
+                                    &lt;/p&gt;
+                                </div>
+                            </div>
+                        </code>
+                    </div>
                     <div class="col-12">
                         <p class="fw-100">
                             Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
@@ -88,33 +124,32 @@ window.addEventListener("DOMContentLoaded", () => {
                                 <div class="code-body">&lt;p class="fw-100"&gt;
                                         Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
                                     &lt;/p&gt;
-                                    &lt;p class="fw-200"&gt;
-                                        Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
-                                    &lt;/p&gt;
-                                    &lt;p class="fw-300"&gt;
-                                        Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
-                                    &lt;/p&gt;
-                                    &lt;p class="fw-400"&gt;
-                                        Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
-                                    &lt;/p&gt;
-                                    &lt;p class="fw-500"&gt;
-                                        Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
-                                    &lt;/p&gt;
-                                    &lt;p class="fw-600"&gt;
-                                        Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
-                                    &lt;/p&gt;
-                                    &lt;p class="fw-700"&gt;
-                                        Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
-                                    &lt;/p&gt;
-                                    &lt;p class="fw-800"&gt;
-                                        Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
-                                    &lt;/p&gt;
-                                    &lt;p class="fw-900"&gt;
-                                        Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
-                                    &lt;/p&gt;
                                 </div>
                             </div>
                         </code>
+                    </div>
+                    <div class="col-12">
+                        <p>
+                            Вот как числовые значения влияют на насыщенность шрифта:
+                        </p>
+                        <blockquote class="blockquote">
+                            <div class="blockquote-content">
+                                <div class="blockquote-body">
+                                    <ul class="list list-nobullet m-0">
+                                        <li class="list-item">.fw-100</li>
+                                        <li class="list-item">.fw-200</li>
+                                        <li class="list-item">.fw-300</li>
+                                        <li class="list-item">.fw-400</li>
+                                        <li class="list-item">.fw-500</li>
+                                        <li class="list-item">.fw-600</li>
+                                        <li class="list-item">.fw-600</li>
+                                        <li class="list-item">.fw-700</li>
+                                        <li class="list-item">.fw-800</li>
+                                        <li class="list-item">.fw-900</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </blockquote>
                     </div>
                     <div class="col-12">
                         <p class="text-primary">

@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#colors").innerHTML = `
+    document.querySelector("#colors").innerHTML = `
 <!-- Палитра цветов -->
 <div class="row g-5">
     <div class="col-12">
@@ -123,7 +123,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         <blockquote class="blockquote">
                             <div class="blockquote-content">
                                 <div class="blockquote-body">
-                                    <ul class="list m-0">
+                                    <ul class="list list-nobullet m-0">
                                         <li>0 - 0%</li>
                                         <li>10 - 10%</li>
                                         <li>20 - 20%</li>
