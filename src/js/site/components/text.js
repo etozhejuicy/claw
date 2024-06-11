@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#text").innerHTML = `
+  document.querySelector("#text").innerHTML = `
     <div class="row g-5">
     <!-- Заголовки -->
     <div class="col-12">
@@ -85,6 +85,16 @@ window.addEventListener("DOMContentLoaded", () => {
                                 </div>
                             </div>
                         </code>
+                    </div>
+                    <div class="col-12">
+                        <p>
+                            Есть возможность изменять насыщенность текста параграфа находу:
+                        </p>
+                        <blockquote class="blockquote mb-0">
+                            <div class="blockquote-content">
+                                <div class="blockquote-body text-warning">.fw-{level}</div>
+                            </div>
+                        </blockquote>
                     </div>
                     <div class="col-12">
                         <p class="fw-100">

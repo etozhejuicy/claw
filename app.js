@@ -6,5 +6,3 @@ import "./src/js/modules/code.js";
 
 import "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit";
-
-import "./src/js/site/components/header.js";

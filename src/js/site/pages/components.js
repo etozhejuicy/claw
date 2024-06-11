@@ -1,7 +1,7 @@
 // components
-import "./src/js/site/components/colors.js";
-import "./src/js/site/components/text.js";
-import "./src/js/site/components/buttons.js";
+import "../components/colors.js";
+import "../components/text.js";
+import "../components/buttons.js";
 
 document.querySelector("#app").innerHTML = `
 <main class="content">

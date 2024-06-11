@@ -1,5 +1,5 @@
 // components
-import "./src/js/site/components/start.js";
+import "../components/start.js";
 
 document.querySelector("#app").innerHTML = `
 <main class="content">

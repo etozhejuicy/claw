@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <div class="col-12">
                             <div class="badge badge-primary badge-colored w-100 ln-lg">
-                                Внимание! Такой импорт уже содержит build.
+                                Внимание! Такой импорт уже содержит готовую сборку
                             </div>
                         </div>
                         <div class="col-12 text-center">
