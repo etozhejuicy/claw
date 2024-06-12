@@ -12,9 +12,9 @@
 
 // Breakpoint
 @mixin breakpoint-xs {
-    @media screen and (max-width: #{$breakpoint-xs}) {
-        @content;
-    }
+    // @media screen and (max-width: #{$breakpoint-xs - 0.02px}) {
+    @content;
+    // }
 }
 
 @mixin breakpoint-sm {
