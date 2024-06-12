@@ -125,15 +125,25 @@ window.addEventListener("DOMContentLoaded", () => {
                                 <div class="blockquote-body">
                                     <ul class="list list-nobullet m-0">
                                         <li>0 - 0%</li>
+                                        <li>5 - 5%</li>
                                         <li>10 - 10%</li>
+                                        <li>15 - 15%</li>
                                         <li>20 - 20%</li>
+                                        <li>25 - 25%</li>
                                         <li>30 - 30%</li>
+                                        <li>35 - 35%</li>
                                         <li>40 - 40%</li>
+                                        <li>45 - 45%</li>
                                         <li>50 - 50%</li>
+                                        <li>55 - 55%</li>
                                         <li>60 - 60%</li>
+                                        <li>65 - 65%</li>
                                         <li>70 - 70%</li>
+                                        <li>75 - 75%</li>
                                         <li>80 - 80%</li>
+                                        <li>85 - 85%</li>
                                         <li>90 - 90%</li>
+                                        <li>95 - 95%</li>
                                         <li>100 - 100%</li>
                                     </ul>
                                 </div>
