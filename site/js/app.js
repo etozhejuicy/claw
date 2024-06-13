@@ -1,8 +1,8 @@
 // styles
-import "../../scss/app.scss";
+import "../scss/app.scss";
 
-import "../modules/jquery.js";
-import "../modules/code.js";
+import "../../src/js/modules/jquery.js";
+import "../../src/js/modules/code.js";
 
 import "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit";

@@ -1,0 +1,88 @@
+@import "../../src/scss/app.scss";
+
+// site
+@import "./layouts/header";
+@import "./layouts/nav";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+}
+
+body {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    font-feature-settings:
+        "clig" off,
+        "liga" off;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: rgba(var(--body-text-color), 1);
+    background-color: rgba(var(--body-bg-color), 1);
+    background-image: radial-gradient(
+            87.08% 87.08% at 0% 0%,
+            rgba(var(--warning-rgb), 0.5) 0%,
+            rgba(var(--red-rgb), 0.25) 100%
+        ),
+        linear-gradient(180deg, rgba(var(--danger-rgb), 0.5) 0%, rgba(var(--purple-rgb), 0.5) 75%);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: clip;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    padding: calc(var(--header-height) + (var(--header-padding-y) * 2)) 0;
+}
+
+.section {
+    contain: layout;
+}
+
+.wow {
+    visibility: hidden;
+}
+
+#mysprite {
+    display: none;
+}
