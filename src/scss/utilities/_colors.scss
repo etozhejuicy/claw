@@ -83,7 +83,7 @@ $colors: (
   $vk: "vk",
   $grey: "grey",
   $green: "green",
-  $transparent: "transparent",
+  $transparent: "transparent"
 );
 
 @each $color, $value in $colors {
