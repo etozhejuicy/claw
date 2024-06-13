@@ -55,7 +55,7 @@ window.addEventListener("DOMContentLoaded", () => {
                             </div>
                         </div>
                         <div class="col-12 text-center">
-                            <a href="./components.html" class="btn btn-primary w-100 w-xs-100 w-sm-100 w-md-auto">
+                            <a href="./components" class="btn btn-primary w-100 w-xs-100 w-sm-100 w-md-auto">
                                 Перейти в компоненты
                             </a>
                         </div>

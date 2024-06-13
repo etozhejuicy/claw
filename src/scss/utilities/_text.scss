@@ -6,167 +6,129 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.035rem;
 }
 
 h,
 .h- {
-    &1 {
-        font-feature-settings:
-            "clig" off,
-            "liga" off;
-        font-size: 3.5rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 100%;
-        letter-spacing: -0.035rem;
-    }
-    &2 {
-        font-feature-settings:
-            "clig" off,
-            "liga" off;
-        font-size: 2.85rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 100%;
-        letter-spacing: -0.035rem;
-    }
-    &3 {
-        font-feature-settings:
-            "clig" off,
-            "liga" off;
-        font-size: 1.75rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 120%; /* 2.1rem */
-        letter-spacing: -0.035rem;
-    }
-    &4 {
-        font-feature-settings:
-            "clig" off,
-            "liga" off;
-        font-size: 1.5rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 100%; /* 2.1rem */
-        letter-spacing: -0.035rem;
-    }
-    &5 {
-        font-feature-settings:
-            "clig" off,
-            "liga" off;
-        font-size: 1.25rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 120%; /* 2.1rem */
-        letter-spacing: -0.035rem;
-    }
-    &6 {
-        font-feature-settings:
-            "clig" off,
-            "liga" off;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 120%; /* 2.1rem */
-        letter-spacing: -0.035rem;
-    }
+  &1 {
+    font-size: 3.5rem;
+  }
+  &2 {
+    font-size: 2.85rem;
+  }
+  &3 {
+    font-size: 1.75rem;
+  }
+  &4 {
+    font-size: 1.5rem;
+  }
+  &5 {
+    font-size: 1.25rem;
+  }
+  &6 {
+    font-size: 1rem;
+  }
 }
 
 @each $align, $value in $aligns {
-    .text {
-        &-#{$value} {
-            text-align: #{$value} !important;
-        }
-        @include breakpoint-xs {
-            &-xs {
-                &-#{$value} {
-                    text-align: #{$value} !important;
-                }
-            }
-        }
-        @include breakpoint-sm {
-            &-sm {
-                &-#{$value} {
-                    text-align: #{$value} !important;
-                }
-            }
-        }
-        @include breakpoint-md {
-            &-md {
-                &-#{$value} {
-                    text-align: #{$value} !important;
-                }
-            }
-        }
-        @include breakpoint-lg {
-            &-lg {
-                &-#{$value} {
-                    text-align: #{$value} !important;
-                }
-            }
-        }
-        @include breakpoint-xl {
-            &-xl {
-                &-#{$value} {
-                    text-align: #{$value} !important;
-                }
-            }
-        }
-        @include breakpoint-xxl {
-            &-xxl {
-                &-#{$value} {
-                    text-align: #{$value} !important;
-                }
-            }
-        }
-        @include breakpoint-xxxl {
-            &-xxxl {
-                &-#{$value} {
-                    text-align: #{$value} !important;
-                }
-            }
-        }
+  .text {
+    &-#{$value} {
+      text-align: #{$value} !important;
     }
+    @include breakpoint-xs {
+      &-xs {
+        &-#{$value} {
+          text-align: #{$value} !important;
+        }
+      }
+    }
+    @include breakpoint-sm {
+      &-sm {
+        &-#{$value} {
+          text-align: #{$value} !important;
+        }
+      }
+    }
+    @include breakpoint-md {
+      &-md {
+        &-#{$value} {
+          text-align: #{$value} !important;
+        }
+      }
+    }
+    @include breakpoint-lg {
+      &-lg {
+        &-#{$value} {
+          text-align: #{$value} !important;
+        }
+      }
+    }
+    @include breakpoint-xl {
+      &-xl {
+        &-#{$value} {
+          text-align: #{$value} !important;
+        }
+      }
+    }
+    @include breakpoint-xxl {
+      &-xxl {
+        &-#{$value} {
+          text-align: #{$value} !important;
+        }
+      }
+    }
+    @include breakpoint-xxxl {
+      &-xxxl {
+        &-#{$value} {
+          text-align: #{$value} !important;
+        }
+      }
+    }
+  }
 }
 
 @each $position, $value in $positions {
-    .fvp-#{$value} {
-        font-variant-position: #{$value} !important;
-    }
+  .fvp-#{$value} {
+    font-variant-position: #{$value} !important;
+  }
 }
 
 @each $size, $value in $sizes {
-    .fs-#{$value} {
-        font-size: $size !important;
-    }
+  .fs-#{$value} {
+    font-size: $size !important;
+  }
 }
 
 @each $lineHeight, $value in $lineHeights {
-    .ln-#{$value} {
-        line-height: #{$lineHeight} !important;
-    }
+  .ln-#{$value} {
+    line-height: #{$lineHeight} !important;
+  }
 }
 
 @each $weight, $value in $weights {
-    .fw-#{$value} {
-        font-weight: #{$value} !important;
-    }
+  .fw-#{$value} {
+    font-weight: #{$value} !important;
+  }
 }
 
 @each $color, $value in $colors {
-    .text-#{$value} {
-        color: rgba(var(--#{$value}-rgb), 1) !important;
-        @each $opacity, $level in $opacities {
-            &-#{$opacity} {
-                color: rgba(var(--#{$value}-rgb), #{$level}) !important;
-            }
-        }
+  .text-#{$value} {
+    color: rgba(var(--#{$value}-rgb), 1) !important;
+    @each $opacity, $level in $opacities {
+      &-#{$opacity} {
+        color: rgba(var(--#{$value}-rgb), #{$level}) !important;
+      }
     }
+  }
 }
 
 // TODO: for text-muted var
 [class^="text-muted"] {
-    color: rgba(var(--secondary-rgb), 1);
+  color: rgba(var(--secondary-rgb), 1);
 }

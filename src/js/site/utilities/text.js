@@ -1,14 +1,14 @@
 window.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#text").innerHTML = `
+  document.querySelector("#text").innerHTML = `
     <div class="row g-5">
     <!-- Заголовки -->
-    <div class="col-12">
+    <div class="col-12" id="title">
         <div class="card shadow-none">
             <div class="card-body">
                 <div class="row g-3">
                     <div class="col-12">
                         <h5 class="h-5">
-                            Система заголовков
+                            <span>Система заголовков <a href="#title">#</a></span>
                         </h5>
                     </div>
                     <div class="col-12">
@@ -53,17 +53,36 @@ window.addEventListener("DOMContentLoaded", () => {
                             </div>
                         </blockquote>
                     </div>
+                    <div class="col-12">
+                        <p>
+                            Стандартно для всех заголовков заданы параметры стилей:
+                        </p>
+                        <blockquote class="blockquote">
+                            <div class="blockquote-content">
+                                <div class="blockquote-body">
+                                    <div>
+                                        {<br>
+                                        &nbsp;    font-weight: 600;<br>
+                                        &nbsp;    font-style: normal;<br>
+                                        &nbsp;    line-height: 120%;<br>
+                                        &nbsp;    letter-spacing: -0.035rem;<br>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
     <!-- Обычный текст -->
-    <div class="col-12">
+    <div class="col-12" id="paragraph">
         <div class="card shadow-none">
             <div class="card-header">
                 <h5 class="h-5">
-                    Обычный текст (параграф)
+                    <span>Параграф <a href="#paragraph">#</a></span>
                 </h5>
             </div>
             <div class="card-body">
@@ -162,6 +181,19 @@ window.addEventListener("DOMContentLoaded", () => {
                         </blockquote>
                     </div>
                     <div class="col-12">
+                        <p>
+                            Взаимодействие с цветами текстов возможно ровно также, как и с цветом блока:
+                        </p>
+                        <blockquote class="blockquote">
+                            <div class="blockquote-content">
+                                <div class="blockquote-body text-warning">.text-{color}-{level}</div>
+                            </div>
+                        </blockquote>
+                        <p>
+                            Пример основной палитры цветов для текста представлен ниже:
+                        </p>
+                    </div>
+                    <div class="col-12">
                         <p class="text-primary">
                             Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
                         </p>
@@ -208,8 +240,61 @@ window.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div class="col-12">
                         <p>
-                            Список наименований цветов для параграфа используется в точности, как в <a href="#palette" class="fw-600">палитре</a>.
+                            Список наименований цветов для параграфа используется в точности, как в <a href="#colors" class="fw-600">палитре</a>.
                         </p>
+                    </div>
+                    <div class="col-12">
+                        Прозрачность можно задать числовым значением модификатора элемента. Пример с 50% прозрачностью:
+                    </div>
+                    <div class="col-12">
+                        <p class="text-primary-50">
+                            Это прогрессивные специалисты самых разных профилей со всей страны. Находи тех, кто нужен твоему проекту и формируй команду мечты.
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <code class="code">
+                            <div class="code-content">
+                                <div class="code-title">
+                                    Пример использования
+                                </div>
+                                <div class="code-body">&lt;p class="text-primary-50"&gt; Ваш текст &lt;/div&gt;
+                                </div>
+                            </div>
+                        </code>
+                    </div>
+                    <div class="col-12">
+                        <p>
+                            Список % прозрачности цветов:
+                        </p>
+                        <blockquote class="blockquote">
+                            <div class="blockquote-content">
+                                <div class="blockquote-body">
+                                    <ul class="list list-nobullet m-0">
+                                        <li>0 - 0%</li>
+                                        <li>5 - 5%</li>
+                                        <li>10 - 10%</li>
+                                        <li>15 - 15%</li>
+                                        <li>20 - 20%</li>
+                                        <li>25 - 25%</li>
+                                        <li>30 - 30%</li>
+                                        <li>35 - 35%</li>
+                                        <li>40 - 40%</li>
+                                        <li>45 - 45%</li>
+                                        <li>50 - 50%</li>
+                                        <li>55 - 55%</li>
+                                        <li>60 - 60%</li>
+                                        <li>65 - 65%</li>
+                                        <li>70 - 70%</li>
+                                        <li>75 - 75%</li>
+                                        <li>80 - 80%</li>
+                                        <li>85 - 85%</li>
+                                        <li>90 - 90%</li>
+                                        <li>95 - 95%</li>
+                                        <li>100 - 100%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </blockquote>
                     </div>
                 </div>
             </div>

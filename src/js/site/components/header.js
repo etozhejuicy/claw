@@ -1,26 +1,26 @@
 import logo from "/logo.svg";
 
 window.addEventListener("DOMContentLoaded", () => {
-    let header = document.createElement("header"),
-        main = document.querySelector("main");
+  let header = document.createElement("header"),
+    main = document.querySelector("main");
 
-    header.innerHTML =
-        `
+  header.innerHTML =
+    `
             <div class="container">
                 <div class="header-inner">
                     <div class="row g-4">
                         <div class="col-auto">
                             <div class="header-logo">
                                 <img data-src="` +
-        logo +
-        `" class="lazyload" />
+    logo +
+    `" class="lazyload" />
                                 <a href="./" class="stretched-link"></a>
                             </div>
                         </div>
                         <div class="col">
                             <nav class="nav nav-horizontal">
                                 <div class="nav-item">
-                                    <a href="./installation.html" class="nav-link">
+                                    <a href="./installation" class="nav-link">
                                         <div class="nav-link-inner">
                                             <div class="nav-link-text">
                                                 Установка
@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     </a>
                                 </div>
                                 <div class="nav-item">
-                                    <a href="./components.html" class="nav-link">
+                                    <a href="./components" class="nav-link">
                                         <div class="nav-link-inner">
                                             <div class="nav-link-text">
                                                 Компоненты
@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     </a>
                                 </div>
                                 <div class="nav-item">
-                                    <a href="./utilities.html" class="nav-link">
+                                    <a href="./utilities" class="nav-link">
                                         <div class="nav-link-inner">
                                             <div class="nav-link-text">
                                                 Утилиты
@@ -53,9 +53,9 @@ window.addEventListener("DOMContentLoaded", () => {
             </div>
     `;
 
-    // add class for <header>
-    header.classList.add("header");
+  // add class for <header>
+  header.classList.add("header");
 
-    // prepend header of main
-    main.parentElement.prepend(header);
+  // prepend header of main
+  main.parentElement.prepend(header);
 });

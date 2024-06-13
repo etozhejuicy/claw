@@ -30,7 +30,7 @@ document.querySelector("#app").innerHTML = `
                 </p>
               </div>
               <div class="card-footer d-flex justify-content-center">
-                <a href="./installation.html" class="btn btn-primary w-100 w-xs-100 w-sm-100 w-md-auto">
+                <a href="./installation" class="btn btn-primary w-100 w-xs-100 w-sm-100 w-md-auto">
                   Приступить!
                 </a>
               </div>
