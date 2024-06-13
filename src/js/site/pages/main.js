@@ -25,7 +25,7 @@ document.querySelector("#app").innerHTML = `
                   <li>✨ Поддержка SCSS ✅</li>
                   <li class="opacity-25">🎯 Отдельный .config для настройки темы ⚠️</li>
                 </ol>
-                <p>
+                <p class="text-center mb-3">
                   🕑 Статус разработки утилит фреймворка: <a href="https://github.com/etozhejuicy/claw?tab=readme-ov-file#the-status-of-utility-readiness" target"_blank" title="Статус разработки утилит">README.md</a>
                 </p>
               </div>
