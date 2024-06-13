@@ -4,7 +4,7 @@ Claw is a CSS framework that helps you quickly create the basic structure of a w
 
 Example: [https://gitpages.etochejuicy.io/claw/](https://etozhejuicy.github.io/claw/)
 
-##The status of utility readiness:
+#### The status of utility readiness:
 
 - [x]  align
 - [ ]  colors
