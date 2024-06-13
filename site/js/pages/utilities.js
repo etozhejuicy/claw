@@ -1,4 +1,5 @@
 // components
+import "../utilities/start.js";
 import "../utilities/colors.js";
 import "../utilities/text.js";
 
@@ -7,6 +8,7 @@ document.querySelector("#app").innerHTML = `
   <section>
     <div class="container">
       <div class="row g-5">
+        <div id="start" class="col-12"></div>
         <div id="colors" class="col-12"></div>
         <div id="text" class="col-12"></div>
       </div>

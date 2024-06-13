@@ -1,6 +1,3 @@
-// vendor
-@import "../../node_modules/wow.js/css/libs/animate";
-
 // utility
 @import "./utilities/utility";
 
@@ -11,42 +8,4 @@
 @import "./utilities/responsive";
 
 // components
-@import "./components/background";
-@import "./components/animation";
-@import "./components/badge";
-@import "./components/buttons";
-@import "./components/code";
-@import "./components/counter";
-@import "./components/cover";
-@import "./components/cards";
-@import "./components/draggable";
-@import "./components/devider";
-@import "./components/fonts";
-@import "./components/forms";
-@import "./components/checkbox";
-@import "./components/btncheck";
-@import "./components/safari";
-@import "./components/switch";
-@import "./components/select";
-@import "./components/spinners";
-@import "./components/player";
-@import "./components/plug";
-@import "./components/preloader";
-@import "./components/progress";
-@import "./components/range";
-@import "./components/sphere";
-@import "./components/stretched";
-@import "./components/shadow";
-@import "./components/suggestions";
-@import "./components/lazyload";
-@import "./components/lazyblur";
-@import "./components/links";
-@import "./components/list";
-@import "./components/tabs";
-@import "./components/tags";
-@import "./components/text";
-@import "./components/modals";
-@import "./components/map";
-@import "./components/timer";
-@import "./components/swiper";
-@import "./components/quote";
+@import "./components/components";
