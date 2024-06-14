@@ -11,6 +11,7 @@ Example: [https://gitpages.etochejuicy.io/claw/](https://etozhejuicy.github.io/c
 - [x]  border
 - [ ]  cols
 - [x]  container
+- [x]  dimensions
 - [x]  display
 - [x]  filter
 - [x]  flexbox
@@ -27,7 +28,6 @@ Example: [https://gitpages.etochejuicy.io/claw/](https://etozhejuicy.github.io/c
 - [ ]  ratio
 - [ ]  radius
 - [ ]  responsive
-- [ ]  size
 - [x]  text
 - [ ]  variables
 - [ ]  visibility
