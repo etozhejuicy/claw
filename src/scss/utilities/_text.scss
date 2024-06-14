@@ -93,7 +93,7 @@ h,
   }
 }
 
-@each $position, $value in $positions {
+@each $fv-position, $value in $fv-positions {
   .fvp-#{$value} {
     font-variant-position: #{$value} !important;
   }

@@ -9,7 +9,6 @@ $breakpoint-xxxl: 1600px;
 // Breakpoints
 
 // display
-// text align
 $display-block: block;
 $display-inline: inline;
 $display-inline-block: inline-block;
@@ -39,6 +38,52 @@ $displays: (
 );
 // display
 
+// positions
+$position-absolute: absolute;
+$position-relative: relative;
+$position-fixed: fixed;
+$position-sticky: sticky;
+$position-static: static;
+$position-unset: unset;
+
+$positions: (
+    $position-absolute: "absolute",
+    $position-relative: "relative",
+    $position-fixed: "fixed",
+    $position-sticky: "sticky",
+    $position-static: "static",
+    $position-unset: "unset"
+);
+// positions
+
+// directions
+$direction-top: top;
+$direction-left: left;
+$direction-right: right;
+$direction-bottom: bottom;
+
+$directions: (
+    $direction-top: "top",
+    $direction-left: "left",
+    $direction-right: "right",
+    $direction-bottom: "bottom"
+);
+// directions
+
+// sticky
+$sticky-1: 1;
+$sticky-2: 2;
+$sticky-3: 3;
+$sticky-4: 4;
+
+$stickys: (
+    $sticky-1: "1",
+    $sticky-2: "2",
+    $sticky-3: "3",
+    $sticky-4: "4"
+);
+// sticky
+
 // text
 // text align
 $text-left: left;
@@ -62,7 +107,7 @@ $fvp-sub: sub;
 $fvp-super: super;
 $fvp-normal: normal;
 
-$positions: (
+$fv-positions: (
     $fvp-sub: "sub",
     $fvp-super: "super",
     $fvp-normal: "normal"
