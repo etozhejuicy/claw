@@ -1,13 +1,3 @@
-$overflow: hidden;
-$overflow-x: x;
-$overflow-y: y;
-
-$overflows: (
-    $overflow: "",
-    $overflow-x: "x",
-    $overflow-y: "y"
-);
-
 @each $overflow, $value in $overflows {
     .overflow {
         &-hidden {

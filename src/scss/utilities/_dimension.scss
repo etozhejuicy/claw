@@ -1,0 +1,110 @@
+@each $dimension, $value in $dimensions {
+    .w {
+        &-#{$dimension} {
+            width: #{$value} !important;
+        }
+        @include breakpoint-xs {
+            &-xs {
+                &-#{$dimension} {
+                    width: #{$value} !important;
+                }
+            }
+        }
+        @include breakpoint-sm {
+            &-sm {
+                &-#{$dimension} {
+                    width: #{$value} !important;
+                }
+            }
+        }
+        @include breakpoint-md {
+            &-md {
+                &-#{$dimension} {
+                    width: #{$value} !important;
+                }
+            }
+        }
+        @include breakpoint-lg {
+            &-lg {
+                &-#{$dimension} {
+                    width: #{$value} !important;
+                }
+            }
+        }
+        @include breakpoint-xl {
+            &-xl {
+                &-#{$dimension} {
+                    width: #{$value} !important;
+                }
+            }
+        }
+        @include breakpoint-xxl {
+            &-xxl {
+                &-#{$dimension} {
+                    width: #{$value} !important;
+                }
+            }
+        }
+        @include breakpoint-xxxl {
+            &-xxxl {
+                &-#{$dimension} {
+                    width: #{$value} !important;
+                }
+            }
+        }
+    }
+    .h {
+        &-#{$dimension} {
+            height: #{$value} !important;
+        }
+        @include breakpoint-xs {
+            &-xs {
+                &-#{$dimension} {
+                    height: #{$value} !important;
+                }
+            }
+        }
+        @include breakpoint-sm {
+            &-sm {
+                &-#{$dimension} {
+                    height: #{$value} !important;
+                }
+            }
+        }
+        @include breakpoint-md {
+            &-md {
+                &-#{$dimension} {
+                    height: #{$value} !important;
+                }
+            }
+        }
+        @include breakpoint-lg {
+            &-lg {
+                &-#{$dimension} {
+                    height: #{$value} !important;
+                }
+            }
+        }
+        @include breakpoint-xl {
+            &-xl {
+                &-#{$dimension} {
+                    height: #{$value} !important;
+                }
+            }
+        }
+        @include breakpoint-xxl {
+            &-xxl {
+                &-#{$dimension} {
+                    height: #{$value} !important;
+                }
+            }
+        }
+        @include breakpoint-xxxl {
+            &-xxxl {
+                &-#{$dimension} {
+                    height: #{$value} !important;
+                }
+            }
+        }
+    }
+}
