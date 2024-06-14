@@ -7,7 +7,7 @@ document.querySelector("#app").innerHTML = `
           <div class="card shadow-none">
             <div class="card-content">
               <div class="card-title text-center">
-                <h3 class="h-3 fw-700">
+                <h3 class="h3 fw-700">
                   Клешня (The Claw)
                 </h3>
               </div>

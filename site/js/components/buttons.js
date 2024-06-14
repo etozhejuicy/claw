@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#buttons").innerHTML = `
+    document.querySelector("#buttons").innerHTML = `
     <div class="row g-5">
     <!-- Кнопки обычные -->
     <div class="col-12">
@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     <div class="card-body">
                         <div class="row g-3">
                             <div class="col-12">
-                                <h5 class="h-5">
+                                <h5 class="h5">
                                     Кнопки (обычные)
                                 </h5>
                             </div>
@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     <div class="card-body">
                         <div class="row g-3">
                             <div class="col-12">
-                                <h5 class="h-5">
+                                <h5 class="h5">
                                     Кнопки (с подсветкой)
                                 </h5>
                             </div>
@@ -113,7 +113,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     <div class="card-body">
                         <div class="row g-3">
                             <div class="col-12">
-                                <h5 class="h-5">
+                                <h5 class="h5">
                                     Кнопки (с обводкой)
                                 </h5>
                             </div>
@@ -163,7 +163,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class="card-body">
                 <div class="row g-3">
                     <div class="col-12">
-                        <h5 class="h-5">
+                        <h5 class="h5">
                             Кнопки (с обводкой + цвет)
                         </h5>
                     </div>
@@ -211,7 +211,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class="card-body">
                 <div class="row g-3">
                     <div class="col-12">
-                        <h5 class="h-5">
+                        <h5 class="h5">
                             Кнопки (с затемнением)
                         </h5>
                     </div>
@@ -355,7 +355,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class="card-body">
                 <div class="row g-3">
                     <div class="col-12">
-                        <h5 class="h-5">
+                        <h5 class="h5">
                             Кнопки (с иконками + текст)
                         </h5>
                     </div>

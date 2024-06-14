@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class="card-body">
                 <div class="row g-3">
                     <div class="col-12">
-                        <h5 class="h-5">
+                        <h5 class="h5">
                             <span>Система заголовков <a href="#title">#</a></span>
                         </h5>
                     </div>
@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", () => {
     <div class="col-12" id="paragraph">
         <div class="card shadow-none">
             <div class="card-header">
-                <h5 class="h-5">
+                <h5 class="h5">
                     <span>Параграф <a href="#paragraph">#</a></span>
                 </h5>
             </div>
