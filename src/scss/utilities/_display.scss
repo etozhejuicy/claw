@@ -1,109 +1,55 @@
-.d {
-    &-block {
-        display: block !important;
-    }
-    &-inline {
-        display: inline !important;
-    }
-    &-flex {
-        display: flex !important;
-    }
-    &-none {
-        display: none !important;
-    }
-    &-xs {
-        @media screen and (max-width: 575.98px) {
-            &-block {
-                display: block !important;
-            }
-            &-inline {
-                display: inline !important;
-            }
-            &-flex {
-                display: flex !important;
-            }
-            &-none {
-                display: none !important;
+@each $display, $value in $displays {
+    .d {
+        &-#{$value} {
+            display: #{$value} !important;
+        }
+        @include breakpoint-xs {
+            &-xs {
+                &-#{$value} {
+                    display: #{$value} !important;
+                }
             }
         }
-    }
-    &-sm {
-        @media (min-width: 576px) and (max-width: 767.98px) {
-            &-block {
-                display: block !important;
-            }
-            &-inline {
-                display: inline !important;
-            }
-            &-flex {
-                display: flex !important;
-            }
-            &-none {
-                display: none !important;
+        @include breakpoint-sm {
+            &-sm {
+                &-#{$value} {
+                    display: #{$value} !important;
+                }
             }
         }
-    }
-    &-md {
-        @media (min-width: 768px) {
-            &-block {
-                display: block !important;
-            }
-            &-inline {
-                display: inline !important;
-            }
-            &-flex {
-                display: flex !important;
-            }
-            &-none {
-                display: none !important;
+        @include breakpoint-md {
+            &-md {
+                &-#{$value} {
+                    display: #{$value} !important;
+                }
             }
         }
-    }
-    &-lg {
-        @media (min-width: 992px) {
-            &-block {
-                display: block !important;
-            }
-            &-inline {
-                display: inline !important;
-            }
-            &-flex {
-                display: flex !important;
-            }
-            &-none {
-                display: none !important;
+        @include breakpoint-lg {
+            &-lg {
+                &-#{$value} {
+                    display: #{$value} !important;
+                }
             }
         }
-    }
-    &-xl {
-        @media (min-width: 1200px) {
-            &-block {
-                display: block !important;
-            }
-            &-inline {
-                display: inline !important;
-            }
-            &-flex {
-                display: flex !important;
-            }
-            &-none {
-                display: none !important;
+        @include breakpoint-xl {
+            &-xl {
+                &-#{$value} {
+                    display: #{$value} !important;
+                }
             }
         }
-    }
-    &-xxl {
-        @media (min-width: 1440px) {
-            &-block {
-                display: block !important;
+        @include breakpoint-xxl {
+            &-xxl {
+                &-#{$value} {
+                    display: #{$value} !important;
+                }
             }
-            &-inline {
-                display: inline !important;
-            }
-            &-flex {
-                display: flex !important;
-            }
-            &-none {
-                display: none !important;
+        }
+        @include breakpoint-xxxl {
+            &-xxxl {
+                &-#{$value} {
+                    display: #{$value} !important;
+                }
             }
         }
     }

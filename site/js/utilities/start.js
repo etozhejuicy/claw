@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
                             В файле <code class="text-primary">./utilities/normalize</code> содержатся стили для сброса стилей, источник: <a href="https://github.com/necolas/normalize.css" target="_blank">normalize.css</a>.
                         </p>
                         <p>
-                            В файле <code class="text-primary">./utilities/responsive</code> содержится <code class="text-warning">:root</code>-стили для управления "резиновой" верстки.
+                            В файле <code class="text-primary">./utilities/responsive</code> содержится <code class="text-warning">:root</code>-стили для управления "резиновой" версткой.
                         </p>
                     </div>
                 </div>
