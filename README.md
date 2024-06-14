@@ -6,12 +6,12 @@ Example: [https://gitpages.etochejuicy.io/claw/](https://etozhejuicy.github.io/c
 
 #### The status of utility readiness:
 
-- [x]  align
+- [ ]  align
 - [ ]  colors
 - [x]  border
 - [ ]  cols
 - [x]  container
-- [ ]  display
+- [x]  display
 - [x]  filter
 - [x]  flexbox
 - [ ]  grid
