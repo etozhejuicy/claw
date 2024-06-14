@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                 <div class="code-title">
                                     Пример использования
                                 </div>
-                                <div class="code-body">&lt;h1 class="h-1"&gt; Заголовок 1 &lt;/h1&gt;</div>
+                                <div class="code-body">&lt;h1 class="h1"&gt; Заголовок 1 &lt;/h1&gt;</div>
                             </div>
                         </code>
                     </div>
@@ -42,12 +42,12 @@ window.addEventListener("DOMContentLoaded", () => {
                             <div class="blockquote-content">
                                 <div class="blockquote-body">
                                     <ul class="list list-nobullet m-0">
-                                        <li class="list-item">.h-1</li>
-                                        <li class="list-item">.h-2</li>
-                                        <li class="list-item">.h-3</li>
-                                        <li class="list-item">.h-4</li>
-                                        <li class="list-item">.h-5</li>
-                                        <li class="list-item">.h-6</li>
+                                        <li class="list-item">.h1</li>
+                                        <li class="list-item">.h2</li>
+                                        <li class="list-item">.h3</li>
+                                        <li class="list-item">.h4</li>
+                                        <li class="list-item">.h5</li>
+                                        <li class="list-item">.h6</li>
                                     </ul>
                                 </div>
                             </div>
