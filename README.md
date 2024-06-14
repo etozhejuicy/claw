@@ -23,7 +23,7 @@ Example: [https://gitpages.etochejuicy.io/claw/](https://etozhejuicy.github.io/c
 - [x]  overflow
 - [x]  padding
 - [ ]  pointer-events
-- [ ]  positions
+- [x]  positions
 - [ ]  ratio
 - [ ]  radius
 - [ ]  responsive
