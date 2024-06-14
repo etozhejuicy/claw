@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#text").innerHTML = `
+    document.querySelector("#text").innerHTML = `
     <div class="row g-5">
     <!-- Заголовки -->
     <div class="col-12" id="title">
@@ -17,12 +17,12 @@ window.addEventListener("DOMContentLoaded", () => {
                         </p>
                     </div>
                     <div class="col-12">
-                        <h1 class="h-1">Заголовок 1</h1>
-                        <h2 class="h-2">Заголовок 2</h2>
-                        <h3 class="h-3">Заголовок 3</h3>
-                        <h4 class="h-4">Заголовок 4</h4>
-                        <h5 class="h-5">Заголовок 5</h5>
-                        <h6 class="h-6">Заголовок 6</h6>
+                        <h1 class="h1">Заголовок 1</h1>
+                        <h2 class="h2">Заголовок 2</h2>
+                        <h3 class="h3">Заголовок 3</h3>
+                        <h4 class="h4">Заголовок 4</h4>
+                        <h5 class="h5">Заголовок 5</h5>
+                        <h6 class="h6">Заголовок 6</h6>
                     </div>
                     <div class="col-12">
                         <code class="code">
