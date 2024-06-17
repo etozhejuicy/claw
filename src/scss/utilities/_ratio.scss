@@ -1,28 +1,24 @@
 .ratio {
     position: relative;
     width: 100%;
+
     &::before {
         display: block;
         padding-top: var(--cl-aspect-ratio);
         content: "";
     }
-    & > * {
+
+    > * {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
     }
-    &-1x1 {
-        --cl-aspect-ratio: 100%;
-    }
-    &-4x3 {
-        --cl-aspect-ratio: 75%;
-    }
-    &-16x9 {
-        --cl-aspect-ratio: 56.25%;
-    }
-    &-21x9 {
-        --cl-aspect-ratio: 42.8571428571%;
+}
+
+@each $key, $ratio in $aspect-ratios {
+    .ratio-#{$key} {
+        --cl-aspect-ratio: #{$ratio};
     }
 }

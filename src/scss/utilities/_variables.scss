@@ -377,3 +377,17 @@ $overflows: (
     $overflow-y: "y"
 );
 // overflow
+
+// ratio
+$aspect-ratio-1x1: 1x1;
+$aspect-ratio-4x3: 4x3;
+$aspect-ratio-16x9: 16x9;
+$aspect-ratio-21x9: 21x9;
+
+$aspect-ratios: (
+    $aspect-ratio-1x1: "100%",
+    $aspect-ratio-4x3: "75%",
+    $aspect-ratio-16x9: "56.25%",
+    $aspect-ratio-21x9: "42.8571428571%"
+);
+// ratio
