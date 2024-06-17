@@ -6,7 +6,7 @@ Example: [https://gitpages.etochejuicy.io/claw/](https://etozhejuicy.github.io/c
 
 #### The status of utility readiness:
 
-- [ ]  align
+- [x]  align
 - [ ]  colors
 - [x]  border
 - [ ]  cols
@@ -24,6 +24,8 @@ Example: [https://gitpages.etochejuicy.io/claw/](https://etozhejuicy.github.io/c
 - [x]  overflow
 - [x]  padding
 - [ ]  pointer-events
+- [ ]  placeholder
+- [x]  prefix
 - [x]  positions
 - [x]  ratio
 - [ ]  radius
