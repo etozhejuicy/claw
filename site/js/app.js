@@ -7,4 +7,5 @@ import "../../src/js/modules/code.js";
 import "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit";
 
-import "./components/header.js";
+import "./layouts/header.js";
+import "./layouts/navigation.js";
