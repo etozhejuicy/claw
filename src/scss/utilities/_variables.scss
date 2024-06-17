@@ -249,6 +249,24 @@ $lineHeights: (
 );
 // text
 
+// vertical-align
+$va-baseline: baseline;
+$va-top: top;
+$va-middle: middle;
+$va-bottom: bottom;
+$va-text-bottom: text-bottom;
+$va-text-top: text-top;
+
+$vertical-aligns: (
+    $va-baseline: "baseline",
+    $va-top: "top",
+    $va-middle: "middle",
+    $va-bottom: "bottom",
+    $va-text-bottom: "text-bottom",
+    $va-text-top: "text-top"
+);
+// vertical-align
+
 // flexbox
 // align-items
 $align-items-baseline: baseline;
