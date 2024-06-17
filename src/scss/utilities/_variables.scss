@@ -418,6 +418,20 @@ $aspect-ratios: (
 );
 // ratio
 
+// pointer-events
+$pointer-event-none: none;
+$pointer-event-auto: auto;
+$pointer-event-all: all;
+$pointer-event-fill: fill;
+
+$pointer-events: (
+    $pointer-event-none: "none",
+    $pointer-event-auto: "auto",
+    $pointer-event-all: "all",
+    $pointer-event-fill: "fill"
+);
+// pointer-events
+
 // stretched-link
 $stretched-link-pseudo-element: after !default;
 $stretched-link-z-index: 1 !default;
