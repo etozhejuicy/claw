@@ -1,27 +1,27 @@
 .popover {
-    --cl-popover-zindex: 1070;
-    --cl-popover-max-width: 276px;
-    --cl-popover-font-size: 0.875rem;
-    --cl-popover-bg: var(--white);
-    --cl-popover-border-width: var(--cl-border-width);
-    --cl-popover-border-color: var(--cl-border-color-translucent);
-    --cl-popover-border-radius: var(--cl-border-radius-lg);
-    --cl-popover-inner-border-radius: calc(var(--cl-border-radius-lg) - var(--cl-border-width));
-    --cl-popover-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    --cl-popover-header-padding-x: 1rem;
-    --cl-popover-header-padding-y: 0.5rem;
-    --cl-popover-header-font-size: 1rem;
-    --cl-popover-header-color: ;
-    --cl-popover-header-bg: var(--cl-secondary-bg);
-    --cl-popover-body-padding-x: 1rem;
-    --cl-popover-body-padding-y: 1rem;
-    --cl-popover-body-color: var(--cl-body-color);
-    --cl-popover-arrow-width: 1rem;
-    --cl-popover-arrow-height: 0.5rem;
-    --cl-popover-arrow-border: var(--cl-popover-border-color);
-    z-index: var(--cl-popover-zindex);
+    #{$prefix}-popover-zindex: 1070;
+    #{$prefix}-popover-max-width: 276px;
+    #{$prefix}-popover-font-size: 0.875rem;
+    #{$prefix}-popover-bg: var(--white);
+    #{$prefix}-popover-border-width: var(#{$prefix}-border-width);
+    #{$prefix}-popover-border-color: var(#{$prefix}-border-color-translucent);
+    #{$prefix}-popover-border-radius: var(#{$prefix}-border-radius-lg);
+    #{$prefix}-popover-inner-border-radius: calc(var(#{$prefix}-border-radius-lg) - var(#{$prefix}-border-width));
+    #{$prefix}-popover-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    #{$prefix}-popover-header-padding-x: 1rem;
+    #{$prefix}-popover-header-padding-y: 0.5rem;
+    #{$prefix}-popover-header-font-size: 1rem;
+    #{$prefix}-popover-header-color:;
+    #{$prefix}-popover-header-bg: var(#{$prefix}-secondary-bg);
+    #{$prefix}-popover-body-padding-x: 1rem;
+    #{$prefix}-popover-body-padding-y: 1rem;
+    #{$prefix}-popover-body-color: var(#{$prefix}-body-color);
+    #{$prefix}-popover-arrow-width: 1rem;
+    #{$prefix}-popover-arrow-height: 0.5rem;
+    #{$prefix}-popover-arrow-border: var(#{$prefix}-popover-border-color);
+    z-index: var(#{$prefix}-popover-zindex);
     display: block;
-    max-width: var(--cl-popover-max-width);
+    max-width: var(#{$prefix}-popover-max-width);
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -36,22 +36,22 @@
     white-space: normal;
     word-spacing: normal;
     line-break: auto;
-    font-size: var(--cl-popover-font-size);
+    font-size: var(#{$prefix}-popover-font-size);
     word-wrap: break-word;
-    background-color: var(--cl-popover-bg);
+    background-color: var(#{$prefix}-popover-bg);
     background-clip: padding-box;
-    border: var(--cl-popover-border-width) solid var(--cl-popover-border-color);
-    border-radius: var(--cl-popover-border-radius);
+    border: var(#{$prefix}-popover-border-width) solid var(#{$prefix}-popover-border-color);
+    border-radius: var(#{$prefix}-popover-border-radius);
     &:not([show-popper]) {
         display: none;
     }
     &-myportfolio {
         width: 100%;
-        --cl-popover-max-width: 577px;
+        #{$prefix}-popover-max-width: 577px;
     }
     &-list {
         width: 100%;
-        --cl-popover-max-width: 577px;
+        #{$prefix}-popover-max-width: 577px;
     }
     &[id="legalStatus"],
     &[id="aboutTeam"],
@@ -60,45 +60,45 @@
     &[id="myContest"],
     &[id="videoMessage"] {
         width: 100%;
-        --cl-popover-max-width: 577px;
+        #{$prefix}-popover-max-width: 577px;
         @media (min-width: 768px) {
-            --cl-popover-max-width: 338px;
+            #{$prefix}-popover-max-width: 338px;
         }
         @media (min-width: 992px) {
-            --cl-popover-max-width: 458px;
+            #{$prefix}-popover-max-width: 458px;
         }
         @media (min-width: 1200px) {
-            --cl-popover-max-width: 378px;
+            #{$prefix}-popover-max-width: 378px;
         }
     }
     &[id="personalPortfolio"] {
         width: 100%;
-        --cl-popover-max-width: 577px;
+        #{$prefix}-popover-max-width: 577px;
         @media (min-width: 768px) {
-            --cl-popover-max-width: 428px;
+            #{$prefix}-popover-max-width: 428px;
         }
         @media (min-width: 992px) {
-            --cl-popover-max-width: 458px;
+            #{$prefix}-popover-max-width: 458px;
         }
         @media (min-width: 1200px) {
-            --cl-popover-max-width: 428px;
+            #{$prefix}-popover-max-width: 428px;
         }
     }
     &-header {
-        padding: var(--cl-popover-header-padding-y) var(--cl-popover-header-padding-x);
+        padding: var(#{$prefix}-popover-header-padding-y) var(#{$prefix}-popover-header-padding-x);
         margin-bottom: 0;
-        font-size: var(--cl-popover-header-font-size);
-        color: var(--cl-popover-header-color);
-        background-color: var(--cl-popover-header-bg);
-        border-bottom: var(--cl-popover-border-width) solid var(--cl-popover-border-color);
-        border-top-left-radius: var(--cl-popover-inner-border-radius);
-        border-top-right-radius: var(--cl-popover-inner-border-radius);
+        font-size: var(#{$prefix}-popover-header-font-size);
+        color: var(#{$prefix}-popover-header-color);
+        background-color: var(#{$prefix}-popover-header-bg);
+        border-bottom: var(#{$prefix}-popover-border-width) solid var(#{$prefix}-popover-border-color);
+        border-top-left-radius: var(#{$prefix}-popover-inner-border-radius);
+        border-top-right-radius: var(#{$prefix}-popover-inner-border-radius);
     }
     &-header:empty {
         display: none;
     }
     &-body {
-        padding: var(--cl-popover-body-padding-y) var(--cl-popover-body-padding-x);
-        color: var(--cl-popover-body-color);
+        padding: var(#{$prefix}-popover-body-padding-y) var(#{$prefix}-popover-body-padding-x);
+        color: var(#{$prefix}-popover-body-color);
     }
 }

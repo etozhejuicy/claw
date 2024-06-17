@@ -9,27 +9,27 @@
         opacity: 0.65;
     }
     & + .btn {
-        --cl-btn-font-weight: 400;
-        color: var(--cl-btn-color);
-        background-color: var(--cl-btn-bg);
-        border-color: var(--cl-btn-border-color);
+        #{$prefix}-btn-font-weight: 400;
+        color: var(#{$prefix}-btn-color);
+        background-color: var(#{$prefix}-btn-bg);
+        border-color: var(#{$prefix}-btn-border-color);
     }
     & + .btn:hover {
-        color: var(--cl-btn-hover-color);
-        background-color: var(--cl-btn-hover-bg);
-        border-color: var(--cl-btn-hover-border-color);
+        color: var(#{$prefix}-btn-hover-color);
+        background-color: var(#{$prefix}-btn-hover-bg);
+        border-color: var(#{$prefix}-btn-hover-border-color);
     }
     &:focus-visible {
-        color: var(--cl-btn-hover-color);
-        background-color: var(--cl-btn-hover-bg);
-        border-color: var(--cl-btn-hover-border-color);
+        color: var(#{$prefix}-btn-hover-color);
+        background-color: var(#{$prefix}-btn-hover-bg);
+        border-color: var(#{$prefix}-btn-hover-border-color);
         outline: 0;
-        box-shadow: var(--cl-btn-focus-box-shadow);
+        box-shadow: var(#{$prefix}-btn-focus-box-shadow);
     }
     &:focus-visible + .btn {
-        border-color: var(--cl-btn-hover-border-color);
+        border-color: var(#{$prefix}-btn-hover-border-color);
         outline: 0;
-        box-shadow: var(--cl-btn-focus-box-shadow);
+        box-shadow: var(#{$prefix}-btn-focus-box-shadow);
     }
 
     &:checked + .btn,
@@ -37,15 +37,15 @@
     &.btn:first-child:active,
     &.btn.active,
     &.btn.show {
-        color: var(--cl-btn-active-color);
-        background-color: var(--cl-btn-active-bg);
-        border-color: var(--cl-btn-active-border-color);
+        color: var(#{$prefix}-btn-active-color);
+        background-color: var(#{$prefix}-btn-active-bg);
+        border-color: var(#{$prefix}-btn-active-border-color);
     }
     &:checked + .btn:focus-visible,
     &:not(.btn-check) + .btn:active:focus-visible,
     &.btn:first-child:active:focus-visible,
     &.btn.active:focus-visible,
     &.btn.show:focus-visible {
-        box-shadow: var(--cl-btn-focus-box-shadow);
+        box-shadow: var(#{$prefix}-btn-focus-box-shadow);
     }
 }

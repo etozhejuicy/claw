@@ -1,11 +1,11 @@
 :root {
-    --cl-form-input-color: var(--grey-rgb);
-    --cl-form-check-bg: rgba(var(--cl-form-input-color), 0.2);
-    --cl-border-width: 0.0625rem;
-    --cl-border-color: rgba(var(--cl-form-input-color), 0);
-    --cl-border-radius: 0.375rem;
-    --cl-checkbox-size: initial;
-    --cl-form-check-label-padding-left: 0.75rem;
+    #{$prefix}-form-input-color: var(--grey-rgb);
+    #{$prefix}-form-check-bg: rgba(var(#{$prefix}-form-input-color), 0.2);
+    #{$prefix}-border-width: 0.0625rem;
+    #{$prefix}-border-color: rgba(var(#{$prefix}-form-input-color), 0);
+    #{$prefix}-border-radius: 0.375rem;
+    #{$prefix}-checkbox-size: initial;
+    #{$prefix}-form-check-label-padding-left: 0.75rem;
 }
 
 .form-check {
@@ -32,7 +32,7 @@
         position: relative;
         display: inline-block;
         width: 100%;
-        padding-left: var(--cl-form-check-label-padding-left);
+        padding-left: var(#{$prefix}-form-check-label-padding-left);
         user-select: none;
         cursor: pointer;
     }
@@ -42,13 +42,13 @@
         flex: 0 0 1.25rem;
         margin-top: 0.25em;
         vertical-align: top;
-        background-color: var(--cl-form-check-bg);
-        background-image: var(--cl-form-check-bg-image);
+        background-color: var(#{$prefix}-form-check-bg);
+        background-image: var(#{$prefix}-form-check-bg-image);
         background-repeat: no-repeat;
         background-position: center;
         background-size: auto;
-        border: var(--cl-border-width) solid var(--cl-border-color);
-        border-radius: var(--cl-border-radius);
+        border: var(#{$prefix}-border-width) solid var(#{$prefix}-border-color);
+        border-radius: var(#{$prefix}-border-radius);
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
@@ -57,7 +57,7 @@
         print-color-adjust: exact;
         cursor: pointer;
         &[type="checkbox"] {
-            border-radius: var(--cl-border-radius);
+            border-radius: var(#{$prefix}-border-radius);
         }
         &[type="radio"] {
             border-radius: 50%;
@@ -69,24 +69,24 @@
             outline: 0;
         }
         &:checked {
-            --cl-form-check-bg: var(--grey);
+            #{$prefix}-form-check-bg: var(--grey);
             background-color: var(--grey);
             border-color: #{darken($grey, 15%)};
         }
         &:checked[type="checkbox"] {
-            --cl-form-check-bg: var(--grey);
-            --cl-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.7775 1.69937L4.1075 7.36937C3.9675 7.50937 3.7775 7.58938 3.5775 7.58938C3.3775 7.58938 3.1875 7.50937 3.0475 7.36937L0.2175 4.53937C-0.0725 4.24937 -0.0725 3.76937 0.2175 3.47937C0.5075 3.18937 0.9875 3.18937 1.2775 3.47937L3.5775 5.77937L8.7175 0.639375C9.0075 0.349375 9.4875 0.349375 9.7775 0.639375C10.0675 0.929375 10.0675 1.39937 9.7775 1.69937Z' fill='%23222222'/%3E%3Cpath d='M9.7775 1.69937L4.1075 7.36937C3.9675 7.50937 3.7775 7.58938 3.5775 7.58938C3.3775 7.58938 3.1875 7.50937 3.0475 7.36937L0.2175 4.53937C-0.0725 4.24937 -0.0725 3.76937 0.2175 3.47937C0.5075 3.18937 0.9875 3.18937 1.2775 3.47937L3.5775 5.77937L8.7175 0.639375C9.0075 0.349375 9.4875 0.349375 9.7775 0.639375C10.0675 0.929375 10.0675 1.39937 9.7775 1.69937Z' fill='%23222222'/%3E%3C/svg%3E%0A");
+            #{$prefix}-form-check-bg: var(--grey);
+            #{$prefix}-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.7775 1.69937L4.1075 7.36937C3.9675 7.50937 3.7775 7.58938 3.5775 7.58938C3.3775 7.58938 3.1875 7.50937 3.0475 7.36937L0.2175 4.53937C-0.0725 4.24937 -0.0725 3.76937 0.2175 3.47937C0.5075 3.18937 0.9875 3.18937 1.2775 3.47937L3.5775 5.77937L8.7175 0.639375C9.0075 0.349375 9.4875 0.349375 9.7775 0.639375C10.0675 0.929375 10.0675 1.39937 9.7775 1.69937Z' fill='%23222222'/%3E%3Cpath d='M9.7775 1.69937L4.1075 7.36937C3.9675 7.50937 3.7775 7.58938 3.5775 7.58938C3.3775 7.58938 3.1875 7.50937 3.0475 7.36937L0.2175 4.53937C-0.0725 4.24937 -0.0725 3.76937 0.2175 3.47937C0.5075 3.18937 0.9875 3.18937 1.2775 3.47937L3.5775 5.77937L8.7175 0.639375C9.0075 0.349375 9.4875 0.349375 9.7775 0.639375C10.0675 0.929375 10.0675 1.39937 9.7775 1.69937Z' fill='%23222222'/%3E%3C/svg%3E%0A");
             background-size: 0.62469rem 0.62469rem;
         }
         &:checked[type="radio"] {
-            --cl-form-check-bg: var(--grey);
-            --cl-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.694 0 0 2.694 0 6C0 9.306 2.694 12 6 12C9.306 12 12 9.306 12 6C12 2.694 9.306 0 6 0Z' fill='%23222222'/%3E%3C/svg%3E%0A");
+            #{$prefix}-form-check-bg: var(--grey);
+            #{$prefix}-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.694 0 0 2.694 0 6C0 9.306 2.694 12 6 12C9.306 12 12 9.306 12 6C12 2.694 9.306 0 6 0Z' fill='%23222222'/%3E%3C/svg%3E%0A");
             background-size: 0.75rem 0.75rem;
         }
         &[type="checkbox"]:indeterminate {
             background-color: var(--white);
             border-color: #{darken($black, 5%)};
-            --cl-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%2365cb82' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+            #{$prefix}-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%2365cb82' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
         }
         &:disabled {
             pointer-events: none;
@@ -100,22 +100,22 @@
         }
     }
     &:is(.form-check-sm) {
-        --cl-form-check-label-padding-left: 0.71rem;
-        --cl-checkbox-size: 0.83331rem;
-        padding-left: var(--cl-checkbox-size);
+        #{$prefix}-form-check-label-padding-left: 0.71rem;
+        #{$prefix}-checkbox-size: 0.83331rem;
+        padding-left: var(#{$prefix}-checkbox-size);
         & .form-check-input {
-            --cl-border-radius: 0.25rem;
-            width: var(--cl-checkbox-size);
-            height: var(--cl-checkbox-size);
-            flex: 0 0 var(--cl-checkbox-size);
+            #{$prefix}-border-radius: 0.25rem;
+            width: var(#{$prefix}-checkbox-size);
+            height: var(#{$prefix}-checkbox-size);
+            flex: 0 0 var(#{$prefix}-checkbox-size);
             margin-top: 0.25rem;
-            margin-left: calc(-1 * var(--cl-checkbox-size));
+            margin-left: calc(-1 * var(#{$prefix}-checkbox-size));
             &:checked[type="checkbox"] {
                 background-size: 0.41644rem 0.41644rem;
             }
         }
         & .form-check-label {
-            padding-left: var(--cl-form-check-label-padding-left);
+            padding-left: var(#{$prefix}-form-check-label-padding-left);
             font-size: 0.875rem;
             font-style: normal;
             font-weight: 400;
@@ -194,7 +194,7 @@
                 border-color: #{darken($color, 5%)};
             }
             &:checked[type="checkbox"] {
-                --cl-form-check-bg: var(--#{$value});
+                #{$prefix}-form-check-bg: var(--#{$value});
             }
             &:checked[type="radio"] {
                 background-color: #{darken($color, 25%)};
@@ -202,16 +202,16 @@
                 @if $value == "primary" {
                     background-color: #{darken($color, 40%)};
                     border-color: #{darken($color, 40%)};
-                    --cl-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.694 0 0 2.694 0 6C0 9.306 2.694 12 6 12C9.306 12 12 9.306 12 6C12 2.694 9.306 0 6 0Z' fill='%2344FFF4'/%3E%3C/svg%3E%0A");
+                    #{$prefix}-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.694 0 0 2.694 0 6C0 9.306 2.694 12 6 12C9.306 12 12 9.306 12 6C12 2.694 9.306 0 6 0Z' fill='%2344FFF4'/%3E%3C/svg%3E%0A");
                 }
                 @if $value == "success" {
-                    --cl-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.694 0 0 2.694 0 6C0 9.306 2.694 12 6 12C9.306 12 12 9.306 12 6C12 2.694 9.306 0 6 0Z' fill='%233eaf2e'/%3E%3C/svg%3E%0A");
+                    #{$prefix}-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.694 0 0 2.694 0 6C0 9.306 2.694 12 6 12C9.306 12 12 9.306 12 6C12 2.694 9.306 0 6 0Z' fill='%233eaf2e'/%3E%3C/svg%3E%0A");
                 }
                 @if $value == "warning" {
-                    --cl-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.694 0 0 2.694 0 6C0 9.306 2.694 12 6 12C9.306 12 12 9.306 12 6C12 2.694 9.306 0 6 0Z' fill='%23fccf19'/%3E%3C/svg%3E%0A");
+                    #{$prefix}-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.694 0 0 2.694 0 6C0 9.306 2.694 12 6 12C9.306 12 12 9.306 12 6C12 2.694 9.306 0 6 0Z' fill='%23fccf19'/%3E%3C/svg%3E%0A");
                 }
                 @if $value == "danger" {
-                    --cl-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.694 0 0 2.694 0 6C0 9.306 2.694 12 6 12C9.306 12 12 9.306 12 6C12 2.694 9.306 0 6 0Z' fill='%23f24822'/%3E%3C/svg%3E%0A");
+                    #{$prefix}-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.694 0 0 2.694 0 6C0 9.306 2.694 12 6 12C9.306 12 12 9.306 12 6C12 2.694 9.306 0 6 0Z' fill='%23f24822'/%3E%3C/svg%3E%0A");
                 }
             }
         }

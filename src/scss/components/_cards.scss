@@ -253,15 +253,15 @@
         &:is(.btn-colored),
         &:is(.btn-dimmed) {
           --card-elements-accent-color: var(--grey-rgb);
-          --cl-btn-color: rgba(var(--card-elements-accent-color), 1);
-          --cl-btn-bg: rgba(var(--card-elements-accent-color), 0.1);
-          --cl-btn-border-color: rgba(var(--card-elements-accent-color), 0.1);
-          --cl-btn-hover-color: var(--cl-btn-color);
-          --cl-btn-hover-bg: var(--cl-btn-bg);
-          --cl-btn-border-hover-color: var(--cl-btn-border-color);
-          --cl-btn-active-color: var(--cl-btn-color);
-          --cl-btn-active-bg: var(--cl-btn-bg);
-          --cl-btn-border-active-color: var(--cl-btn-border-color);
+          #{$prefix}-btn-color: rgba(var(--card-elements-accent-color), 1);
+          #{$prefix}-btn-bg: rgba(var(--card-elements-accent-color), 0.1);
+          #{$prefix}-btn-border-color: rgba(var(--card-elements-accent-color), 0.1);
+          #{$prefix}-btn-hover-color: var(#{$prefix}-btn-color);
+          #{$prefix}-btn-hover-bg: var(#{$prefix}-btn-bg);
+          #{$prefix}-btn-border-hover-color: var(#{$prefix}-btn-border-color);
+          #{$prefix}-btn-active-color: var(#{$prefix}-btn-color);
+          #{$prefix}-btn-active-bg: var(#{$prefix}-btn-bg);
+          #{$prefix}-btn-border-active-color: var(#{$prefix}-btn-border-color);
         }
       }
     }
@@ -532,9 +532,9 @@
       & .btn-tag {
         &:is(.btn-colored),
         &:is(.btn-dimmed) {
-          --cl-btn-color: rgba(var(--card-elements-accent-color), 1);
-          --cl-btn-bg: rgba(var(--card-elements-accent-color), 0.1);
-          --cl-btn-border-color: rgba(var(--card-elements-accent-color), 0.1);
+          #{$prefix}-btn-color: rgba(var(--card-elements-accent-color), 1);
+          #{$prefix}-btn-bg: rgba(var(--card-elements-accent-color), 0.1);
+          #{$prefix}-btn-border-color: rgba(var(--card-elements-accent-color), 0.1);
         }
       }
     }
@@ -543,9 +543,9 @@
     --card-elements-accent-color: var(--#{$value}-rgb);
     & .card-interesting-tags {
       & .btn-interesting {
-        --cl-btn-active-color: rgba(var(--card-elements-accent-color), 1);
-        --cl-btn-active-bg: rgba(var(--card-elements-accent-color), 0.1);
-        --cl-btn-active-border-color: rgba(var(--card-elements-accent-color), 0.1);
+        #{$prefix}-btn-active-color: rgba(var(--card-elements-accent-color), 1);
+        #{$prefix}-btn-active-bg: rgba(var(--card-elements-accent-color), 0.1);
+        #{$prefix}-btn-active-border-color: rgba(var(--card-elements-accent-color), 0.1);
       }
     }
   }
@@ -585,7 +585,7 @@
 }
 .card-block > :not(.card-check:first-child) + .card,
 .card-block > .card-block:not(:first-child) {
-  margin-left: calc(var(--cl-border-width) * -1);
+  margin-left: calc(var(#{$prefix}-border-width) * -1);
   border-top: 0;
   border-right: 0;
   border-bottom: 0;
@@ -631,7 +631,7 @@
 }
 .card-block-vertical > .card:not(:first-child),
 .card-block-vertical > .card-block:not(:first-child) {
-  margin-top: calc(var(--cl-border-width) * -1);
+  margin-top: calc(var(#{$prefix}-border-width) * -1);
 }
 .card-block-vertical > .card:not(:last-child):not(.dropdown-toggle),
 .card-block-vertical > .card-block:not(:last-child) > .card {

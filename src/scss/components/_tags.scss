@@ -1,41 +1,41 @@
 .tag {
-  --cl-tag-padding-x: 0.5rem;
-  --cl-tag-padding-y: 0.25rem;
-  --cl-tag-font-family: Verdana, Geneva, sans-serif;
-  --cl-tag-font-size: 0.875rem;
-  --cl-tag-font-weight: 600;
-  --cl-tag-line-height: 120%;
-  --cl-tag-color: var(--dark);
-  --cl-tag-bg: transparent;
-  --cl-tag-border-width: 0.0625rem;
-  --cl-tag-border-color: transparent;
-  --cl-border-radius: 1rem;
-  --cl-tag-box-shadow: none;
-  --cl-tag-disabled-opacity: 0.65;
-  --cl-tag-letter-spacing: -0.02rem;
+  #{$prefix}-tag-padding-x: 0.5rem;
+  #{$prefix}-tag-padding-y: 0.25rem;
+  #{$prefix}-tag-font-family: Verdana, Geneva, sans-serif;
+  #{$prefix}-tag-font-size: 0.875rem;
+  #{$prefix}-tag-font-weight: 600;
+  #{$prefix}-tag-line-height: 120%;
+  #{$prefix}-tag-color: var(--dark);
+  #{$prefix}-tag-bg: transparent;
+  #{$prefix}-tag-border-width: 0.0625rem;
+  #{$prefix}-tag-border-color: transparent;
+  #{$prefix}-border-radius: 1rem;
+  #{$prefix}-tag-box-shadow: none;
+  #{$prefix}-tag-disabled-opacity: 0.65;
+  #{$prefix}-tag-letter-spacing: -0.02rem;
   display: inline-block;
-  padding: var(--cl-tag-padding-y) var(--cl-tag-padding-x);
+  padding: var(#{$prefix}-tag-padding-y) var(#{$prefix}-tag-padding-x);
   font-feature-settings:
     "clig" off,
     "liga" off;
-  font-family: var(--cl-tag-font-family);
-  font-size: var(--cl-tag-font-size);
-  font-weight: var(--cl-tag-font-weight);
-  line-height: var(--cl-tag-line-height);
-  color: var(--cl-tag-color);
+  font-family: var(#{$prefix}-tag-font-family);
+  font-size: var(#{$prefix}-tag-font-size);
+  font-weight: var(#{$prefix}-tag-font-weight);
+  line-height: var(#{$prefix}-tag-line-height);
+  color: var(#{$prefix}-tag-color);
   text-align: center;
   text-decoration: none;
-  letter-spacing: var(--cl-tag-letter-spacing);
+  letter-spacing: var(#{$prefix}-tag-letter-spacing);
   vertical-align: middle;
   cursor: default;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
   text-transform: none;
-  border: var(--cl-tag-border-width) solid var(--cl-tag-border-color);
-  border-radius: var(--cl-border-radius);
-  background-color: var(--cl-tag-bg);
-  box-shadow: var(--cl-tag-box-shadow);
+  border: var(#{$prefix}-tag-border-width) solid var(#{$prefix}-tag-border-color);
+  border-radius: var(#{$prefix}-border-radius);
+  background-color: var(#{$prefix}-tag-bg);
+  box-shadow: var(#{$prefix}-tag-box-shadow);
   transition:
     color 0.15s ease-in-out,
     background-color 0.15s ease-in-out,
@@ -48,97 +48,98 @@
 
 @each $color, $value in $colors {
   .tag-#{$value} {
-    --cl-tag-color: var(--white);
-    --cl-tag-bg: var(--#{$value});
-    --cl-tag-border-color: var(--#{$value});
-    --cl-tag-hover-color: var(--white);
-    --cl-tag-hover-bg: #{lighten($color, 15%)};
-    --cl-tag-hover-border-color: #{lighten($color, 15%)};
-    --cl-tag-focus-shadow-rgb: rgba(var(--#{$value}-rgb), 1);
-    --cl-tag-active-color: var(--white);
-    --cl-tag-active-bg: #{darken($color, 10%)};
-    --cl-tag-active-border-color: #{darken($color, 10%)};
-    --cl-tag-active-shadow: inset 0 3px 5px rgba(var(--#{$value}-rgb), 0.125);
-    --cl-tag-disabled-color: rgba(var(--dark-rgb), 0.3);
-    --cl-tag-disabled-bg: var(--grey);
-    --cl-tag-disabled-border-color: var(--grey);
+    #{$prefix}-tag-color: var(--white);
+    #{$prefix}-tag-bg: var(--#{$value});
+    #{$prefix}-tag-border-color: var(--#{$value});
+    #{$prefix}-tag-hover-color: var(--white);
+    #{$prefix}-tag-hover-bg: #{lighten($color, 15%)};
+    #{$prefix}-tag-hover-border-color: #{lighten($color, 15%)};
+    #{$prefix}-tag-focus-shadow-rgb: rgba(var(--#{$value}-rgb), 1);
+    #{$prefix}-tag-active-color: var(--white);
+    #{$prefix}-tag-active-bg: #{darken($color, 10%)};
+    #{$prefix}-tag-active-border-color: #{darken($color, 10%)};
+    #{$prefix}-tag-active-shadow: inset 0 3px 5px rgba(var(--#{$value}-rgb), 0.125);
+    #{$prefix}-tag-disabled-color: rgba(var(--dark-rgb), 0.3);
+    #{$prefix}-tag-disabled-bg: var(--grey);
+    #{$prefix}-tag-disabled-border-color: var(--grey);
     &.tag-voluminous {
-      --cl-tag-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
+      #{$prefix}-tag-box-shadow:
+        0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
         0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
     }
     &-shadow {
       filter: drop-shadow(0rem 0.125rem 1rem rgba(var(--#{$value}-rgb), 0.5));
     }
     @if $value == "primary" {
-      --cl-tag-color: var(--black);
-      --cl-tag-hover-color: var(--black);
-      --cl-tag-active-color: var(--black);
-      --cl-tag-active-bg: #{darken($color, 25%)};
-      --cl-tag-active-border-color: #{darken($color, 25%)};
+      #{$prefix}-tag-color: var(--black);
+      #{$prefix}-tag-hover-color: var(--black);
+      #{$prefix}-tag-active-color: var(--black);
+      #{$prefix}-tag-active-bg: #{darken($color, 25%)};
+      #{$prefix}-tag-active-border-color: #{darken($color, 25%)};
     }
     @if $value == "secondary" {
-      --cl-tag-active-bg: #{darken($color, 1%)};
-      --cl-tag-active-border-color: #{darken($color, 1%)};
+      #{$prefix}-tag-active-bg: #{darken($color, 1%)};
+      #{$prefix}-tag-active-border-color: #{darken($color, 1%)};
     }
     @if $value == "warning" {
-      --cl-tag-color: var(--black);
-      --cl-tag-hover-color: var(--black);
-      --cl-tag-active-color: var(--black);
+      #{$prefix}-tag-color: var(--black);
+      #{$prefix}-tag-hover-color: var(--black);
+      #{$prefix}-tag-active-color: var(--black);
     }
     @if $value == "white" {
-      --cl-tag-color: var(--black);
-      --cl-tag-hover-color: var(--black);
-      --cl-tag-active-color: var(--black);
-      --cl-tag-active-bg: #{darken($color, 25%)};
-      --cl-tag-active-border-color: #{darken($color, 25%)};
+      #{$prefix}-tag-color: var(--black);
+      #{$prefix}-tag-hover-color: var(--black);
+      #{$prefix}-tag-active-color: var(--black);
+      #{$prefix}-tag-active-bg: #{darken($color, 25%)};
+      #{$prefix}-tag-active-border-color: #{darken($color, 25%)};
     }
   }
   .tag-outline-#{$value} {
     &:not(.tag-colored),
     &:not(.tag-dimmed) {
-      --cl-tag-color: var(--white);
+      #{$prefix}-tag-color: var(--white);
     }
-    --cl-tag-color: var(--#{$value});
-    --cl-tag-bg: transparent;
-    --cl-tag-border-color: var(--#{$value});
-    --cl-tag-hover-bg: var(--#{$value});
-    --cl-tag-hover-border-color: var(--#{$value});
-    --cl-tag-border-width: 0.0625rem;
-    --cl-tag-box-shadow: unset;
-    --cl-tag-focus-shadow-rgb: unset;
-    --cl-tag-active-bg: #{darken($color, 15%)};
-    --cl-tag-active-border-color: #{darken($color, 15%)};
+    #{$prefix}-tag-color: var(--#{$value});
+    #{$prefix}-tag-bg: transparent;
+    #{$prefix}-tag-border-color: var(--#{$value});
+    #{$prefix}-tag-hover-bg: var(--#{$value});
+    #{$prefix}-tag-hover-border-color: var(--#{$value});
+    #{$prefix}-tag-border-width: 0.0625rem;
+    #{$prefix}-tag-box-shadow: unset;
+    #{$prefix}-tag-focus-shadow-rgb: unset;
+    #{$prefix}-tag-active-bg: #{darken($color, 15%)};
+    #{$prefix}-tag-active-border-color: #{darken($color, 15%)};
     @if $value == "primary" {
-      --cl-tag-active-bg: #{darken($color, 25%)};
-      --cl-tag-active-border-color: #{darken($color, 25%)};
+      #{$prefix}-tag-active-bg: #{darken($color, 25%)};
+      #{$prefix}-tag-active-border-color: #{darken($color, 25%)};
     }
     @if $value == "secondary" {
-      --cl-tag-color: #{lighten($color, 50%)};
-      --cl-tag-border-color: #{lighten($color, 10%)};
-      --cl-tag-active-bg: #{darken($color, 5%)};
-      --cl-tag-active-border-color: #{darken($color, 5%)};
+      #{$prefix}-tag-color: #{lighten($color, 50%)};
+      #{$prefix}-tag-border-color: #{lighten($color, 10%)};
+      #{$prefix}-tag-active-bg: #{darken($color, 5%)};
+      #{$prefix}-tag-active-border-color: #{darken($color, 5%)};
     }
   }
   .tag-colored {
     &:is(.tag-#{$value}),
     &:is(.tag-outline-#{$value}) {
-      --cl-tag-color: #{$color};
+      #{$prefix}-tag-color: #{$color};
       @if $value == "secondary" {
-        --cl-tag-color: #{lighten($color, 50%)};
-        --cl-tag-border-color: #{lighten($color, 10%)};
+        #{$prefix}-tag-color: #{lighten($color, 50%)};
+        #{$prefix}-tag-border-color: #{lighten($color, 10%)};
       }
     }
   }
   .tag-dimmed {
-    --cl-tag-box-shadow: unset;
-    --cl-tag-focus-shadow-rgb: unset;
+    #{$prefix}-tag-box-shadow: unset;
+    #{$prefix}-tag-focus-shadow-rgb: unset;
     &:is(.tag-#{$value}),
     &:is(.tag-outline-#{$value}) {
-      --cl-tag-bg: rgba(var(--#{$value}-rgb), 0.1);
-      --cl-tag-hover-bg: rgba(var(--#{$value}-rgb), 1);
+      #{$prefix}-tag-bg: rgba(var(--#{$value}-rgb), 0.1);
+      #{$prefix}-tag-hover-bg: rgba(var(--#{$value}-rgb), 1);
       @if $value == "secondary" {
-        --cl-tag-color: #{lighten($color, 50%)};
-        --cl-tag-bg: rgba(var(--#{$value}-rgb), 0.8);
+        #{$prefix}-tag-color: #{lighten($color, 50%)};
+        #{$prefix}-tag-bg: rgba(var(--#{$value}-rgb), 0.8);
       }
     }
   }

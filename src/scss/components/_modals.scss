@@ -3,31 +3,31 @@
 }
 
 .modal {
-    --cl-modal-backdrop-bg: rgba(var(--true-black-rgb), 0.5);
-    --cl-modal-border-radius: 0;
-    --cl-modal-padding-y: 1rem;
-    --cl-modal-padding-x: 0;
-    --cl-modal-content-padding-y: 1rem;
-    --cl-modal-content-padding-x: 1rem;
-    --cl-modal-content-background-color: var(--card-background-color);
-    --cl-modal-content-color: var(--card-text-color);
-    --cl-modal-content-border-radius: 1.5rem;
-    --cl-modal-backdrop-filter: blur(2.8606rem);
-    --cl-modal-header-padding-y: 1rem;
-    --cl-modal-header-padding-x: 0;
-    --cl-modal-body-padding-y: 1rem;
-    --cl-modal-body-padding-x: 0;
-    --cl-modal-footer-padding-y: 2rem;
-    --cl-modal-footer-padding-x: 0;
-    --cl-modal-zindex: 1050;
+    #{$prefix}-modal-backdrop-bg: rgba(var(--true-black-rgb), 0.5);
+    #{$prefix}-modal-border-radius: 0;
+    #{$prefix}-modal-padding-y: 1rem;
+    #{$prefix}-modal-padding-x: 0;
+    #{$prefix}-modal-content-padding-y: 1rem;
+    #{$prefix}-modal-content-padding-x: 1rem;
+    #{$prefix}-modal-content-background-color: var(--card-background-color);
+    #{$prefix}-modal-content-color: var(--card-text-color);
+    #{$prefix}-modal-content-border-radius: 1.5rem;
+    #{$prefix}-modal-backdrop-filter: blur(2.8606rem);
+    #{$prefix}-modal-header-padding-y: 1rem;
+    #{$prefix}-modal-header-padding-x: 0;
+    #{$prefix}-modal-body-padding-y: 1rem;
+    #{$prefix}-modal-body-padding-x: 0;
+    #{$prefix}-modal-footer-padding-y: 2rem;
+    #{$prefix}-modal-footer-padding-x: 0;
+    #{$prefix}-modal-zindex: 1050;
     position: fixed;
-    background-color: var(--cl-modal-backdrop-bg);
+    background-color: var(#{$prefix}-modal-backdrop-bg);
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     display: flex;
-    // backdrop-filter: var(--cl-modal-backdrop-filter);
+    // backdrop-filter: var(#{$prefix}-modal-backdrop-filter);
     z-index: -100;
     visibility: hidden;
     opacity: 0;
@@ -51,7 +51,7 @@
         }
     }
     &.show {
-        z-index: var(--cl-modal-zindex);
+        z-index: var(#{$prefix}-modal-zindex);
         visibility: visible;
         opacity: 1;
         pointer-events: auto;
@@ -67,7 +67,7 @@
         max-width: 22.375rem;
         height: fit-content;
         margin: auto auto 0 auto;
-        padding: var(--cl-modal-padding-y) var(--cl-modal-padding-x);
+        padding: var(#{$prefix}-modal-padding-y) var(#{$prefix}-modal-padding-x);
         transform: translateY(var(--modal-translate));
         transition: 0.05s ease;
     }
@@ -77,12 +77,12 @@
         display: block;
         width: 100%;
         height: 100%;
-        padding: calc(var(--cl-modal-content-padding-y) + 0.5rem) var(--cl-modal-content-padding-x)
-            var(--cl-modal-content-padding-y);
-        border-radius: var(--cl-modal-border-radius);
-        color: var(--cl-modal-content-color);
-        background-color: var(--cl-modal-content-background-color);
-        border-radius: var(--cl-modal-content-border-radius);
+        padding: calc(var(#{$prefix}-modal-content-padding-y) + 0.5rem) var(#{$prefix}-modal-content-padding-x)
+            var(#{$prefix}-modal-content-padding-y);
+        border-radius: var(#{$prefix}-modal-border-radius);
+        color: var(#{$prefix}-modal-content-color);
+        background-color: var(#{$prefix}-modal-content-background-color);
+        border-radius: var(#{$prefix}-modal-content-border-radius);
         overflow: hidden;
         cursor: grab;
         touch-action: pan-y;
@@ -91,19 +91,19 @@
         & > * {
             &:first-child {
                 &:is(:not(.modal-close)):is(:not(.modal-icon)) {
-                    padding: 0 var(--cl-modal-header-padding-x);
+                    padding: 0 var(#{$prefix}-modal-header-padding-x);
                     & ~ .modal-footer {
-                        --cl-modal-footer-padding-y: 1rem;
+                        #{$prefix}-modal-footer-padding-y: 1rem;
                     }
                 }
             }
         }
     }
     &-header {
-        padding: var(--cl-modal-header-padding-y) var(--cl-modal-header-padding-x) 0;
+        padding: var(#{$prefix}-modal-header-padding-y) var(#{$prefix}-modal-header-padding-x) 0;
         & > .row {
-            --cl-gutter-x: 0.5rem;
-            --cl-gutter-y: 0.5rem;
+            #{$prefix}-gutter-x: 0.5rem;
+            #{$prefix}-gutter-y: 0.5rem;
         }
     }
     &-title {
@@ -112,7 +112,7 @@
         text-align: center;
     }
     &-body {
-        padding: var(--cl-modal-body-padding-y) var(--cl-modal-body-padding-x) 0;
+        padding: var(#{$prefix}-modal-body-padding-y) var(#{$prefix}-modal-body-padding-x) 0;
         text-align: center;
         &-text {
             font-size: 1rem;
@@ -126,21 +126,21 @@
         }
     }
     &-footer {
-        padding: var(--cl-modal-footer-padding-y) var(--cl-modal-footer-padding-x) 0;
+        padding: var(#{$prefix}-modal-footer-padding-y) var(#{$prefix}-modal-footer-padding-x) 0;
         & > .row {
-            --cl-gutter-x: 0.5rem;
-            --cl-gutter-y: 0.5rem;
+            #{$prefix}-gutter-x: 0.5rem;
+            #{$prefix}-gutter-y: 0.5rem;
         }
     }
     &-translating {
         user-select: none;
     }
     &-icon {
-        --cl-icon-width: 2rem;
-        --cl-icon-height: 2rem;
+        #{$prefix}-icon-width: 2rem;
+        #{$prefix}-icon-height: 2rem;
         position: relative;
-        width: var(--cl-icon-width);
-        height: var(--cl-icon-height);
+        width: var(#{$prefix}-icon-width);
+        height: var(#{$prefix}-icon-height);
         z-index: 1;
         appearance: none;
         border: none;
@@ -160,21 +160,21 @@
             object-fit: contain;
         }
         &-sphere {
-            --cl-icon-width: 4rem;
-            --cl-icon-height: 4rem;
+            #{$prefix}-icon-width: 4rem;
+            #{$prefix}-icon-height: 4rem;
             margin-top: 0.75rem;
             margin-bottom: 0.5rem;
         }
     }
     &-close {
-        --cl-btn-padding-x: 0.75rem;
-        --cl-btn-padding-y: 0.75rem;
-        --cl-btn-top: 0;
-        --cl-btn-left: 50%;
-        --cl-modal-close-w: 2.75rem;
-        --cl-modal-close-h: 0.25rem;
-        --cl-modal-close-border-radius: 7.6875rem;
-        --cl-modal-close-background-color: var(--grey);
+        #{$prefix}-btn-padding-x: 0.75rem;
+        #{$prefix}-btn-padding-y: 0.75rem;
+        #{$prefix}-btn-top: 0;
+        #{$prefix}-btn-left: 50%;
+        #{$prefix}-modal-close-w: 2.75rem;
+        #{$prefix}-modal-close-h: 0.25rem;
+        #{$prefix}-modal-close-border-radius: 7.6875rem;
+        #{$prefix}-modal-close-background-color: var(--grey);
         position: relative;
         z-index: 1;
         appearance: none;
@@ -185,7 +185,7 @@
         justify-content: center;
         background-color: unset;
         margin: -1.5rem auto auto auto;
-        padding: var(--cl-btn-padding-y) var(--cl-btn-padding-x);
+        padding: var(#{$prefix}-btn-padding-y) var(#{$prefix}-btn-padding-x);
         text-align: center;
         text-decoration: none;
         vertical-align: middle;
@@ -194,11 +194,11 @@
         user-select: none;
         &::before {
             content: "";
-            width: var(--cl-modal-close-w);
-            height: var(--cl-modal-close-h);
-            background-color: var(--cl-modal-close-background-color);
-            border-radius: var(--cl-modal-close-border-radius);
-            color: var(--cl-modal-close-color);
+            width: var(#{$prefix}-modal-close-w);
+            height: var(#{$prefix}-modal-close-h);
+            background-color: var(#{$prefix}-modal-close-background-color);
+            border-radius: var(#{$prefix}-modal-close-border-radius);
+            color: var(#{$prefix}-modal-close-color);
         }
         & svg {
             width: 100%;

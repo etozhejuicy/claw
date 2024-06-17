@@ -1,11 +1,11 @@
 .spinner-grow,
 .spinner-border {
     display: inline-block;
-    width: var(--cl-spinner-width);
-    height: var(--cl-spinner-height);
-    vertical-align: var(--cl-spinner-vertical-align);
+    width: var(#{$prefix}-spinner-width);
+    height: var(#{$prefix}-spinner-height);
+    vertical-align: var(#{$prefix}-spinner-vertical-align);
     border-radius: 50%;
-    animation: var(--cl-spinner-animation-speed) linear infinite var(--cl-spinner-animation-name);
+    animation: var(#{$prefix}-spinner-animation-speed) linear infinite var(#{$prefix}-spinner-animation-name);
 }
 
 @keyframes spinner-border {
@@ -14,20 +14,20 @@
     }
 }
 .spinner-border {
-    --cl-spinner-width: 2rem;
-    --cl-spinner-height: 2rem;
-    --cl-spinner-vertical-align: -0.125em;
-    --cl-spinner-border-width: 0.25em;
-    --cl-spinner-animation-speed: 0.75s;
-    --cl-spinner-animation-name: spinner-border;
-    border: var(--cl-spinner-border-width) solid currentcolor;
+    #{$prefix}-spinner-width: 2rem;
+    #{$prefix}-spinner-height: 2rem;
+    #{$prefix}-spinner-vertical-align: -0.125em;
+    #{$prefix}-spinner-border-width: 0.25em;
+    #{$prefix}-spinner-animation-speed: 0.75s;
+    #{$prefix}-spinner-animation-name: spinner-border;
+    border: var(#{$prefix}-spinner-border-width) solid currentcolor;
     border-right-color: transparent;
 }
 
 .spinner-border-sm {
-    --cl-spinner-width: 1rem;
-    --cl-spinner-height: 1rem;
-    --cl-spinner-border-width: 0.2em;
+    #{$prefix}-spinner-width: 1rem;
+    #{$prefix}-spinner-height: 1rem;
+    #{$prefix}-spinner-border-width: 0.2em;
 }
 
 @keyframes spinner-grow {
@@ -40,23 +40,23 @@
     }
 }
 .spinner-grow {
-    --cl-spinner-width: 2rem;
-    --cl-spinner-height: 2rem;
-    --cl-spinner-vertical-align: -0.125em;
-    --cl-spinner-animation-speed: 0.75s;
-    --cl-spinner-animation-name: spinner-grow;
+    #{$prefix}-spinner-width: 2rem;
+    #{$prefix}-spinner-height: 2rem;
+    #{$prefix}-spinner-vertical-align: -0.125em;
+    #{$prefix}-spinner-animation-speed: 0.75s;
+    #{$prefix}-spinner-animation-name: spinner-grow;
     background-color: currentcolor;
     opacity: 0;
 }
 
 .spinner-grow-sm {
-    --cl-spinner-width: 1rem;
-    --cl-spinner-height: 1rem;
+    #{$prefix}-spinner-width: 1rem;
+    #{$prefix}-spinner-height: 1rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
     .spinner-border,
     .spinner-grow {
-        --cl-spinner-animation-speed: 1.5s;
+        #{$prefix}-spinner-animation-speed: 1.5s;
     }
 }

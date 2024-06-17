@@ -1,19 +1,19 @@
 // flexbox columns
 .row {
-    --cl-gutter-x: 1.5rem;
-    --cl-gutter-y: 0;
+    #{$prefix}-gutter-x: 1.5rem;
+    #{$prefix}-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-top: calc(-1 * var(--cl-gutter-y));
-    margin-right: calc(-0.5 * var(--cl-gutter-x));
-    margin-left: calc(-0.5 * var(--cl-gutter-x));
+    margin-top: calc(-1 * var(#{$prefix}-gutter-y));
+    margin-right: calc(-0.5 * var(#{$prefix}-gutter-x));
+    margin-left: calc(-0.5 * var(#{$prefix}-gutter-x));
     & > * {
         flex-shrink: 0;
         width: 100%;
         max-width: 100%;
-        padding-right: calc(var(--cl-gutter-x) * 0.5);
-        padding-left: calc(var(--cl-gutter-x) * 0.5);
-        margin-top: var(--cl-gutter-y);
+        padding-right: calc(var(#{$prefix}-gutter-x) * 0.5);
+        padding-left: calc(var(#{$prefix}-gutter-x) * 0.5);
+        margin-top: var(#{$prefix}-gutter-y);
     }
 }
 
@@ -167,62 +167,62 @@
 
 .g-0,
 .gx-0 {
-    --cl-gutter-x: 0;
+    #{$prefix}-gutter-x: 0;
 }
 
 .g-0,
 .gy-0 {
-    --cl-gutter-y: 0;
+    #{$prefix}-gutter-y: 0;
 }
 
 .g-1,
 .gx-1 {
-    --cl-gutter-x: 0.25rem;
+    #{$prefix}-gutter-x: 0.25rem;
 }
 
 .g-1,
 .gy-1 {
-    --cl-gutter-y: 0.25rem;
+    #{$prefix}-gutter-y: 0.25rem;
 }
 
 .g-2,
 .gx-2 {
-    --cl-gutter-x: 0.5rem;
+    #{$prefix}-gutter-x: 0.5rem;
 }
 
 .g-2,
 .gy-2 {
-    --cl-gutter-y: 0.5rem;
+    #{$prefix}-gutter-y: 0.5rem;
 }
 
 .g-3,
 .gx-3 {
-    --cl-gutter-x: 1rem;
+    #{$prefix}-gutter-x: 1rem;
 }
 
 .g-3,
 .gy-3 {
-    --cl-gutter-y: 1rem;
+    #{$prefix}-gutter-y: 1rem;
 }
 
 .g-4,
 .gx-4 {
-    --cl-gutter-x: 1.5rem;
+    #{$prefix}-gutter-x: 1.5rem;
 }
 
 .g-4,
 .gy-4 {
-    --cl-gutter-y: 1.5rem;
+    #{$prefix}-gutter-y: 1.5rem;
 }
 
 .g-5,
 .gx-5 {
-    --cl-gutter-x: 3rem;
+    #{$prefix}-gutter-x: 3rem;
 }
 
 .g-5,
 .gy-5 {
-    --cl-gutter-y: 3rem;
+    #{$prefix}-gutter-y: 3rem;
 }
 
 @media (min-width: 576px) {
@@ -347,51 +347,51 @@
     }
     .g-sm-0,
     .gx-sm-0 {
-        --cl-gutter-x: 0;
+        #{$prefix}-gutter-x: 0;
     }
     .g-sm-0,
     .gy-sm-0 {
-        --cl-gutter-y: 0;
+        #{$prefix}-gutter-y: 0;
     }
     .g-sm-1,
     .gx-sm-1 {
-        --cl-gutter-x: 0.25rem;
+        #{$prefix}-gutter-x: 0.25rem;
     }
     .g-sm-1,
     .gy-sm-1 {
-        --cl-gutter-y: 0.25rem;
+        #{$prefix}-gutter-y: 0.25rem;
     }
     .g-sm-2,
     .gx-sm-2 {
-        --cl-gutter-x: 0.5rem;
+        #{$prefix}-gutter-x: 0.5rem;
     }
     .g-sm-2,
     .gy-sm-2 {
-        --cl-gutter-y: 0.5rem;
+        #{$prefix}-gutter-y: 0.5rem;
     }
     .g-sm-3,
     .gx-sm-3 {
-        --cl-gutter-x: 1rem;
+        #{$prefix}-gutter-x: 1rem;
     }
     .g-sm-3,
     .gy-sm-3 {
-        --cl-gutter-y: 1rem;
+        #{$prefix}-gutter-y: 1rem;
     }
     .g-sm-4,
     .gx-sm-4 {
-        --cl-gutter-x: 1.5rem;
+        #{$prefix}-gutter-x: 1.5rem;
     }
     .g-sm-4,
     .gy-sm-4 {
-        --cl-gutter-y: 1.5rem;
+        #{$prefix}-gutter-y: 1.5rem;
     }
     .g-sm-5,
     .gx-sm-5 {
-        --cl-gutter-x: 3rem;
+        #{$prefix}-gutter-x: 3rem;
     }
     .g-sm-5,
     .gy-sm-5 {
-        --cl-gutter-y: 3rem;
+        #{$prefix}-gutter-y: 3rem;
     }
 }
 @media (min-width: 768px) {
@@ -516,51 +516,51 @@
     }
     .g-md-0,
     .gx-md-0 {
-        --cl-gutter-x: 0;
+        #{$prefix}-gutter-x: 0;
     }
     .g-md-0,
     .gy-md-0 {
-        --cl-gutter-y: 0;
+        #{$prefix}-gutter-y: 0;
     }
     .g-md-1,
     .gx-md-1 {
-        --cl-gutter-x: 0.25rem;
+        #{$prefix}-gutter-x: 0.25rem;
     }
     .g-md-1,
     .gy-md-1 {
-        --cl-gutter-y: 0.25rem;
+        #{$prefix}-gutter-y: 0.25rem;
     }
     .g-md-2,
     .gx-md-2 {
-        --cl-gutter-x: 0.5rem;
+        #{$prefix}-gutter-x: 0.5rem;
     }
     .g-md-2,
     .gy-md-2 {
-        --cl-gutter-y: 0.5rem;
+        #{$prefix}-gutter-y: 0.5rem;
     }
     .g-md-3,
     .gx-md-3 {
-        --cl-gutter-x: 1rem;
+        #{$prefix}-gutter-x: 1rem;
     }
     .g-md-3,
     .gy-md-3 {
-        --cl-gutter-y: 1rem;
+        #{$prefix}-gutter-y: 1rem;
     }
     .g-md-4,
     .gx-md-4 {
-        --cl-gutter-x: 1.5rem;
+        #{$prefix}-gutter-x: 1.5rem;
     }
     .g-md-4,
     .gy-md-4 {
-        --cl-gutter-y: 1.5rem;
+        #{$prefix}-gutter-y: 1.5rem;
     }
     .g-md-5,
     .gx-md-5 {
-        --cl-gutter-x: 3rem;
+        #{$prefix}-gutter-x: 3rem;
     }
     .g-md-5,
     .gy-md-5 {
-        --cl-gutter-y: 3rem;
+        #{$prefix}-gutter-y: 3rem;
     }
 }
 @media (min-width: 992px) {
@@ -685,51 +685,51 @@
     }
     .g-lg-0,
     .gx-lg-0 {
-        --cl-gutter-x: 0;
+        #{$prefix}-gutter-x: 0;
     }
     .g-lg-0,
     .gy-lg-0 {
-        --cl-gutter-y: 0;
+        #{$prefix}-gutter-y: 0;
     }
     .g-lg-1,
     .gx-lg-1 {
-        --cl-gutter-x: 0.25rem;
+        #{$prefix}-gutter-x: 0.25rem;
     }
     .g-lg-1,
     .gy-lg-1 {
-        --cl-gutter-y: 0.25rem;
+        #{$prefix}-gutter-y: 0.25rem;
     }
     .g-lg-2,
     .gx-lg-2 {
-        --cl-gutter-x: 0.5rem;
+        #{$prefix}-gutter-x: 0.5rem;
     }
     .g-lg-2,
     .gy-lg-2 {
-        --cl-gutter-y: 0.5rem;
+        #{$prefix}-gutter-y: 0.5rem;
     }
     .g-lg-3,
     .gx-lg-3 {
-        --cl-gutter-x: 1rem;
+        #{$prefix}-gutter-x: 1rem;
     }
     .g-lg-3,
     .gy-lg-3 {
-        --cl-gutter-y: 1rem;
+        #{$prefix}-gutter-y: 1rem;
     }
     .g-lg-4,
     .gx-lg-4 {
-        --cl-gutter-x: 1.5rem;
+        #{$prefix}-gutter-x: 1.5rem;
     }
     .g-lg-4,
     .gy-lg-4 {
-        --cl-gutter-y: 1.5rem;
+        #{$prefix}-gutter-y: 1.5rem;
     }
     .g-lg-5,
     .gx-lg-5 {
-        --cl-gutter-x: 3rem;
+        #{$prefix}-gutter-x: 3rem;
     }
     .g-lg-5,
     .gy-lg-5 {
-        --cl-gutter-y: 3rem;
+        #{$prefix}-gutter-y: 3rem;
     }
 }
 @media (min-width: 1200px) {
@@ -854,51 +854,51 @@
     }
     .g-xl-0,
     .gx-xl-0 {
-        --cl-gutter-x: 0;
+        #{$prefix}-gutter-x: 0;
     }
     .g-xl-0,
     .gy-xl-0 {
-        --cl-gutter-y: 0;
+        #{$prefix}-gutter-y: 0;
     }
     .g-xl-1,
     .gx-xl-1 {
-        --cl-gutter-x: 0.25rem;
+        #{$prefix}-gutter-x: 0.25rem;
     }
     .g-xl-1,
     .gy-xl-1 {
-        --cl-gutter-y: 0.25rem;
+        #{$prefix}-gutter-y: 0.25rem;
     }
     .g-xl-2,
     .gx-xl-2 {
-        --cl-gutter-x: 0.5rem;
+        #{$prefix}-gutter-x: 0.5rem;
     }
     .g-xl-2,
     .gy-xl-2 {
-        --cl-gutter-y: 0.5rem;
+        #{$prefix}-gutter-y: 0.5rem;
     }
     .g-xl-3,
     .gx-xl-3 {
-        --cl-gutter-x: 1rem;
+        #{$prefix}-gutter-x: 1rem;
     }
     .g-xl-3,
     .gy-xl-3 {
-        --cl-gutter-y: 1rem;
+        #{$prefix}-gutter-y: 1rem;
     }
     .g-xl-4,
     .gx-xl-4 {
-        --cl-gutter-x: 1.5rem;
+        #{$prefix}-gutter-x: 1.5rem;
     }
     .g-xl-4,
     .gy-xl-4 {
-        --cl-gutter-y: 1.5rem;
+        #{$prefix}-gutter-y: 1.5rem;
     }
     .g-xl-5,
     .gx-xl-5 {
-        --cl-gutter-x: 3rem;
+        #{$prefix}-gutter-x: 3rem;
     }
     .g-xl-5,
     .gy-xl-5 {
-        --cl-gutter-y: 3rem;
+        #{$prefix}-gutter-y: 3rem;
     }
 }
 @media (min-width: 1400px) {
@@ -1023,50 +1023,50 @@
     }
     .g-xxl-0,
     .gx-xxl-0 {
-        --cl-gutter-x: 0;
+        #{$prefix}-gutter-x: 0;
     }
     .g-xxl-0,
     .gy-xxl-0 {
-        --cl-gutter-y: 0;
+        #{$prefix}-gutter-y: 0;
     }
     .g-xxl-1,
     .gx-xxl-1 {
-        --cl-gutter-x: 0.25rem;
+        #{$prefix}-gutter-x: 0.25rem;
     }
     .g-xxl-1,
     .gy-xxl-1 {
-        --cl-gutter-y: 0.25rem;
+        #{$prefix}-gutter-y: 0.25rem;
     }
     .g-xxl-2,
     .gx-xxl-2 {
-        --cl-gutter-x: 0.5rem;
+        #{$prefix}-gutter-x: 0.5rem;
     }
     .g-xxl-2,
     .gy-xxl-2 {
-        --cl-gutter-y: 0.5rem;
+        #{$prefix}-gutter-y: 0.5rem;
     }
     .g-xxl-3,
     .gx-xxl-3 {
-        --cl-gutter-x: 1rem;
+        #{$prefix}-gutter-x: 1rem;
     }
     .g-xxl-3,
     .gy-xxl-3 {
-        --cl-gutter-y: 1rem;
+        #{$prefix}-gutter-y: 1rem;
     }
     .g-xxl-4,
     .gx-xxl-4 {
-        --cl-gutter-x: 1.5rem;
+        #{$prefix}-gutter-x: 1.5rem;
     }
     .g-xxl-4,
     .gy-xxl-4 {
-        --cl-gutter-y: 1.5rem;
+        #{$prefix}-gutter-y: 1.5rem;
     }
     .g-xxl-5,
     .gx-xxl-5 {
-        --cl-gutter-x: 3rem;
+        #{$prefix}-gutter-x: 3rem;
     }
     .g-xxl-5,
     .gy-xxl-5 {
-        --cl-gutter-y: 3rem;
+        #{$prefix}-gutter-y: 3rem;
     }
 }

@@ -117,13 +117,13 @@
             margin: -0.375rem -0.75rem;
             -webkit-margin-end: 0.75rem;
             margin-inline-end: 0.75rem;
-            color: var(--cl-body-color);
-            background-color: var(--cl-tertiary-bg);
+            color: var(#{$prefix}-body-color);
+            background-color: var(#{$prefix}-tertiary-bg);
             pointer-events: none;
             border-color: inherit;
             border-style: solid;
             border-width: 0;
-            border-inline-end-width: var(--cl-border-width);
+            border-inline-end-width: var(#{$prefix}-border-width);
             border-radius: 0;
             -webkit-transition:
                 color 0.15s ease-in-out,
@@ -141,13 +141,13 @@
             margin: -0.375rem -0.75rem;
             -webkit-margin-end: 0.75rem;
             margin-inline-end: 0.75rem;
-            color: var(--cl-body-color);
-            background-color: var(--cl-tertiary-bg);
+            color: var(#{$prefix}-body-color);
+            background-color: var(#{$prefix}-tertiary-bg);
             pointer-events: none;
             border-color: inherit;
             border-style: solid;
             border-width: 0;
-            border-inline-end-width: var(--cl-border-width);
+            border-inline-end-width: var(#{$prefix}-border-width);
             border-radius: 0;
             transition:
                 color 0.15s ease-in-out,
@@ -165,10 +165,10 @@
             }
         }
         &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-            background-color: var(--cl-secondary-bg);
+            background-color: var(#{$prefix}-secondary-bg);
         }
         &:hover:not(:disabled):not([readonly])::file-selector-button {
-            background-color: var(--cl-secondary-bg);
+            background-color: var(#{$prefix}-secondary-bg);
         }
     }
     &-floating {
@@ -640,19 +640,19 @@ textarea.form-control.is-invalid {
 // checks
 .was-validated .form-check-input:valid,
 .form-check-input.is-valid {
-    border-color: var(--cl-form-valid-border-color);
+    border-color: var(#{$prefix}-form-valid-border-color);
 }
 .was-validated .form-check-input:valid:checked,
 .form-check-input.is-valid:checked {
-    background-color: var(--cl-form-valid-color);
+    background-color: var(#{$prefix}-form-valid-color);
 }
 .was-validated .form-check-input:valid:focus,
 .form-check-input.is-valid:focus {
-    box-shadow: 0 0 0 0.25rem rgba(var(--cl-success-rgb), 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(var(#{$prefix}-success-rgb), 0.25);
 }
 .was-validated .form-check-input:valid ~ .form-check-label,
 .form-check-input.is-valid ~ .form-check-label {
-    color: var(--cl-form-valid-color);
+    color: var(#{$prefix}-form-valid-color);
 }
 
 .form-check-inline .form-check-input ~ .valid-feedback {
@@ -661,16 +661,16 @@ textarea.form-control.is-invalid {
 
 .was-validated .form-check-input:invalid,
 .form-check-input.is-invalid {
-    --cl-form-invalid-color: var(--red);
+    #{$prefix}-form-invalid-color: var(--red);
     border-color: var(--red);
 }
 .was-validated .form-check-input:invalid:checked,
 .form-check-input.is-invalid:checked {
-    background-color: var(--cl-form-invalid-color);
+    background-color: var(#{$prefix}-form-invalid-color);
 }
 .was-validated .form-check-input:invalid:focus,
 .form-check-input.is-invalid:focus {
-    box-shadow: 0 0 0 0.25rem rgba(var(--cl-danger-rgb), 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(var(#{$prefix}-danger-rgb), 0.25);
 }
 .was-validated .form-check-input:invalid ~ .form-check-label,
 .form-check-input.is-invalid ~ .form-check-label {

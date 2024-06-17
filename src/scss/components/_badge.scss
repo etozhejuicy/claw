@@ -1,24 +1,24 @@
 .badge {
-    --cl-border-radius: 1.5rem;
-    --cl-badge-padding-x: 1.25rem;
-    --cl-badge-padding-y: 1.5625rem;
-    --cl-badge-font-size: 1rem;
-    --cl-badge-font-weight: 500;
-    --cl-badge-color: var(--white);
-    --cl-badge-background-color: var(--black);
-    --cl-badge-border-radius: var(--cl-border-radius);
+    #{$prefix}-border-radius: 1.5rem;
+    #{$prefix}-badge-padding-x: 1.25rem;
+    #{$prefix}-badge-padding-y: 1.5625rem;
+    #{$prefix}-badge-font-size: 1rem;
+    #{$prefix}-badge-font-weight: 500;
+    #{$prefix}-badge-color: var(--white);
+    #{$prefix}-badge-background-color: var(--black);
+    #{$prefix}-badge-border-radius: var(#{$prefix}-border-radius);
     position: relative;
     z-index: 1;
     display: inline-block;
-    padding: var(--cl-badge-padding-y) var(--cl-badge-padding-x);
-    font-size: var(--cl-badge-font-size);
-    font-weight: var(--cl-badge-font-weight);
+    padding: var(#{$prefix}-badge-padding-y) var(#{$prefix}-badge-padding-x);
+    font-size: var(#{$prefix}-badge-font-size);
+    font-weight: var(#{$prefix}-badge-font-weight);
     line-height: 1;
-    color: var(--cl-badge-color);
+    color: var(#{$prefix}-badge-color);
     text-align: center;
     vertical-align: baseline;
-    background-color: var(--cl-badge-background-color);
-    border-radius: var(--cl-badge-border-radius);
+    background-color: var(#{$prefix}-badge-background-color);
+    border-radius: var(#{$prefix}-badge-border-radius);
     &:empty {
         display: none;
     }
@@ -26,10 +26,10 @@
         text-decoration: none;
     }
     &-card {
-        --cl-badge-padding-x: 2.875rem;
-        --cl-badge-padding-y: 2.875rem;
-        --cl-badge-font-size: 1.25rem;
-        --cl-badge-font-weight: 600;
+        #{$prefix}-badge-padding-x: 2.875rem;
+        #{$prefix}-badge-padding-y: 2.875rem;
+        #{$prefix}-badge-font-size: 1.25rem;
+        #{$prefix}-badge-font-weight: 600;
     }
     &-rings {
         --sphere-size: 8.75rem;
@@ -56,8 +56,8 @@
         }
     }
     &-gradient {
-        --cl-badge-color: var(--white);
-        --cl-badge-background-color: var(--black);
+        #{$prefix}-badge-color: var(--white);
+        #{$prefix}-badge-background-color: var(--black);
         &::after {
             opacity: 0.4;
         }
@@ -98,14 +98,14 @@
 
 @each $color, $value in $colors {
     .badge-#{$value} {
-        --cl-badge-background-color: var(--#{$value});
-        --cl-badge-color: var(--white);
+        #{$prefix}-badge-background-color: var(--#{$value});
+        #{$prefix}-badge-color: var(--white);
     }
 
     .badge-colored {
         &:is(.badge-#{$value}) {
-            --cl-badge-background-color: rgba(var(--#{$value}-rgb), 0.125);
-            --cl-badge-color: var(--#{$value});
+            #{$prefix}-badge-background-color: rgba(var(--#{$value}-rgb), 0.125);
+            #{$prefix}-badge-color: var(--#{$value});
         }
     }
 }

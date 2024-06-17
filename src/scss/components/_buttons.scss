@@ -1,45 +1,49 @@
 .btn {
-  --cl-btn-padding-x: 2.62rem;
-  --cl-btn-padding-y: 1rem;
-  --cl-btn-font-size: 1rem;
-  --cl-btn-font-weight: 600;
-  --cl-btn-line-height: 120%;
-  --cl-btn-color: var(--dark);
-  --cl-btn-bg: transparent;
-  --cl-btn-border-width: 0;
-  --cl-btn-border-color: transparent;
-  --cl-border-radius: 1rem;
-  --cl-btn-hover-border-color: transparent;
-  --cl-btn-box-shadow: 0rem 0.0625rem 0.0469rem 0rem
-      rgba(var(--white-rgb), 0.15) inset,
+  #{$prefix}-btn-padding-x: 2.62rem;
+  #{$prefix}-btn-padding-y: 1rem;
+  #{$prefix}-btn-font-size: 1rem;
+  #{$prefix}-btn-font-weight: 600;
+  #{$prefix}-btn-line-height: 120%;
+  #{$prefix}-btn-color: var(--dark);
+  #{$prefix}-btn-bg: transparent;
+  #{$prefix}-btn-border-width: 0;
+  #{$prefix}-btn-border-color: transparent;
+  #{$prefix}-border-radius: 1rem;
+  #{$prefix}-btn-hover-border-color: transparent;
+  #{$prefix}-btn-box-shadow:
+    0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
     0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
-  --cl-btn-disabled-opacity: 0.65;
-  --cl-btn-focus-box-shadow: 0 0 0 0.25rem
-    rgba(var(--cl-btn-focus-shadow-rgb), 0.5);
-  --cl-btn-letter-spacing: -0.02rem;
+  #{$prefix}-btn-disabled-opacity: 0.65;
+  #{$prefix}-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(#{$prefix}-btn-focus-shadow-rgb), 0.5);
+  #{$prefix}-btn-letter-spacing: -0.02rem;
   display: inline-block;
-  padding: var(--cl-btn-padding-y) var(--cl-btn-padding-x);
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: var(--cl-btn-font-family);
-  font-size: var(--cl-btn-font-size);
-  font-weight: var(--cl-btn-font-weight);
-  line-height: var(--cl-btn-line-height);
-  color: var(--cl-btn-color);
+  padding: var(#{$prefix}-btn-padding-y) var(#{$prefix}-btn-padding-x);
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-family: var(#{$prefix}-btn-font-family);
+  font-size: var(#{$prefix}-btn-font-size);
+  font-weight: var(#{$prefix}-btn-font-weight);
+  line-height: var(#{$prefix}-btn-line-height);
+  color: var(#{$prefix}-btn-color);
   text-align: center;
   text-decoration: none;
-  letter-spacing: var(--cl-btn-letter-spacing);
+  letter-spacing: var(#{$prefix}-btn-letter-spacing);
   vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
   text-transform: none;
-  border: var(--cl-btn-border-width) solid var(--cl-btn-border-color);
-  border-radius: var(--cl-border-radius);
-  background-color: var(--cl-btn-bg);
-  box-shadow: var(--cl-btn-box-shadow);
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border: var(#{$prefix}-btn-border-width) solid var(#{$prefix}-btn-border-color);
+  border-radius: var(#{$prefix}-border-radius);
+  background-color: var(#{$prefix}-btn-bg);
+  box-shadow: var(#{$prefix}-btn-box-shadow);
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   @media (prefers-reduced-motion: reduce) {
     transition: none;
   }
@@ -54,24 +58,24 @@
     padding: 0;
   }
   &:hover {
-    color: var(--cl-btn-hover-color);
-    background-color: var(--cl-btn-hover-bg);
-    border-color: var(--cl-btn-hover-border-color);
+    color: var(#{$prefix}-btn-hover-color);
+    background-color: var(#{$prefix}-btn-hover-bg);
+    border-color: var(#{$prefix}-btn-hover-border-color);
   }
   &.btn-check + &:hover {
-    color: var(--cl-btn-hover-color);
-    background-color: var(--cl-btn-hover-bg);
-    border-color: var(--cl-btn-hover-border-color);
+    color: var(#{$prefix}-btn-hover-color);
+    background-color: var(#{$prefix}-btn-hover-bg);
+    border-color: var(#{$prefix}-btn-hover-border-color);
   }
   &:focus-visible {
-    color: var(--cl-btn-hover-color);
-    background-color: var(--cl-btn-hover-bg);
-    border-color: var(--cl-btn-hover-border-color);
+    color: var(#{$prefix}-btn-hover-color);
+    background-color: var(#{$prefix}-btn-hover-bg);
+    border-color: var(#{$prefix}-btn-hover-border-color);
     outline: 0;
     box-shadow: unset;
   }
   &.btn-check:focus-visible + & {
-    border-color: var(--cl-btn-hover-border-color);
+    border-color: var(#{$prefix}-btn-hover-border-color);
     outline: 0;
     box-shadow: unset;
   }
@@ -80,9 +84,9 @@
   &:first-child:active,
   &.active,
   &.show {
-    color: var(--cl-btn-active-color);
-    background-color: var(--cl-btn-active-bg);
-    border-color: var(--cl-btn-active-border-color);
+    color: var(#{$prefix}-btn-active-color);
+    background-color: var(#{$prefix}-btn-active-bg);
+    border-color: var(#{$prefix}-btn-active-border-color);
   }
   &.btn-check:checked + &:focus-visible,
   &:not(.btn-check) + &:active:focus-visible,
@@ -94,69 +98,67 @@
   &:disabled,
   &.disabled,
   fieldset:disabled & {
-    color: var(--cl-btn-disabled-color);
+    color: var(#{$prefix}-btn-disabled-color);
     pointer-events: none;
-    background-color: var(--cl-btn-disabled-bg);
-    border-color: var(--cl-btn-disabled-border-color);
-    opacity: var(--cl-btn-disabled-opacity);
+    background-color: var(#{$prefix}-btn-disabled-bg);
+    border-color: var(#{$prefix}-btn-disabled-border-color);
+    opacity: var(#{$prefix}-btn-disabled-opacity);
     cursor: not-allowed;
   }
   &-sm {
-    padding: calc(var(--cl-btn-padding-y) - 0.25rem)
-      calc(var(--cl-btn-padding-x) - 0.25rem);
+    padding: calc(var(#{$prefix}-btn-padding-y) - 0.25rem) calc(var(#{$prefix}-btn-padding-x) - 0.25rem);
   }
   &-lg {
-    padding: calc(var(--cl-btn-padding-y) + 0.56rem)
-      calc(var(--cl-btn-padding-x) + 0.25rem);
+    padding: calc(var(#{$prefix}-btn-padding-y) + 0.56rem) calc(var(#{$prefix}-btn-padding-x) + 0.25rem);
   }
   &-rounded {
-    --cl-border-radius: 50rem;
+    #{$prefix}-border-radius: 50rem;
   }
   &-icon {
-    --cl-btn-size: var(--cl-btn-font-size);
-    --cl-btn-gap: 0.5rem;
-    --cl-btn-padding-x: 1rem;
-    --cl-btn-padding-y: 1rem;
+    #{$prefix}-btn-size: var(#{$prefix}-btn-font-size);
+    #{$prefix}-btn-gap: 0.5rem;
+    #{$prefix}-btn-padding-x: 1rem;
+    #{$prefix}-btn-padding-y: 1rem;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     &:has(> *:is(.btn-icon-text)) {
-      --cl-btn-padding-x: 1.62rem;
+      #{$prefix}-btn-padding-x: 1.62rem;
     }
     & > svg {
       display: inline-block;
       vertical-align: middle;
-      width: var(--cl-btn-size);
-      height: var(--cl-btn-size);
-      min-width: var(--cl-btn-size);
-      min-height: var(--cl-btn-size);
+      width: var(#{$prefix}-btn-size);
+      height: var(#{$prefix}-btn-size);
+      min-width: var(#{$prefix}-btn-size);
+      min-height: var(#{$prefix}-btn-size);
       object-fit: contain;
     }
     & > * {
       &:first-child {
         &:is(.btn-icon-text) {
-          margin-right: var(--cl-btn-gap);
+          margin-right: var(#{$prefix}-btn-gap);
         }
         &:is(svg) {
-          min-width: var(--cl-btn-size);
-          min-height: var(--cl-btn-size);
+          min-width: var(#{$prefix}-btn-size);
+          min-height: var(#{$prefix}-btn-size);
         }
       }
       &:last-child {
         &:is(.btn-icon-text) {
-          margin-left: var(--cl-btn-gap);
+          margin-left: var(#{$prefix}-btn-gap);
         }
         &:is(svg) {
-          min-width: var(--cl-btn-size);
-          min-height: var(--cl-btn-size);
+          min-width: var(#{$prefix}-btn-size);
+          min-height: var(#{$prefix}-btn-size);
         }
       }
       &:is(* ~ .btn-icon-text) {
         &:not(:last-child),
         &:not(:first-of-type) {
-          margin-right: var(--cl-btn-gap);
-          margin-left: var(--cl-btn-gap);
+          margin-right: var(#{$prefix}-btn-gap);
+          margin-left: var(#{$prefix}-btn-gap);
         }
       }
       &:is(.btn-social) {
@@ -178,103 +180,99 @@
 // exp
 @each $color, $value in $colors {
   .btn-#{$value} {
-    --cl-btn-color: #{lighten($color, 100%)};
-    --cl-btn-bg: var(--#{$value});
-    --cl-btn-border-color: var(--#{$value});
-    --cl-btn-hover-color: #{lighten($color, 100%)};
-    --cl-btn-hover-bg: #{lighten($color, 15%)};
-    --cl-btn-hover-border-color: #{lighten($color, 15%)};
-    --cl-btn-focus-shadow-rgb: rgba(var(--#{$value}-rgb), 1);
-    --cl-btn-active-color: #{lighten($color, 45%)};
-    --cl-btn-active-bg: #{darken($color, 10%)};
-    --cl-btn-active-border-color: #{darken($color, 10%)};
-    --cl-btn-active-shadow: inset 0 3px 5px rgba(var(--#{$value}-rgb), 0.125);
-    --cl-btn-disabled-color: rgba(var(--dark-rgb), 0.3);
-    --cl-btn-disabled-bg: var(--grey);
-    --cl-btn-disabled-border-color: var(--grey);
+    #{$prefix}-btn-color: #{lighten($color, 100%)};
+    #{$prefix}-btn-bg: var(--#{$value});
+    #{$prefix}-btn-border-color: var(--#{$value});
+    #{$prefix}-btn-hover-color: #{lighten($color, 100%)};
+    #{$prefix}-btn-hover-bg: #{lighten($color, 15%)};
+    #{$prefix}-btn-hover-border-color: #{lighten($color, 15%)};
+    #{$prefix}-btn-focus-shadow-rgb: rgba(var(--#{$value}-rgb), 1);
+    #{$prefix}-btn-active-color: #{lighten($color, 45%)};
+    #{$prefix}-btn-active-bg: #{darken($color, 10%)};
+    #{$prefix}-btn-active-border-color: #{darken($color, 10%)};
+    #{$prefix}-btn-active-shadow: inset 0 3px 5px rgba(var(--#{$value}-rgb), 0.125);
+    #{$prefix}-btn-disabled-color: rgba(var(--dark-rgb), 0.3);
+    #{$prefix}-btn-disabled-bg: var(--grey);
+    #{$prefix}-btn-disabled-border-color: var(--grey);
     @if $value == "danger" {
-      --cl-btn-color: #{darken($color, 90%)};
-      --cl-btn-hover-color: #{darken($color, 50%)};
-      --cl-btn-active-color: #{darken($color, 90%)};
+      #{$prefix}-btn-color: #{darken($color, 90%)};
+      #{$prefix}-btn-hover-color: #{darken($color, 50%)};
+      #{$prefix}-btn-active-color: #{darken($color, 90%)};
     }
     @if $value == "white" {
-      --cl-btn-color: #{darken($color, 90%)};
-      --cl-btn-hover-color: #{darken($color, 50%)};
-      --cl-btn-active-color: #{darken($color, 75%)};
-      --cl-btn-active-bg: #{darken($color, 5%)};
-      --cl-btn-active-border-color: #{darken($color, 5%)};
+      #{$prefix}-btn-color: #{darken($color, 90%)};
+      #{$prefix}-btn-hover-color: #{darken($color, 50%)};
+      #{$prefix}-btn-active-color: #{darken($color, 75%)};
+      #{$prefix}-btn-active-bg: #{darken($color, 5%)};
+      #{$prefix}-btn-active-border-color: #{darken($color, 5%)};
     }
   }
   .btn-#{$value}-shadow {
     filter: drop-shadow(0rem 0.125rem 1rem rgba(var(--#{$value}-rgb), 0.5));
   }
   .btn-voluminous {
-    --cl-btn-box-shadow: 0rem
-        0.0625rem
-        0.0469rem
-        0rem
-        rgba(var(--white-rgb), 0.15)
-        inset,
+    #{$prefix}-btn-box-shadow:
+      0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
       0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
   }
   .btn-outline-#{$value} {
     &:not(.btn-colored),
     &:not(.btn-dimmed) {
-      --cl-btn-color: var(--body-text-color);
+      #{$prefix}-btn-color: var(--body-text-color);
     }
-    --cl-btn-color: var(--#{$value});
-    --cl-btn-bg: transparent;
-    --cl-btn-border-color: var(--#{$value});
-    --cl-btn-hover-bg: var(--#{$value});
-    --cl-btn-hover-border-color: var(--#{$value});
-    --cl-btn-border-width: 0.0625rem;
-    --cl-btn-box-shadow: unset;
-    --cl-btn-focus-shadow-rgb: unset;
-    --cl-btn-active-bg: #{darken($color, 15%)};
-    --cl-btn-active-border-color: #{darken($color, 15%)};
+    #{$prefix}-btn-color: var(--#{$value});
+    #{$prefix}-btn-bg: transparent;
+    #{$prefix}-btn-border-color: var(--#{$value});
+    #{$prefix}-btn-hover-bg: var(--#{$value});
+    #{$prefix}-btn-hover-border-color: var(--#{$value});
+    #{$prefix}-btn-border-width: 0.0625rem;
+    #{$prefix}-btn-box-shadow: unset;
+    #{$prefix}-btn-focus-shadow-rgb: unset;
+    #{$prefix}-btn-active-bg: #{darken($color, 15%)};
+    #{$prefix}-btn-active-border-color: #{darken($color, 15%)};
     @if $value == "white" {
-      --cl-btn-color: #{darken($color, 50%)};
-      --cl-btn-border-color: #{darken($color, 5%)};
-      --cl-btn-hover-bg: #{darken($color, 2.5%)};
-      --cl-btn-hover-border-color: #{darken($color, 2.5%)};
-      --cl-btn-hover-color: #{darken($color, 75%)};
-      --cl-btn-active-color: #{darken($color, 75%)};
-      --cl-btn-active-bg: #{darken($color, 10%)};
-      --cl-btn-active-border-color: #{darken($color, 10%)};
+      #{$prefix}-btn-color: #{darken($color, 50%)};
+      #{$prefix}-btn-border-color: #{darken($color, 5%)};
+      #{$prefix}-btn-hover-bg: #{darken($color, 2.5%)};
+      #{$prefix}-btn-hover-border-color: #{darken($color, 2.5%)};
+      #{$prefix}-btn-hover-color: #{darken($color, 75%)};
+      #{$prefix}-btn-active-color: #{darken($color, 75%)};
+      #{$prefix}-btn-active-bg: #{darken($color, 10%)};
+      #{$prefix}-btn-active-border-color: #{darken($color, 10%)};
     }
   }
   .btn-colored {
     &:is(.btn-#{$value}),
     &:is(.btn-outline-#{$value}) {
-      --cl-btn-color: #{$color};
+      #{$prefix}-btn-color: #{$color};
       @if $value == "white" {
-        --cl-btn-color: #{darken($color, 50%)};
-        --cl-btn-border-color: #{darken($color, 5%)};
-        --cl-btn-hover-bg: #{darken($color, 2.5%)};
-        --cl-btn-hover-border-color: #{darken($color, 2.5%)};
-        --cl-btn-hover-color: #{darken($color, 75%)};
-        --cl-btn-active-color: #{darken($color, 75%)};
-        --cl-btn-active-bg: #{darken($color, 10%)};
-        --cl-btn-active-border-color: #{darken($color, 10%)};
+        #{$prefix}-btn-color: #{darken($color, 50%)};
+        #{$prefix}-btn-border-color: #{darken($color, 5%)};
+        #{$prefix}-btn-hover-bg: #{darken($color, 2.5%)};
+        #{$prefix}-btn-hover-border-color: #{darken($color, 2.5%)};
+        #{$prefix}-btn-hover-color: #{darken($color, 75%)};
+        #{$prefix}-btn-active-color: #{darken($color, 75%)};
+        #{$prefix}-btn-active-bg: #{darken($color, 10%)};
+        #{$prefix}-btn-active-border-color: #{darken($color, 10%)};
       }
     }
   }
   .btn-dimmed {
-    --cl-btn-box-shadow: unset;
-    --cl-btn-focus-shadow-rgb: unset;
+    #{$prefix}-btn-box-shadow: unset;
+    #{$prefix}-btn-focus-shadow-rgb: unset;
     &:is(.btn-#{$value}),
     &:is(.btn-outline-#{$value}) {
-      --cl-btn-bg: rgba(var(--#{$value}-rgb), 0.1);
-      --cl-btn-hover-bg: rgba(var(--#{$value}-rgb), 1);
+      #{$prefix}-btn-bg: rgba(var(--#{$value}-rgb), 0.1);
+      #{$prefix}-btn-hover-bg: rgba(var(--#{$value}-rgb), 1);
       @if $value == "white" {
-        --cl-btn-color: #{darken($color, 50%)};
-        --cl-btn-border-color: #{darken($color, 5%)};
-        --cl-btn-hover-bg: #{darken($color, 2.5%)};
-        --cl-btn-hover-border-color: #{darken($color, 2.5%)};
-        --cl-btn-hover-color: #{darken($color, 75%)};
-        --cl-btn-active-color: #{darken($color, 75%)};
-        --cl-btn-active-bg: #{darken($color, 10%)};
-        --cl-btn-active-border-color: #{darken($color, 10%)};
+        #{$prefix}-btn-color: #{darken($color, 50%)};
+        #{$prefix}-btn-border-color: #{darken($color, 5%)};
+        #{$prefix}-btn-hover-bg: #{darken($color, 2.5%)};
+        #{$prefix}-btn-hover-border-color: #{darken($color, 2.5%)};
+        #{$prefix}-btn-hover-color: #{darken($color, 75%)};
+        #{$prefix}-btn-active-color: #{darken($color, 75%)};
+        #{$prefix}-btn-active-bg: #{darken($color, 10%)};
+        #{$prefix}-btn-active-border-color: #{darken($color, 10%)};
       }
     }
   }
@@ -284,98 +282,84 @@
       & .btn-progress-round {
         mix-blend-mode: hue;
         border-radius: inherit;
-        background: radial-gradient(
-            closest-side,
-            transparent 79%,
-            transparent 80% 100%
-          ),
-          conic-gradient(
-            rgba(var(--#{$value}-rgb), 0.75) calc(var(--finish-value) * 1%),
-            transparent 0
-          );
+        background: radial-gradient(closest-side, transparent 79%, transparent 80% 100%),
+          conic-gradient(rgba(var(--#{$value}-rgb), 0.75) calc(var(--finish-value) * 1%), transparent 0);
       }
       @if $value == "secondary" {
         & .btn-progress-round {
-          background: radial-gradient(
-              closest-side,
-              transparent 79%,
-              transparent 80% 100%
-            ),
-            conic-gradient(
-              lighten($color, 15) calc(var(--finish-value) * 1%),
-              transparent 0
-            );
+          background: radial-gradient(closest-side, transparent 79%, transparent 80% 100%),
+            conic-gradient(lighten($color, 15) calc(var(--finish-value) * 1%), transparent 0);
         }
       }
     }
     &.rounded-pill {
-      --cl-border-radius: var(--cl-border-radius-pill);
+      #{$prefix}-border-radius: var(#{$prefix}-border-radius-pill);
     }
   }
   .btn-check + :is(.btn-#{$value}) {
-    --cl-btn-color: var(--grey);
-    --cl-btn-bg: var(--dark-grey);
-    --cl-btn-border-color: var(--cl-btn-bg);
-    --cl-btn-hover-color: var(--white);
-    --cl-btn-hover-bg: var(--cl-btn-border-color);
-    --cl-btn-hover-border-color: rgba(var(--#{$value}-rgb), 0.5);
-    --cl-btn-active-color: var(--white);
-    --cl-btn-active-bg: var(--#{$value});
-    --cl-btn-active-border-color: var(--#{$value});
+    #{$prefix}-btn-color: var(--grey);
+    #{$prefix}-btn-bg: var(--dark-grey);
+    #{$prefix}-btn-border-color: var(#{$prefix}-btn-bg);
+    #{$prefix}-btn-hover-color: var(--white);
+    #{$prefix}-btn-hover-bg: var(#{$prefix}-btn-border-color);
+    #{$prefix}-btn-hover-border-color: rgba(var(--#{$value}-rgb), 0.5);
+    #{$prefix}-btn-active-color: var(--white);
+    #{$prefix}-btn-active-bg: var(--#{$value});
+    #{$prefix}-btn-active-border-color: var(--#{$value});
     @if $value == "primary" {
-      --cl-btn-color: var(--grey);
-      --cl-btn-bg: var(--dark-grey);
-      --cl-btn-border-color: var(--dark-grey);
-      --cl-btn-active-color: var(--dark-grey);
-      --cl-btn-hover-border-color: #{lighten($color, 20%)};
-      --cl-btn-active-border-color: #{lighten($color, 20%)};
+      #{$prefix}-btn-color: var(--grey);
+      #{$prefix}-btn-bg: var(--dark-grey);
+      #{$prefix}-btn-border-color: var(--dark-grey);
+      #{$prefix}-btn-active-color: var(--dark-grey);
+      #{$prefix}-btn-hover-border-color: #{lighten($color, 20%)};
+      #{$prefix}-btn-active-border-color: #{lighten($color, 20%)};
     }
     @if $value == "secondary" {
-      --cl-btn-color: var(--grey);
-      --cl-btn-active-color: var(--white);
-      --cl-btn-hover-border-color: #{lighten($color, 50%)};
-      --cl-btn-active-border-color: #{lighten($color, 50%)};
+      #{$prefix}-btn-color: var(--grey);
+      #{$prefix}-btn-active-color: var(--white);
+      #{$prefix}-btn-hover-border-color: #{lighten($color, 50%)};
+      #{$prefix}-btn-active-border-color: #{lighten($color, 50%)};
     }
     @if $value == "danger" {
-      --cl-btn-active-color: var(--black);
+      #{$prefix}-btn-active-color: var(--black);
     }
     @if $value == "white" {
-      --cl-btn-active-color: var(--black);
+      #{$prefix}-btn-active-color: var(--black);
     }
   }
   .btn-check + :is(.btn-outline-#{$value}) {
-    --cl-btn-color: var(--grey);
-    --cl-btn-bg: var(--dark-grey);
-    --cl-btn-border-color: var(--cl-btn-bg);
-    --cl-btn-hover-color: var(--white);
-    --cl-btn-hover-bg: var(--cl-btn-border-color);
-    --cl-btn-hover-border-color: rgba(var(--#{$value}-rgb), 0.5);
-    --cl-btn-active-color: var(--#{$value});
-    --cl-btn-active-bg: var(--dark-grey);
-    --cl-btn-active-border-color: var(--#{$value});
+    #{$prefix}-btn-color: var(--grey);
+    #{$prefix}-btn-bg: var(--dark-grey);
+    #{$prefix}-btn-border-color: var(#{$prefix}-btn-bg);
+    #{$prefix}-btn-hover-color: var(--white);
+    #{$prefix}-btn-hover-bg: var(#{$prefix}-btn-border-color);
+    #{$prefix}-btn-hover-border-color: rgba(var(--#{$value}-rgb), 0.5);
+    #{$prefix}-btn-active-color: var(--#{$value});
+    #{$prefix}-btn-active-bg: var(--dark-grey);
+    #{$prefix}-btn-active-border-color: var(--#{$value});
     @if $value == "primary" {
-      --cl-btn-active-border-color: #{darken($color, 25%)};
+      #{$prefix}-btn-active-border-color: #{darken($color, 25%)};
     }
     @if $value == "secondary" {
-      --cl-btn-hover-border-color: #{lighten($color, 20%)};
-      --cl-btn-hover-color: var(--white);
-      --cl-btn-active-bg: var(--dark-grey);
-      --cl-btn-active-color: #{lighten($color, 30%)};
-      --cl-btn-active-border-color: #{lighten($color, 30%)};
+      #{$prefix}-btn-hover-border-color: #{lighten($color, 20%)};
+      #{$prefix}-btn-hover-color: var(--white);
+      #{$prefix}-btn-active-bg: var(--dark-grey);
+      #{$prefix}-btn-active-color: #{lighten($color, 30%)};
+      #{$prefix}-btn-active-border-color: #{lighten($color, 30%)};
     }
   }
   .btn-tag {
     &:is(.btn-#{$value}),
     &:is(.btn-outline-#{$value}) {
-      --cl-btn-hover-bg: var(--cl-btn-bg);
-      --cl-btn-hover-color: var(--cl-btn-color);
-      --cl-btn-hover-border-color: var(--cl-btn-border-color);
-      --cl-btn-active-bg: var(--cl-btn-bg);
-      --cl-btn-active-color: var(--cl-btn-color);
-      --cl-btn-active-border-color: var(--cl-btn-border-color);
+      #{$prefix}-btn-hover-bg: var(#{$prefix}-btn-bg);
+      #{$prefix}-btn-hover-color: var(#{$prefix}-btn-color);
+      #{$prefix}-btn-hover-border-color: var(#{$prefix}-btn-border-color);
+      #{$prefix}-btn-active-bg: var(#{$prefix}-btn-bg);
+      #{$prefix}-btn-active-color: var(#{$prefix}-btn-color);
+      #{$prefix}-btn-active-border-color: var(#{$prefix}-btn-border-color);
       @if $value == "secondary" {
-        --cl-btn-color: #{lighten($color, 50%)};
-        --cl-btn-bg: rgba(var(--#{$value}-rgb), 0.45);
+        #{$prefix}-btn-color: #{lighten($color, 50%)};
+        #{$prefix}-btn-bg: rgba(var(--#{$value}-rgb), 0.45);
       }
     }
   }
@@ -396,12 +380,12 @@
 .btn-progress {
   &-round {
     position: absolute;
-    top: calc(-3 * var(--cl-border-width));
-    left: calc(-3 * var(--cl-border-width));
+    top: calc(-3 * var(#{$prefix}-border-width));
+    left: calc(-3 * var(#{$prefix}-border-width));
     z-index: -1;
-    width: calc(100% + var(--cl-border-width) * 6);
-    height: calc(100% + var(--cl-border-width) * 6);
-    border-radius: var(--cl-border-radius);
+    width: calc(100% + var(#{$prefix}-border-width) * 6);
+    height: calc(100% + var(#{$prefix}-border-width) * 6);
+    border-radius: var(#{$prefix}-border-radius);
     animation: progress 2s 1 forwards;
   }
   &-spinner {
@@ -415,21 +399,21 @@
     & .spinner-border {
       width: 100%;
       height: 100%;
-      --cl-spinner-border-width: 0.2rem;
+      #{$prefix}-spinner-border-width: 0.2rem;
     }
   }
 }
 
 .btn-tag {
-  --cl-btn-padding-x: 0.75rem;
-  --cl-btn-padding-y: 0.62rem;
-  --cl-btn-font-size: 0.75rem;
-  --cl-btn-font-weight: 400;
-  --cl-btn-line-height: 120%;
+  #{$prefix}-btn-padding-x: 0.75rem;
+  #{$prefix}-btn-padding-y: 0.62rem;
+  #{$prefix}-btn-font-size: 0.75rem;
+  #{$prefix}-btn-font-weight: 400;
+  #{$prefix}-btn-line-height: 120%;
   &-card {
-    --cl-btn-padding-x: 0.5rem;
-    --cl-btn-padding-y: 0.22rem;
-    --cl-btn-font-size: 0.875rem;
+    #{$prefix}-btn-padding-x: 0.5rem;
+    #{$prefix}-btn-padding-y: 0.22rem;
+    #{$prefix}-btn-font-size: 0.875rem;
   }
 }
 
@@ -460,11 +444,11 @@
 }
 
 .btn-group {
-  border-radius: var(--cl-border-radius);
+  border-radius: var(#{$prefix}-border-radius);
 }
 .btn-group > :not(.btn-check:first-child) + .btn,
 .btn-group > .btn-group:not(:first-child) {
-  margin-left: calc(var(--cl-border-width) * -1);
+  margin-left: calc(var(#{$prefix}-border-width) * -1);
 }
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn.dropdown-toggle-split:first-child,
@@ -476,7 +460,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: var(--cl-btn-border-width);
+    width: var(#{$prefix}-btn-border-width);
     height: 100%;
     background-color: rgba(var(--grey-rgb), 0.5);
   }
@@ -511,7 +495,7 @@
 }
 .btn-group-vertical > .btn:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
-  margin-top: calc(var(--cl-border-width) * -1);
+  margin-top: calc(var(#{$prefix}-border-width) * -1);
 }
 .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn {
