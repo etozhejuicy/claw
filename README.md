@@ -30,6 +30,7 @@ Example: [https://gitpages.etochejuicy.io/claw/](https://etozhejuicy.github.io/c
 - [x]  ratio
 - [ ]  radius
 - [ ]  responsive
+- [x]  stretched-link
 - [x]  text
 - [ ]  variables
 - [ ]  visibility
