@@ -413,3 +413,8 @@ $aspect-ratios: (
     $aspect-ratio-21x9: "42.8571428571%"
 );
 // ratio
+
+// stretched-link
+$stretched-link-pseudo-element: after !default;
+$stretched-link-z-index: 1 !default;
+// stretched-link
