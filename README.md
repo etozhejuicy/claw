@@ -25,7 +25,7 @@ Example: [https://gitpages.etochejuicy.io/claw/](https://etozhejuicy.github.io/c
 - [x]  padding
 - [ ]  pointer-events
 - [x]  positions
-- [ ]  ratio
+- [x]  ratio
 - [ ]  radius
 - [ ]  responsive
 - [x]  text
