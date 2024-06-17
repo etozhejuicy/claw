@@ -66,6 +66,7 @@
     }
     &.active {
       --nav-item-color: rgba(var(--primary-rgb), 1) !important;
+      font-weight: 600;
       opacity: 1;
     }
     &-inner {
