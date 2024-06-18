@@ -18,9 +18,10 @@ Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/cla
 - [ ]  grid
 - [ ]  icons
 - [x]  margin
-- [ ]  object-fit
+- [x]  object-fit
+- [x]  object-position
 - [x]  opacity
-- [ ]  order
+- [x]  order
 - [x]  overflow
 - [x]  padding
 - [x]  pointer-events
