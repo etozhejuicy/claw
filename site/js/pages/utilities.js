@@ -3,6 +3,8 @@ import "../utilities/start.js";
 import "../utilities/colors.js";
 import "../utilities/text.js";
 
+import "../block/soon.js";
+
 document.querySelector("#app").innerHTML = `
 <main class="content">
   <section>
@@ -11,6 +13,7 @@ document.querySelector("#app").innerHTML = `
         <div id="start" class="col-12"></div>
         <div id="colors" class="col-12"></div>
         <div id="text" class="col-12"></div>
+        <div id="soon" class="col-12"></div>
       </div>
     </div>
   </section>
