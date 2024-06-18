@@ -16,6 +16,24 @@ $breakpoint-xxl: 1400px;
 $breakpoint-xxxl: 1600px;
 // Breakpoints
 
+// responsive
+$r-xs: 375;
+$r-sm: 576;
+$r-md: 768;
+$r-lg: 992;
+$r-xl: 1440;
+$r-xxxl: 1600;
+
+$responsives: (
+    $r-xs: 375,
+    $r-sm: 576,
+    $r-md: 768,
+    $r-lg: 992,
+    $r-xl: 1440,
+    $r-xxxl: 1600
+);
+// responsive
+
 // dimensions
 $dimension-0: 0;
 $dimension-5: 5;

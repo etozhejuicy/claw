@@ -1,22 +1,25 @@
 // responsive config
 :root {
-  font-size: calc(100vw / 375 * #{$root-fs});
+  font-size: calc(100vw / #{$r-xs} * #{$root-fs});
+  @media (min-width: 576px) {
+    font-size: calc(100vw / #{$r-sm} * #{$root-fs});
+  }
   @media (min-width: 768px) {
-    font-size: calc(100vw / 768 * #{$root-fs});
+    font-size: calc(100vw / #{$r-md} * #{$root-fs});
   }
   @media (min-width: 992px) {
-    font-size: calc(100vw / 992 * #{$root-fs});
+    font-size: calc(100vw / #{$r-lg} * #{$root-fs});
   }
   @media (min-width: 1200px) {
-    font-size: calc(100vw / 1440 * #{$root-fs});
+    font-size: calc(100vw / #{$r-xl} * #{$root-fs});
   }
   @media (min-width: 1440px) {
-    font-size: calc(100vw / 1440 * #{$root-fs});
+    font-size: calc(100vw / #{$r-xl} * #{$root-fs});
   }
   @media (min-width: 1600px) {
-    font-size: calc(100vw / 1440 * #{$root-fs});
+    font-size: calc(100vw / #{$r-xl} * #{$root-fs});
   }
   @media (min-width: 1920px) {
-    font-size: calc(100vw / 1600 * #{$root-fs});
+    font-size: calc(100vw / #{$r-xxxl} * #{$root-fs});
   }
 }
