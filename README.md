@@ -2,6 +2,8 @@
 
 ![logo](public/logo-min.svg)
 
+Notice: **This framework is under development**
+
 Claw is a CSS framework that helps you quickly create the basic structure of a website with the necessary components on your server.
 
 Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/claw/)
