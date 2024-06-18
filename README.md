@@ -32,7 +32,7 @@ Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/cla
 - [x]  positions
 - [x]  ratio
 - [ ]  radius
-- [ ]  responsive
+- [x]  responsive
 - [x]  stretched-link
 - [x]  text
 - [ ]  variables
