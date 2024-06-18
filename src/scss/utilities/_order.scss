@@ -3,10 +3,108 @@
         &-#{$i} {
             order: $i !important;
         }
+        @include breakpoint-xs {
+            &-xs {
+                &-#{$i} {
+                    order: $i !important;
+                }
+            }
+        }
+        @include breakpoint-sm {
+            &-sm {
+                &-#{$i} {
+                    order: $i !important;
+                }
+            }
+        }
+        @include breakpoint-md {
+            &-md {
+                &-#{$i} {
+                    order: $i !important;
+                }
+            }
+        }
+        @include breakpoint-lg {
+            &-lg {
+                &-#{$i} {
+                    order: $i !important;
+                }
+            }
+        }
+        @include breakpoint-xl {
+            &-xl {
+                &-#{$i} {
+                    order: $i !important;
+                }
+            }
+        }
+        @include breakpoint-xxl {
+            &-xxl {
+                &-#{$i} {
+                    order: $i !important;
+                }
+            }
+        }
+        @include breakpoint-xxxl {
+            &-xxxl {
+                &-#{$i} {
+                    order: $i !important;
+                }
+            }
+        }
     }
     @each $order, $value in $orders {
         &-#{$order} {
             order: $value !important;
+        }
+        @include breakpoint-xs {
+            &-xs {
+                &-#{$order} {
+                    order: $value !important;
+                }
+            }
+        }
+        @include breakpoint-sm {
+            &-sm {
+                &-#{$order} {
+                    order: $value !important;
+                }
+            }
+        }
+        @include breakpoint-md {
+            &-md {
+                &-#{$order} {
+                    order: $value !important;
+                }
+            }
+        }
+        @include breakpoint-lg {
+            &-lg {
+                &-#{$order} {
+                    order: $value !important;
+                }
+            }
+        }
+        @include breakpoint-xl {
+            &-xl {
+                &-#{$order} {
+                    order: $value !important;
+                }
+            }
+        }
+        @include breakpoint-xxl {
+            &-xxl {
+                &-#{$order} {
+                    order: $value !important;
+                }
+            }
+        }
+        @include breakpoint-xxxl {
+            &-xxxl {
+                &-#{$order} {
+                    order: $value !important;
+                }
+            }
         }
     }
 }

@@ -38,13 +38,6 @@
                 }
             }
         }
-        @include breakpoint-xl {
-            &-xl {
-                &-#{$value} {
-                    vertical-align: #{$vertical-align} !important;
-                }
-            }
-        }
         @include breakpoint-xxl {
             &-xxl {
                 &-#{$value} {
