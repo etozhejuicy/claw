@@ -344,6 +344,38 @@ $align-selfs: (
 );
 // flexbox
 
+// object-fit
+$object-fit-contain: contain;
+$object-fit-cover: cover;
+$object-fit-fill: fill;
+$object-fit-scale: scale-down;
+$object-fit-none: none;
+
+$object-fits: (
+    $object-fit-contain: contain,
+    $object-fit-cover: cover,
+    $object-fit-fill: fill,
+    $object-fit-scale: scale,
+    $object-fit-none: none
+);
+// object-fit
+
+// object-position
+$object-position-top: top;
+$object-position-left: left;
+$object-position-right: right;
+$object-position-bottom: bottom;
+$object-position-center: center;
+
+$object-positions: (
+    $object-position-top: top,
+    $object-position-left: left,
+    $object-position-right: right,
+    $object-position-bottom: bottom,
+    $object-position-center: center
+);
+// object-position
+
 // opacity
 $opacity-0: 0;
 $opacity-5: 5;
