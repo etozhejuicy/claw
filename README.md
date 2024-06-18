@@ -18,7 +18,7 @@ Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/cla
 - [x]  filter
 - [x]  flexbox
 - [ ]  grid
-- [ ]  icons
+- [x]  icons
 - [x]  margin
 - [x]  object-fit
 - [x]  object-position
