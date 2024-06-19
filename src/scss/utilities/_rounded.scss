@@ -1,62 +1,16 @@
-// border-radius
 .rounded {
-    #{$prefix}-border-radius: 0.375rem;
+    #{$prefix}-border-radius: #{$rounded} !important;
     border-radius: var(#{$prefix}-border-radius) !important;
-
-    &-0 {
-        border-radius: 0 !important;
+    @for $i from 0 through 10 {
+        &-#{$i} {
+            #{$prefix}-border-radius: calc(#{$i}rem / 4) !important;
+            border-radius: var(#{$prefix}-border-radius) !important;
+        }
     }
-
-    &-1 {
-        #{$prefix}-border-radius-sm: 0.25rem;
-        border-radius: var(#{$prefix}-border-radius-sm) !important;
-    }
-
-    &-2 {
-        border-radius: var(#{$prefix}-border-radius) !important;
-    }
-
-    &-3 {
-        #{$prefix}-border-radius-lg: 0.5rem;
-        border-radius: var(#{$prefix}-border-radius-lg) !important;
-    }
-
-    &-4 {
-        #{$prefix}-border-radius-xl: 1rem;
-        border-radius: var(#{$prefix}-border-radius-xl) !important;
-    }
-
-    &-5 {
-        #{$prefix}-border-radius-2xl: 2rem;
-        border-radius: var(#{$prefix}-border-radius-2xl) !important;
-    }
-
-    &-circle {
-        border-radius: 50% !important;
-    }
-
-    &-pill {
-        #{$prefix}-border-radius-pill: 50rem;
-        border-radius: var(#{$prefix}-border-radius-pill) !important;
-    }
-
-    &-top {
-        border-top-left-radius: var(#{$prefix}-border-radius) !important;
-        border-top-right-radius: var(#{$prefix}-border-radius) !important;
-    }
-
-    &-end {
-        border-top-right-radius: var(#{$prefix}-border-radius) !important;
-        border-bottom-right-radius: var(#{$prefix}-border-radius) !important;
-    }
-
-    &-bottom {
-        border-bottom-right-radius: var(#{$prefix}-border-radius) !important;
-        border-bottom-left-radius: var(#{$prefix}-border-radius) !important;
-    }
-
-    &-start {
-        border-bottom-left-radius: var(#{$prefix}-border-radius) !important;
-        border-top-left-radius: var(#{$prefix}-border-radius) !important;
+    @each $rounded, $value in $roundeds {
+        &-#{$value} {
+            #{$prefix}-border-radius: #{$rounded} !important;
+            border-radius: var(#{$prefix}-border-radius) !important;
+        }
     }
 }

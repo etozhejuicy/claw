@@ -859,6 +859,18 @@ $align-selfs: (
 );
 // flexbox
 
+// radius
+$rounded: 0.375rem;
+$rounded-pill: 50rem;
+$rounded-circle: 50%;
+
+$roundeds: (
+    $rounded: "",
+    $rounded-pill: "pill",
+    $rounded-circle: "circle"
+);
+// radius
+
 // order
 $order-first: "first";
 
