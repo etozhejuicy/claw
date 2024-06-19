@@ -34,6 +34,32 @@ $responsives: (
 );
 // responsive
 
+// borders
+$border-1: 0.0625rem;
+$border-2: 0.125rem;
+$border-3: 0.25rem;
+
+$borders: (
+    $border-1: "1",
+    $border-2: "2",
+    $border-3: "3"
+);
+
+$border-none: none;
+$border-solid: solid;
+$border-dotted: dotted;
+$border-dashed: dashed;
+$border-double: double;
+
+$borderStyles: (
+    $border-none: "none",
+    $border-solid: "solid",
+    $border-dotted: "dotted",
+    $border-dashed: "dashed",
+    $border-double: "double"
+);
+// borders
+
 // dimensions
 $dimension-0: 0;
 $dimension-5: 5;
