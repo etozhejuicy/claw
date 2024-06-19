@@ -33,7 +33,7 @@ Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/cla
 - [x]  prefix
 - [x]  positions
 - [x]  ratio
-- [ ]  radius
+- [x]  rounded
 - [x]  responsive
 - [x]  stretched-link
 - [x]  text
