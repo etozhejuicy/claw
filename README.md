@@ -13,7 +13,7 @@ Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/cla
 - [x]  align
 - [ ]  colors
 - [x]  border
-- [ ]  cols
+- [x]  cols
 - [x]  container
 - [x]  dimensions
 - [x]  display
