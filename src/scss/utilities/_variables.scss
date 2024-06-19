@@ -60,6 +60,36 @@ $borderStyles: (
 );
 // borders
 
+// cols
+$col-auto: auto;
+
+$cols: (
+    $col-auto: "auto"
+);
+
+$row-col-auto: auto;
+
+$row-cols: (
+    $row-col-auto: "auto"
+);
+
+$gutter-0: 0rem;
+$gutter-1: 0.25rem;
+$gutter-2: 0.5rem;
+$gutter-3: 1rem;
+$gutter-4: 1.5rem;
+$gutter-5: 3rem;
+
+$gutters: (
+    $gutter-0: "0",
+    $gutter-1: "1",
+    $gutter-2: "2",
+    $gutter-3: "3",
+    $gutter-4: "4",
+    $gutter-5: "5"
+);
+// cols
+
 // dimensions
 $dimension-0: 0;
 $dimension-5: 5;
