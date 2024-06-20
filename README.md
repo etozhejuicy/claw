@@ -39,6 +39,7 @@ Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/cla
 - [x]  text
 - [ ]  variables
 - [ ]  visibility
+- [x]  z-index
 
 
 #### The status of components readiness:
