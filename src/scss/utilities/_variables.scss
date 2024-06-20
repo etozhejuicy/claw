@@ -1016,14 +1016,18 @@ $opacities: (
 // opacity
 
 // overflow
-$overflow: hidden;
-$overflow-x: x;
-$overflow-y: y;
+$overflow-hidden: hidden;
+$overflow-auto: auto;
+$overflow-scroll: scroll;
+$overflow-visible: visible;
+$overflow-clip: clip;
 
 $overflows: (
-    $overflow: "",
-    $overflow-x: "x",
-    $overflow-y: "y"
+    $overflow-hidden: "hidden",
+    $overflow-auto: "auto",
+    $overflow-scroll: "scroll",
+    $overflow-visible: "visible",
+    $overflow-clip: "clip"
 );
 // overflow
 

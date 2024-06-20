@@ -1,11 +1,16 @@
 @each $overflow, $value in $overflows {
     .overflow {
-        &-hidden {
-            overflow: hidden !important;
-        }
         &-#{$value} {
-            &-hidden {
-                overflow-#{$value}: hidden !important;
+            overflow: #{$value} !important;
+        }
+        &-x {
+            &-#{$value} {
+                overflow-x: #{$value} !important;
+            }
+        }
+        &-y {
+            &-#{$value} {
+                overflow-y: #{$value} !important;
             }
         }
     }
