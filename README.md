@@ -39,3 +39,29 @@ Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/cla
 - [x]  text
 - [ ]  variables
 - [ ]  visibility
+
+
+#### The status of components readiness:
+
+- [ ]  background
+- [ ]  badge
+- [ ]  buttons
+- [ ]  cards
+- [ ]  checks, radios & switches
+- [ ]  code & quote
+- [ ]  counter
+- [ ]  devider
+- [ ]  forms
+- [ ]  groups & stacks
+- [ ]  links
+- [ ]  list
+- [ ]  modals
+- [ ]  popover
+- [ ]  progressbar
+- [ ]  range
+- [ ]  select
+- [ ]  shadow
+- [ ]  spinners
+- [ ]  stretched
+- [ ]  table
+- [ ]  tabs
