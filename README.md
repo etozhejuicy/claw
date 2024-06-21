@@ -38,7 +38,7 @@ Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/cla
 - [x]  stretched-link
 - [x]  text
 - [ ]  variables
-- [ ]  visibility
+- [x]  visibility
 - [x]  z-index
 
 
