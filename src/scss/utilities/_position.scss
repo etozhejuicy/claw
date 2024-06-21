@@ -55,12 +55,12 @@
     }
 }
 
-@each $sticky, $value in $stickys {
-    .sticky {
-        @each $direction, $key in $directions {
-            &-#{$key} {
-                &-#{$value} {
-                    #{$key}: #{$value}rem !important;
+.sticky {
+    @each $direction, $key in $directions {
+        &-#{$key} {
+            @for $i from 0 through 16 {
+                &-#{$i} {
+                    #{$key}: calc(#{$i}rem/ 2.5) !important;
                 }
             }
         }

@@ -707,20 +707,6 @@ $cl-icon-svg: unquote('"\\eae9"');
 $cl-icon-IcoMoon: unquote('"\\eaea"');
 // icons
 
-// sticky
-$sticky-1: 1;
-$sticky-2: 2;
-$sticky-3: 3;
-$sticky-4: 4;
-
-$stickys: (
-    $sticky-1: "1",
-    $sticky-2: "2",
-    $sticky-3: "3",
-    $sticky-4: "4"
-);
-// sticky
-
 // text
 // text align
 $text-left: left;
@@ -914,6 +900,14 @@ $align-selfs: (
     $align-selfs-unset: "unset"
 );
 // flexbox
+
+// margin
+$m-auto: auto;
+
+$margins: (
+    $m-auto: "auto"
+);
+// margin
 
 // radius
 $rounded: 0.375rem;

@@ -6,6 +6,9 @@
     margin-bottom: unset;
     letter-spacing: -0.02rem;
     line-height: 130%;
+    &:first-of-type {
+      margin-top: unset;
+    }
     &:last-of-type {
       margin-bottom: unset;
     }

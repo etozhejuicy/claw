@@ -1,53 +1,792 @@
-$m-0: 0rem;
-$m-1: 0.25rem;
-$m-2: 0.5rem;
-$m-3: 0.75rem;
-$m-4: 1rem;
-$m-5: 1.25rem;
-$m-6: 1.5rem;
-$m-7: 1.75rem;
-$m-8: 2rem;
-$m-9: 2.25rem;
-$m-auto: auto;
+@use "sass:math";
 
-$sizes: (
-    $m-0: "0",
-    $m-1: "1",
-    $m-2: "2",
-    $m-3: "3",
-    $m-4: "4",
-    $m-5: "5",
-    $m-6: "6",
-    $m-7: "7",
-    $m-8: "8",
-    $m-9: "9",
-    $m-auto: "auto"
-);
-
-@each $size, $value in $sizes {
-    .m {
+.m {
+    @each $margin, $value in $margins {
         &-#{$value} {
-            margin: $size !important;
+            margin: $margin !important;
         }
-        &t-#{$value} {
-            margin-top: $size !important;
+        @include breakpoint-xs {
+            &-xs {
+                &-#{$value} {
+                    margin: $margin !important;
+                }
+            }
         }
-        &b-#{$value} {
-            margin-bottom: $size !important;
+        @include breakpoint-sm {
+            &-sm {
+                &-#{$value} {
+                    margin: $margin !important;
+                }
+            }
         }
-        &l-#{$value} {
-            margin-left: $size !important;
+        @include breakpoint-md {
+            &-md {
+                &-#{$value} {
+                    margin: $margin !important;
+                }
+            }
         }
-        &r-#{$value} {
-            margin-right: $size !important;
+        @include breakpoint-lg {
+            &-lg {
+                &-#{$value} {
+                    margin: $margin !important;
+                }
+            }
         }
-        &y-#{$value} {
-            margin-top: $size !important;
-            margin-bottom: $size !important;
+        @include breakpoint-xl {
+            &-xl {
+                &-#{$value} {
+                    margin: $margin !important;
+                }
+            }
         }
-        &x-#{$value} {
-            margin-left: $size !important;
-            margin-right: $size !important;
+        @include breakpoint-xxl {
+            &-xxl {
+                &-#{$value} {
+                    margin: $margin !important;
+                }
+            }
+        }
+        @include breakpoint-xxxl {
+            &-xxxl {
+                &-#{$value} {
+                    margin: $margin !important;
+                }
+            }
+        }
+        &t {
+            &-#{$value} {
+                margin-top: $margin !important;
+            }
+            @include breakpoint-xs {
+                &-xs {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-sm {
+                &-sm {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-md {
+                &-md {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-lg {
+                &-lg {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xl {
+                &-xl {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xxl {
+                &-xxl {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xxxl {
+                &-xxxl {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                    }
+                }
+            }
+        }
+        &b {
+            &-#{$value} {
+                margin-bottom: $margin !important;
+            }
+            @include breakpoint-xs {
+                &-xs {
+                    &-#{$value} {
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-sm {
+                &-sm {
+                    &-#{$value} {
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-md {
+                &-md {
+                    &-#{$value} {
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-lg {
+                &-lg {
+                    &-#{$value} {
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xl {
+                &-xl {
+                    &-#{$value} {
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xxl {
+                &-xxl {
+                    &-#{$value} {
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xxxl {
+                &-xxxl {
+                    &-#{$value} {
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+        }
+        &l {
+            &-#{$value} {
+                margin-left: $margin !important;
+            }
+            @include breakpoint-xs {
+                &-xs {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-sm {
+                &-sm {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-md {
+                &-md {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-lg {
+                &-lg {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xl {
+                &-xl {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xxl {
+                &-xxl {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xxxl {
+                &-xxxl {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                    }
+                }
+            }
+        }
+        &r {
+            &-#{$value} {
+                margin-right: $margin !important;
+            }
+            @include breakpoint-xs {
+                &-xs {
+                    &-#{$value} {
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-sm {
+                &-sm {
+                    &-#{$value} {
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-md {
+                &-md {
+                    &-#{$value} {
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-lg {
+                &-lg {
+                    &-#{$value} {
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xl {
+                &-xl {
+                    &-#{$value} {
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xxl {
+                &-xxl {
+                    &-#{$value} {
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xxxl {
+                &-xxxl {
+                    &-#{$value} {
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+        }
+        &y {
+            &-#{$value} {
+                margin-top: $margin !important;
+                margin-bottom: $margin !important;
+            }
+            @include breakpoint-xs {
+                &-xs {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-sm {
+                &-sm {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-md {
+                &-md {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-lg {
+                &-lg {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xl {
+                &-xl {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xxl {
+                &-xxl {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xxxl {
+                &-xxxl {
+                    &-#{$value} {
+                        margin-top: $margin !important;
+                        margin-bottom: $margin !important;
+                    }
+                }
+            }
+        }
+        &x {
+            &-#{$value} {
+                margin-left: $margin !important;
+                margin-right: $margin !important;
+            }
+            @include breakpoint-xs {
+                &-xs {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-sm {
+                &-sm {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-md {
+                &-md {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-lg {
+                &-lg {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xl {
+                &-xl {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xxl {
+                &-xxl {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+            @include breakpoint-xxxl {
+                &-xxxl {
+                    &-#{$value} {
+                        margin-left: $margin !important;
+                        margin-right: $margin !important;
+                    }
+                }
+            }
+        }
+    }
+    @for $i from 0 through 12 {
+        &-#{$i} {
+            margin: divide($i, 4) + rem !important;
+        }
+        @include breakpoint-xs {
+            &-xs {
+                &-#{$i} {
+                    margin: divide($i, 4) + rem !important;
+                }
+            }
+        }
+        @include breakpoint-sm {
+            &-sm {
+                &-#{$i} {
+                    margin: divide($i, 4) + rem !important;
+                }
+            }
+        }
+        @include breakpoint-md {
+            &-md {
+                &-#{$i} {
+                    margin: divide($i, 4) + rem !important;
+                }
+            }
+        }
+        @include breakpoint-lg {
+            &-lg {
+                &-#{$i} {
+                    margin: divide($i, 4) + rem !important;
+                }
+            }
+        }
+        @include breakpoint-xl {
+            &-xl {
+                &-#{$i} {
+                    margin: divide($i, 4) + rem !important;
+                }
+            }
+        }
+        @include breakpoint-xxl {
+            &-xxl {
+                &-#{$i} {
+                    margin: divide($i, 4) + rem !important;
+                }
+            }
+        }
+        @include breakpoint-xxxl {
+            &-xxxl {
+                &-#{$i} {
+                    margin: divide($i, 4) + rem !important;
+                }
+            }
+        }
+        &t {
+            &-#{$i} {
+                margin-top: divide($i, 4) + rem !important;
+            }
+            @include breakpoint-xs {
+                &-xs {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-sm {
+                &-sm {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-md {
+                &-md {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-lg {
+                &-lg {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xl {
+                &-xl {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xxl {
+                &-xxl {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xxxl {
+                &-xxxl {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+        }
+        &b {
+            &-#{$i} {
+                margin-bottom: divide($i, 4) + rem !important;
+            }
+            @include breakpoint-xs {
+                &-xs {
+                    &-#{$i} {
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-sm {
+                &-sm {
+                    &-#{$i} {
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-md {
+                &-md {
+                    &-#{$i} {
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-lg {
+                &-lg {
+                    &-#{$i} {
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xl {
+                &-xl {
+                    &-#{$i} {
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xxl {
+                &-xxl {
+                    &-#{$i} {
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xxxl {
+                &-xxxl {
+                    &-#{$i} {
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+        }
+        &l {
+            &-#{$i} {
+                margin-left: divide($i, 4) + rem !important;
+            }
+            @include breakpoint-xs {
+                &-xs {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-sm {
+                &-sm {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-md {
+                &-md {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-lg {
+                &-lg {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xl {
+                &-xl {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xxl {
+                &-xxl {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xxxl {
+                &-xxxl {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+        }
+        &r {
+            &-#{$i} {
+                margin-right: divide($i, 4) + rem !important;
+            }
+            @include breakpoint-xs {
+                &-xs {
+                    &-#{$i} {
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-sm {
+                &-sm {
+                    &-#{$i} {
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-md {
+                &-md {
+                    &-#{$i} {
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-lg {
+                &-lg {
+                    &-#{$i} {
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xl {
+                &-xl {
+                    &-#{$i} {
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xxl {
+                &-xxl {
+                    &-#{$i} {
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xxxl {
+                &-xxxl {
+                    &-#{$i} {
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+        }
+        &y {
+            &-#{$i} {
+                margin-top: divide($i, 4) + rem !important;
+                margin-bottom: divide($i, 4) + rem !important;
+            }
+            @include breakpoint-xs {
+                &-xs {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-sm {
+                &-sm {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-md {
+                &-md {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-lg {
+                &-lg {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xl {
+                &-xl {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xxl {
+                &-xxl {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xxxl {
+                &-xxxl {
+                    &-#{$i} {
+                        margin-top: divide($i, 4) + rem !important;
+                        margin-bottom: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+        }
+        &x {
+            &-#{$i} {
+                margin-left: divide($i, 4) + rem !important;
+                margin-right: divide($i, 4) + rem !important;
+            }
+            @include breakpoint-xs {
+                &-xs {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-sm {
+                &-sm {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-md {
+                &-md {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-lg {
+                &-lg {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xl {
+                &-xl {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xxl {
+                &-xxl {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
+            @include breakpoint-xxxl {
+                &-xxxl {
+                    &-#{$i} {
+                        margin-left: divide($i, 4) + rem !important;
+                        margin-right: divide($i, 4) + rem !important;
+                    }
+                }
+            }
         }
     }
 }
