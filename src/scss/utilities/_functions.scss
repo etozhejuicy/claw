@@ -95,6 +95,15 @@
     }
 }
 
+// new fix
+// @mixin breakpoint($breakpoint) {
+//   @media (min-width: map-get($breakpoints, $breakpoint)) {
+//     @content;
+//   }
+// }
+// how to use new fix?
+// @include breakpoint("$breakpoint")
+
 @mixin hover {
     @media (hover: hover) {
         @content;
