@@ -1,51 +1,51 @@
 .order {
     @for $i from 0 through 100 {
         &-#{$i} {
-            order: $i !important;
+            order: $i;
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$i} {
                     order: $i !important;
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$i} {
                     order: $i !important;
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$i} {
                     order: $i !important;
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$i} {
                     order: $i !important;
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$i} {
                     order: $i !important;
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$i} {
                     order: $i !important;
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$i} {
                     order: $i !important;
@@ -55,51 +55,51 @@
     }
     @each $order, $value in $orders {
         &-#{$order} {
-            order: $value !important;
+            order: $value;
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$order} {
                     order: $value !important;
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$order} {
                     order: $value !important;
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$order} {
                     order: $value !important;
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$order} {
                     order: $value !important;
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$order} {
                     order: $value !important;
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$order} {
                     order: $value !important;
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$order} {
                     order: $value !important;

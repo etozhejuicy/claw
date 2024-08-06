@@ -53,56 +53,15 @@
 }
 
 // Breakpoint
-@mixin breakpoint-xs {
-    @media screen and (max-width: #{$breakpoint-sm - 0.02px}) {
+@mixin breakpoint($breakpoint) {
+    @if ($breakpoint) {
+        @media (min-width: map-get($breakpoints, #{$breakpoint})) {
+            @content;
+        }
+    } @else {
         @content;
     }
 }
-
-@mixin breakpoint-sm {
-    @media (min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-md - 0.02px}) {
-        @content;
-    }
-}
-
-@mixin breakpoint-md {
-    @media (min-width: #{$breakpoint-md}) {
-        @content;
-    }
-}
-
-@mixin breakpoint-lg {
-    @media (min-width: #{$breakpoint-lg}) {
-        @content;
-    }
-}
-
-@mixin breakpoint-xl {
-    @media (min-width: #{$breakpoint-xl}) {
-        @content;
-    }
-}
-
-@mixin breakpoint-xxl {
-    @media (min-width: #{$breakpoint-xxl}) {
-        @content;
-    }
-}
-
-@mixin breakpoint-xxxl {
-    @media (min-width: #{$breakpoint-xxxl}) {
-        @content;
-    }
-}
-
-// new fix
-// @mixin breakpoint($breakpoint) {
-//   @media (min-width: map-get($breakpoints, $breakpoint)) {
-//     @content;
-//   }
-// }
-// how to use new fix?
-// @include breakpoint("$breakpoint")
 
 @mixin hover {
     @media (hover: hover) {

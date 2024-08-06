@@ -3,51 +3,51 @@
 .m {
     @each $margin, $value in $margins {
         &-#{$value} {
-            margin: $margin !important;
+            margin: $margin;
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$value} {
                     margin: $margin !important;
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$value} {
                     margin: $margin !important;
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$value} {
                     margin: $margin !important;
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$value} {
                     margin: $margin !important;
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$value} {
                     margin: $margin !important;
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$value} {
                     margin: $margin !important;
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$value} {
                     margin: $margin !important;
@@ -56,51 +56,51 @@
         }
         &t {
             &-#{$value} {
-                margin-top: $margin !important;
+                margin-top: $margin;
             }
-            @include breakpoint-xs {
+            @include breakpoint("breakpoint-xs") {
                 &-xs {
                     &-#{$value} {
                         margin-top: $margin !important;
                     }
                 }
             }
-            @include breakpoint-sm {
+            @include breakpoint("breakpoint-sm") {
                 &-sm {
                     &-#{$value} {
                         margin-top: $margin !important;
                     }
                 }
             }
-            @include breakpoint-md {
+            @include breakpoint("breakpoint-md") {
                 &-md {
                     &-#{$value} {
                         margin-top: $margin !important;
                     }
                 }
             }
-            @include breakpoint-lg {
+            @include breakpoint("breakpoint-lg") {
                 &-lg {
                     &-#{$value} {
                         margin-top: $margin !important;
                     }
                 }
             }
-            @include breakpoint-xl {
+            @include breakpoint("breakpoint-xl") {
                 &-xl {
                     &-#{$value} {
                         margin-top: $margin !important;
                     }
                 }
             }
-            @include breakpoint-xxl {
+            @include breakpoint("breakpoint-xxl") {
                 &-xxl {
                     &-#{$value} {
                         margin-top: $margin !important;
                     }
                 }
             }
-            @include breakpoint-xxxl {
+            @include breakpoint("breakpoint-xxxl") {
                 &-xxxl {
                     &-#{$value} {
                         margin-top: $margin !important;
@@ -110,51 +110,51 @@
         }
         &b {
             &-#{$value} {
-                margin-bottom: $margin !important;
+                margin-bottom: $margin;
             }
-            @include breakpoint-xs {
+            @include breakpoint("breakpoint-xs") {
                 &-xs {
                     &-#{$value} {
                         margin-bottom: $margin !important;
                     }
                 }
             }
-            @include breakpoint-sm {
+            @include breakpoint("breakpoint-sm") {
                 &-sm {
                     &-#{$value} {
                         margin-bottom: $margin !important;
                     }
                 }
             }
-            @include breakpoint-md {
+            @include breakpoint("breakpoint-md") {
                 &-md {
                     &-#{$value} {
                         margin-bottom: $margin !important;
                     }
                 }
             }
-            @include breakpoint-lg {
+            @include breakpoint("breakpoint-lg") {
                 &-lg {
                     &-#{$value} {
                         margin-bottom: $margin !important;
                     }
                 }
             }
-            @include breakpoint-xl {
+            @include breakpoint("breakpoint-xl") {
                 &-xl {
                     &-#{$value} {
                         margin-bottom: $margin !important;
                     }
                 }
             }
-            @include breakpoint-xxl {
+            @include breakpoint("breakpoint-xxl") {
                 &-xxl {
                     &-#{$value} {
                         margin-bottom: $margin !important;
                     }
                 }
             }
-            @include breakpoint-xxxl {
+            @include breakpoint("breakpoint-xxxl") {
                 &-xxxl {
                     &-#{$value} {
                         margin-bottom: $margin !important;
@@ -164,51 +164,51 @@
         }
         &l {
             &-#{$value} {
-                margin-left: $margin !important;
+                margin-left: $margin;
             }
-            @include breakpoint-xs {
+            @include breakpoint("breakpoint-xs") {
                 &-xs {
                     &-#{$value} {
                         margin-left: $margin !important;
                     }
                 }
             }
-            @include breakpoint-sm {
+            @include breakpoint("breakpoint-sm") {
                 &-sm {
                     &-#{$value} {
                         margin-left: $margin !important;
                     }
                 }
             }
-            @include breakpoint-md {
+            @include breakpoint("breakpoint-md") {
                 &-md {
                     &-#{$value} {
                         margin-left: $margin !important;
                     }
                 }
             }
-            @include breakpoint-lg {
+            @include breakpoint("breakpoint-lg") {
                 &-lg {
                     &-#{$value} {
                         margin-left: $margin !important;
                     }
                 }
             }
-            @include breakpoint-xl {
+            @include breakpoint("breakpoint-xl") {
                 &-xl {
                     &-#{$value} {
                         margin-left: $margin !important;
                     }
                 }
             }
-            @include breakpoint-xxl {
+            @include breakpoint("breakpoint-xxl") {
                 &-xxl {
                     &-#{$value} {
                         margin-left: $margin !important;
                     }
                 }
             }
-            @include breakpoint-xxxl {
+            @include breakpoint("breakpoint-xxxl") {
                 &-xxxl {
                     &-#{$value} {
                         margin-left: $margin !important;
@@ -218,51 +218,51 @@
         }
         &r {
             &-#{$value} {
-                margin-right: $margin !important;
+                margin-right: $margin;
             }
-            @include breakpoint-xs {
+            @include breakpoint("breakpoint-xs") {
                 &-xs {
                     &-#{$value} {
                         margin-right: $margin !important;
                     }
                 }
             }
-            @include breakpoint-sm {
+            @include breakpoint("breakpoint-sm") {
                 &-sm {
                     &-#{$value} {
                         margin-right: $margin !important;
                     }
                 }
             }
-            @include breakpoint-md {
+            @include breakpoint("breakpoint-md") {
                 &-md {
                     &-#{$value} {
                         margin-right: $margin !important;
                     }
                 }
             }
-            @include breakpoint-lg {
+            @include breakpoint("breakpoint-lg") {
                 &-lg {
                     &-#{$value} {
                         margin-right: $margin !important;
                     }
                 }
             }
-            @include breakpoint-xl {
+            @include breakpoint("breakpoint-xl") {
                 &-xl {
                     &-#{$value} {
                         margin-right: $margin !important;
                     }
                 }
             }
-            @include breakpoint-xxl {
+            @include breakpoint("breakpoint-xxl") {
                 &-xxl {
                     &-#{$value} {
                         margin-right: $margin !important;
                     }
                 }
             }
-            @include breakpoint-xxxl {
+            @include breakpoint("breakpoint-xxxl") {
                 &-xxxl {
                     &-#{$value} {
                         margin-right: $margin !important;
@@ -272,10 +272,10 @@
         }
         &y {
             &-#{$value} {
-                margin-top: $margin !important;
-                margin-bottom: $margin !important;
+                margin-top: $margin;
+                margin-bottom: $margin;
             }
-            @include breakpoint-xs {
+            @include breakpoint("breakpoint-xs") {
                 &-xs {
                     &-#{$value} {
                         margin-top: $margin !important;
@@ -283,7 +283,7 @@
                     }
                 }
             }
-            @include breakpoint-sm {
+            @include breakpoint("breakpoint-sm") {
                 &-sm {
                     &-#{$value} {
                         margin-top: $margin !important;
@@ -291,7 +291,7 @@
                     }
                 }
             }
-            @include breakpoint-md {
+            @include breakpoint("breakpoint-md") {
                 &-md {
                     &-#{$value} {
                         margin-top: $margin !important;
@@ -299,7 +299,7 @@
                     }
                 }
             }
-            @include breakpoint-lg {
+            @include breakpoint("breakpoint-lg") {
                 &-lg {
                     &-#{$value} {
                         margin-top: $margin !important;
@@ -307,7 +307,7 @@
                     }
                 }
             }
-            @include breakpoint-xl {
+            @include breakpoint("breakpoint-xl") {
                 &-xl {
                     &-#{$value} {
                         margin-top: $margin !important;
@@ -315,7 +315,7 @@
                     }
                 }
             }
-            @include breakpoint-xxl {
+            @include breakpoint("breakpoint-xxl") {
                 &-xxl {
                     &-#{$value} {
                         margin-top: $margin !important;
@@ -323,7 +323,7 @@
                     }
                 }
             }
-            @include breakpoint-xxxl {
+            @include breakpoint("breakpoint-xxxl") {
                 &-xxxl {
                     &-#{$value} {
                         margin-top: $margin !important;
@@ -334,10 +334,10 @@
         }
         &x {
             &-#{$value} {
-                margin-left: $margin !important;
-                margin-right: $margin !important;
+                margin-left: $margin;
+                margin-right: $margin;
             }
-            @include breakpoint-xs {
+            @include breakpoint("breakpoint-xs") {
                 &-xs {
                     &-#{$value} {
                         margin-left: $margin !important;
@@ -345,7 +345,7 @@
                     }
                 }
             }
-            @include breakpoint-sm {
+            @include breakpoint("breakpoint-sm") {
                 &-sm {
                     &-#{$value} {
                         margin-left: $margin !important;
@@ -353,7 +353,7 @@
                     }
                 }
             }
-            @include breakpoint-md {
+            @include breakpoint("breakpoint-md") {
                 &-md {
                     &-#{$value} {
                         margin-left: $margin !important;
@@ -361,7 +361,7 @@
                     }
                 }
             }
-            @include breakpoint-lg {
+            @include breakpoint("breakpoint-lg") {
                 &-lg {
                     &-#{$value} {
                         margin-left: $margin !important;
@@ -369,7 +369,7 @@
                     }
                 }
             }
-            @include breakpoint-xl {
+            @include breakpoint("breakpoint-xl") {
                 &-xl {
                     &-#{$value} {
                         margin-left: $margin !important;
@@ -377,7 +377,7 @@
                     }
                 }
             }
-            @include breakpoint-xxl {
+            @include breakpoint("breakpoint-xxl") {
                 &-xxl {
                     &-#{$value} {
                         margin-left: $margin !important;
@@ -385,7 +385,7 @@
                     }
                 }
             }
-            @include breakpoint-xxxl {
+            @include breakpoint("breakpoint-xxxl") {
                 &-xxxl {
                     &-#{$value} {
                         margin-left: $margin !important;
@@ -397,51 +397,51 @@
     }
     @for $i from 0 through 12 {
         &-#{$i} {
-            margin: divide($i, 4) + rem !important;
+            margin: divide($i, 4) + rem;
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$i} {
                     margin: divide($i, 4) + rem !important;
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$i} {
                     margin: divide($i, 4) + rem !important;
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$i} {
                     margin: divide($i, 4) + rem !important;
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$i} {
                     margin: divide($i, 4) + rem !important;
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$i} {
                     margin: divide($i, 4) + rem !important;
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$i} {
                     margin: divide($i, 4) + rem !important;
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$i} {
                     margin: divide($i, 4) + rem !important;
@@ -450,51 +450,51 @@
         }
         &t {
             &-#{$i} {
-                margin-top: divide($i, 4) + rem !important;
+                margin-top: divide($i, 4) + rem;
             }
-            @include breakpoint-xs {
+            @include breakpoint("breakpoint-xs") {
                 &-xs {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-sm {
+            @include breakpoint("breakpoint-sm") {
                 &-sm {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-md {
+            @include breakpoint("breakpoint-md") {
                 &-md {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-lg {
+            @include breakpoint("breakpoint-lg") {
                 &-lg {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-xl {
+            @include breakpoint("breakpoint-xl") {
                 &-xl {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-xxl {
+            @include breakpoint("breakpoint-xxl") {
                 &-xxl {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-xxxl {
+            @include breakpoint("breakpoint-xxxl") {
                 &-xxxl {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
@@ -504,51 +504,51 @@
         }
         &b {
             &-#{$i} {
-                margin-bottom: divide($i, 4) + rem !important;
+                margin-bottom: divide($i, 4) + rem;
             }
-            @include breakpoint-xs {
+            @include breakpoint("breakpoint-xs") {
                 &-xs {
                     &-#{$i} {
                         margin-bottom: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-sm {
+            @include breakpoint("breakpoint-sm") {
                 &-sm {
                     &-#{$i} {
                         margin-bottom: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-md {
+            @include breakpoint("breakpoint-md") {
                 &-md {
                     &-#{$i} {
                         margin-bottom: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-lg {
+            @include breakpoint("breakpoint-lg") {
                 &-lg {
                     &-#{$i} {
                         margin-bottom: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-xl {
+            @include breakpoint("breakpoint-xl") {
                 &-xl {
                     &-#{$i} {
                         margin-bottom: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-xxl {
+            @include breakpoint("breakpoint-xxl") {
                 &-xxl {
                     &-#{$i} {
                         margin-bottom: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-xxxl {
+            @include breakpoint("breakpoint-xxxl") {
                 &-xxxl {
                     &-#{$i} {
                         margin-bottom: divide($i, 4) + rem !important;
@@ -558,51 +558,51 @@
         }
         &l {
             &-#{$i} {
-                margin-left: divide($i, 4) + rem !important;
+                margin-left: divide($i, 4) + rem;
             }
-            @include breakpoint-xs {
+            @include breakpoint("breakpoint-xs") {
                 &-xs {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-sm {
+            @include breakpoint("breakpoint-sm") {
                 &-sm {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-md {
+            @include breakpoint("breakpoint-md") {
                 &-md {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-lg {
+            @include breakpoint("breakpoint-lg") {
                 &-lg {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-xl {
+            @include breakpoint("breakpoint-xl") {
                 &-xl {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-xxl {
+            @include breakpoint("breakpoint-xxl") {
                 &-xxl {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-xxxl {
+            @include breakpoint("breakpoint-xxxl") {
                 &-xxxl {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
@@ -612,51 +612,51 @@
         }
         &r {
             &-#{$i} {
-                margin-right: divide($i, 4) + rem !important;
+                margin-right: divide($i, 4) + rem;
             }
-            @include breakpoint-xs {
+            @include breakpoint("breakpoint-xs") {
                 &-xs {
                     &-#{$i} {
                         margin-right: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-sm {
+            @include breakpoint("breakpoint-sm") {
                 &-sm {
                     &-#{$i} {
                         margin-right: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-md {
+            @include breakpoint("breakpoint-md") {
                 &-md {
                     &-#{$i} {
                         margin-right: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-lg {
+            @include breakpoint("breakpoint-lg") {
                 &-lg {
                     &-#{$i} {
                         margin-right: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-xl {
+            @include breakpoint("breakpoint-xl") {
                 &-xl {
                     &-#{$i} {
                         margin-right: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-xxl {
+            @include breakpoint("breakpoint-xxl") {
                 &-xxl {
                     &-#{$i} {
                         margin-right: divide($i, 4) + rem !important;
                     }
                 }
             }
-            @include breakpoint-xxxl {
+            @include breakpoint("breakpoint-xxxl") {
                 &-xxxl {
                     &-#{$i} {
                         margin-right: divide($i, 4) + rem !important;
@@ -666,10 +666,10 @@
         }
         &y {
             &-#{$i} {
-                margin-top: divide($i, 4) + rem !important;
-                margin-bottom: divide($i, 4) + rem !important;
+                margin-top: divide($i, 4) + rem;
+                margin-bottom: divide($i, 4) + rem;
             }
-            @include breakpoint-xs {
+            @include breakpoint("breakpoint-xs") {
                 &-xs {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
@@ -677,7 +677,7 @@
                     }
                 }
             }
-            @include breakpoint-sm {
+            @include breakpoint("breakpoint-sm") {
                 &-sm {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
@@ -685,7 +685,7 @@
                     }
                 }
             }
-            @include breakpoint-md {
+            @include breakpoint("breakpoint-md") {
                 &-md {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
@@ -693,7 +693,7 @@
                     }
                 }
             }
-            @include breakpoint-lg {
+            @include breakpoint("breakpoint-lg") {
                 &-lg {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
@@ -701,7 +701,7 @@
                     }
                 }
             }
-            @include breakpoint-xl {
+            @include breakpoint("breakpoint-xl") {
                 &-xl {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
@@ -709,7 +709,7 @@
                     }
                 }
             }
-            @include breakpoint-xxl {
+            @include breakpoint("breakpoint-xxl") {
                 &-xxl {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
@@ -717,7 +717,7 @@
                     }
                 }
             }
-            @include breakpoint-xxxl {
+            @include breakpoint("breakpoint-xxxl") {
                 &-xxxl {
                     &-#{$i} {
                         margin-top: divide($i, 4) + rem !important;
@@ -728,10 +728,10 @@
         }
         &x {
             &-#{$i} {
-                margin-left: divide($i, 4) + rem !important;
-                margin-right: divide($i, 4) + rem !important;
+                margin-left: divide($i, 4) + rem;
+                margin-right: divide($i, 4) + rem;
             }
-            @include breakpoint-xs {
+            @include breakpoint("breakpoint-xs") {
                 &-xs {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
@@ -739,7 +739,7 @@
                     }
                 }
             }
-            @include breakpoint-sm {
+            @include breakpoint("breakpoint-sm") {
                 &-sm {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
@@ -747,7 +747,7 @@
                     }
                 }
             }
-            @include breakpoint-md {
+            @include breakpoint("breakpoint-md") {
                 &-md {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
@@ -755,7 +755,7 @@
                     }
                 }
             }
-            @include breakpoint-lg {
+            @include breakpoint("breakpoint-lg") {
                 &-lg {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
@@ -763,7 +763,7 @@
                     }
                 }
             }
-            @include breakpoint-xl {
+            @include breakpoint("breakpoint-xl") {
                 &-xl {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
@@ -771,7 +771,7 @@
                     }
                 }
             }
-            @include breakpoint-xxl {
+            @include breakpoint("breakpoint-xxl") {
                 &-xxl {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;
@@ -779,7 +779,7 @@
                     }
                 }
             }
-            @include breakpoint-xxxl {
+            @include breakpoint("breakpoint-xxxl") {
                 &-xxxl {
                     &-#{$i} {
                         margin-left: divide($i, 4) + rem !important;

@@ -11,12 +11,12 @@
 
 .col {
     flex: 1 0 0%;
-    @for $i from 0 through 12 {
+    @for $i from 1 through 12 {
         &-#{$i} {
             flex: 0 0 auto;
-            width: percentage(divide($i, 12)) !important;
+            width: percentage(divide($i, 12));
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$i} {
                     flex: 0 0 auto;
@@ -24,7 +24,7 @@
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$i} {
                     flex: 0 0 auto;
@@ -32,7 +32,7 @@
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$i} {
                     flex: 0 0 auto;
@@ -40,7 +40,7 @@
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$i} {
                     flex: 0 0 auto;
@@ -48,7 +48,7 @@
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$i} {
                     flex: 0 0 auto;
@@ -56,7 +56,7 @@
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$i} {
                     flex: 0 0 auto;
@@ -64,7 +64,7 @@
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$i} {
                     flex: 0 0 auto;
@@ -76,9 +76,9 @@
     @each $col, $value in $cols {
         &-#{$value} {
             flex: 0 0 auto;
-            width: #{$col} !important;
+            width: #{$col};
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 flex: 1 0 0%;
                 &-#{$value} {
@@ -87,7 +87,7 @@
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 flex: 1 0 0%;
                 &-#{$value} {
@@ -96,7 +96,7 @@
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 flex: 1 0 0%;
                 &-#{$value} {
@@ -105,7 +105,7 @@
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 flex: 1 0 0%;
                 &-#{$value} {
@@ -114,7 +114,7 @@
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 flex: 1 0 0%;
                 &-#{$value} {
@@ -123,7 +123,7 @@
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 flex: 1 0 0%;
                 &-#{$value} {
@@ -132,7 +132,7 @@
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 flex: 1 0 0%;
                 &-#{$value} {
@@ -149,10 +149,10 @@
         &-#{$i} {
             & > * {
                 flex: 0 0 auto;
-                width: calc(100% / #{$i}) !important;
+                width: calc(100% / #{$i});
             }
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$i} {
                     & > * {
@@ -162,7 +162,7 @@
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$i} {
                     & > * {
@@ -172,7 +172,7 @@
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$i} {
                     & > * {
@@ -182,7 +182,7 @@
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$i} {
                     & > * {
@@ -192,7 +192,7 @@
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$i} {
                     & > * {
@@ -202,7 +202,7 @@
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$i} {
                     & > * {
@@ -212,7 +212,7 @@
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$i} {
                     & > * {
@@ -227,10 +227,10 @@
         &-#{$value} {
             & > * {
                 flex: 0 0 auto;
-                width: #{$row-col} !important;
+                width: #{$row-col};
             }
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$value} {
                     & > * {
@@ -240,7 +240,7 @@
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$value} {
                     & > * {
@@ -250,7 +250,7 @@
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$value} {
                     & > * {
@@ -260,7 +260,7 @@
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$value} {
                     & > * {
@@ -270,7 +270,7 @@
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$value} {
                     & > * {
@@ -280,7 +280,7 @@
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$value} {
                     & > * {
@@ -290,7 +290,7 @@
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$value} {
                     & > * {
@@ -306,51 +306,51 @@
 .offset {
     @for $i from 1 through 11 {
         &-#{$i} {
-            margin-left: percentage(divide($i, 12)) !important;
+            margin-left: percentage(divide($i, 12));
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$i} {
                     margin-left: percentage(divide($i, 12)) !important;
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$i} {
                     margin-left: percentage(divide($i, 12)) !important;
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$i} {
                     margin-left: percentage(divide($i, 12)) !important;
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$i} {
                     margin-left: percentage(divide($i, 12)) !important;
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$i} {
                     margin-left: percentage(divide($i, 12)) !important;
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$i} {
                     margin-left: percentage(divide($i, 12)) !important;
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$i} {
                     margin-left: percentage(divide($i, 12)) !important;
@@ -366,59 +366,59 @@
             #{$prefix}-gutter-x: #{$gutter};
             #{$prefix}-gutter-y: #{$gutter};
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
@@ -430,52 +430,52 @@
         &-#{$value} {
             #{$prefix}-gutter-x: #{$gutter};
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$value} {
-                    #{$prefix}-gutter-x: #{$gutter};
+                    #{$prefix}-gutter-x: #{$gutter} !important;
                 }
             }
         }
@@ -487,52 +487,52 @@
         &-#{$value} {
             #{$prefix}-gutter-y: #{$gutter};
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$value} {
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$value} {
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$value} {
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$value} {
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$value} {
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$value} {
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$value} {
-                    #{$prefix}-gutter-y: #{$gutter};
+                    #{$prefix}-gutter-y: #{$gutter} !important;
                 }
             }
         }

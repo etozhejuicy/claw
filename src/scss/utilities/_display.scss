@@ -1,51 +1,51 @@
 @each $display, $value in $displays {
     .d {
         &-#{$value} {
-            display: #{$value} !important;
+            display: #{$value};
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$value} {
                     display: #{$value} !important;
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$value} {
                     display: #{$value} !important;
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$value} {
                     display: #{$value} !important;
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$value} {
                     display: #{$value} !important;
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$value} {
                     display: #{$value} !important;
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$value} {
                     display: #{$value} !important;
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$value} {
                     display: #{$value} !important;

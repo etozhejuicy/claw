@@ -3,49 +3,49 @@
         &-#{$value} {
             vertical-align: #{$vertical-align};
         }
-        @include breakpoint-xs {
+        @include breakpoint("breakpoint-xs") {
             &-xs {
                 &-#{$value} {
                     vertical-align: #{$vertical-align} !important;
                 }
             }
         }
-        @include breakpoint-sm {
+        @include breakpoint("breakpoint-sm") {
             &-sm {
                 &-#{$value} {
                     vertical-align: #{$vertical-align} !important;
                 }
             }
         }
-        @include breakpoint-md {
+        @include breakpoint("breakpoint-md") {
             &-md {
                 &-#{$value} {
                     vertical-align: #{$vertical-align} !important;
                 }
             }
         }
-        @include breakpoint-lg {
+        @include breakpoint("breakpoint-lg") {
             &-lg {
                 &-#{$value} {
                     vertical-align: #{$vertical-align} !important;
                 }
             }
         }
-        @include breakpoint-xl {
+        @include breakpoint("breakpoint-xl") {
             &-xl {
                 &-#{$value} {
                     vertical-align: #{$vertical-align} !important;
                 }
             }
         }
-        @include breakpoint-xxl {
+        @include breakpoint("breakpoint-xxl") {
             &-xxl {
                 &-#{$value} {
                     vertical-align: #{$vertical-align} !important;
                 }
             }
         }
-        @include breakpoint-xxxl {
+        @include breakpoint("breakpoint-xxxl") {
             &-xxxl {
                 &-#{$value} {
                     vertical-align: #{$vertical-align} !important;
