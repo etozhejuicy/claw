@@ -1,8 +1,8 @@
 :root {
   #{$prefix}-form-input-color: var(--grey-rgb);
-  #{$prefix}-form-check-bg: rgba(var(#{$prefix}-form-input-color), 0.2);
+  #{$prefix}-form-check-bg: rgba(var(--white), 0.2);
   #{$prefix}-border-width: 0.0625rem;
-  #{$prefix}-border-color: rgba(var(#{$prefix}-form-input-color), 0);
+  #{$prefix}-border-color: rgba(var(#{$prefix}-form-input-color), 0.5);
   #{$prefix}-border-radius: 0.25rem;
   #{$prefix}-checkbox-size: initial;
   #{$prefix}-form-check-label-padding-left: 0.75rem;
@@ -11,20 +11,20 @@
 .form-check {
   position: relative;
   min-height: 1.5rem;
-  padding-left: 1.5em;
+  padding-left: 1.25rem;
   margin-bottom: 0.125rem;
   & .form-check-input {
     float: left;
     margin-top: 0.125rem;
-    margin-left: -1.5em;
+    margin-left: -1.25rem;
   }
   &-reverse {
-    padding-right: 1.5em;
+    padding-right: 1.25rem;
     padding-left: 0;
     text-align: right;
     & .form-check-input {
       float: right;
-      margin-right: -1.5em;
+      margin-right: -1.25rem;
       margin-left: 0;
     }
   }
@@ -72,7 +72,7 @@
       text-align: center;
     }
     &[type="checkbox"] {
-      #{$prefix}-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.7775 1.69937L4.1075 7.36937C3.9675 7.50937 3.7775 7.58938 3.5775 7.58938C3.3775 7.58938 3.1875 7.50937 3.0475 7.36937L0.2175 4.53937C-0.0725 4.24937 -0.0725 3.76937 0.2175 3.47937C0.5075 3.18937 0.9875 3.18937 1.2775 3.47937L3.5775 5.77937L8.7175 0.639375C9.0075 0.349375 9.4875 0.349375 9.7775 0.639375C10.0675 0.929375 10.0675 1.39937 9.7775 1.69937Z' fill='%23222222'/%3E%3Cpath d='M9.7775 1.69937L4.1075 7.36937C3.9675 7.50937 3.7775 7.58938 3.5775 7.58938C3.3775 7.58938 3.1875 7.50937 3.0475 7.36937L0.2175 4.53937C-0.0725 4.24937 -0.0725 3.76937 0.2175 3.47937C0.5075 3.18937 0.9875 3.18937 1.2775 3.47937L3.5775 5.77937L8.7175 0.639375C9.0075 0.349375 9.4875 0.349375 9.7775 0.639375C10.0675 0.929375 10.0675 1.39937 9.7775 1.69937Z' fill='%23222222'/%3E%3C/svg%3E%0A");
+      #{$prefix}-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.7775 1.69937L4.1075 7.36937C3.9675 7.50937 3.7775 7.58938 3.5775 7.58938C3.3775 7.58938 3.1875 7.50937 3.0475 7.36937L0.2175 4.53937C-0.0725 4.24937 -0.0725 3.76937 0.2175 3.47937C0.5075 3.18937 0.9875 3.18937 1.2775 3.47937L3.5775 5.77937L8.7175 0.639375C9.0075 0.349375 9.4875 0.349375 9.7775 0.639375C10.0675 0.929375 10.0675 1.39937 9.7775 1.69937Z' fill='%23222222'/%3E%3Cpath d='M9.7775 1.69937L4.1075 7.36937C3.9675 7.50937 3.7775 7.58938 3.5775 7.58938C3.3775 7.58938 3.1875 7.50937 3.0475 7.36937L0.2175 4.53937C-0.0725 4.24937 -0.0725 3.76937 0.2175 3.47937C0.5075 3.18937 0.9875 3.18937 1.2775 3.47937L3.5775 5.77937L8.7175 0.639375C9.0075 0.349375 9.4875 0.349375 9.7775 0.639375C10.0675 0.929375 10.0675 1.39937 9.7775 1.69937Z' fill='%23222222'/%3E%3C/svg%3E%0A");
       border-radius: var(#{$prefix}-border-radius);
     }
     &[type="radio"] {
@@ -85,8 +85,7 @@
     &:focus {
       outline: 0;
     }
-    &:checked,
-    &[checked] {
+    &:checked {
       background-color: var(--grey);
       border-color: #{darken($grey, 15%)};
       &::before {
@@ -94,13 +93,13 @@
       }
     }
     &:checked[type="checkbox"] {
-      #{$prefix}-form-check-bg: var(--grey);
+      #{$prefix}-form-check-bg: var(--white);
       &::before {
         content: var(#{$prefix}-form-check-bg-image);
       }
     }
     &:checked[type="radio"] {
-      #{$prefix}-form-check-bg: var(--grey);
+      #{$prefix}-form-check-bg: var(--white);
       &::before {
         content: var(#{$prefix}-form-check-bg-image);
         color: var(--white);
@@ -146,9 +145,12 @@
       }
     }
     &:is(.form-check-colored) {
-      & .form-check-input:checked {
-        & + .form-check-label {
-          color: var(--#{$value});
+      & .form-check-input {
+        border-color: var(--#{$value});
+        &:checked {
+          & + .form-check-label {
+            color: var(--#{$value});
+          }
         }
       }
     }

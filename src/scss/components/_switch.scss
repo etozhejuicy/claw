@@ -1,116 +1,115 @@
 .form-switch {
-    padding-left: 2.5rem;
+  padding-left: 2.5rem;
+  & .form-check-input {
+    #{$prefix}-form-switch-bg: var(--black);
+    #{$prefix}-border-color: var(--black);
+    #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+    #{$prefix}-border-width: 0.0625rem;
+    width: 2.25rem;
+    height: 1.25rem;
+    margin-left: -2.5rem;
+    background-image: var(#{$prefix}-form-switch-image);
+    background-position: 0.15rem 0.1rem;
+    background-size: 0.95rem 0.95rem;
+    background-color: var(#{$prefix}-form-switch-bg);
+    border-color: var(#{$prefix}-border-color);
+    border-radius: 2rem;
+    transition: background-position 0.15s ease-in-out,
+      background-image 0.15s ease-in-out;
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+    &:focus:active {
+      opacity: 0.95;
+    }
+    &:checked {
+      #{$prefix}-form-switch-bg: var(--black);
+      #{$prefix}-border-color: var(--black);
+      #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+      background-position: 1.05rem 0.1rem;
+      background-size: 0.95rem 0.95rem;
+    }
+  }
+  &.form-check-reverse {
+    padding-right: 2.5rem;
+    padding-left: 0;
     & .form-check-input {
-        #{$prefix}-form-switch-bg: var(--black);
-        #{$prefix}-border-color: var(--black);
-        #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
-        #{$prefix}-border-width: 0.0625rem;
-        width: 2.25rem;
-        height: 1.25rem;
-        margin-left: -2.5rem;
-        background-image: var(#{$prefix}-form-switch-image);
-        background-position: 0.15rem 0.1rem;
-        background-size: 0.95rem 0.95rem;
-        background-color: var(#{$prefix}-form-switch-bg);
-        border-color: var(#{$prefix}-border-color);
-        border-radius: 2rem;
-        transition:
-            background-position 0.15s ease-in-out,
-            background-image 0.15s ease-in-out;
-        @media (prefers-reduced-motion: reduce) {
-            transition: none;
-        }
-        &:focus:active {
-            opacity: 0.95;
-        }
-        &:checked {
-            #{$prefix}-form-switch-bg: var(--black);
-            #{$prefix}-border-color: var(--black);
-            #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
-            background-position: 1.05rem 0.1rem;
-            background-size: 0.95rem 0.95rem;
-        }
+      margin-right: -2.5rem;
+      margin-left: 0;
     }
-    &.form-check-reverse {
-        padding-right: 2.5rem;
-        padding-left: 0;
-        & .form-check-input {
-            margin-right: -2.5rem;
-            margin-left: 0;
-        }
-    }
+  }
 }
 
 @each $color, $value in $colors {
-    .form-switch-#{$value} {
-        & .form-check-input {
-            #{$prefix}-form-switch-bg: rgba(var(--#{$value}-rgb), 0.25);
-            #{$prefix}-border-color: transparent;
-            @if $value == "primary" {
-                #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%2344fff4'/%3E%3C/svg%3E%0A");
-            }
-            @if $value == "secondary" {
-                #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23444444'/%3E%3C/svg%3E%0A");
-            }
-            @if $value == "success" {
-                #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%233eaf2e'/%3E%3C/svg%3E%0A");
-            }
-            @if $value == "warning" {
-                #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23fccf19'/%3E%3C/svg%3E%0A");
-            }
-            @if $value == "danger" {
-                #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23f24822'/%3E%3C/svg%3E%0A");
-            }
-            @if $value == "white" {
-                #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
-            }
-            &:checked {
-                #{$prefix}-form-switch-bg: rgba(var(--#{$value}-rgb), 0.25);
-                #{$prefix}-border-color: transparent;
-                @if $value == "primary" {
-                    #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%2344fff4'/%3E%3C/svg%3E%0A");
-                }
-                @if $value == "secondary" {
-                    #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23444444'/%3E%3C/svg%3E%0A");
-                }
-                @if $value == "success" {
-                    #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%233eaf2e'/%3E%3C/svg%3E%0A");
-                }
-                @if $value == "warning" {
-                    #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23fccf19'/%3E%3C/svg%3E%0A");
-                }
-                @if $value == "danger" {
-                    #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23f24822'/%3E%3C/svg%3E%0A");
-                }
-                @if $value == "white" {
-                    #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
-                }
-            }
+  .form-switch-#{$value} {
+    & .form-check-input {
+      #{$prefix}-form-switch-bg: rgba(var(--#{$value}-rgb), 0.25);
+      #{$prefix}-border-color: transparent;
+      @if $value == "primary" {
+        #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%2344fff4'/%3E%3C/svg%3E%0A");
+      }
+      @if $value == "secondary" {
+        #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23444444'/%3E%3C/svg%3E%0A");
+      }
+      @if $value == "success" {
+        #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%233eaf2e'/%3E%3C/svg%3E%0A");
+      }
+      @if $value == "warning" {
+        #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23fccf19'/%3E%3C/svg%3E%0A");
+      }
+      @if $value == "danger" {
+        #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23f24822'/%3E%3C/svg%3E%0A");
+      }
+      @if $value == "white" {
+        #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+      }
+      &:checked {
+        #{$prefix}-form-switch-bg: rgba(var(--#{$value}-rgb), 0.25);
+        #{$prefix}-border-color: transparent;
+        @if $value == "primary" {
+          #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%2344fff4'/%3E%3C/svg%3E%0A");
         }
+        @if $value == "secondary" {
+          #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23444444'/%3E%3C/svg%3E%0A");
+        }
+        @if $value == "success" {
+          #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%233eaf2e'/%3E%3C/svg%3E%0A");
+        }
+        @if $value == "warning" {
+          #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23fccf19'/%3E%3C/svg%3E%0A");
+        }
+        @if $value == "danger" {
+          #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23f24822'/%3E%3C/svg%3E%0A");
+        }
+        @if $value == "white" {
+          #{$prefix}-form-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+        }
+      }
     }
+  }
 
-    .form-switch-outline {
-        &:is(.form-switch-#{$value}) {
-            & .form-check-input {
-                #{$prefix}-form-switch-bg: transparent;
-                #{$prefix}-border-color: var(--#{$value});
-                &:checked {
-                    #{$prefix}-form-switch-bg: rgba(var(--#{$value}-rgb), 0.25);
-                    #{$prefix}-border-color: var(--#{$value});
-                }
-            }
+  .form-switch-outline {
+    &:is(.form-switch-#{$value}) {
+      & .form-check-input {
+        #{$prefix}-form-switch-bg: transparent;
+        #{$prefix}-border-color: var(--#{$value});
+        &:checked {
+          #{$prefix}-form-switch-bg: rgba(var(--#{$value}-rgb), 0.25);
+          #{$prefix}-border-color: var(--#{$value});
         }
+      }
     }
+  }
 
-    .form-switch-colored {
-        &:is(.form-switch-#{$value}) {
-            & .form-check-input {
-                &:checked {
-                    & + .form-check-label {
-                        color: $color;
-                    }
-                }
-            }
+  .form-switch-colored {
+    &:is(.form-switch-#{$value}) {
+      & .form-check-input {
+        &:checked {
+          & + .form-check-label {
+            color: $color;
+          }
         }
+      }
     }
+  }
 }
