@@ -18,35 +18,16 @@ window.addEventListener("DOMContentLoaded", () => {
                             </div>
                         </div>
                         <div class="col">
-                            <nav class="nav nav-horizontal">
-                                <div class="nav-item">
-                                    <a href="./installation" class="nav-link" url="/installation">
-                                        <div class="nav-link-inner">
-                                            <div class="nav-link-text">
-                                                Установка
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="./components" class="nav-link" url="/components">
-                                        <div class="nav-link-inner">
-                                            <div class="nav-link-text">
-                                                Компоненты
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="./utilities" class="nav-link" url="/utilities">
-                                        <div class="nav-link-inner">
-                                            <div class="nav-link-text">
-                                                Утилиты
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </nav>
+                            <div class="header-navigation">
+                                <nav class="nav nav-horizontal" navigation="header"></nav>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="header-button">
+                                <button type="button" class="btn btn-primary btn-dimmed btn-colored btn-icon btn-icon-burger position-relative" data-menu-open="">
+                                    <i class="cl-icon-menu"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

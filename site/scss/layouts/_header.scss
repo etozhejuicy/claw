@@ -62,4 +62,16 @@
       transform: rotate(-90deg) scale3d(0.8, 0.8, 0.8);
     }
   }
+  &-navigation {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+  &-button {
+    display: block;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
 }
