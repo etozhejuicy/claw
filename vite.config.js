@@ -9,6 +9,7 @@ export default defineConfig({
         installation: "/installation.html",
         components: "/components.html",
         utilities: "/utilities.html",
+        about: "/about.html",
       },
     },
   },
