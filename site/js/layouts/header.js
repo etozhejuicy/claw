@@ -1,7 +1,5 @@
 import logo from "/logo.svg";
 
-
-
 class Header {
     constructor() {
         window.addEventListener("DOMContentLoaded", () => {
