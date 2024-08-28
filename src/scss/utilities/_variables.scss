@@ -26,6 +26,26 @@ $breakpoints: (
 );
 // Breakpoints
 
+// Breakpoints class
+$bpclass-xs: xs;
+$bpclass-sm: sm;
+$bpclass-md: md;
+$bpclass-lg: lg;
+$bpclass-xl: xl;
+$bpclass-xxl: xxl;
+$bpclass-xxxl: xxxl;
+
+$bpclasses: (
+    "bpclass-xs": "xs",
+    "bpclass-sm": "sm",
+    "bpclass-md": "md",
+    "bpclass-lg": "lg",
+    "bpclass-xl": "xl",
+    "bpclass-xxl": "xxl",
+    "bpclass-xxxl": "xxxl"
+);
+// Breakpoints class
+
 // responsive
 $r-xs: 375;
 $r-sm: 576;
