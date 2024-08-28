@@ -1,7 +1,7 @@
 import logo from "/logo.svg";
 
 let now = new Date().getFullYear();
-const menu = document.createElement('div');
+const menu = document.createElement('aside');
 
 class MobileMenu {
     constructor() {

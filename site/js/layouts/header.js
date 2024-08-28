@@ -1,19 +1,28 @@
 import logo from "/logo.svg";
 
-window.addEventListener("DOMContentLoaded", () => {
-    let header = document.createElement("header"),
-        main = document.querySelector("main");
 
-    header.innerHTML =
-        `
+
+class Header {
+    constructor() {
+        window.addEventListener("DOMContentLoaded", () => {
+            this.events();
+        });
+    }
+
+    events() {
+        let header = document.createElement("header"),
+            main = document.querySelector("main");
+
+        header.innerHTML =
+            `
             <div class="container">
                 <div class="header-inner">
                     <div class="row g-2 g-md-4">
                         <div class="col-auto">
                             <div class="header-logo">
                                 <img data-src="` +
-        logo +
-        `" class="lazyload" />
+            logo +
+            `" class="lazyload" />
                                 <a href="./" class="stretched-link"></a>
                             </div>
                         </div>
@@ -34,9 +43,12 @@ window.addEventListener("DOMContentLoaded", () => {
             </div>
     `;
 
-    // add class for <header>
-    header.classList.add("header");
+        // add class for <header>
+        header.classList.add("header");
 
-    // prepend header of main
-    main.parentElement.prepend(header);
-});
+        // prepend header of main
+        main.parentElement.prepend(header);
+    }
+}
+
+new Header();
