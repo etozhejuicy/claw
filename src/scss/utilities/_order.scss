@@ -13,18 +13,18 @@
 
 @each $breakpointclass, $bpc in $breakpointclasses {
     .order {
-        @each $order, $value in $orders {
-            @include breakpoint("breakpoint-#{$bpc}") {
-                &-#{$bpc} {
+        @include breakpoint("breakpoint-#{$bpc}") {
+            &-#{$bpc} {
+                @each $order, $value in $orders {
                     &-#{$order} {
                         order: $value !important;
                     }
                 }
             }
         }
-        @for $i from 0 through 100 {
-            @include breakpoint("breakpoint-#{$bpc}") {
-                &-#{$bpc} {
+        @include breakpoint("breakpoint-#{$bpc}") {
+            &-#{$bpc} {
+                @for $i from 0 through 100 {
                     &-#{$i} {
                         order: $i !important;
                     }
