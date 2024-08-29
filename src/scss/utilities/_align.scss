@@ -6,9 +6,9 @@
     }
 }
 
-@each $value, $vertical-align in $vertical-aligns {
+@each $breakpointclass, $bpc in $breakpointclasses {
     .align {
-        @each $breakpointclass, $bpc in $breakpointclasses {
+        @each $value, $vertical-align in $vertical-aligns {
             @include breakpoint("breakpoint-#{$bpc}") {
                 &-#{$bpc} {
                     &-#{$value} {

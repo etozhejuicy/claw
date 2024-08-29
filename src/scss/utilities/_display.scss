@@ -6,9 +6,9 @@
     }
 }
 
-@each $display, $value in $displays {
-    .d {
-        @each $breakpointclass, $bpc in $breakpointclasses {
+@each $breakpointclass, $bpc in $breakpointclasses {
+    @each $display, $value in $displays {
+        .d {
             @include breakpoint("breakpoint-#{$bpc}") {
                 &-#{$bpc} {
                     &-#{$value} {
