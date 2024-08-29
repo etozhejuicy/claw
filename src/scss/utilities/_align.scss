@@ -1,54 +1,19 @@
 @each $value, $vertical-align in $vertical-aligns {
     .align {
         &-#{$value} {
-            vertical-align: #{$vertical-align};
+            vertical-align: #{$vertical-align} !important;
         }
-        @include breakpoint("breakpoint-xs") {
-            &-xs {
-                &-#{$value} {
-                    vertical-align: #{$vertical-align} !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-sm") {
-            &-sm {
-                &-#{$value} {
-                    vertical-align: #{$vertical-align} !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-md") {
-            &-md {
-                &-#{$value} {
-                    vertical-align: #{$vertical-align} !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-lg") {
-            &-lg {
-                &-#{$value} {
-                    vertical-align: #{$vertical-align} !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xl") {
-            &-xl {
-                &-#{$value} {
-                    vertical-align: #{$vertical-align} !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xxl") {
-            &-xxl {
-                &-#{$value} {
-                    vertical-align: #{$vertical-align} !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xxxl") {
-            &-xxxl {
-                &-#{$value} {
-                    vertical-align: #{$vertical-align} !important;
+    }
+}
+
+@each $value, $vertical-align in $vertical-aligns {
+    .align {
+        @each $breakpointclass, $bpc in $breakpointclasses {
+            @include breakpoint("breakpoint-#{$bpc}") {
+                &-#{$bpc} {
+                    &-#{$value} {
+                        vertical-align: #{$vertical-align} !important;
+                    }
                 }
             }
         }
