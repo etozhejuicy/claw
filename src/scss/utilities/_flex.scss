@@ -1,190 +1,60 @@
 @use "./functions";
 
 .align {
-    @each $align-item, $value in $align-items {
+    &-items {
+        @each $align-item, $value in $align-items {
+            &-#{$value} {
+                align-items: #{$align-item} !important;
+            }
+        }
+    }
+    &-content {
+        @each $align-content, $value in $align-contents {
+            &-#{$value} {
+                align-content: #{$align-content} !important;
+            }
+        }
+    }
+    &-self {
+        @each $align-self, $value in $align-selfs {
+            &-#{$value} {
+                align-self: #{$align-self} !important;
+            }
+        }
+    }
+}
+
+@each $breakpointclass, $bpc in $breakpointclasses {
+    .align {
         &-items {
-            &-#{$value} {
-                align-items: #{$align-item};
-            }
-            @include breakpoint("breakpoint-xs") {
-                &-xs {
-                    &-#{$value} {
-                        align-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-sm") {
-                &-sm {
-                    &-#{$value} {
-                        align-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-md") {
-                &-md {
-                    &-#{$value} {
-                        align-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-lg") {
-                &-lg {
-                    &-#{$value} {
-                        align-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$value} {
-                        align-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$value} {
-                        align-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxl") {
-                &-xxl {
-                    &-#{$value} {
-                        align-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxxl") {
-                &-xxxl {
-                    &-#{$value} {
-                        align-items: #{$align-item} !important;
+            @include breakpoint("breakpoint-#{$bpc}") {
+                &-#{$bpc} {
+                    @each $align-item, $value in $align-items {
+                        &-#{$value} {
+                            align-items: #{$align-item} !important;
+                        }
                     }
                 }
             }
         }
-    }
-    @each $align-content, $value in $align-contents {
         &-content {
-            &-#{$value} {
-                align-content: #{$align-content};
-            }
-            @include breakpoint("breakpoint-xs") {
-                &-xs {
-                    &-#{$value} {
-                        align-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-sm") {
-                &-sm {
-                    &-#{$value} {
-                        align-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-md") {
-                &-md {
-                    &-#{$value} {
-                        align-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-lg") {
-                &-lg {
-                    &-#{$value} {
-                        align-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$value} {
-                        align-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$value} {
-                        align-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxl") {
-                &-xxl {
-                    &-#{$value} {
-                        align-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxxl") {
-                &-xxxl {
-                    &-#{$value} {
-                        align-content: #{$align-content} !important;
+            @include breakpoint("breakpoint-#{$bpc}") {
+                &-#{$bpc} {
+                    @each $align-content, $value in $align-contents {
+                        &-#{$value} {
+                            align-content: #{$align-content} !important;
+                        }
                     }
                 }
             }
         }
-    }
-    @each $align-self, $value in $align-selfs {
         &-self {
-            &-#{$value} {
-                align-self: #{$align-self};
-            }
-            @include breakpoint("breakpoint-xs") {
-                &-xs {
-                    &-#{$value} {
-                        align-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-sm") {
-                &-sm {
-                    &-#{$value} {
-                        align-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-md") {
-                &-md {
-                    &-#{$value} {
-                        align-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-lg") {
-                &-lg {
-                    &-#{$value} {
-                        align-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$value} {
-                        align-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$value} {
-                        align-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxl") {
-                &-xxl {
-                    &-#{$value} {
-                        align-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxxl") {
-                &-xxxl {
-                    &-#{$value} {
-                        align-self: #{$align-self} !important;
+            @include breakpoint("breakpoint-#{$bpc}") {
+                &-#{$bpc} {
+                    @each $align-self, $value in $align-selfs {
+                        &-#{$value} {
+                            align-self: #{$align-self} !important;
+                        }
                     }
                 }
             }
@@ -193,190 +63,60 @@
 }
 
 .justify {
-    @each $align-item, $value in $align-items {
+    &-items {
+        @each $align-item, $value in $align-items {
+            &-#{$value} {
+                justify-items: #{$align-item} !important;
+            }
+        }
+    }
+    &-content {
+        @each $align-content, $value in $align-contents {
+            &-#{$value} {
+                justify-content: #{$align-content} !important;
+            }
+        }
+    }
+    &-self {
+        @each $align-self, $value in $align-selfs {
+            &-#{$value} {
+                justify-self: #{$align-self} !important;
+            }
+        }
+    }
+}
+
+@each $breakpointclass, $bpc in $breakpointclasses {
+    .justify {
         &-items {
-            &-#{$value} {
-                justify-items: #{$align-item};
-            }
-            @include breakpoint("breakpoint-xs") {
-                &-xs {
-                    &-#{$value} {
-                        justify-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-sm") {
-                &-sm {
-                    &-#{$value} {
-                        justify-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-md") {
-                &-md {
-                    &-#{$value} {
-                        justify-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-lg") {
-                &-lg {
-                    &-#{$value} {
-                        justify-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$value} {
-                        justify-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$value} {
-                        justify-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxl") {
-                &-xxl {
-                    &-#{$value} {
-                        justify-items: #{$align-item} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxxl") {
-                &-xxxl {
-                    &-#{$value} {
-                        justify-items: #{$align-item} !important;
+            @include breakpoint("breakpoint-#{$bpc}") {
+                &-#{$bpc} {
+                    @each $align-item, $value in $align-items {
+                        &-#{$value} {
+                            justify-items: #{$align-item} !important;
+                        }
                     }
                 }
             }
         }
-    }
-    @each $align-content, $value in $align-contents {
         &-content {
-            &-#{$value} {
-                justify-content: #{$align-content};
-            }
-            @include breakpoint("breakpoint-xs") {
-                &-xs {
-                    &-#{$value} {
-                        justify-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-sm") {
-                &-sm {
-                    &-#{$value} {
-                        justify-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-md") {
-                &-md {
-                    &-#{$value} {
-                        justify-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-lg") {
-                &-lg {
-                    &-#{$value} {
-                        justify-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$value} {
-                        justify-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$value} {
-                        justify-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxl") {
-                &-xxl {
-                    &-#{$value} {
-                        justify-content: #{$align-content} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxxl") {
-                &-xxxl {
-                    &-#{$value} {
-                        justify-content: #{$align-content} !important;
+            @include breakpoint("breakpoint-#{$bpc}") {
+                &-#{$bpc} {
+                    @each $align-content, $value in $align-contents {
+                        &-#{$value} {
+                            justify-content: #{$align-content} !important;
+                        }
                     }
                 }
             }
         }
-    }
-    @each $align-self, $value in $align-selfs {
         &-self {
-            &-#{$value} {
-                justify-self: #{$align-self};
-            }
-            @include breakpoint("breakpoint-xs") {
-                &-xs {
-                    &-#{$value} {
-                        justify-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-sm") {
-                &-sm {
-                    &-#{$value} {
-                        justify-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-md") {
-                &-md {
-                    &-#{$value} {
-                        justify-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-lg") {
-                &-lg {
-                    &-#{$value} {
-                        justify-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$value} {
-                        justify-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$value} {
-                        justify-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxl") {
-                &-xxl {
-                    &-#{$value} {
-                        justify-self: #{$align-self} !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxxl") {
-                &-xxxl {
-                    &-#{$value} {
-                        justify-self: #{$align-self} !important;
+            @include breakpoint("breakpoint-#{$bpc}") {
+                &-#{$bpc} {
+                    @each $align-self, $value in $align-selfs {
+                        &-#{$value} {
+                            justify-self: #{$align-self} !important;
+                        }
                     }
                 }
             }
