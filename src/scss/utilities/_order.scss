@@ -1,108 +1,33 @@
 .order {
-    @for $i from 0 through 100 {
-        &-#{$i} {
-            order: $i;
-        }
-        @include breakpoint("breakpoint-xs") {
-            &-xs {
-                &-#{$i} {
-                    order: $i !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-sm") {
-            &-sm {
-                &-#{$i} {
-                    order: $i !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-md") {
-            &-md {
-                &-#{$i} {
-                    order: $i !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-lg") {
-            &-lg {
-                &-#{$i} {
-                    order: $i !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xl") {
-            &-xl {
-                &-#{$i} {
-                    order: $i !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xxl") {
-            &-xxl {
-                &-#{$i} {
-                    order: $i !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xxxl") {
-            &-xxxl {
-                &-#{$i} {
-                    order: $i !important;
-                }
-            }
-        }
-    }
     @each $order, $value in $orders {
         &-#{$order} {
-            order: $value;
+            order: $value !important;
         }
-        @include breakpoint("breakpoint-xs") {
-            &-xs {
-                &-#{$order} {
-                    order: $value !important;
+    }
+    @for $i from 0 through 100 {
+        &-#{$i} {
+            order: $i !important;
+        }
+    }
+}
+
+@each $breakpointclass, $bpc in $breakpointclasses {
+    .order {
+        @each $order, $value in $orders {
+            @include breakpoint("breakpoint-#{$bpc}") {
+                &-#{$bpc} {
+                    &-#{$order} {
+                        order: $value !important;
+                    }
                 }
             }
         }
-        @include breakpoint("breakpoint-sm") {
-            &-sm {
-                &-#{$order} {
-                    order: $value !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-md") {
-            &-md {
-                &-#{$order} {
-                    order: $value !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-lg") {
-            &-lg {
-                &-#{$order} {
-                    order: $value !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xl") {
-            &-xl {
-                &-#{$order} {
-                    order: $value !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xxl") {
-            &-xxl {
-                &-#{$order} {
-                    order: $value !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xxxl") {
-            &-xxxl {
-                &-#{$order} {
-                    order: $value !important;
+        @for $i from 0 through 100 {
+            @include breakpoint("breakpoint-#{$bpc}") {
+                &-#{$bpc} {
+                    &-#{$i} {
+                        order: $i !important;
+                    }
                 }
             }
         }
