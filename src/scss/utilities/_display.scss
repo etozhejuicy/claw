@@ -8,9 +8,9 @@
 
 @each $display, $value in $displays {
     .d {
-        @each $bpclass, $bp in $bpclasses {
-            @include breakpoint("breakpoint-#{$bp}") {
-                &-#{$bp} {
+        @each $breakpointclass, $bpc in $breakpointclasses {
+            @include breakpoint("breakpoint-#{$bpc}") {
+                &-#{$bpc} {
                     &-#{$value} {
                         display: #{$value} !important;
                     }

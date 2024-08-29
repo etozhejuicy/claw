@@ -27,22 +27,22 @@ $breakpoints: (
 // Breakpoints
 
 // Breakpoints class
-$bpclass-xs: xs;
-$bpclass-sm: sm;
-$bpclass-md: md;
-$bpclass-lg: lg;
-$bpclass-xl: xl;
-$bpclass-xxl: xxl;
-$bpclass-xxxl: xxxl;
+$breakpointclass-xs: xs;
+$breakpointclass-sm: sm;
+$breakpointclass-md: md;
+$breakpointclass-lg: lg;
+$breakpointclass-xl: xl;
+$breakpointclass-xxl: xxl;
+$breakpointclass-xxxl: xxxl;
 
-$bpclasses: (
-    "bpclass-xs": "xs",
-    "bpclass-sm": "sm",
-    "bpclass-md": "md",
-    "bpclass-lg": "lg",
-    "bpclass-xl": "xl",
-    "bpclass-xxl": "xxl",
-    "bpclass-xxxl": "xxxl"
+$breakpointclasses: (
+    "breakpointclass-xs": "xs",
+    "breakpointclass-sm": "sm",
+    "breakpointclass-md": "md",
+    "breakpointclass-lg": "lg",
+    "breakpointclass-xl": "xl",
+    "breakpointclass-xxl": "xxl",
+    "breakpointclass-xxxl": "xxxl"
 );
 // Breakpoints class
 
