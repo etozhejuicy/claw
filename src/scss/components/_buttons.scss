@@ -10,9 +10,10 @@
   #{$prefix}-btn-border-color: transparent;
   #{$prefix}-border-radius: 1rem;
   #{$prefix}-btn-hover-border-color: transparent;
-  #{$prefix}-btn-box-shadow:
-    0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
-    0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
+  #{$prefix}-btn-filter: unset;
+  // #{$prefix}-btn-box-shadow:
+  //   0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
+  //   0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
   #{$prefix}-btn-disabled-opacity: 0.65;
   #{$prefix}-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(#{$prefix}-btn-focus-shadow-rgb), 0.5);
   #{$prefix}-btn-letter-spacing: -0.02rem;
@@ -39,6 +40,7 @@
   border-radius: var(#{$prefix}-border-radius);
   background-color: var(#{$prefix}-btn-bg);
   box-shadow: var(#{$prefix}-btn-box-shadow);
+  filter: var(#{$prefix}-btn-filter);
   transition:
     color 0.15s ease-in-out,
     background-color 0.15s ease-in-out,
@@ -180,40 +182,40 @@
 // exp
 @each $color, $value in $colors {
   .btn-#{$value} {
-    #{$prefix}-btn-color: #{lighten($color, 100%)};
+    #{$prefix}-btn-color: hsl(from var(--#{$value}) h s calc(l + 100));
     #{$prefix}-btn-bg: var(--#{$value});
     #{$prefix}-btn-border-color: var(--#{$value});
-    #{$prefix}-btn-hover-color: #{lighten($color, 100%)};
-    #{$prefix}-btn-hover-bg: #{lighten($color, 15%)};
-    #{$prefix}-btn-hover-border-color: #{lighten($color, 15%)};
+    #{$prefix}-btn-hover-color: hsl(from var(--#{$value}) h s calc(l + 100));
+    #{$prefix}-btn-hover-bg: hsl(from var(--#{$value}) h s calc(l + 15));
+    #{$prefix}-btn-hover-border-color: hsl(from var(--#{$value}) h s calc(l + 15));
     #{$prefix}-btn-focus-shadow-rgb: rgba(var(--#{$value}-rgb), 1);
-    #{$prefix}-btn-active-color: #{lighten($color, 45%)};
-    #{$prefix}-btn-active-bg: #{darken($color, 10%)};
-    #{$prefix}-btn-active-border-color: #{darken($color, 10%)};
+    #{$prefix}-btn-active-color: hsl(from var(--#{$value}) h s calc(l + 45));
+    #{$prefix}-btn-active-bg: hsl(from var(--#{$value}) h s calc(l - 10));
+    #{$prefix}-btn-active-border-color: hsl(from var(--#{$value}) h s calc(l - 10));
     #{$prefix}-btn-active-shadow: inset 0 3px 5px rgba(var(--#{$value}-rgb), 0.125);
     #{$prefix}-btn-disabled-color: rgba(var(--dark-rgb), 0.3);
     #{$prefix}-btn-disabled-bg: var(--grey);
     #{$prefix}-btn-disabled-border-color: var(--grey);
     @if $value == "danger" {
-      #{$prefix}-btn-color: #{darken($color, 90%)};
-      #{$prefix}-btn-hover-color: #{darken($color, 50%)};
-      #{$prefix}-btn-active-color: #{darken($color, 90%)};
+      #{$prefix}-btn-color: hsl(from var(--#{$value}) h s calc(l - 90));
+      #{$prefix}-btn-hover-color: hsl(from var(--#{$value}) h s calc(l - 50));
+      #{$prefix}-btn-active-color: hsl(from var(--#{$value}) h s calc(l - 90));
     }
     @if $value == "white" {
-      #{$prefix}-btn-color: #{darken($color, 90%)};
-      #{$prefix}-btn-hover-color: #{darken($color, 50%)};
-      #{$prefix}-btn-active-color: #{darken($color, 75%)};
-      #{$prefix}-btn-active-bg: #{darken($color, 5%)};
-      #{$prefix}-btn-active-border-color: #{darken($color, 5%)};
+      #{$prefix}-btn-color: hsl(from var(--#{$value}) h s calc(l - 90));
+      #{$prefix}-btn-hover-color: hsl(from var(--#{$value}) h s calc(l - 50));
+      #{$prefix}-btn-active-color: hsl(from var(--#{$value}) h s calc(l - 75));
+      #{$prefix}-btn-active-bg: hsl(from var(--#{$value}) h s calc(l - 5));
+      #{$prefix}-btn-active-border-color: hsl(from var(--#{$value}) h s calc(l - 5));
     }
-  }
-  .btn-#{$value}-shadow {
-    filter: drop-shadow(0rem 0.125rem 1rem rgba(var(--#{$value}-rgb), 0.5));
-  }
-  .btn-voluminous {
-    #{$prefix}-btn-box-shadow:
-      0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
-      0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
+    &.btn-voluminous {
+      #{$prefix}-btn-filter: drop-shadow(0rem 0.125rem 1rem rgba(var(--#{$value}-rgb), 0.5));
+    }
+    &.btn-shadow {
+      #{$prefix}-btn-box-shadow:
+        0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
+        0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
+    }
   }
   .btn-outline-#{$value} {
     &:not(.btn-colored),
@@ -228,32 +230,32 @@
     #{$prefix}-btn-border-width: 0.0625rem;
     #{$prefix}-btn-box-shadow: unset;
     #{$prefix}-btn-focus-shadow-rgb: unset;
-    #{$prefix}-btn-active-bg: #{darken($color, 15%)};
-    #{$prefix}-btn-active-border-color: #{darken($color, 15%)};
+    #{$prefix}-btn-active-bg: hsl(from var(--#{$value}) h s calc(l - 15));
+    #{$prefix}-btn-active-border-color: hsl(from var(--#{$value}) h s calc(l - 15));
     @if $value == "white" {
-      #{$prefix}-btn-color: #{darken($color, 50%)};
-      #{$prefix}-btn-border-color: #{darken($color, 5%)};
-      #{$prefix}-btn-hover-bg: #{darken($color, 2.5%)};
-      #{$prefix}-btn-hover-border-color: #{darken($color, 2.5%)};
-      #{$prefix}-btn-hover-color: #{darken($color, 75%)};
-      #{$prefix}-btn-active-color: #{darken($color, 75%)};
-      #{$prefix}-btn-active-bg: #{darken($color, 10%)};
-      #{$prefix}-btn-active-border-color: #{darken($color, 10%)};
+      #{$prefix}-btn-color: hsl(from var(--#{$value}) h s calc(l - 50));
+      #{$prefix}-btn-border-color: hsl(from var(--#{$value}) h s calc(l - 5));
+      #{$prefix}-btn-hover-bg: hsl(from var(--#{$value}) h s calc(l - 2.5));
+      #{$prefix}-btn-hover-border-color: hsl(from var(--#{$value}) h s calc(l - 2.5));
+      #{$prefix}-btn-hover-color: hsl(from var(--#{$value}) h s calc(l - 75));
+      #{$prefix}-btn-active-color: hsl(from var(--#{$value}) h s calc(l - 75));
+      #{$prefix}-btn-active-bg: hsl(from var(--#{$value}) h s calc(l - 10));
+      #{$prefix}-btn-active-border-color: hsl(from var(--#{$value}) h s calc(l - 10));
     }
   }
   .btn-colored {
     &:is(.btn-#{$value}),
     &:is(.btn-outline-#{$value}) {
-      #{$prefix}-btn-color: #{$color};
+      #{$prefix}-btn-color: var(--#{$value});
       @if $value == "white" {
-        #{$prefix}-btn-color: #{darken($color, 50%)};
-        #{$prefix}-btn-border-color: #{darken($color, 5%)};
-        #{$prefix}-btn-hover-bg: #{darken($color, 2.5%)};
-        #{$prefix}-btn-hover-border-color: #{darken($color, 2.5%)};
-        #{$prefix}-btn-hover-color: #{darken($color, 75%)};
-        #{$prefix}-btn-active-color: #{darken($color, 75%)};
-        #{$prefix}-btn-active-bg: #{darken($color, 10%)};
-        #{$prefix}-btn-active-border-color: #{darken($color, 10%)};
+        #{$prefix}-btn-color: hsl(from var(--#{$value}) h s calc(l - 50));
+        #{$prefix}-btn-border-color: hsl(from var(--#{$value}) h s calc(l - 5));
+        #{$prefix}-btn-hover-bg: hsl(from var(--#{$value}) h s calc(l - 2.5));
+        #{$prefix}-btn-hover-border-color: hsl(from var(--#{$value}) h s calc(l - 2.5));
+        #{$prefix}-btn-hover-color: hsl(from var(--#{$value}) h s calc(l - 75));
+        #{$prefix}-btn-active-color: hsl(from var(--#{$value}) h s calc(l - 75));
+        #{$prefix}-btn-active-bg: hsl(from var(--#{$value}) h s calc(l - 10));
+        #{$prefix}-btn-active-border-color: hsl(from var(--#{$value}) h s calc(l - 10));
       }
     }
   }
@@ -265,16 +267,21 @@
       #{$prefix}-btn-bg: rgba(var(--#{$value}-rgb), 0.1);
       #{$prefix}-btn-hover-bg: rgba(var(--#{$value}-rgb), 1);
       @if $value == "white" {
-        #{$prefix}-btn-color: #{darken($color, 50%)};
-        #{$prefix}-btn-border-color: #{darken($color, 5%)};
-        #{$prefix}-btn-hover-bg: #{darken($color, 2.5%)};
-        #{$prefix}-btn-hover-border-color: #{darken($color, 2.5%)};
-        #{$prefix}-btn-hover-color: #{darken($color, 75%)};
-        #{$prefix}-btn-active-color: #{darken($color, 75%)};
-        #{$prefix}-btn-active-bg: #{darken($color, 10%)};
-        #{$prefix}-btn-active-border-color: #{darken($color, 10%)};
+        #{$prefix}-btn-color: hsl(from var(--#{$value}) h s calc(l - 50));
+        #{$prefix}-btn-border-color: hsl(from var(--#{$value}) h s calc(l - 5));
+        #{$prefix}-btn-hover-bg: hsl(from var(--#{$value}) h s calc(l - 2.5));
+        #{$prefix}-btn-hover-border-color: hsl(from var(--#{$value}) h s calc(l - 2.5));
+        #{$prefix}-btn-hover-color: hsl(from var(--#{$value}) h s calc(l - 75));
+        #{$prefix}-btn-active-color: hsl(from var(--#{$value}) h s calc(l - 75));
+        #{$prefix}-btn-active-bg: hsl(from var(--#{$value}) h s calc(l - 10));
+        #{$prefix}-btn-active-border-color: hsl(from var(--#{$value}) h s calc(l - 10));
       }
     }
+  }
+  .btn-#{$value}-shadow {
+    #{$prefix}-btn-box-shadow:
+      0rem 0.0625rem 0.0469rem 0rem rgba(var(--#{$value}-rgb), 0.15) inset,
+      0rem -0.0625rem 0.0625rem 0rem rgba(var(--#{$value}-rgb), 0.33) inset !important;
   }
   .btn-progress {
     &:is(.btn-#{$value}),

@@ -50,26 +50,26 @@ window.addEventListener("DOMContentLoaded", () => {
                                 <div class="row g-3">
                                     <div class="col-12">
                                         <h5 class="h5">
-                                            Кнопки (с подсветкой)
+                                            Кнопки (с тенью)
                                         </h5>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-primary btn-primary-shadow">Кнопка 1 с подсветкой</button>
+                                        <button type="button" class="btn btn-primary btn-shadow">Кнопка 1 с тенью</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-secondary btn-secondary-shadow">Кнопка 2 с подсветкой</button>
+                                        <button type="button" class="btn btn-secondary btn-shadow">Кнопка 2 с тенью</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-danger btn-danger-shadow">Кнопка 3 с подсветкой</button>
+                                        <button type="button" class="btn btn-danger btn-shadow">Кнопка 3 с тенью</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-warning btn-warning-shadow">Кнопка 4 с подсветкой</button>
+                                        <button type="button" class="btn btn-warning btn-shadow">Кнопка 4 с тенью</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-success btn-success-shadow">Кнопка 5 с подсветкой</button>
+                                        <button type="button" class="btn btn-success btn-shadow">Кнопка 5 с тенью</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-white btn-white-shadow">Кнопка 6 с подсветкой</button>
+                                        <button type="button" class="btn btn-white btn-shadow">Кнопка 6 с тенью</button>
                                     </div>
                                     <div class="col-12">
                                         <code class="code">
@@ -77,7 +77,45 @@ window.addEventListener("DOMContentLoaded", () => {
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">&lt;button type="button" class="btn btn-primary btn-primary-shadow"&gt;Кнопка 1 с подсветкой&lt;/button&gt;
+                                                <div class="code-body">&lt;button type="button" class="btn btn-primary btn-shadow"&gt;Кнопка 1 с тенью&lt;/button&gt;
+                                                </div>
+                                            </div>
+                                        </code>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <h5 class="h5">
+                                            Кнопки (с подсветкой)
+                                        </h5>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-primary btn-voluminous">Кнопка 1 с подсветкой</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-secondary btn-voluminous">Кнопка 2 с подсветкой</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-danger btn-voluminous">Кнопка 3 с подсветкой</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-warning btn-voluminous">Кнопка 4 с подсветкой</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-success btn-voluminous">Кнопка 5 с подсветкой</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-white btn-voluminous">Кнопка 6 с подсветкой</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <code class="code">
+                                            <div class="code-content">
+                                                <div class="code-title">
+                                                    Пример использования
+                                                </div>
+                                                <div class="code-body">&lt;button type="button" class="btn btn-primary btn-voluminous"&gt;Кнопка 1 с подсветкой&lt;/button&gt;
                                                 </div>
                                             </div>
                                         </code>
