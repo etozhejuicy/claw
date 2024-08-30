@@ -12,28 +12,42 @@ document.querySelector("#app").innerHTML = `
                 </h3>
               </div>
               <div class="card-body">
-                <p class="fs-5 fw-600 text-center">
-                🦀 Легкий, гибкий, простой.
-                </p>
-                <p class="text-md-center">
-                  <strong>Claw</strong> - это CSS-фреймворк, который поможет вам быстро создать базовую структуру веб-сайта с необходимыми компонентами на вашем сервере.
-                </p>
-                <ol class="list list-nobullet w-fit mx-auto">
-                  <li>😏 Поддерживаются box-иконки <i class="cl-icon-unlocked text-success"></i></li>
-                  <li>🎏 Поддержка flexbox <i class="cl-icon-unlocked text-success"></i></li>
-                  <li class="opacity-25">🧱 Поддержка grid <i class="cl-icon-lock text-warning"></i></li>
-                  <li>✨ Поддержка SCSS <i class="cl-icon-unlocked text-success"></i></li>
-                  <li class="opacity-25">🎯 Отдельный .config для настройки темы <i class="cl-icon-lock text-warning"></i></li>
-                </ol>
-                <p class="text-center ln-2 mb-3">
-                  <i class="cl-icon-clock"></i> Статус разработки утилит фреймворка: <a href="https://github.com/etozhejuicy/claw?tab=readme-ov-file#the-status-of-utility-readiness" target="_blank" class="bg-grey-100 py-1 px-2 rounded-pill" title="Статус разработки утилит">README.md</a>
-                </p>
-              </div>
-              <div class="card-footer d-flex justify-content-center">
-                <a href="./installation" class="btn btn-icon btn-primary w-100 w-xs-100 w-sm-100 w-md-auto">
-                <i class="cl-icon-rocket"></i>
-                <span class="btn-icon-text">Приступить!</span>
-                </a>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <p class="fs-5 fw-600 text-center">
+                      🦀 Легкий, гибкий, простой.
+                    </p>
+                  </div>
+                  <div class="col-12">
+                    <p class="text-md-center w-sm-75 w-lg-75 mx-auto">
+                      <strong>Claw</strong> - это CSS-фреймворк, который поможет вам быстро создать базовую структуру веб-сайта с необходимыми компонентами на вашем сервере.
+                    </p>
+                  </div>
+                  <div class="col-12">
+                    <ol class="list list-nobullet w-fit mx-auto">
+                      <li>😏 Поддерживаются box-иконки <i class="cl-icon-unlocked text-success"></i></li>
+                      <li>🎏 Поддержка flexbox <i class="cl-icon-unlocked text-success"></i></li>
+                      <li class="opacity-25">🧱 Поддержка grid <i class="cl-icon-lock text-warning"></i></li>
+                      <li>✨ Поддержка SCSS <i class="cl-icon-unlocked text-success"></i></li>
+                      <li class="opacity-25">🎯 Отдельный .config для настройки темы <i class="cl-icon-lock text-warning"></i></li>
+                    </ol>
+                  </div>
+                  <div class="col-12">
+                    <div class="badge badge-secondary badge-colored w-100">
+                      <p class="text-center">
+                        <i class="cl-icon-clock"></i> Статус разработки утилит фреймворка: <a href="https://github.com/etozhejuicy/claw?tab=readme-ov-file#the-status-of-utility-readiness" target="_blank" class="fw-bold" title="Статус разработки утилит">README.md</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex justify-content-center">
+                      <a href="./installation" class="btn btn-icon btn-primary w-100 w-xs-100 w-sm-100 w-md-auto">
+                        <i class="cl-icon-rocket"></i>
+                        <span class="btn-icon-text">Приступить!</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
