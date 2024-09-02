@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#radio").innerHTML = `
+    document.querySelector("#radio").innerHTML = `
           <div class="row g-5">
               <div class="col-12">
                   <div class="card shadow-none">
@@ -124,9 +124,17 @@ window.addEventListener("DOMContentLoaded", () => {
                                           <div class="row g-3">
                                               <div class="col-auto">
                                                   <div class="form-check form-check-danger">
-                                                      <input class="form-check-input" type="radio" value="" id="flexRadioCheckedDanger" checked>
+                                                      <input class="form-check-input" name="flexRadioDanger" type="radio" value="" id="flexRadioCheckedDanger" checked>
                                                       <label class="form-check-label" for="flexRadioCheckedDanger">
                                                           Радио выбран
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-danger">
+                                                      <input class="form-check-input" name="flexRadioDanger" type="radio" value="" id="flexRadioCheckedDanger2">
+                                                      <label class="form-check-label" for="flexRadioCheckedDanger2">
+                                                          Радио
                                                       </label>
                                                   </div>
                                               </div>
@@ -152,9 +160,17 @@ window.addEventListener("DOMContentLoaded", () => {
                                           <div class="row g-3">
                                               <div class="col-auto">
                                                   <div class="form-check form-check-warning">
-                                                      <input class="form-check-input" type="radio" value="" id="flexRadioCheckedWarning" checked>
+                                                      <input class="form-check-input" name="flexRadioWarning" type="radio" value="" id="flexRadioCheckedWarning" checked>
                                                       <label class="form-check-label" for="flexRadioCheckedWarning">
                                                           Радио выбран
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-warning">
+                                                      <input class="form-check-input" name="flexRadioWarning" type="radio" value="" id="flexRadioCheckedWarning2">
+                                                      <label class="form-check-label" for="flexRadioCheckedWarning2">
+                                                          Радио
                                                       </label>
                                                   </div>
                                               </div>
@@ -170,6 +186,114 @@ window.addEventListener("DOMContentLoaded", () => {
                                                   <div class="form-check form-check-warning">
                                                       <input class="form-check-input" type="radio" value="" id="flexRadioCheckedDisabledWarning" checked disabled>
                                                       <label class="form-check-label" for="flexRadioCheckedDisabledWarning">
+                                                          Радио выбран и не активен
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-12">
+                                          <div class="row g-3">
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-orange">
+                                                      <input class="form-check-input" name="flexRadioOrange" type="radio" value="" id="flexRadioCheckedOrange" checked>
+                                                      <label class="form-check-label" for="flexRadioCheckedOrange">
+                                                          Радио выбран
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-orange">
+                                                      <input class="form-check-input" name="flexRadioOrange" type="radio" value="" id="flexRadioCheckedOrange2">
+                                                      <label class="form-check-label" for="flexRadioCheckedOrange2">
+                                                          Радио
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-orange">
+                                                      <input class="form-check-input" type="radio" value="" id="flexRadioDisabledOrange" disabled>
+                                                      <label class="form-check-label" for="flexRadioDisabledOrange">
+                                                          Радио не активен
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-orange">
+                                                      <input class="form-check-input" type="radio" value="" id="flexRadioCheckedDisabledOrange" checked disabled>
+                                                      <label class="form-check-label" for="flexRadioCheckedDisabledOrange">
+                                                          Радио выбран и не активен
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-12">
+                                          <div class="row g-3">
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-purple">
+                                                      <input class="form-check-input" name="flexRadioPurple" type="radio" value="" id="flexRadioCheckedPurple" checked>
+                                                      <label class="form-check-label" for="flexRadioCheckedPurple">
+                                                          Радио выбран
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-purple">
+                                                      <input class="form-check-input" name="flexRadioPurple" type="radio" value="" id="flexRadioCheckedPurple2">
+                                                      <label class="form-check-label" for="flexRadioCheckedPurple2">
+                                                          Радио
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-purple">
+                                                      <input class="form-check-input" type="radio" value="" id="flexRadioDisabledPurple" disabled>
+                                                      <label class="form-check-label" for="flexRadioDisabledPurple">
+                                                          Радио не активен
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-purple">
+                                                      <input class="form-check-input" type="radio" value="" id="flexRadioCheckedDisabledPurple" checked disabled>
+                                                      <label class="form-check-label" for="flexRadioCheckedDisabledPurple">
+                                                          Радио выбран и не активен
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-12">
+                                          <div class="row g-3">
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-blue">
+                                                      <input class="form-check-input" name="flexRadioBlue" type="radio" value="" id="flexRadioCheckedBlue" checked>
+                                                      <label class="form-check-label" for="flexRadioCheckedBlue">
+                                                          Радио выбран
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-blue">
+                                                      <input class="form-check-input" name="flexRadioBlue" type="radio" value="" id="flexRadioCheckedBlue2">
+                                                      <label class="form-check-label" for="flexRadioCheckedBlue2">
+                                                          Радио
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-blue">
+                                                      <input class="form-check-input" type="radio" value="" id="flexRadioDisabledBlue" disabled>
+                                                      <label class="form-check-label" for="flexRadioDisabledBlue">
+                                                          Радио не активен
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-check form-check-blue">
+                                                      <input class="form-check-input" type="radio" value="" id="flexRadioCheckedDisabledBlue" checked disabled>
+                                                      <label class="form-check-label" for="flexRadioCheckedDisabledBlue">
                                                           Радио выбран и не активен
                                                       </label>
                                                   </div>

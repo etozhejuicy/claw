@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#checkbox").innerHTML = `
+    document.querySelector("#checkbox").innerHTML = `
         <div class="row g-5">
             <div class="col-12">
                 <div class="card shadow-none">
@@ -168,6 +168,90 @@ window.addEventListener("DOMContentLoaded", () => {
                                                 <div class="form-check form-check-warning">
                                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabledWarning" checked disabled>
                                                     <label class="form-check-label" for="flexCheckCheckedDisabledWarning">
+                                                        Чекбокс выбран и не активен
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row g-3">
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-orange">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedOrange" checked>
+                                                    <label class="form-check-label" for="flexCheckCheckedOrange">
+                                                        Чекбокс выбран
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-orange">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabledOrange" disabled>
+                                                    <label class="form-check-label" for="flexCheckDisabledOrange">
+                                                        Чекбокс не активен
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-orange">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabledOrange" checked disabled>
+                                                    <label class="form-check-label" for="flexCheckCheckedDisabledOrange">
+                                                        Чекбокс выбран и не активен
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row g-3">
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-purple">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedPurple" checked>
+                                                    <label class="form-check-label" for="flexCheckCheckedPurple">
+                                                        Чекбокс выбран
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-purple">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabledPurple" disabled>
+                                                    <label class="form-check-label" for="flexCheckDisabledPurple">
+                                                        Чекбокс не активен
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-purple">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabledPurple" checked disabled>
+                                                    <label class="form-check-label" for="flexCheckCheckedDisabledPurple">
+                                                        Чекбокс выбран и не активен
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row g-3">
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-blue">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedBlue" checked>
+                                                    <label class="form-check-label" for="flexCheckCheckedBlue">
+                                                        Чекбокс выбран
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-blue">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabledBlue" disabled>
+                                                    <label class="form-check-label" for="flexCheckDisabledBlue">
+                                                        Чекбокс не активен
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-blue">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabledBlue" checked disabled>
+                                                    <label class="form-check-label" for="flexCheckCheckedDisabledBlue">
                                                         Чекбокс выбран и не активен
                                                     </label>
                                                 </div>
