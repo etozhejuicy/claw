@@ -54,10 +54,11 @@
       fill: currentColor;
     }
   }
-  & .spinner-border {
-    width: 0.65rem;
-    height: 0.65rem;
-    padding: 0;
+  & * {
+    &[class^="spinner-"] {
+      #{$prefix}-spinner-width: var(#{$prefix}-btn-font-size);
+      #{$prefix}-spinner-height: var(#{$prefix}-btn-font-size);
+    }
   }
   &:hover {
     color: var(#{$prefix}-btn-hover-color);
