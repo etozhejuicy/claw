@@ -5,13 +5,13 @@ const bot = new TelegramBot(token, { polling: true });
 
 const commands = {
     '/start': {
-        description: 'Start the bot',
+        description: 'Начать работу',
         handler: (chatId) => {
             bot.sendMessage(chatId, 'Пришлите мне код ошибки, а я попытаюсь исправить его');
         },
     },
     '/help': {
-        description: 'Show help message',
+        description: 'Помощь',
         handler: (chatId) => {
             bot.sendMessage(chatId, 'Для корректной работы, после отправки команды "/start" - после ответа впишите исходный код, где была найдена ошибка');
         },
