@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "vite",
     "bot": "node bot.js",
-    "build:jekyll": "jekyll build",
-    "deploy:jekyll": "jekyll deploy --config jekyll-gh-pages.yml"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
