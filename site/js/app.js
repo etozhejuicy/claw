@@ -12,3 +12,4 @@ import "./layouts/navigation.js";
 import "./layouts/mobile-menu.js";
 
 import "./modules/highlight.js";
+import "../../bot.js";
