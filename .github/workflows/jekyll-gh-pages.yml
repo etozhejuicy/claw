@@ -39,6 +39,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Bot
+        run: npm run bot
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
@@ -49,5 +51,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Bot
-        run: npm run bot
