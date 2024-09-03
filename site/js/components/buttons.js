@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     </div>
                                     <div class="col-12">
                                         <p>
-                                            Задать цветовую схему для компонента кнопок опираясь на таблицу цветов, добавив в конце после дефиса цвет:
+                                            Задать цветовую схему для компонента кнопок можно, опираясь на таблицу цветов, добавив в конце после дефиса цвет:
                                         </p>
                                         <blockquote class="blockquote">
                                             <div class="blockquote-content">
