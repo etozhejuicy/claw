@@ -14,7 +14,4 @@ export default defineConfig({
     },
   },
   refresh: true,
-  scripts: {
-    'bot': 'node bot.js',
-  },
 });
