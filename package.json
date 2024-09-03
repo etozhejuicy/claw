@@ -6,7 +6,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "bot": "node bot.js",
     "build": "vite build",
     "preview": "vite preview"
   },
