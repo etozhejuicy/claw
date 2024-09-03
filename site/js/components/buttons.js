@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                 <div class="row g-3">
                                     <div class="col-12">
                                         <h5 class="h5">
-                                            Кнопки (обычные)
+                                            Кнопки
                                         </h5>
                                     </div>
                                     <div class="col-auto">
@@ -44,6 +44,39 @@ window.addEventListener("DOMContentLoaded", () => {
                                             </div>
                                         </code>
                                     </div>
+                                    <div class="col-12">
+                                        <p>
+                                            Задать цветовую схему для компонента кнопок опираясь на таблицу цветов, добавив в конце после дефиса цвет:
+                                        </p>
+                                        <blockquote class="blockquote">
+                                            <div class="blockquote-content">
+                                                <div class="blockquote-body text-warning">.btn-{color}</div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>
+                                            Список наименования основной палитры цветов:
+                                        </p>
+                                        <blockquote class="blockquote">
+                                            <div class="blockquote-content">
+                                                <div class="blockquote-body">
+                                                    <ul class="list list-nobullet m-0">
+                                                        <li class="list-item text-primary">primary</li>
+                                                        <li class="list-item text-secondary">secondary</li>
+                                                        <li class="list-item text-success">success</li>
+                                                        <li class="list-item text-danger">danger</li>
+                                                        <li class="list-item text-warning">warning</li>
+                                                        <li class="list-item text-black">black</li>
+                                                        <li class="list-item text-orange">orange</li>
+                                                        <li class="list-item text-purple">purple</li>
+                                                        <li class="list-item text-blue">blue</li>
+                                                        <li class="list-item text-white">white</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -54,22 +87,22 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </h5>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-primary btn-shadow">Кнопка 1 с тенью</button>
+                                        <button type="button" class="btn btn-primary btn-shadow">Кнопка 1</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-secondary btn-shadow">Кнопка 2 с тенью</button>
+                                        <button type="button" class="btn btn-secondary btn-shadow">Кнопка 2</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-danger btn-shadow">Кнопка 3 с тенью</button>
+                                        <button type="button" class="btn btn-danger btn-shadow">Кнопка 3</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-warning btn-shadow">Кнопка 4 с тенью</button>
+                                        <button type="button" class="btn btn-warning btn-shadow">Кнопка 4</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-success btn-shadow">Кнопка 5 с тенью</button>
+                                        <button type="button" class="btn btn-success btn-shadow">Кнопка 5</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-white btn-shadow">Кнопка 6 с тенью</button>
+                                        <button type="button" class="btn btn-white btn-shadow">Кнопка 6</button>
                                     </div>
                                     <div class="col-12">
                                         <code class="code">
@@ -92,22 +125,22 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </h5>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-primary btn-voluminous">Кнопка 1 с подсветкой</button>
+                                        <button type="button" class="btn btn-primary btn-voluminous">Кнопка 1</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-secondary btn-voluminous">Кнопка 2 с подсветкой</button>
+                                        <button type="button" class="btn btn-secondary btn-voluminous">Кнопка 2</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-danger btn-voluminous">Кнопка 3 с подсветкой</button>
+                                        <button type="button" class="btn btn-danger btn-voluminous">Кнопка 3</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-warning btn-voluminous">Кнопка 4 с подсветкой</button>
+                                        <button type="button" class="btn btn-warning btn-voluminous">Кнопка 4</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-success btn-voluminous">Кнопка 5 с подсветкой</button>
+                                        <button type="button" class="btn btn-success btn-voluminous">Кнопка 5</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-white btn-voluminous">Кнопка 6 с подсветкой</button>
+                                        <button type="button" class="btn btn-white btn-voluminous">Кнопка 6</button>
                                     </div>
                                     <div class="col-12">
                                         <code class="code">
@@ -130,22 +163,22 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </h5>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-primary btn-outline-primary">Кнопка 1 с обводкой</button>
+                                        <button type="button" class="btn btn-primary btn-outline-primary">Кнопка 1</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-secondary btn-outline-secondary">Кнопка 2 с обводкой</button>
+                                        <button type="button" class="btn btn-secondary btn-outline-secondary">Кнопка 2</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-danger btn-outline-danger">Кнопка 3 с обводкой</button>
+                                        <button type="button" class="btn btn-danger btn-outline-danger">Кнопка 3</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-warning btn-outline-warning">Кнопка 4 с обводкой</button>
+                                        <button type="button" class="btn btn-warning btn-outline-warning">Кнопка 4</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-success btn-outline-success">Кнопка 5 с обводкой</button>
+                                        <button type="button" class="btn btn-success btn-outline-success">Кнопка 5</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-white btn-outline-white">Кнопка 6 с обводкой</button>
+                                        <button type="button" class="btn btn-white btn-outline-white">Кнопка 6</button>
                                     </div>
                                     <div class="col-12">
                                         <code class="code">
@@ -168,22 +201,22 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </h5>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-primary btn-colored btn-outline-primary">Кнопка 1 с обводкой + цвет</button>
+                                        <button type="button" class="btn btn-primary btn-colored btn-outline-primary">Кнопка 1</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-secondary btn-colored btn-outline-secondary">Кнопка 2 с обводкой + цвет</button>
+                                        <button type="button" class="btn btn-secondary btn-colored btn-outline-secondary">Кнопка 2</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-danger btn-colored btn-outline-danger">Кнопка 3 с обводкой + цвет</button>
+                                        <button type="button" class="btn btn-danger btn-colored btn-outline-danger">Кнопка 3</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-warning btn-colored btn-outline-warning">Кнопка 4 с обводкой + цвет</button>
+                                        <button type="button" class="btn btn-warning btn-colored btn-outline-warning">Кнопка 4</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-success btn-colored btn-outline-success">Кнопка 5 с обводкой + цвет</button>
+                                        <button type="button" class="btn btn-success btn-colored btn-outline-success">Кнопка 5</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-white btn-colored btn-outline-white">Кнопка 6 с обводкой + цвет</button>
+                                        <button type="button" class="btn btn-white btn-colored btn-outline-white">Кнопка 6</button>
                                     </div>
                                     <div class="col-12">
                                         <code class="code">
@@ -206,22 +239,22 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </h5>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-primary btn-dimmed btn-colored">Кнопка 1 с затемнением + цвет</button>
+                                        <button type="button" class="btn btn-primary btn-dimmed btn-colored">Кнопка 1</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-secondary btn-dimmed btn-colored">Кнопка 2 с затемнением + цвет</button>
+                                        <button type="button" class="btn btn-secondary btn-dimmed btn-colored">Кнопка 2</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-danger btn-dimmed btn-colored">Кнопка 3 с затемнением + цвет</button>
+                                        <button type="button" class="btn btn-danger btn-dimmed btn-colored">Кнопка 3</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-warning btn-dimmed btn-colored">Кнопка 4 с затемнением + цвет</button>
+                                        <button type="button" class="btn btn-warning btn-dimmed btn-colored">Кнопка 4</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-success btn-dimmed btn-colored">Кнопка 5 с затемнением + цвет</button>
+                                        <button type="button" class="btn btn-success btn-dimmed btn-colored">Кнопка 5</button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-white btn-dimmed btn-colored">Кнопка 6 с затемнением + цвет</button>
+                                        <button type="button" class="btn btn-white btn-dimmed btn-colored">Кнопка 6</button>
                                     </div>
                                     <div class="col-12">
                                         <code class="code">

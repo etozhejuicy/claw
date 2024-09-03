@@ -5,9 +5,9 @@
   #{$prefix}-btn-font-weight: 600;
   #{$prefix}-btn-line-height: 120%;
   #{$prefix}-btn-color: var(--dark);
-  #{$prefix}-btn-bg: transparent;
+  #{$prefix}-btn-bg: var(--grey);
   #{$prefix}-btn-border-width: 0;
-  #{$prefix}-btn-border-color: transparent;
+  #{$prefix}-btn-border-color: var(--grey);
   #{$prefix}-border-radius: 1rem;
   #{$prefix}-btn-hover-border-color: transparent;
   #{$prefix}-btn-filter: unset;

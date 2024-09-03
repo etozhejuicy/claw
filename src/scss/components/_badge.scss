@@ -55,28 +55,6 @@
             transform: translate(-50%, -50%) scale(1.15);
         }
     }
-    &-gradient {
-        #{$prefix}-badge-color: var(--white);
-        #{$prefix}-badge-background-color: var(--black);
-        &::after {
-            opacity: 0.4;
-        }
-        &::before {
-            filter: blur(2.25rem);
-            background-image: conic-gradient(
-                from 180deg at 50% 50%,
-                #ffa629 -58.98deg,
-                #fccf19 0.15deg,
-                #3eaf2e 62.84deg,
-                #02a6e6 119.45deg,
-                #9747ff 179.51deg,
-                #f24822 240.2deg,
-                #ffa629 301.02deg,
-                #fccf19 360.15deg
-            );
-            opacity: 1;
-        }
-    }
     &-content {
         position: relative;
         z-index: 1;
