@@ -81,7 +81,8 @@
     --card-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset;
   }
   &-glass {
-    --card-background-color: rgba(var(--dark-grey-rgb), 0.8);
+    --card-background-color: rgba(var(--dark-grey-rgb), 0.125);
+    --card-text-color: var(--white);
   }
 }
 
