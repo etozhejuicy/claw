@@ -1,5 +1,67 @@
 @use "./functions";
 
+.flex {
+    @each $flex-direction, $value in $flex-directions {
+        &-#{$value} {
+            flex-direction: #{$flex-direction} !important;
+        }
+    }
+    @each $flex-wrap, $value in $flex-wraps {
+        &-#{$value} {
+            flex-wrap: #{$flex-wrap} !important;
+        }
+    }
+    @each $flex-grow, $value in $flex-grows {
+        &-#{$value} {
+            flex-grow: #{$flex-grow} !important;
+        }
+    }
+    @each $flex-shrink, $value in $flex-shrinks {
+        &-#{$value} {
+            flex-shrink: #{$flex-shrink} !important;
+        }
+    }
+    @each $flex-fill, $value in $flex-fills {
+        &-#{$value} {
+            flex: #{$flex-fill} !important;
+        }
+    }
+}
+
+@each $breakpointclass, $bpc in $breakpointclasses {
+    @include breakpoint("breakpoint-#{$bpc}") {
+        .flex {
+            &-#{$bpc} {
+                @each $flex-direction, $value in $flex-directions {
+                    &-#{$value} {
+                        flex-direction: #{$flex-direction} !important;
+                    }
+                }
+                @each $flex-wrap, $value in $flex-wraps {
+                    &-#{$value} {
+                        flex-wrap: #{$flex-wrap} !important;
+                    }
+                }
+                @each $flex-grow, $value in $flex-grows {
+                    &-#{$value} {
+                        flex-grow: #{$flex-grow} !important;
+                    }
+                }
+                @each $flex-shrink, $value in $flex-shrinks {
+                    &-#{$value} {
+                        flex-shrink: #{$flex-shrink} !important;
+                    }
+                }
+                @each $flex-fill, $value in $flex-fills {
+                    &-#{$value} {
+                        flex: #{$flex-fill} !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .align {
     &-items {
         @each $align-item, $value in $align-items {

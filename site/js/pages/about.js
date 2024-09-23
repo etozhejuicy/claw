@@ -5,7 +5,7 @@ document.querySelector("#app").innerHTML = `
         <div class="card shadow-none">
             <div class="card-content">
                 <div class="card-header text-center justify-content-center">
-                    <h1 class="h-1 fw-700">
+                    <h1 class="h3 fw-700">
                         Легкий и гибкий CSS-фреймворк
                     </h1>
                 </div>

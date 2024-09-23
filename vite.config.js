@@ -10,6 +10,7 @@ export default defineConfig({
         components: "/components.html",
         utilities: "/utilities.html",
         about: "/about.html",
+        demo: "/demo.html",
       },
       output: {
         errorFile: '/error.html',

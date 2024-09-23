@@ -208,6 +208,48 @@ $displays: (
 );
 // display
 
+// flexbox
+$flex-fill: 1 1 auto;
+$flex-row: row;
+$flex-column: column;
+$flex-row-reverse: row-reverse;
+$flex-column-reverse: column-reverse;
+$flex-grow-0: 0;
+$flex-grow-1: 1;
+$flex-shrink-0: 0;
+$flex-shrink-1: 1;
+$flex-wrap: wrap;
+$flex-nowrap: nowrap;
+$flex-wrap-reverse: wrap-reverse;
+
+$flex-directions: (
+    $flex-row: "row",
+    $flex-column: "column",
+    $flex-row-reverse: "row-reverse",
+    $flex-column-reverse: "column-reverse"
+);
+
+$flex-wraps: (
+    $flex-wrap: "wrap",
+    $flex-nowrap: "nowrap",
+    $flex-wrap-reverse: "wrap-reverse"
+);
+
+$flex-grows: (
+    $flex-grow-0: "0",
+    $flex-grow-1: "1"
+);
+
+$flex-shrinks: (
+    $flex-shrink-0: "0",
+    $flex-shrink-1: "1"
+);
+
+$flex-fills: (
+    $flex-fill: "fill"
+);
+// flexbox
+
 // positions
 $position-absolute: absolute;
 $position-relative: relative;
