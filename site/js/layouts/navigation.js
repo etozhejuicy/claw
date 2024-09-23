@@ -24,6 +24,10 @@ class Navigation {
         {
           'name': 'О нас',
           'path': 'about'
+        },
+        {
+          'name': 'Демо',
+          'path': 'demo'
         }
       ],
       navAreas = document.querySelectorAll('[navigation]');
