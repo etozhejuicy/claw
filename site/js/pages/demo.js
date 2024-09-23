@@ -112,7 +112,7 @@ class Demo {
                                 <div class="card-body">
                                     <div class="row g-4">
                                         <div class="col-12">
-                                            <p>
+                                            <p class="fs-5 fw-500">
                                                 Список проектов, которые используют ранние наработки Claw (Клешни):
                                             </p>
                                         </div>

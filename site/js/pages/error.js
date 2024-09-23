@@ -25,7 +25,7 @@ class Error {
                       </div>
                     </div>
                     <div class="col-12">
-                        <p class="text-center fs-5">
+                        <p class="text-center fs-5 fw-500">
                             Такой страницы не существует
                         </p>
                     </div>
@@ -42,19 +42,6 @@ class Error {
         </section>
       </main>
     `;
-
-    window.addEventListener("DOMContentLoaded", () => {
-      this.animation();
-    });
-  }
-
-  animation() {
-    const crabSvg = document.getElementById("crab-svg");
-    const svgDoc = crabSvg.contentDocument;
-
-    const leftClaw = svgDoc.querySelector("g[id='left-claw']");
-
-    console.log(leftClaw);
   }
 }
 

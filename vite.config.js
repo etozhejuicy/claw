@@ -4,6 +4,7 @@ export default defineConfig({
   base: "./",
   build: {
     rollupOptions: {
+      fallback: "/error.html",
       input: {
         index: "/index.html",
         installation: "/installation.html",
@@ -13,7 +14,7 @@ export default defineConfig({
         demo: "/demo.html",
       },
       output: {
-        errorFile: '/error.html',
+        errorFile: "/error.html",
       },
     },
   },

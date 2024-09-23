@@ -13,7 +13,9 @@
 
 .form-check {
   position: relative;
-  min-height: calc(var(#{$prefix}-form-input-margin) + var(#{$prefix}-form-input-size));
+  min-height: calc(
+    var(#{$prefix}-form-input-margin) + var(#{$prefix}-form-input-size)
+  );
   padding-left: var(#{$prefix}-form-input-size);
   margin-bottom: var(#{$prefix}-form-input-margin);
   & .form-check-input {
@@ -68,7 +70,7 @@
       justify-content: center;
       box-sizing: border-box;
       width: 100%;
-      height: 100%;
+      // height: 100%; // removed
       color: var(--black);
       opacity: 0;
       line-height: 1;
