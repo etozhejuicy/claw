@@ -16,7 +16,7 @@ document.querySelector("#app").innerHTML = `
               </div>
               <div class="col-12">
                   <p class="text-center">
-                      <a href="/" class="link">На главную</a>
+                      <a href="./" class="link">На главную</a>
                   </p>
               </div>
             </div>
