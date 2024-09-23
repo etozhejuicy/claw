@@ -11,6 +11,9 @@ export default defineConfig({
         utilities: "/utilities.html",
         about: "/about.html",
       },
+      output: {
+        errorFile: 'error.html',
+      },
     },
   },
   refresh: true,
