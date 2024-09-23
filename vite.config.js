@@ -12,7 +12,7 @@ export default defineConfig({
         about: "/about.html",
       },
       output: {
-        errorFile: 'error.html',
+        errorFile: '/error.html',
       },
     },
   },
