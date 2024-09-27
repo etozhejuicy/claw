@@ -108,13 +108,9 @@
   }
   &-sm {
     padding: calc(var(#{$prefix}-btn-padding-y) - 0.25rem) calc(var(#{$prefix}-btn-padding-x) - 0.25rem);
-    font-size: calc(var(#{$prefix}-btn-font-size) - 25%);
-    line-height: calc(var(#{$prefix}-btn-font-size) - 25%);
   }
   &-lg {
     padding: calc(var(#{$prefix}-btn-padding-y) + 0.56rem) calc(var(#{$prefix}-btn-padding-x) + 0.25rem);
-    font-size: calc(var(#{$prefix}-btn-font-size) + 56%);
-    line-height: calc(var(#{$prefix}-btn-font-size) + 56%);
   }
   &-rounded {
     #{$prefix}-border-radius: 50rem;
