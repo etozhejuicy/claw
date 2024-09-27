@@ -1,7 +1,7 @@
 .btn {
   #{$prefix}-btn-padding-x: 2.62rem;
   #{$prefix}-btn-padding-y: 1rem;
-  #{$prefix}-btn-font-size: var(#{$prefix}-btn-font-size);
+  #{$prefix}-btn-font-size: 1rem;
   #{$prefix}-btn-font-weight: 600;
   #{$prefix}-btn-line-height: 120%;
   #{$prefix}-btn-color: var(--dark);
@@ -145,6 +145,9 @@
           min-width: var(#{$prefix}-btn-size);
           min-height: var(#{$prefix}-btn-size);
         }
+        &:is(i) {
+          aspect-ratio: 1 / 1;
+        }
       }
       &:last-child {
         &:is(.btn-icon-text) {
@@ -153,6 +156,9 @@
         &:is(svg) {
           min-width: var(#{$prefix}-btn-size);
           min-height: var(#{$prefix}-btn-size);
+        }
+        &:is(i) {
+          aspect-ratio: 1 / 1;
         }
       }
       &:is(* ~ .btn-icon-text) {

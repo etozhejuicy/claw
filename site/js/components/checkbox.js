@@ -63,6 +63,19 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </code>
                                     </div>
                                     <div class="col-12">
+                                        <p>
+                                            Изменяя следующий класс можно манипулировать цветом чекбокса:
+                                        </p>
+                                        <blockquote class="blockquote">
+                                            <div class="blockquote-content">
+                                                <div class="blockquote-body text-warning">.form-check-{color}</div>
+                                            </div>
+                                        </blockquote>
+                                        <p>
+                                            Список наименований цветов для данного компонента используется в точности, как в <a href="./utilities#colors" class="fw-600">палитре</a>.
+                                        </p>
+                                    </div>
+                                    <div class="col-12">
                                         <div class="row g-3">
                                             <div class="col-auto">
                                                 <div class="form-check form-check-primary">
@@ -257,6 +270,71 @@ window.addEventListener("DOMContentLoaded", () => {
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>
+                                            Существуют вариации чекбокса с цветом текста, который совпадает с цветом фона чекбокса.
+                                        </p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row g-3">
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-primary form-check-colored">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedPrimary1" checked>
+                                                    <label class="form-check-label" for="flexCheckCheckedPrimary1">
+                                                        Чекбокс выбран
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-primary form-check-colored">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabledPrimary1" disabled>
+                                                    <label class="form-check-label" for="flexCheckDisabledPrimary1">
+                                                        Чекбокс не активен
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-primary form-check-colored">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabledPrimary1" checked disabled>
+                                                    <label class="form-check-label" for="flexCheckCheckedDisabledPrimary1">
+                                                        Чекбокс выбран и не активен
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <code class="code">
+                                            <div class="code-content">
+                                                <div class="code-title">
+                                                    Пример использования
+                                                </div>
+                                                <div class="code-body">
+                                                &lt;div class="form-check form-check-primary form-check-colored"&gt;
+                                                &lt;input class="form-check-input" type="checkbox" id="checkboxExample"&gt;
+                                                &lt;label class="form-check-label" for="checkboxExample"&gt;
+                                                    Чекбокс
+                                                &lt;/label&gt;
+                                                &lt;/div&gt;
+                                                </div>
+                                            </div>
+                                        </code>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>
+                                            Когда чекбокс имеет  класс <code class="text-warning">.form-check-colored</code>, он становится цветным.
+                                            Граница <code class="text-warning">border</code> и текст <code class="text-warning">color</code> имеет цвет,  который совпадает с цветом фона чекбокса с параметром <code class="text-warning">checked="true"</code>, иначе имеет цвет текста <code class="text-warning">var(--body-text-color);</code>
+
+                                        </p>
+                                        <p>
+                                            Обратите внимание! Вариации чекбокса с цветом текста работают только при использовании класса:
+                                        </p>
+                                        <blockquote class="blockquote">
+                                            <div class="blockquote-content">
+                                                <div class="blockquote-body text-warning">.form-check-colored</div>
+                                            </div>
+                                        </blockquote>
                                     </div>
                                 </div>
                             </div>
