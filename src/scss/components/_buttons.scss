@@ -1,7 +1,7 @@
 .btn {
   #{$prefix}-btn-padding-x: 2.62rem;
   #{$prefix}-btn-padding-y: 1rem;
-  #{$prefix}-btn-font-size: 1rem;
+  #{$prefix}-btn-font-size: var(#{$prefix}-btn-font-size);
   #{$prefix}-btn-font-weight: 600;
   #{$prefix}-btn-line-height: 120%;
   #{$prefix}-btn-color: var(--dark);
