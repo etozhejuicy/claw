@@ -124,7 +124,7 @@ class Demo {
                                                     <i class="cl-icon-arrow-right"></i>
                                                 </div>
                                                 <div class="btn btn-primary btn-icon swiper-button-prev" style="--swiper-navigation-size: 2.5rem;width:var(--swiper-navigation-size);height:var(--swiper-navigation-size);--swiper-navigation-color: var(--cl-btn-color);">
-                                                    <i class="cl-icon-arrow-prev"></i>
+                                                    <i class="cl-icon-arrow-left"></i>
                                                 </div>
                                             </div>
                                         </div>
