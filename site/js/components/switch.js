@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#switch").innerHTML = `
+    document.querySelector("#switch").innerHTML = `
           <div class="row g-5">
               <div class="col-12">
                   <div class="card shadow-none">
@@ -16,24 +16,24 @@ window.addEventListener("DOMContentLoaded", () => {
                                           <div class="row g-3">
                                               <div class="col-auto">
                                                   <div class="form-switch">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                      <label class="form-check-label" for="flexCheckChecked">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchChecked" checked>
+                                                      <label class="form-switch-label" for="flexSwitchChecked">
                                                           Свитч выбран
                                                       </label>
                                                   </div>
                                               </div>
                                               <div class="col-auto">
                                                   <div class="form-switch">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
-                                                      <label class="form-check-label" for="flexCheckDisabled">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchDisabled" disabled>
+                                                      <label class="form-switch-label" for="flexSwitchDisabled">
                                                           Свитч не активен
                                                       </label>
                                                   </div>
                                               </div>
                                               <div class="col-auto">
                                                   <div class="form-switch">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
-                                                      <label class="form-check-label" for="flexCheckCheckedDisabled">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchCheckedDisabled" checked disabled>
+                                                      <label class="form-switch-label" for="flexSwitchCheckedDisabled">
                                                           Свитч выбран и не активен
                                                       </label>
                                                   </div>
@@ -48,25 +48,25 @@ window.addEventListener("DOMContentLoaded", () => {
                                       <div class="col-12">
                                           <div class="row g-3">
                                               <div class="col-auto">
-                                                  <div class="form-switch form-check-primary">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedPrimary" checked>
-                                                      <label class="form-check-label" for="flexCheckCheckedPrimary">
+                                                  <div class="form-switch form-switch-primary">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchCheckedPrimary" checked>
+                                                      <label class="form-switch-label" for="flexSwitchCheckedPrimary">
                                                           Свитч выбран
                                                       </label>
                                                   </div>
                                               </div>
                                               <div class="col-auto">
-                                                  <div class="form-switch form-check-primary">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabledPrimary" disabled>
-                                                      <label class="form-check-label" for="flexCheckDisabledPrimary">
+                                                  <div class="form-switch form-switch-primary">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchDisabledPrimary" disabled>
+                                                      <label class="form-switch-label" for="flexSwitchDisabledPrimary">
                                                           Свитч не активен
                                                       </label>
                                                   </div>
                                               </div>
                                               <div class="col-auto">
-                                                  <div class="form-switch form-check-primary">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabledPrimary" checked disabled>
-                                                      <label class="form-check-label" for="flexCheckCheckedDisabledPrimary">
+                                                  <div class="form-switch form-switch-primary">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchCheckedDisabledPrimary" checked disabled>
+                                                      <label class="form-switch-label" for="flexSwitchCheckedDisabledPrimary">
                                                           Свитч выбран и не активен
                                                       </label>
                                                   </div>
@@ -76,25 +76,25 @@ window.addEventListener("DOMContentLoaded", () => {
                                       <div class="col-12">
                                           <div class="row g-3">
                                               <div class="col-auto">
-                                                  <div class="form-switch form-check-success">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedSuccess" checked>
-                                                      <label class="form-check-label" for="flexCheckCheckedSuccess">
+                                                  <div class="form-switch form-switch-success">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchCheckedSuccess" checked>
+                                                      <label class="form-switch-label" for="flexSwitchCheckedSuccess">
                                                           Свитч выбран
                                                       </label>
                                                   </div>
                                               </div>
                                               <div class="col-auto">
-                                                  <div class="form-switch form-check-success">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabledSuccess" disabled>
-                                                      <label class="form-check-label" for="flexCheckDisabledSuccess">
+                                                  <div class="form-switch form-switch-success">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchDisabledSuccess" disabled>
+                                                      <label class="form-switch-label" for="flexSwitchDisabledSuccess">
                                                           Свитч не активен
                                                       </label>
                                                   </div>
                                               </div>
                                               <div class="col-auto">
-                                                  <div class="form-switch form-check-success">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabledSuccess" checked disabled>
-                                                      <label class="form-check-label" for="flexCheckCheckedDisabledSuccess">
+                                                  <div class="form-switch form-switch-success">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchCheckedDisabledSuccess" checked disabled>
+                                                      <label class="form-switch-label" for="flexSwitchCheckedDisabledSuccess">
                                                           Свитч выбран и не активен
                                                       </label>
                                                   </div>
@@ -104,25 +104,25 @@ window.addEventListener("DOMContentLoaded", () => {
                                       <div class="col-12">
                                           <div class="row g-3">
                                               <div class="col-auto">
-                                                  <div class="form-switch form-check-danger">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDanger" checked>
-                                                      <label class="form-check-label" for="flexCheckCheckedDanger">
+                                                  <div class="form-switch form-switch-danger">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchCheckedDanger" checked>
+                                                      <label class="form-switch-label" for="flexSwitchCheckedDanger">
                                                           Свитч выбран
                                                       </label>
                                                   </div>
                                               </div>
                                               <div class="col-auto">
-                                                  <div class="form-switch form-check-danger">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabledDanger" disabled>
-                                                      <label class="form-check-label" for="flexCheckDisabledDanger">
+                                                  <div class="form-switch form-switch-danger">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchDisabledDanger" disabled>
+                                                      <label class="form-switch-label" for="flexSwitchDisabledDanger">
                                                           Свитч не активен
                                                       </label>
                                                   </div>
                                               </div>
                                               <div class="col-auto">
-                                                  <div class="form-switch form-check-danger">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabledDanger" checked disabled>
-                                                      <label class="form-check-label" for="flexCheckCheckedDisabledDanger">
+                                                  <div class="form-switch form-switch-danger">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchCheckedDisabledDanger" checked disabled>
+                                                      <label class="form-switch-label" for="flexSwitchCheckedDisabledDanger">
                                                           Свитч выбран и не активен
                                                       </label>
                                                   </div>
@@ -132,25 +132,25 @@ window.addEventListener("DOMContentLoaded", () => {
                                       <div class="col-12">
                                           <div class="row g-3">
                                               <div class="col-auto">
-                                                  <div class="form-switch form-check-warning">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedWarning" checked>
-                                                      <label class="form-check-label" for="flexCheckCheckedWarning">
+                                                  <div class="form-switch form-switch-warning">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchCheckedWarning" checked>
+                                                      <label class="form-switch-label" for="flexSwitchCheckedWarning">
                                                           Свитч выбран
                                                       </label>
                                                   </div>
                                               </div>
                                               <div class="col-auto">
-                                                  <div class="form-switch form-check-warning">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabledWarning" disabled>
-                                                      <label class="form-check-label" for="flexCheckDisabledWarning">
+                                                  <div class="form-switch form-switch-warning">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchDisabledWarning" disabled>
+                                                      <label class="form-switch-label" for="flexSwitchDisabledWarning">
                                                           Свитч не активен
                                                       </label>
                                                   </div>
                                               </div>
                                               <div class="col-auto">
-                                                  <div class="form-switch form-check-warning">
-                                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabledWarning" checked disabled>
-                                                      <label class="form-check-label" for="flexCheckCheckedDisabledWarning">
+                                                  <div class="form-switch form-switch-warning">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchCheckedDisabledWarning" checked disabled>
+                                                      <label class="form-switch-label" for="flexSwitchCheckedDisabledWarning">
                                                           Свитч выбран и не активен
                                                       </label>
                                                   </div>
