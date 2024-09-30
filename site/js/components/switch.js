@@ -157,6 +157,56 @@ window.addEventListener("DOMContentLoaded", () => {
                                               </div>
                                           </div>
                                       </div>
+                                      <div class="col-12">
+                                          <div class="row g-3">
+                                              <div class="col-auto">
+                                                  <div class="form-switch form-switch-outline form-switch-primary">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchCheckedOutlinePrimary" checked>
+                                                      <label class="form-switch-label" for="flexSwitchCheckedOutlinePrimary">
+                                                          Свитч выбран
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-switch form-switch-outline form-switch-primary">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchDisabledOutlinePrimary" disabled>
+                                                      <label class="form-switch-label" for="flexSwitchDisabledOutlinePrimary">
+                                                          Свитч не активен
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-auto">
+                                                  <div class="form-switch form-switch-outline form-switch-primary">
+                                                      <input class="form-switch-input" type="checkbox" value="" id="flexSwitchCheckedDisabledOutlinePrimary" checked disabled>
+                                                      <label class="form-switch-label" for="flexSwitchCheckedDisabledOutlinePrimary">
+                                                          Свитч выбран и не активен
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    <div class="col-12">
+                                        <p>
+                                            Чтобы зеркально отобразить переключатель, добавьте следующий класс:
+                                        </p>
+                                        <blockquote class="blockquote">
+                                            <div class="blockquote-content">
+                                                <div class="blockquote-body text-warning">.form-check-reverse</div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row g-3">
+                                            <div class="col-auto">
+                                                <div class="form-switch form-switch-reverse">
+                                                    <input class="form-switch-input" type="checkbox" value="" id="flexSwitchMirror">
+                                                    <label class="form-switch-label" for="flexSwitchMirror">
+                                                        Переключатель зеркально
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                   </div>
                               </div>
                           </div>

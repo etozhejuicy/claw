@@ -408,6 +408,28 @@ window.addEventListener("DOMContentLoaded", () => {
                                             </div>
                                         </blockquote>
                                     </div>
+                                    <div class="col-12">
+                                        <p>
+                                            Чтобы зеркально отобразить радио, добавьте следующий класс:
+                                        </p>
+                                        <blockquote class="blockquote">
+                                            <div class="blockquote-content">
+                                                <div class="blockquote-body text-warning">.form-check-reverse</div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row g-3">
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-reverse">
+                                                    <input class="form-check-input" type="radio" value="" id="flexRadioMirror">
+                                                    <label class="form-check-label" for="flexRadioMirror">
+                                                        Радио зеркально
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                   </div>
                               </div>
                           </div>

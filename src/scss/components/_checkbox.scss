@@ -8,7 +8,7 @@
   #{$prefix}-border-color: rgba(var(#{$prefix}-form-input-color), 0.5);
   #{$prefix}-border-radius: 0.25rem;
   #{$prefix}-checkbox-size: initial;
-  #{$prefix}-form-check-label-padding-left: 0.75rem;
+  #{$prefix}-form-check-label-padding-x: 0.75rem;
 }
 
 .form-check {
@@ -21,21 +21,11 @@
     margin-top: var(#{$prefix}-form-input-margin);
     margin-left: calc(-1 * var(#{$prefix}-form-input-size));
   }
-  &-reverse {
-    padding-right: var(#{$prefix}-form-input-size);
-    padding-left: 0;
-    text-align: right;
-    & .form-check-input {
-      float: right;
-      margin-right: calc(-1 * var(#{$prefix}-form-input-size));
-      margin-left: 0;
-    }
-  }
   &-label {
     position: relative;
     display: inline-block;
     width: 100%;
-    padding-left: var(#{$prefix}-form-check-label-padding-left);
+    padding-left: var(#{$prefix}-form-check-label-padding-x);
     user-select: none;
     cursor: pointer;
   }
@@ -129,6 +119,20 @@
     &:disabled ~ label {
       cursor: default;
       opacity: 0.5;
+    }
+  }
+  &-reverse {
+    padding-right: var(#{$prefix}-form-input-size);
+    padding-left: 0;
+    text-align: right;
+    & .form-check-input {
+      float: right;
+      margin-right: calc(-1 * var(#{$prefix}-form-input-size));
+      margin-left: 0;
+    }
+    & .form-check-label {
+      padding-left: unset;
+      padding-right: var(#{$prefix}-form-check-label-padding-x);
     }
   }
 }

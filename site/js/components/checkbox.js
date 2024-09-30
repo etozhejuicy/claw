@@ -328,13 +328,36 @@ window.addEventListener("DOMContentLoaded", () => {
 
                                         </p>
                                         <p>
-                                            Обратите внимание! Вариации чекбокса с цветом текста работают только при использовании класса:
+                                            Обратите внимание! <br />
+                                            Вариации чекбокса с цветом текста работают только при использовании класса:
                                         </p>
                                         <blockquote class="blockquote">
                                             <div class="blockquote-content">
                                                 <div class="blockquote-body text-warning">.form-check-colored</div>
                                             </div>
                                         </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>
+                                            Чтобы зеркально отобразить ваш чекбокс, добавьте следующий класс:
+                                        </p>
+                                        <blockquote class="blockquote">
+                                            <div class="blockquote-content">
+                                                <div class="blockquote-body text-warning">.form-check-reverse</div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row g-3">
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-reverse">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckboxMirror" checked>
+                                                    <label class="form-check-label" for="flexCheckboxMirror">
+                                                        Чекбокс выбран
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
