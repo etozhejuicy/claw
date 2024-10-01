@@ -191,7 +191,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </p>
                                         <blockquote class="blockquote">
                                             <div class="blockquote-content">
-                                                <div class="blockquote-body text-warning">.form-check-reverse</div>
+                                                <div class="blockquote-body text-warning">.form-switch-reverse</div>
                                             </div>
                                         </blockquote>
                                     </div>

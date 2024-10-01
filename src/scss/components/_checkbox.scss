@@ -203,6 +203,31 @@
       }
     }
   }
+  .form-check-outline {
+    &:is(.form-check-#{$value}) {
+      & .form-check-input {
+        #{$prefix}-form-check-bg: rgba(var(--#{$value}-rgb), 0);
+        #{$prefix}-border-color: rgba(var(--#{$value}-rgb), 0.5);
+        &[type="checkbox"] {
+          #{$prefix}-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='0.75rem' height='0.75rem' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.7775 1.69937L4.1075 7.36937C3.9675 7.50937 3.7775 7.58938 3.5775 7.58938C3.3775 7.58938 3.1875 7.50937 3.0475 7.36937L0.2175 4.53937C-0.0725 4.24937 -0.0725 3.76937 0.2175 3.47937C0.5075 3.18937 0.9875 3.18937 1.2775 3.47937L3.5775 5.77937L8.7175 0.639375C9.0075 0.349375 9.4875 0.349375 9.7775 0.639375C10.0675 0.929375 10.0675 1.39937 9.7775 1.69937Z' fill='%23#{str-slice(inspect($color), 2)}'/%3E%3Cpath d='M9.7775 1.69937L4.1075 7.36937C3.9675 7.50937 3.7775 7.58938 3.5775 7.58938C3.3775 7.58938 3.1875 7.50937 3.0475 7.36937L0.2175 4.53937C-0.0725 4.24937 -0.0725 3.76937 0.2175 3.47937C0.5075 3.18937 0.9875 3.18937 1.2775 3.47937L3.5775 5.77937L8.7175 0.639375C9.0075 0.349375 9.4875 0.349375 9.7775 0.639375C10.0675 0.929375 10.0675 1.39937 9.7775 1.69937Z' fill='%23#{str-slice(inspect($color), 2)}'/%3E%3C/svg%3E%0A");
+        }
+        &[type="radio"] {
+          #{$prefix}-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='0.75rem' height='0.75rem' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.694 0 0 2.694 0 6C0 9.306 2.694 12 6 12C9.306 12 12 9.306 12 6C12 2.694 9.306 0 6 0Z' fill='%23#{str-slice(inspect($color), 2)}'/%3E%3C/svg%3E%0A");
+        }
+        &:active {
+          filter: brightness(75%);
+        }
+        &:checked {
+          #{$prefix}-form-check-bg: rgba(var(--#{$value}-rgb), 0);
+          #{$prefix}-border-color: rgba(var(--#{$value}-rgb), 1);
+          &::before {
+            mix-blend-mode: unset;
+            filter: unset;
+          }
+        }
+      }
+    }
+  }
 }
 
 .form-check-inline {
