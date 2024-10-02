@@ -36,84 +36,113 @@ h,
   }
 }
 
-@each $align, $value in $aligns {
-  .text {
+.text {
+  @each $align, $value in $aligns {
     &-#{$value} {
       text-align: #{$value} !important;
     }
-    @include breakpoint("breakpoint-xs") {
-      &-xs {
-        &-#{$value} {
-          text-align: #{$value} !important;
-        }
-      }
-    }
-    @include breakpoint("breakpoint-sm") {
-      &-sm {
-        &-#{$value} {
-          text-align: #{$value} !important;
-        }
-      }
-    }
-    @include breakpoint("breakpoint-md") {
-      &-md {
-        &-#{$value} {
-          text-align: #{$value} !important;
-        }
-      }
-    }
-    @include breakpoint("breakpoint-lg") {
-      &-lg {
-        &-#{$value} {
-          text-align: #{$value} !important;
-        }
-      }
-    }
-    @include breakpoint("breakpoint-xl") {
-      &-xl {
-        &-#{$value} {
-          text-align: #{$value} !important;
-        }
-      }
-    }
-    @include breakpoint("breakpoint-xxl") {
-      &-xxl {
-        &-#{$value} {
-          text-align: #{$value} !important;
-        }
-      }
-    }
-    @include breakpoint("breakpoint-xxxl") {
-      &-xxxl {
-        &-#{$value} {
-          text-align: #{$value} !important;
+  }
+}
+
+@each $breakpointclass, $bpc in $breakpointclasses {
+  @include breakpoint("breakpoint-#{$bpc}") {
+    .text {
+      &-#{$bpc} {
+        @each $align, $value in $aligns {
+          &-#{$value} {
+            text-align: #{$value} !important;
+          }
         }
       }
     }
   }
 }
 
-@each $fv-position, $value in $fv-positions {
-  .fvp-#{$value} {
-    font-variant-position: #{$value} !important;
+.fvp {
+  @each $fv-position, $value in $fv-positions {
+    &-#{$value} {
+      font-variant-position: #{$value} !important;
+    }
   }
 }
 
-@each $size, $value in $sizes {
-  .fs-#{$value} {
-    font-size: $size !important;
+@each $breakpointclass, $bpc in $breakpointclasses {
+  @include breakpoint("breakpoint-#{$bpc}") {
+    .fvp {
+      &-#{$bpc} {
+        @each $fv-position, $value in $fv-positions {
+          &-#{$value} {
+            font-variant-position: #{$value} !important;
+          }
+        }
+      }
+    }
   }
 }
 
-@each $lineHeight, $value in $lineHeights {
-  .ln-#{$value} {
-    line-height: #{$lineHeight} !important;
+.fs {
+  @each $size, $value in $sizes {
+    &-#{$value} {
+      font-size: $size !important;
+    }
   }
 }
 
-@each $weight, $value in $weights {
-  .fw-#{$value} {
-    font-weight: #{$value} !important;
+@each $breakpointclass, $bpc in $breakpointclasses {
+  @include breakpoint("breakpoint-#{$bpc}") {
+    .fs {
+      &-#{$bpc} {
+        @each $size, $value in $sizes {
+          &-#{$value} {
+            font-size: $size !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ln {
+  @each $lineHeight, $value in $lineHeights {
+    &-#{$value} {
+      line-height: #{$lineHeight} !important;
+    }
+  }
+}
+
+@each $breakpointclass, $bpc in $breakpointclasses {
+  @include breakpoint("breakpoint-#{$bpc}") {
+    .ln {
+      &-#{$bpc} {
+        @each $lineHeight, $value in $lineHeights {
+          &-#{$value} {
+            line-height: #{$lineHeight} !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fw {
+  @each $weight, $value in $weights {
+    &-#{$value} {
+      font-weight: #{$value} !important;
+    }
+  }
+}
+
+@each $breakpointclass, $bpc in $breakpointclasses {
+  @include breakpoint("breakpoint-#{$bpc}") {
+    .fw {
+      &-#{$bpc} {
+        @each $weight, $value in $weights {
+          &-#{$value} {
+            font-weight: #{$value} !important;
+          }
+        }
+      }
+    }
   }
 }
 
