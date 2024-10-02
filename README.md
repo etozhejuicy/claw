@@ -44,7 +44,7 @@ Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/cla
 
 #### The status of components readiness:
 
-- [ ]  background
+- [x]  background
 - [x]  badge
 - [x]  buttons
 - [ ]  cards
