@@ -335,6 +335,9 @@ window.addEventListener("DOMContentLoaded", () => {
                                               </div>
                                           </div>
                                       </div>
+                                    <div class="col-12">
+                                        <hr />
+                                    </div>
                                       <div class="col-12">
                                         <p>
                                             Существуют вариации радио с цветом текста, который совпадает с цветом фона радио.
@@ -362,7 +365,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                                   <div class="form-check form-check-primary form-check-colored">
                                                       <input class="form-check-input" type="radio" value="" id="flexRadioDisabledColored" disabled>
                                                       <label class="form-check-label" for="flexRadioDisabledColored">
-                                                          Радио не активен
+                                                          Радио не активно
                                                       </label>
                                                   </div>
                                               </div>
@@ -370,7 +373,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                                   <div class="form-check form-check-primary form-check-colored">
                                                       <input class="form-check-input" type="radio" value="" id="flexRadioCheckedDisabledColored" checked disabled>
                                                       <label class="form-check-label" for="flexRadioCheckedDisabledColored">
-                                                          Радио выбран и не активен
+                                                          Радио выбран и не активно
                                                       </label>
                                                   </div>
                                               </div>
@@ -409,6 +412,9 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </blockquote>
                                     </div>
                                     <div class="col-12">
+                                        <hr />
+                                    </div>
+                                    <div class="col-12">
                                         <p>
                                             Чтобы зеркально отобразить радио, добавьте следующий класс:
                                         </p>
@@ -429,6 +435,82 @@ window.addEventListener("DOMContentLoaded", () => {
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <hr />
+                                    </div>
+                                    <div class="col-12">
+                                        <p>
+                                            Существуют вариации радио с выбранным цветом <code class="text-warning">border</code>, который не совпадает с цветом фона радио.
+                                        </p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row g-3">
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-primary form-check-outline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioOutlineColored" value="" id="flexRadioOutlineCheckedPrimary1" checked>
+                                                    <label class="form-check-label" for="flexRadioOutlineCheckedPrimary1">
+                                                        Радио выбрано
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-primary form-check-outline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioOutlineColored" value="" id="flexRadioOutlineCheckedPrimary2">
+                                                    <label class="form-check-label" for="flexRadioOutlineCheckedPrimary2">
+                                                        Радио не выбрано
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-primary form-check-outline">
+                                                    <input class="form-check-input" type="radio" value="" id="flexRadioOutlineDisabledPrimary3" disabled>
+                                                    <label class="form-check-label" for="flexRadioOutlineDisabledPrimary3">
+                                                        Радио не активно
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-check-primary form-check-outline">
+                                                    <input class="form-check-input" type="radio" value="" id="flexRadioOutlineCheckedDisabledPrimary4" checked disabled>
+                                                    <label class="form-check-label" for="flexRadioOutlineCheckedDisabledPrimary4">
+                                                        Радио выбрано и не активно
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <code class="code">
+                                            <div class="code-content">
+                                                <div class="code-title">
+                                                    Пример использования
+                                                </div>
+                                                <div class="code-body">
+                                                &lt;div class="form-check form-check-primary form-check-outline"&gt;
+                                                &lt;input class="form-check-input" type="radio" id="radioExample"&gt;
+                                                &lt;label class="form-check-label" for="radioExample"&gt;
+                                                    Радио
+                                                &lt;/label&gt;
+                                                &lt;/div&gt;
+                                                </div>
+                                            </div>
+                                        </code>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>
+                                            Когда радио имеет  класс <code class="text-warning">.form-check-outline</code>, его <code class="text-warning">border</code> становится цветным, а <code class="text-warning">background-color</code> прозрачным.
+
+                                        </p>
+                                        <p>
+                                            Обратите внимание! <br />
+                                            Вариации радио с активным цветом текста работают только при использовании класса:
+                                        </p>
+                                        <blockquote class="blockquote">
+                                            <div class="blockquote-content">
+                                                <div class="blockquote-body text-warning">.form-check-colored</div>
+                                            </div>
+                                        </blockquote>
                                     </div>
                                   </div>
                               </div>

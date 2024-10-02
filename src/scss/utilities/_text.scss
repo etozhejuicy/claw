@@ -39,7 +39,7 @@ h,
 @each $align, $value in $aligns {
   .text {
     &-#{$value} {
-      text-align: #{$value};
+      text-align: #{$value} !important;
     }
     @include breakpoint("breakpoint-xs") {
       &-xs {
