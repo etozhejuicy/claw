@@ -1,54 +1,19 @@
-@each $position, $value in $positions {
-    .position {
+.position {
+    @each $position, $value in $positions {
         &-#{$value} {
             position: #{$value};
         }
-        @include breakpoint("breakpoint-xs") {
-            &-xs {
-                &-#{$value} {
-                    position: #{$value} !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-sm") {
-            &-sm {
-                &-#{$value} {
-                    position: #{$value} !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-md") {
-            &-md {
-                &-#{$value} {
-                    position: #{$value} !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-lg") {
-            &-lg {
-                &-#{$value} {
-                    position: #{$value} !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xl") {
-            &-xl {
-                &-#{$value} {
-                    position: #{$value} !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xxl") {
-            &-xxl {
-                &-#{$value} {
-                    position: #{$value} !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xxxl") {
-            &-xxxl {
-                &-#{$value} {
-                    position: #{$value} !important;
+    }
+}
+
+@each $breakpointclass, $bpc in $breakpointclasses {
+    .position {
+        @include breakpoint("breakpoint-#{$bpc}") {
+            &-#{$bpc} {
+                @each $position, $value in $positions {
+                    &-#{$value} {
+                        position: #{$value};
+                    }
                 }
             }
         }
