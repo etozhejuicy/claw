@@ -46,9 +46,9 @@ Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/cla
 
 - [ ]  background
 - [x]  badge
-- [ ]  buttons
+- [x]  buttons
 - [ ]  cards
-- [ ]  checks, radios & switches
+- [x]  checks, radios & switches
 - [ ]  code & quote
 - [ ]  counter
 - [ ]  devider
