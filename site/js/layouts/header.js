@@ -1,26 +1,26 @@
 import logo from "/logo.svg";
 
 class Header {
-    constructor() {
-        window.addEventListener("DOMContentLoaded", () => {
-            this.events();
-        });
-    }
+  constructor() {
+    window.addEventListener("DOMContentLoaded", () => {
+      this.events();
+    });
+  }
 
-    events() {
-        let header = document.createElement("header"),
-            main = document.querySelector("main");
+  events() {
+    let header = document.createElement("header"),
+      main = document.querySelector("main");
 
-        header.innerHTML =
-            `
+    header.innerHTML =
+      `
             <div class="container">
                 <div class="header-inner">
                     <div class="row g-2 g-md-4">
                         <div class="col-auto">
                             <div class="header-logo">
                                 <img data-src="` +
-            logo +
-            `" class="lazyload" />
+      logo +
+      `" class="lazyload" />
                                 <a href="./" class="stretched-link"></a>
                             </div>
                         </div>
@@ -31,7 +31,7 @@ class Header {
                         </div>
                         <div class="col-auto">
                             <div class="header-button">
-                                <button type="button" class="btn btn-primary btn-dimmed btn-colored btn-icon btn-icon-burger position-relative" data-menu-open="">
+                                <button type="button" class="btn btn-grey-600 btn-dimmed btn-colored btn-icon btn-icon-burger position-relative" data-menu-open="">
                                     <i class="cl-icon-menu"></i>
                                 </button>
                             </div>
@@ -41,12 +41,12 @@ class Header {
             </div>
     `;
 
-        // add class for <header>
-        header.classList.add("header");
+    // add class for <header>
+    header.classList.add("header");
 
-        // prepend header of main
-        main.parentElement.prepend(header);
-    }
+    // prepend header of main
+    main.parentElement.prepend(header);
+  }
 }
 
 new Header();

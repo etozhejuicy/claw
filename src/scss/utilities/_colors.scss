@@ -39,6 +39,24 @@
   --green-rgb: 101, 203, 130;
   --red: #ec7a7a;
   --red-rgb: 236, 122, 122;
+  --grey-100: #f7f7f8;
+  --grey-100-rgb: 247, 247, 248;
+  --grey-200: #e7e9eb;
+  --grey-200-rgb: 231, 233, 235;
+  --grey-300: #d2d6da;
+  --grey-300-rgb: 210, 214, 218;
+  --grey-400: #9fa6ad;
+  --grey-400-rgb: 159, 166, 173;
+  --grey-500: #6e7881;
+  --grey-500-rgb: 110, 120, 129;
+  --grey-600: #51585f;
+  --grey-600-rgb: 81, 88, 95;
+  --grey-700: #3f4449;
+  --grey-700-rgb: 63, 68, 73;
+  --grey-800: #2a2d2f;
+  --grey-800-rgb: 42, 45, 47;
+  --grey-900: #222222;
+  --grey-900-rgb: 34, 34, 34;
 
   --body-bg-color: var(--white-rgb);
   --body-text-color: var(--black-rgb);
@@ -68,6 +86,17 @@ $black: #000000;
 $vk: #0077ff;
 $transparent: transparent;
 
+// grey palette
+$grey-100: #f7f7f8;
+$grey-200: #e7e9eb;
+$grey-300: #d2d6da;
+$grey-400: #9fa6ad;
+$grey-500: #6e7881;
+$grey-600: #51585f;
+$grey-700: #3f4449;
+$grey-800: #2a2d2f;
+$grey-900: #222222;
+
 // exp
 $colors: (
   $primary: "primary",
@@ -83,7 +112,17 @@ $colors: (
   $vk: "vk",
   $grey: "grey",
   $green: "green",
-  $transparent: "transparent"
+  $transparent: "transparent",
+
+  $grey-100: "grey-100",
+  $grey-200: "grey-200",
+  $grey-300: "grey-300",
+  $grey-400: "grey-400",
+  $grey-500: "grey-500",
+  $grey-600: "grey-600",
+  $grey-700: "grey-700",
+  $grey-800: "grey-800",
+  $grey-900: "grey-900",
 );
 
 @each $color, $value in $colors {

@@ -29,7 +29,8 @@ body {
   font-weight: 400;
   line-height: 150%;
   color: rgba(var(--body-text-color), 1);
-  background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+  background-color: var(--grey-100);
+  // background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
   // background-color: rgba(var(--body-bg-color), 1);
   // background-image: radial-gradient(
   //         87.08% 87.08% at 0% 0%,

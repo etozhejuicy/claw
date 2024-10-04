@@ -5,7 +5,7 @@
   #{$prefix}-switch-margin: 0.125rem;
   #{$prefix}-switch-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23ffffff'/%3E%3C/svg%3E%0A");
   #{$prefix}-switch-bg: var(--black);
-  #{$prefix}-switch-bg-size: 0.95rem;
+  #{$prefix}-switch-bg-size: 0.85rem;
   #{$prefix}-switch-border-radius: 2rem;
   #{$prefix}-switch-border-color: var(--black);
   #{$prefix}-switch-border-width: 0.0625rem;
@@ -21,7 +21,8 @@
     // margin-left: calc(var(#{$prefix}-switch-gutter) * -1);
     background-image: var(#{$prefix}-switch-image);
     background-position: calc(var(#{$prefix}-switch-border-width) * 3) 50%;
-    background-size: var(#{$prefix}-switch-bg-size) var(#{$prefix}-switch-bg-size);
+    background-size: var(#{$prefix}-switch-bg-size)
+      var(#{$prefix}-switch-bg-size);
     background-repeat: no-repeat;
     background-color: var(#{$prefix}-switch-bg);
     border-color: var(#{$prefix}-switch-border-color);
@@ -35,8 +36,7 @@
     color-adjust: exact;
     print-color-adjust: exact;
     cursor: pointer;
-    transition:
-      background-position 0.15s ease-in-out,
+    transition: background-position 0.15s ease-in-out,
       background-image 0.15s ease-in-out;
     @media (prefers-reduced-motion: reduce) {
       transition: none;
@@ -45,8 +45,12 @@
       opacity: 0.95;
     }
     &:checked {
-      background-position: calc(100% - (var(#{$prefix}-switch-border-width) * 3)) 50%;
-      background-size: 0.95rem 0.95rem;
+      background-position: calc(
+          100% - (var(#{$prefix}-switch-border-width) * 3)
+        )
+        50%;
+      background-size: var(#{$prefix}-switch-bg-size)
+        var(#{$prefix}-switch-bg-size);
     }
     &[disabled],
     &:disabled {

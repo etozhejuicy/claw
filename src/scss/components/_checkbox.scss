@@ -3,7 +3,7 @@
   #{$prefix}-form-input-margin: 0.125rem;
   #{$prefix}-form-input-color: var(--grey-rgb);
   #{$prefix}-form-check-bg: rgba(var(--white), 0.2);
-  #{$prefix}-form-check-bg-size: 0.75rem;
+  #{$prefix}-form-check-bg-size: 0.65rem;
   #{$prefix}-border-width: 0.0625rem;
   #{$prefix}-border-color: rgba(var(#{$prefix}-form-input-color), 0.5);
   #{$prefix}-border-radius: 0.25rem;
@@ -13,7 +13,9 @@
 
 .form-check {
   position: relative;
-  min-height: calc(var(#{$prefix}-form-input-margin) + var(#{$prefix}-form-input-size));
+  min-height: calc(
+    var(#{$prefix}-form-input-margin) + var(#{$prefix}-form-input-size)
+  );
   padding-left: var(#{$prefix}-form-input-size);
   margin-bottom: var(#{$prefix}-form-input-margin);
   & .form-check-input {

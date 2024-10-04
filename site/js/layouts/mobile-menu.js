@@ -1,25 +1,26 @@
 import logo from "/logo.svg";
 
 let now = new Date().getFullYear();
-const menu = document.createElement('aside');
+const menu = document.createElement("aside");
 
 class MobileMenu {
-    constructor() {
-        window.addEventListener("DOMContentLoaded", () => {
-            this.init();
-        });
-    }
+  constructor() {
+    window.addEventListener("DOMContentLoaded", () => {
+      this.init();
+    });
+  }
 
-    init() {
-        let main = document.querySelector("main");
+  init() {
+    let main = document.querySelector("main");
 
-        menu.classList.add("menu");
-        main.after(menu);
-        this.menuInit();
-    }
+    menu.classList.add("menu");
+    main.after(menu);
+    this.menuInit();
+  }
 
-    menuInit() {
-        menu.innerHTML = `
+  menuInit() {
+    menu.innerHTML =
+      `
             <div class="menu-wrapper">
                 <div class="menu-header">
                     <div class="container">
@@ -27,13 +28,15 @@ class MobileMenu {
                             <div class="row justify-content-between">
                                 <div class="col-auto">
                                     <div class="menu-header-logo">
-                                        <img data-src="` + logo + `" class="lazyload" />
+                                        <img data-src="` +
+      logo +
+      `" class="lazyload" />
                                         <a href="./" class="stretched-link"></a>
                                     </div>
                                 </div>
                                 <div class="col-auto">
                                     <div class="menu-header-button">
-                                        <button type="button" class="btn btn-primary btn-dimmed btn-colored btn-icon btn-icon-burger position-relative" data-menu-close="">
+                                        <button type="button" class="btn btn-grey-600 btn-dimmed btn-colored btn-icon btn-icon-burger position-relative" data-menu-close="">
                                             <i class="cl-icon-cross"></i>
                                         </button>
                                     </div>
@@ -50,39 +53,40 @@ class MobileMenu {
                 <div class="menu-copyrite">
                     <div class="container">
                         <span class="fs-4 text-grey-500">
-                            © Клешня (Claw) ` + now + `
+                            © Клешня (Claw) ` +
+      now +
+      `
                         </span>
                     </div>
                 </div>
             </div>
         `;
 
-        this.events();
-    }
+    this.events();
+  }
 
-    events() {
-        let menuOpenElem = document.querySelector('[data-menu-open]'),
-            menuCloseElem = document.querySelector('[data-menu-close]');
+  events() {
+    let menuOpenElem = document.querySelector("[data-menu-open]"),
+      menuCloseElem = document.querySelector("[data-menu-close]");
 
-        menuOpenElem.addEventListener("click", () => {
-            this.open();
-        });
+    menuOpenElem.addEventListener("click", () => {
+      this.open();
+    });
 
+    menuCloseElem.addEventListener("click", () => {
+      this.close();
+    });
+  }
 
-        menuCloseElem.addEventListener("click", () => {
-            this.close();
-        });
-    }
+  open() {
+    menu.classList.add("menu-show");
+    document.documentElement.classList.add("menu-open");
+  }
 
-    open() {
-        menu.classList.add("menu-show");
-        document.documentElement.classList.add("menu-open");
-    }
-
-    close() {
-        menu.classList.remove("menu-show");
-        document.documentElement.classList.remove("menu-open");
-    }
+  close() {
+    menu.classList.remove("menu-show");
+    document.documentElement.classList.remove("menu-open");
+  }
 }
 
 new MobileMenu();

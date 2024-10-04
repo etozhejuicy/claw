@@ -1,3 +1,5 @@
+// todo: include card-border
+
 :root {
   --card-text-color: var(--body-text-color);
   --card-body-padding-x: 1rem;
@@ -7,6 +9,10 @@
   --card-body-line-height: 150%;
   --card-body-letter-spacing: unset;
   --card-border-radius: 1rem;
+  --card-border-width: 0.0625rem;
+  --card-border-style: solid;
+  --card-border-color: var(--black-rgb);
+  --card-border-color-opacity: 0.125;
   --card-background-image: initial;
   --card-background-color: var(--white);
   --card-box-shadow: unset;
@@ -23,6 +29,12 @@
   position: relative;
   z-index: 1;
   display: block;
+  border-width: var(--card-border-width);
+  border-style: var(--card-border-style);
+  border-color: rgba(
+    var(--card-border-color),
+    var(--card-border-color-opacity)
+  );
   border-radius: var(--card-border-radius);
   background-color: var(--card-background-color);
   box-shadow: var(--card-box-shadow);
@@ -73,12 +85,14 @@
     }
   }
   &-shadowed {
-    --card-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
+    --card-box-shadow: 0rem 0.0625rem 0.0469rem 0rem
+        rgba(var(--white-rgb), 0.15) inset,
       0rem -0.0625rem 0.0625rem 0rem rgba(var(--true-black-rgb), 0.33) inset;
   }
   &-outline {
     background-color: unset;
-    --card-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset;
+    --card-box-shadow: 0rem 0.0625rem 0.0469rem 0rem
+      rgba(var(--white-rgb), 0.15) inset;
   }
   &-glass {
     --card-background-color: rgba(var(--dark-grey-rgb), 0.125);
@@ -107,7 +121,10 @@
         &:is(.btn-dimmed) {
           #{$prefix}-btn-color: rgba(var(--card-elements-accent-color), 1);
           #{$prefix}-btn-bg: rgba(var(--card-elements-accent-color), 0.1);
-          #{$prefix}-btn-border-color: rgba(var(--card-elements-accent-color), 0.1);
+          #{$prefix}-btn-border-color: rgba(
+            var(--card-elements-accent-color),
+            0.1
+          );
         }
       }
     }
@@ -118,7 +135,10 @@
       & .btn-interesting {
         #{$prefix}-btn-active-color: rgba(var(--card-elements-accent-color), 1);
         #{$prefix}-btn-active-bg: rgba(var(--card-elements-accent-color), 0.1);
-        #{$prefix}-btn-active-border-color: rgba(var(--card-elements-accent-color), 0.1);
+        #{$prefix}-btn-active-border-color: rgba(
+          var(--card-elements-accent-color),
+          0.1
+        );
       }
     }
   }

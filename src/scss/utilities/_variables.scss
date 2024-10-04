@@ -16,13 +16,13 @@ $breakpoint-xxl: 1400px;
 $breakpoint-xxxl: 1600px;
 
 $breakpoints: (
-    "breakpoint-xs": 0,
-    "breakpoint-sm": 576px,
-    "breakpoint-md": 768px,
-    "breakpoint-lg": 992px,
-    "breakpoint-xl": 1200px,
-    "breakpoint-xxl": 1400px,
-    "breakpoint-xxxl": 1600px
+  "breakpoint-xs": 0,
+  "breakpoint-sm": 576px,
+  "breakpoint-md": 768px,
+  "breakpoint-lg": 992px,
+  "breakpoint-xl": 1200px,
+  "breakpoint-xxl": 1400px,
+  "breakpoint-xxxl": 1600px,
 );
 // Breakpoints
 
@@ -36,13 +36,13 @@ $breakpointclass-xxl: xxl;
 $breakpointclass-xxxl: xxxl;
 
 $breakpointclasses: (
-    "breakpointclass-xs": "xs",
-    "breakpointclass-sm": "sm",
-    "breakpointclass-md": "md",
-    "breakpointclass-lg": "lg",
-    "breakpointclass-xl": "xl",
-    "breakpointclass-xxl": "xxl",
-    "breakpointclass-xxxl": "xxxl"
+  "breakpointclass-xs": "xs",
+  "breakpointclass-sm": "sm",
+  "breakpointclass-md": "md",
+  "breakpointclass-lg": "lg",
+  "breakpointclass-xl": "xl",
+  "breakpointclass-xxl": "xxl",
+  "breakpointclass-xxxl": "xxxl",
 );
 // Breakpoints class
 
@@ -55,12 +55,12 @@ $r-xl: 1440;
 $r-xxxl: 1600;
 
 $responsives: (
-    $r-xs: 375,
-    $r-sm: 576,
-    $r-md: 768,
-    $r-lg: 992,
-    $r-xl: 1440,
-    $r-xxxl: 1600
+  $r-xs: 375,
+  $r-sm: 576,
+  $r-md: 768,
+  $r-lg: 992,
+  $r-xl: 1440,
+  $r-xxxl: 1600,
 );
 // responsive
 
@@ -70,9 +70,9 @@ $border-2: 0.125rem;
 $border-3: 0.25rem;
 
 $borders: (
-    $border-1: "1",
-    $border-2: "2",
-    $border-3: "3"
+  $border-1: "1",
+  $border-2: "2",
+  $border-3: "3",
 );
 
 $border-none: none;
@@ -82,11 +82,11 @@ $border-dashed: dashed;
 $border-double: double;
 
 $borderStyles: (
-    $border-none: "none",
-    $border-solid: "solid",
-    $border-dotted: "dotted",
-    $border-dashed: "dashed",
-    $border-double: "double"
+  $border-none: "none",
+  $border-solid: "solid",
+  $border-dotted: "dotted",
+  $border-dashed: "dashed",
+  $border-double: "double",
 );
 // borders
 
@@ -94,13 +94,13 @@ $borderStyles: (
 $col-auto: auto;
 
 $cols: (
-    $col-auto: "auto"
+  $col-auto: "auto",
 );
 
 $row-col-auto: auto;
 
 $row-cols: (
-    $row-col-auto: "auto"
+  $row-col-auto: "auto",
 );
 
 $gutter-0: 0rem;
@@ -111,12 +111,12 @@ $gutter-4: 1.5rem;
 $gutter-5: 3rem;
 
 $gutters: (
-    $gutter-0: "0",
-    $gutter-1: "1",
-    $gutter-2: "2",
-    $gutter-3: "3",
-    $gutter-4: "4",
-    $gutter-5: "5"
+  $gutter-0: "0",
+  $gutter-1: "1",
+  $gutter-2: "2",
+  $gutter-3: "3",
+  $gutter-4: "4",
+  $gutter-5: "5",
 );
 // cols
 
@@ -149,32 +149,32 @@ $dimension-min: min;
 $dimension-max: max;
 
 $dimensions: (
-    $dimension-0: 0%,
-    $dimension-5: 5%,
-    $dimension-10: 10%,
-    $dimension-15: 15%,
-    $dimension-20: 20%,
-    $dimension-25: 25%,
-    $dimension-30: 30%,
-    $dimension-35: 35%,
-    $dimension-40: 40%,
-    $dimension-45: 45%,
-    $dimension-50: 50%,
-    $dimension-55: 55%,
-    $dimension-60: 60%,
-    $dimension-65: 65%,
-    $dimension-70: 70%,
-    $dimension-75: 75%,
-    $dimension-80: 80%,
-    $dimension-85: 85%,
-    $dimension-90: 90%,
-    $dimension-95: 95%,
-    $dimension-100: 100%,
-    $dimension-auto: auto,
-    $dimension-fit: fit-content,
-    $dimension-fill: fill-available,
-    $dimension-min: min-content,
-    $dimension-max: max-content
+  $dimension-0: 0%,
+  $dimension-5: 5%,
+  $dimension-10: 10%,
+  $dimension-15: 15%,
+  $dimension-20: 20%,
+  $dimension-25: 25%,
+  $dimension-30: 30%,
+  $dimension-35: 35%,
+  $dimension-40: 40%,
+  $dimension-45: 45%,
+  $dimension-50: 50%,
+  $dimension-55: 55%,
+  $dimension-60: 60%,
+  $dimension-65: 65%,
+  $dimension-70: 70%,
+  $dimension-75: 75%,
+  $dimension-80: 80%,
+  $dimension-85: 85%,
+  $dimension-90: 90%,
+  $dimension-95: 95%,
+  $dimension-100: 100%,
+  $dimension-auto: auto,
+  $dimension-fit: fit-content,
+  $dimension-fill: fill-available,
+  $dimension-min: min-content,
+  $dimension-max: max-content,
 );
 // dimensions
 
@@ -193,18 +193,18 @@ $display-table-cell: table-cell;
 $display-none: none;
 
 $displays: (
-    $display-block: "block",
-    $display-inline: "inline",
-    $display-inline-block: "inline-block",
-    $display-flex: "flex",
-    $display-inline-flex: "inline-flex",
-    $display-grid: "grid",
-    $display-inline-grid: "inline-grid",
-    $display-list: "list",
-    $display-table: "table",
-    $display-table-row: "table-row",
-    $display-table-cell: "table-cell",
-    $display-none: "none"
+  $display-block: "block",
+  $display-inline: "inline",
+  $display-inline-block: "inline-block",
+  $display-flex: "flex",
+  $display-inline-flex: "inline-flex",
+  $display-grid: "grid",
+  $display-inline-grid: "inline-grid",
+  $display-list: "list",
+  $display-table: "table",
+  $display-table-row: "table-row",
+  $display-table-cell: "table-cell",
+  $display-none: "none",
 );
 // display
 
@@ -223,30 +223,30 @@ $flex-nowrap: nowrap;
 $flex-wrap-reverse: wrap-reverse;
 
 $flex-directions: (
-    $flex-row: "row",
-    $flex-column: "column",
-    $flex-row-reverse: "row-reverse",
-    $flex-column-reverse: "column-reverse"
+  $flex-row: "row",
+  $flex-column: "column",
+  $flex-row-reverse: "row-reverse",
+  $flex-column-reverse: "column-reverse",
 );
 
 $flex-wraps: (
-    $flex-wrap: "wrap",
-    $flex-nowrap: "nowrap",
-    $flex-wrap-reverse: "wrap-reverse"
+  $flex-wrap: "wrap",
+  $flex-nowrap: "nowrap",
+  $flex-wrap-reverse: "wrap-reverse",
 );
 
 $flex-grows: (
-    $flex-grow-0: "0",
-    $flex-grow-1: "1"
+  $flex-grow-0: "0",
+  $flex-grow-1: "1",
 );
 
 $flex-shrinks: (
-    $flex-shrink-0: "0",
-    $flex-shrink-1: "1"
+  $flex-shrink-0: "0",
+  $flex-shrink-1: "1",
 );
 
 $flex-fills: (
-    $flex-fill: "fill"
+  $flex-fill: "fill",
 );
 // flexbox
 
@@ -264,17 +264,17 @@ $bf-blur-9: 0.5625rem;
 $bf-blur-10: 0.625rem;
 
 $blurs: (
-    $bf-blur-0: "0",
-    $bf-blur-1: "1",
-    $bf-blur-2: "2",
-    $bf-blur-3: "3",
-    $bf-blur-4: "4",
-    $bf-blur-5: "5",
-    $bf-blur-6: "6",
-    $bf-blur-7: "7",
-    $bf-blur-8: "8",
-    $bf-blur-9: "9",
-    $bf-blur-10: "10"
+  $bf-blur-0: "0",
+  $bf-blur-1: "1",
+  $bf-blur-2: "2",
+  $bf-blur-3: "3",
+  $bf-blur-4: "4",
+  $bf-blur-5: "5",
+  $bf-blur-6: "6",
+  $bf-blur-7: "7",
+  $bf-blur-8: "8",
+  $bf-blur-9: "9",
+  $bf-blur-10: "10",
 );
 // filters
 
@@ -287,12 +287,12 @@ $position-static: static;
 $position-unset: unset;
 
 $positions: (
-    $position-absolute: "absolute",
-    $position-relative: "relative",
-    $position-fixed: "fixed",
-    $position-sticky: "sticky",
-    $position-static: "static",
-    $position-unset: "unset"
+  $position-absolute: "absolute",
+  $position-relative: "relative",
+  $position-fixed: "fixed",
+  $position-sticky: "sticky",
+  $position-static: "static",
+  $position-unset: "unset",
 );
 // positions
 
@@ -303,10 +303,10 @@ $direction-right: right;
 $direction-bottom: bottom;
 
 $directions: (
-    $direction-top: "top",
-    $direction-left: "left",
-    $direction-right: "right",
-    $direction-bottom: "bottom"
+  $direction-top: "top",
+  $direction-left: "left",
+  $direction-right: "right",
+  $direction-bottom: "bottom",
 );
 // directions
 
@@ -818,12 +818,12 @@ $text-start: start;
 $text-end: end;
 
 $aligns: (
-    $text-left: "left",
-    $text-right: "right",
-    $text-center: "center",
-    $text-justify: "justify",
-    $text-start: "start",
-    $text-end: "end"
+  $text-left: "left",
+  $text-right: "right",
+  $text-center: "center",
+  $text-justify: "justify",
+  $text-start: "start",
+  $text-end: "end",
 );
 
 // font-variant
@@ -832,9 +832,9 @@ $fvp-super: super;
 $fvp-normal: normal;
 
 $fv-positions: (
-    $fvp-sub: "sub",
-    $fvp-super: "super",
-    $fvp-normal: "normal"
+  $fvp-sub: "sub",
+  $fvp-super: "super",
+  $fvp-normal: "normal",
 );
 
 // font-weight
@@ -852,18 +852,18 @@ $fw-bolder: bolder;
 $fw-lighter: lighter;
 
 $weights: (
-    $fw-100: "100",
-    $fw-200: "200",
-    $fw-300: "300",
-    $fw-400: "400",
-    $fw-500: "500",
-    $fw-600: "600",
-    $fw-700: "700",
-    $fw-800: "800",
-    $fw-900: "900",
-    $fw-bold: "bold",
-    $fw-bolder: "bolder",
-    $fw-lighter: "lighter"
+  $fw-100: "100",
+  $fw-200: "200",
+  $fw-300: "300",
+  $fw-400: "400",
+  $fw-500: "500",
+  $fw-600: "600",
+  $fw-700: "700",
+  $fw-800: "800",
+  $fw-900: "900",
+  $fw-bold: "bold",
+  $fw-bolder: "bolder",
+  $fw-lighter: "lighter",
 );
 
 // font-size
@@ -877,14 +877,14 @@ $fs-xs: 0.875rem;
 $fs-lg: 1.125rem;
 
 $sizes: (
-    $fs-1: "1",
-    $fs-2: "2",
-    $fs-3: "3",
-    $fs-4: "4",
-    $fs-5: "5",
-    $fs-6: "6",
-    $fs-xs: "xs",
-    $fs-lg: "lg"
+  $fs-1: "1",
+  $fs-2: "2",
+  $fs-3: "3",
+  $fs-4: "4",
+  $fs-5: "5",
+  $fs-6: "6",
+  $fs-xs: "xs",
+  $fs-lg: "lg",
 );
 
 // line-height
@@ -899,15 +899,15 @@ $ln-md: 0.75;
 $ln-lg: 1.25;
 
 $lineHeights: (
-    $ln-0: "0",
-    $ln-1: "1",
-    $ln-2: "2",
-    $ln-3: "3",
-    $ln-4: "4",
-    $ln-xs: "xs",
-    $ln-sm: "sm",
-    $ln-md: "md",
-    $ln-lg: "lg"
+  $ln-0: "0",
+  $ln-1: "1",
+  $ln-2: "2",
+  $ln-3: "3",
+  $ln-4: "4",
+  $ln-xs: "xs",
+  $ln-sm: "sm",
+  $ln-md: "md",
+  $ln-lg: "lg",
 );
 // text
 
@@ -920,12 +920,12 @@ $va-text-bottom: text-bottom;
 $va-text-top: text-top;
 
 $vertical-aligns: (
-    $va-baseline: "baseline",
-    $va-top: "top",
-    $va-middle: "middle",
-    $va-bottom: "bottom",
-    $va-text-bottom: "text-bottom",
-    $va-text-top: "text-top"
+  $va-baseline: "baseline",
+  $va-top: "top",
+  $va-middle: "middle",
+  $va-bottom: "bottom",
+  $va-text-bottom: "text-bottom",
+  $va-text-top: "text-top",
 );
 // vertical-align
 
@@ -942,15 +942,15 @@ $align-items-self-end: self-end;
 $align-items-unset: unset;
 
 $align-items: (
-    $align-items-baseline: "baseline",
-    $align-items-center: "center",
-    $align-items-normal: "normal",
-    $align-items-start: "start",
-    $align-items-end: "end",
-    $align-items-stretch: "stretch",
-    $align-items-self-start: "self-start",
-    $align-items-self-end: "self-end",
-    $align-items-unset: "unset"
+  $align-items-baseline: "baseline",
+  $align-items-center: "center",
+  $align-items-normal: "normal",
+  $align-items-start: "start",
+  $align-items-end: "end",
+  $align-items-stretch: "stretch",
+  $align-items-self-start: "self-start",
+  $align-items-self-end: "self-end",
+  $align-items-unset: "unset",
 );
 
 // align-content
@@ -966,16 +966,16 @@ $align-contents-space-evenly: space-evenly;
 $align-contents-unset: unset;
 
 $align-contents: (
-    $align-contents-baseline: "baseline",
-    $align-contents-center: "center",
-    $align-contents-normal: "normal",
-    $align-contents-start: "start",
-    $align-contents-end: "end",
-    $align-contents-stretch: "stretch",
-    $align-contents-space-around: "around",
-    $align-contents-space-between: "between",
-    $align-contents-space-evenly: "evenly",
-    $align-contents-unset: "unset"
+  $align-contents-baseline: "baseline",
+  $align-contents-center: "center",
+  $align-contents-normal: "normal",
+  $align-contents-start: "start",
+  $align-contents-end: "end",
+  $align-contents-stretch: "stretch",
+  $align-contents-space-around: "around",
+  $align-contents-space-between: "between",
+  $align-contents-space-evenly: "evenly",
+  $align-contents-unset: "unset",
 );
 
 // align-self
@@ -990,15 +990,15 @@ $align-selfs-self-end: self-end;
 $align-selfs-unset: unset;
 
 $align-selfs: (
-    $align-selfs-baseline: "baseline",
-    $align-selfs-center: "center",
-    $align-selfs-normal: "normal",
-    $align-selfs-start: "start",
-    $align-selfs-end: "end",
-    $align-selfs-stretch: "stretch",
-    $align-selfs-self-start: "self-start",
-    $align-selfs-self-end: "self-end",
-    $align-selfs-unset: "unset"
+  $align-selfs-baseline: "baseline",
+  $align-selfs-center: "center",
+  $align-selfs-normal: "normal",
+  $align-selfs-start: "start",
+  $align-selfs-end: "end",
+  $align-selfs-stretch: "stretch",
+  $align-selfs-self-start: "self-start",
+  $align-selfs-self-end: "self-end",
+  $align-selfs-unset: "unset",
 );
 // flexbox
 
@@ -1006,7 +1006,7 @@ $align-selfs: (
 $m-auto: auto;
 
 $margins: (
-    $m-auto: "auto"
+  $m-auto: "auto",
 );
 // margin
 
@@ -1016,17 +1016,27 @@ $rounded-pill: 50rem;
 $rounded-circle: 50%;
 
 $roundeds: (
-    $rounded: "",
-    $rounded-pill: "pill",
-    $rounded-circle: "circle"
+  $rounded: "",
+  $rounded-pill: "pill",
+  $rounded-circle: "circle",
 );
 // radius
+
+// shadows
+$shadow-initial: var(--shadow-initial);
+$shadow-none: var(--shadow-none);
+
+$shadows: (
+  $shadow-initial: "initial",
+  $shadow-none: "none",
+);
+// shadows
 
 // order
 $order-first: "first";
 
 $orders: (
-    $order-first: -1
+  $order-first: -1,
 );
 // order
 
@@ -1038,11 +1048,11 @@ $object-fit-scale: scale-down;
 $object-fit-none: none;
 
 $object-fits: (
-    $object-fit-contain: contain,
-    $object-fit-cover: cover,
-    $object-fit-fill: fill,
-    $object-fit-scale: scale,
-    $object-fit-none: none
+  $object-fit-contain: contain,
+  $object-fit-cover: cover,
+  $object-fit-fill: fill,
+  $object-fit-scale: scale,
+  $object-fit-none: none,
 );
 // object-fit
 
@@ -1054,11 +1064,11 @@ $object-position-bottom: bottom;
 $object-position-center: center;
 
 $object-positions: (
-    $object-position-top: top,
-    $object-position-left: left,
-    $object-position-right: right,
-    $object-position-bottom: bottom,
-    $object-position-center: center
+  $object-position-top: top,
+  $object-position-left: left,
+  $object-position-right: right,
+  $object-position-bottom: bottom,
+  $object-position-center: center,
 );
 // object-position
 
@@ -1086,27 +1096,27 @@ $opacity-95: 95;
 $opacity-100: 100;
 
 $opacities: (
-    $opacity-0: 0,
-    $opacity-5: 5,
-    $opacity-10: 0.1,
-    $opacity-15: 0.15,
-    $opacity-20: 0.2,
-    $opacity-25: 0.25,
-    $opacity-30: 0.3,
-    $opacity-35: 0.35,
-    $opacity-40: 0.4,
-    $opacity-45: 0.45,
-    $opacity-50: 0.5,
-    $opacity-55: 0.55,
-    $opacity-60: 0.6,
-    $opacity-65: 0.65,
-    $opacity-70: 0.7,
-    $opacity-75: 0.75,
-    $opacity-80: 0.8,
-    $opacity-85: 0.85,
-    $opacity-90: 0.9,
-    $opacity-95: 0.95,
-    $opacity-100: 1
+  $opacity-0: 0,
+  $opacity-5: 5,
+  $opacity-10: 0.1,
+  $opacity-15: 0.15,
+  $opacity-20: 0.2,
+  $opacity-25: 0.25,
+  $opacity-30: 0.3,
+  $opacity-35: 0.35,
+  $opacity-40: 0.4,
+  $opacity-45: 0.45,
+  $opacity-50: 0.5,
+  $opacity-55: 0.55,
+  $opacity-60: 0.6,
+  $opacity-65: 0.65,
+  $opacity-70: 0.7,
+  $opacity-75: 0.75,
+  $opacity-80: 0.8,
+  $opacity-85: 0.85,
+  $opacity-90: 0.9,
+  $opacity-95: 0.95,
+  $opacity-100: 1,
 );
 // opacity
 
@@ -1118,11 +1128,11 @@ $overflow-visible: visible;
 $overflow-clip: clip;
 
 $overflows: (
-    $overflow-hidden: "hidden",
-    $overflow-auto: "auto",
-    $overflow-scroll: "scroll",
-    $overflow-visible: "visible",
-    $overflow-clip: "clip"
+  $overflow-hidden: "hidden",
+  $overflow-auto: "auto",
+  $overflow-scroll: "scroll",
+  $overflow-visible: "visible",
+  $overflow-clip: "clip",
 );
 // overflow
 
@@ -1133,10 +1143,10 @@ $aspect-ratio-16x9: 16x9;
 $aspect-ratio-21x9: 21x9;
 
 $aspect-ratios: (
-    $aspect-ratio-1x1: "100%",
-    $aspect-ratio-4x3: "75%",
-    $aspect-ratio-16x9: "56.25%",
-    $aspect-ratio-21x9: "42.8571428571%"
+  $aspect-ratio-1x1: "100%",
+  $aspect-ratio-4x3: "75%",
+  $aspect-ratio-16x9: "56.25%",
+  $aspect-ratio-21x9: "42.8571428571%",
 );
 // ratio
 
@@ -1147,10 +1157,10 @@ $pointer-event-all: all;
 $pointer-event-fill: fill;
 
 $pointer-events: (
-    $pointer-event-none: "none",
-    $pointer-event-auto: "auto",
-    $pointer-event-all: "all",
-    $pointer-event-fill: "fill"
+  $pointer-event-none: "none",
+  $pointer-event-auto: "auto",
+  $pointer-event-all: "all",
+  $pointer-event-fill: "fill",
 );
 // pointer-events
 
