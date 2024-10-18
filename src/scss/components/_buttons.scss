@@ -114,12 +114,24 @@
     }
   }
   &-sm {
-    padding: calc(var(#{$prefix}-btn-padding-y) - 0.25rem)
-      calc(var(#{$prefix}-btn-padding-x) - 0.25rem);
+    padding: calc(var(#{$prefix}-btn-padding-y) / 0.5)
+      calc(var(#{$prefix}-btn-padding-x) / 0.5);
+    &:is(.btn-icon) {
+      font-size: calc(var(#{$prefix}-btn-font-size) - 15%);
+      & i {
+        font-size: calc(var(#{$prefix}-btn-font-size) - 15%);
+      }
+    }
   }
   &-lg {
-    padding: calc(var(#{$prefix}-btn-padding-y) + 0.56rem)
-      calc(var(#{$prefix}-btn-padding-x) + 0.25rem);
+    padding: calc(var(#{$prefix}-btn-padding-y) * 1.25)
+      calc(var(#{$prefix}-btn-padding-x) * 1.25);
+    &:is(.btn-icon) {
+      font-size: calc(var(#{$prefix}-btn-font-size) + 35%);
+      & i {
+        font-size: calc(var(#{$prefix}-btn-font-size) + 35%);
+      }
+    }
   }
   &-rounded {
     #{$prefix}-border-radius: 50rem;

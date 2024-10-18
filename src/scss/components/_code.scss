@@ -27,10 +27,12 @@
 .code,
 code {
   position: relative;
-  overflow: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   &-content {
     border-radius: var(--code-content-border-radius);
-    // overflow: hidden; // to do remove
   }
   &-title {
     display: flex;
@@ -71,29 +73,29 @@ code {
       rgba(var(--code-body-border-color), var(--code-body-border-opacity));
     border-radius: var(--code-content-border-radius);
     overflow: auto;
-    &:is(.copied) {
-      &::after {
-        content: "Скопировано";
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--black);
-        color: var(--white);
-        border-radius: var(--code-content-border-radius);
-      }
-    }
   }
   &:is(.disabled),
   &:is([disabled]) {
     pointer-events: none;
     user-select: none;
     opacity: 0.5;
+  }
+  &:is(.copied) {
+    &::before {
+      content: "Скопировано";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 50;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--black);
+      color: var(--white);
+      border-radius: var(--code-content-border-radius);
+    }
   }
 }

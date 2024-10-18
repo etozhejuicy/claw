@@ -35,10 +35,10 @@ class CodeBlock {
           .writeText(codeText)
 
           .then(() => {
-            codeBody.classList.add("copied");
+            code.classList.add("copied");
 
             setTimeout(() => {
-              codeBody.classList.remove("copied");
+              code.classList.remove("copied");
             }, 2000);
           })
 
