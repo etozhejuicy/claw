@@ -271,47 +271,47 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </h5>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-icon btn-primary rounded-circle">
+                                        <button type="button" class="btn btn-icon btn-primary">
                                             <i class="cl-icon-clock"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-icon btn-secondary rounded-circle">
+                                        <button type="button" class="btn btn-icon btn-secondary">
                                             <i class="cl-icon-keyboard"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-icon btn-danger rounded-circle">
+                                        <button type="button" class="btn btn-icon btn-danger">
                                             <i class="cl-icon-cart"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-icon btn-warning rounded-circle">
+                                        <button type="button" class="btn btn-icon btn-warning">
                                             <i class="cl-icon-copy"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-icon btn-success rounded-circle">
+                                        <button type="button" class="btn btn-icon btn-success">
                                             <i class="cl-icon-profile"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-icon btn-white rounded-circle">
+                                        <button type="button" class="btn btn-icon btn-white">
                                             <i class="cl-icon-image"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-icon btn-vk rounded-circle">
+                                        <button type="button" class="btn btn-icon btn-vk">
                                             <i class="cl-icon-mobile"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-icon btn-orange rounded-circle">
+                                        <button type="button" class="btn btn-icon btn-orange">
                                             <i class="cl-icon-pencil"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-icon btn-purple rounded-circle">
+                                        <button type="button" class="btn btn-icon btn-purple">
                                             <i class="cl-icon-search"></i>
                                         </button>
                                     </div>
@@ -321,7 +321,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-<pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-primary btn-dimmed btn-colored btn-outline-primary"&gt;
+<pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-icon btn-primary"&gt;
     &lt;i class="cl-icon-search"&gt;&lt;/i&gt;
 &lt;/button&gt;</code></pre>
                                             </div>

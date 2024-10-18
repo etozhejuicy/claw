@@ -10,59 +10,58 @@ Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/cla
 
 #### The status of utility readiness:
 
-- [x]  align
-- [ ]  colors
-- [x]  border
-- [x]  cols
-- [x]  container
-- [x]  dimensions
-- [x]  display
-- [x]  filter
-- [x]  flexbox
-- [ ]  grid
-- [x]  icons
-- [x]  margin
-- [x]  object-fit
-- [x]  object-position
-- [x]  opacity
-- [x]  order
-- [x]  overflow
-- [x]  padding
-- [x]  pointer-events
-- [ ]  placeholder
-- [x]  prefix
-- [x]  positions
-- [x]  ratio
-- [x]  rounded
-- [x]  responsive
-- [x]  stretched-link
-- [x]  text
-- [ ]  variables
-- [x]  visibility
-- [x]  z-index
-
+- [x] align
+- [ ] colors
+- [x] border
+- [x] cols
+- [x] container
+- [x] dimensions
+- [x] display
+- [x] filter
+- [x] flexbox
+- [ ] grid
+- [x] icons
+- [x] margin
+- [x] object-fit
+- [x] object-position
+- [x] opacity
+- [x] order
+- [x] overflow
+- [x] padding
+- [x] pointer-events
+- [ ] placeholder
+- [x] prefix
+- [x] positions
+- [x] ratio
+- [x] rounded
+- [x] responsive
+- [x] stretched-link
+- [x] text
+- [ ] variables
+- [x] visibility
+- [x] z-index
 
 #### The status of components readiness:
 
-- [x]  background
-- [x]  badge
-- [x]  buttons
-- [ ]  cards
-- [x]  checks, radios & switches
-- [ ]  code & quote
-- [ ]  counter
-- [ ]  devider
-- [ ]  forms
-- [ ]  groups & stacks
-- [ ]  links
-- [ ]  list
-- [ ]  modals
-- [ ]  popover
-- [ ]  progressbar
-- [ ]  range
-- [ ]  select
-- [ ]  shadow
-- [ ]  spinners
-- [ ]  stretched
-- [ ]  table
-- [ ]  tabs
+- [x] background
+- [x] badge
+- [x] buttons
+- [ ] cards
+- [x] checks, radios & switches
+- [x] code & quote
+- [ ] counter
+- [ ] devider
+- [ ] forms
+- [ ] groups & stacks
+- [ ] links
+- [ ] list
+- [ ] modals
+- [ ] popover
+- [ ] progressbar
+- [ ] range
+- [ ] select
+- [ ] shadow
+- [ ] spinners
+- [ ] stretched
+- [ ] table
+- [ ] tabs
