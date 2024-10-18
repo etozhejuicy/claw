@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#start").innerHTML = `
+  document.querySelector("#start").innerHTML = `
 <!-- Утилиты -->
 <div class="row g-5">
     <div class="col-12" id="start">
@@ -19,10 +19,10 @@ window.addEventListener("DOMContentLoaded", () => {
                             <div class="blockquote-content">
                                 <div class="blockquote-body">
                                     <div>
-                                        <span class="text-secondary">// utility</span><br>
-                                        @import "./utilities/utility";<br>
                                         <span class="text-secondary">// normalize</span><br>
                                         @import "./utilities/normalize";<br>
+                                        <span class="text-secondary">// utility</span><br>
+                                        @import "./utilities/utility";<br>
                                         <span class="text-secondary">// responsive</span><br>
                                         @import "./utilities/responsive";
                                     </div>

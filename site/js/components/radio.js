@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#radio").innerHTML = `
+  document.querySelector("#radio").innerHTML = `
           <div class="row g-5">
               <div class="col-12">
                   <div class="card shadow-none">
@@ -54,21 +54,19 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </p>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">
-                                                &lt;div class="form-check"&gt;
-                                                &lt;input class="form-check-input" type="radio" id="radioExample"&gt;
-                                                &lt;label class="form-check-label" for="radioExample"&gt;
-                                                    Радио
-                                                &lt;/label&gt;
-                                                &lt;/div&gt;
-                                                </div>
+<pre class="hljs html code-body"><code>&lt;div class="form-check"&gt;
+    &lt;input class="form-check-input" type="radio" id="radioExample"&gt;
+    &lt;label class="form-check-label" for="radioExample"&gt;
+        Радио
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                     <div class="col-12">
                                         <p>
@@ -380,21 +378,19 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">
-                                                &lt;div class="form-check form-check-primary form-check-colored"&gt;
-                                                &lt;input class="form-check-input" type="radio" id="radioExample"&gt;
-                                                &lt;label class="form-check-label" for="radioExample"&gt;
-                                                    Чекбокс
-                                                &lt;/label&gt;
-                                                &lt;/div&gt;
-                                                </div>
+<pre class="hljs html code-body"><code>&lt;div class="form-check form-check-primary form-check-colored"&gt;
+    &lt;input class="form-check-input" type="radio" id="radioExample"&gt;
+    &lt;label class="form-check-label" for="radioExample"&gt;
+        Чекбокс
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                     <div class="col-12">
                                         <p>
@@ -481,21 +477,19 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">
-                                                &lt;div class="form-check form-check-primary form-check-outline"&gt;
-                                                &lt;input class="form-check-input" type="radio" id="radioExample"&gt;
-                                                &lt;label class="form-check-label" for="radioExample"&gt;
-                                                    Радио
-                                                &lt;/label&gt;
-                                                &lt;/div&gt;
-                                                </div>
+<pre class="hljs html code-body"><code>&lt;div class="form-check form-check-primary form-check-outline"&gt;
+    &lt;input class="form-check-input" type="radio" id="radioExample"&gt;
+    &lt;label class="form-check-label" for="radioExample"&gt;
+        Радио
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                     <div class="col-12">
                                         <p>

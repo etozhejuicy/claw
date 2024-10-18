@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#buttons").innerHTML = `
+  document.querySelector("#buttons").innerHTML = `
     <div class="row g-5">
     <!-- Кнопки обычные -->
     <div class="col-12">
@@ -34,15 +34,14 @@ window.addEventListener("DOMContentLoaded", () => {
                                         <button type="button" class="btn btn-white">Кнопка 6</button>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">&lt;button type="button" class="btn btn-primary"&gt;Кнопка 1&lt;/button&gt;
-                                                </div>
+                                                <pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-primary"&gt;Кнопка 1&lt;/button&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                     <div class="col-12">
                                         <p>
@@ -105,15 +104,14 @@ window.addEventListener("DOMContentLoaded", () => {
                                         <button type="button" class="btn btn-white btn-shadow">Кнопка 6</button>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">&lt;button type="button" class="btn btn-primary btn-shadow"&gt;Кнопка 1 с тенью&lt;/button&gt;
-                                                </div>
+                                                <pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-primary btn-shadow"&gt;Кнопка 1 с тенью&lt;/button&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -143,15 +141,14 @@ window.addEventListener("DOMContentLoaded", () => {
                                         <button type="button" class="btn btn-white btn-voluminous">Кнопка 6</button>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">&lt;button type="button" class="btn btn-primary btn-voluminous"&gt;Кнопка 1 с подсветкой&lt;/button&gt;
-                                                </div>
+                                                <pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-primary btn-voluminous"&gt;Кнопка 1 с подсветкой&lt;/button&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -181,15 +178,14 @@ window.addEventListener("DOMContentLoaded", () => {
                                         <button type="button" class="btn btn-white btn-outline-white">Кнопка 6</button>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">&lt;button type="button" class="btn btn-primary btn-outline-primary"&gt;Кнопка 1 с обводкой&lt;/button&gt;
-                                                </div>
+                                                <pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-primary btn-outline-primary"&gt;Кнопка 1 с обводкой&lt;/button&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -219,15 +215,14 @@ window.addEventListener("DOMContentLoaded", () => {
                                         <button type="button" class="btn btn-white btn-colored btn-outline-white">Кнопка 6</button>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">&lt;button type="button" class="btn btn-primary btn-colored btn-outline-primary"&gt;Кнопка 1 с обводкой + цвет&lt;/button&gt;
-                                                </div>
+                                                <pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-primary btn-colored btn-outline-primary"&gt;Кнопка 1 с обводкой + цвет&lt;/button&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -257,15 +252,14 @@ window.addEventListener("DOMContentLoaded", () => {
                                         <button type="button" class="btn btn-white btn-dimmed btn-colored">Кнопка 6</button>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">&lt;button type="button" class="btn btn-primary btn-dimmed btn-colored btn-outline-primary"&gt;Кнопка 1 с затемнением + цвет&lt;/button&gt;
-                                                </div>
+                                                <pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-primary btn-dimmed btn-colored btn-outline-primary"&gt;Кнопка 1 с затемнением + цвет&lt;/button&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -322,17 +316,16 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </button>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">&lt;button type="button" class="btn btn-primary btn-dimmed btn-colored btn-outline-primary"&gt;
-                                                        &lt;i class="cl-icon-search"&gt;&lt;/i&gt;
-                                                    &lt;/button&gt;
-                                                </div>
+<pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-primary btn-dimmed btn-colored btn-outline-primary"&gt;
+    &lt;i class="cl-icon-search"&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -350,18 +343,17 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </button>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">&lt;button type="button" class="btn btn-icon btn-primary">
-                                                        &lt;i class="cl-icon-hour-glass"&gt;&lt;/i&gt;
-                                                        &lt;span class="btn-icon-text">Кнопка 1&lt;/span&gt;
-                                                    &lt;/button&gt;
-                                                </div>
+<pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-icon btn-primary">
+    &lt;i class="cl-icon-hour-glass"&gt;&lt;/i&gt;
+    &lt;span class="btn-icon-text">Кнопка 1&lt;/span&gt;
+&lt;/button&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-secondary">
@@ -370,18 +362,17 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </button>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">&lt;button type="button" class="btn btn-icon btn-primary">
-                                                        &lt;span class="btn-icon-text">Кнопка 2&lt;/span&gt;
-                                                        &lt;i class="cl-icon-bubble"&gt;&lt;/i&gt;
-                                                    &lt;/button&gt;
-                                                </div>
+<pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-icon btn-primary">
+    &lt;span class="btn-icon-text">Кнопка 2&lt;/span&gt;
+    &lt;i class="cl-icon-bubble"&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-danger">
@@ -391,19 +382,18 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </button>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">&lt;button type="button" class="btn btn-icon btn-primary">
-                                                        &lt;i class="cl-icon-drawer"&gt;&lt;/i&gt;
-                                                        &lt;span class="btn-icon-text">Кнопка 3&lt;/span&gt;
-                                                        &lt;i class="cl-icon-upload"&gt;&lt;/i&gt;
-                                                    &lt;/button&gt;
-                                                </div>
+<pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-icon btn-primary">
+    &lt;i class="cl-icon-drawer"&gt;&lt;/i&gt;
+    &lt;span class="btn-icon-text">Кнопка 3&lt;/span&gt;
+    &lt;i class="cl-icon-upload"&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

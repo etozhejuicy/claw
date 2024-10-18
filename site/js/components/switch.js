@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#switch").innerHTML = `
+  document.querySelector("#switch").innerHTML = `
           <div class="row g-5">
               <div class="col-12">
                   <div class="card shadow-none">
@@ -46,21 +46,19 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </p>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">
-                                                &lt;div class="form-switch"&gt;
-                                                &lt;input class="form-switch-input" type="checkbox" id="switchExample"&gt;
-                                                &lt;label class="form-switch-label" for="switchExample"&gt;
-                                                    Переключатель
-                                                &lt;/label&gt;
-                                                &lt;/div&gt;
-                                                </div>
+<pre class="hljs html code-body"><code>&lt;div class="form-switch"&gt;
+    &lt;input class="form-switch-input" type="checkbox" id="switchExample"&gt;
+    &lt;label class="form-switch-label" for="switchExample"&gt;
+        Переключатель
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                     <div class="col-12">
                                         <p>
@@ -224,21 +222,19 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">
-                                                &lt;div class="form-switch form-switch-primary form-switch-colored"&gt;
-                                                &lt;input class="form-switch-input" type="checkbox" id="switchExample"&gt;
-                                                &lt;label class="form-switch-label" for="switchExample"&gt;
-                                                    Переключатель
-                                                &lt;/label&gt;
-                                                &lt;/div&gt;
-                                                </div>
+<pre class="hljs html code-body"><code>&lt;div class="form-switch form-switch-primary form-switch-colored"&gt;
+    &lt;input class="form-switch-input" type="checkbox" id="switchExample"&gt;
+    &lt;label class="form-switch-label" for="switchExample"&gt;
+        Переключатель
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                     <div class="col-12">
                                         <p>
@@ -320,21 +316,19 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <code class="code">
+                                        <div class="code">
                                             <div class="code-content">
                                                 <div class="code-title">
                                                     Пример использования
                                                 </div>
-                                                <div class="code-body">
-                                                &lt;div class="form-switch form-switch-primary form-switch-outline"&gt;
-                                                &lt;input class="form-switch-input" type="checkbox" id="switchExample"&gt;
-                                                &lt;label class="form-switch-label" for="switchExample"&gt;
-                                                    Переключатель
-                                                &lt;/label&gt;
-                                                &lt;/div&gt;
-                                                </div>
+<pre class="hljs html code-body"><code>&lt;div class="form-switch form-switch-primary form-switch-outline"&gt;
+    &lt;input class="form-switch-input" type="checkbox" id="switchExample"&gt;
+    &lt;label class="form-switch-label" for="switchExample"&gt;
+        Переключатель
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
                                             </div>
-                                        </code>
+                                        </div>
                                     </div>
                                     <div class="col-12">
                                         <p>

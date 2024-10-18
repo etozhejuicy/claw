@@ -1,6 +1,7 @@
 :root {
   --blockquote-content-border-radius: 0.5rem;
   --blockquote-title-font-weight: 700;
+  --blockquote-title-font-size: 0.875rem;
   --blockquote-title-color: var(--white);
   --blockquote-title-background-color: var(--primary-rgb);
   --blockquote-title-background-opacity: 1;
@@ -9,7 +10,7 @@
   --blockquote-body-font-family: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
   --blockquote-body-font-weight: 500;
-  --blockquote-body-font-size: 0.875rem;
+  --blockquote-body-font-size: 1rem;
   --blockquote-body-font-style: italic;
   --blockquote-body-background-color: var(--grey-rgb);
   --blockquote-body-background-opacity: 0.5;
@@ -26,6 +27,7 @@ blockquote {
   }
   &-title {
     font-weight: var(--blockquote-title-font-weight);
+    font-size: var(--blockquote-title-font-size);
     background-color: rgba(
       var(--blockquote-title-background-color),
       var(--blockquote-title-background-opacity)
