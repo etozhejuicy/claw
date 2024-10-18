@@ -10,4 +10,5 @@ import "./layouts/header.js";
 import "./layouts/navigation.js";
 import "./layouts/mobile-menu.js";
 
+import "./modules/code.js";
 import "./modules/highlight.js";

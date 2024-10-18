@@ -76,8 +76,7 @@ blockquote {
         var(--blockquote-body-border-color),
         var(--blockquote-body-border-opacity)
       );
-    border-radius: var(--blockquote-content-border-radius)
-      var(--blockquote-content-border-radius);
+    border-radius: var(--blockquote-content-border-radius);
     white-space: var(--blockquote-body-white-space);
     &::after {
       content: "\e977";
