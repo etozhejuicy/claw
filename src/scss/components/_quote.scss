@@ -6,14 +6,22 @@
   --blockquote-title-background-color: var(--primary-rgb);
   --blockquote-title-background-opacity: 1;
   --blockquote-title-padding: 0.5rem;
-  --blockquote-body-padding: 0.5rem;
+  --blockquote-title-border-width: 0.0625rem;
+  --blockquote-title-border-style: solid;
+  --blockquote-title-border-color: var(--grey-900-rgb);
+  --blockquote-title-border-opacity: 0.25;
+  --blockquote-body-padding: 1rem;
   --blockquote-body-font-family: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
   --blockquote-body-font-weight: 500;
   --blockquote-body-font-size: 1rem;
   --blockquote-body-font-style: italic;
-  --blockquote-body-background-color: var(--grey-rgb);
+  --blockquote-body-background-color: var(--grey-200-rgb);
   --blockquote-body-background-opacity: 0.5;
+  --blockquote-body-border-width: 0.0625rem;
+  --blockquote-body-border-style: solid;
+  --blockquote-body-border-color: var(--grey-900-rgb);
+  --blockquote-body-border-opacity: 0.25;
   --blockquote-body-white-space: normal;
 }
 
@@ -23,7 +31,7 @@ blockquote {
   margin-right: 0;
   &-content {
     border-radius: var(--blockquote-content-border-radius);
-    overflow: hidden;
+    // overflow: hidden;
   }
   &-title {
     font-weight: var(--blockquote-title-font-weight);
@@ -34,8 +42,25 @@ blockquote {
     );
     color: var(--blockquote-title-color);
     padding: var(--blockquote-title-padding);
+    border: var(--blockquote-title-border-width)
+      var(--blockquote-title-border-style)
+      rgba(
+        var(--blockquote-title-border-color),
+        var(--blockquote-title-border-opacity)
+      );
+    border-radius: var(--blockquote-content-border-radius)
+      var(--blockquote-content-border-radius) 0 0;
+    & + * {
+      &:is(.blockquote-body) {
+        border-top: none;
+        border-radius: 0 0 var(--blockquote-content-border-radius)
+          var(--blockquote-content-border-radius) !important;
+      }
+    }
   }
   &-body {
+    position: relative;
+    z-index: 1;
     background-color: rgba(
       var(--blockquote-body-background-color),
       var(--blockquote-body-background-opacity)
@@ -45,6 +70,26 @@ blockquote {
     font-size: var(--blockquote-body-font-size);
     font-style: var(--blockquote-body-font-style);
     padding: var(--blockquote-body-padding);
+    border: var(--blockquote-body-border-width)
+      var(--blockquote-body-border-style)
+      rgba(
+        var(--blockquote-body-border-color),
+        var(--blockquote-body-border-opacity)
+      );
+    border-radius: var(--blockquote-content-border-radius)
+      var(--blockquote-content-border-radius);
     white-space: var(--blockquote-body-white-space);
+    &::after {
+      content: "\e977";
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-family: "clawicons" !important;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      padding: 0.5rem;
+    }
   }
 }

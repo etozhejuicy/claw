@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#text").innerHTML = `
+  document.querySelector("#text").innerHTML = `
     <div class="row g-5">
     <!-- Заголовки -->
     <div class="col-12" id="title">
@@ -25,52 +25,48 @@ window.addEventListener("DOMContentLoaded", () => {
                         <h6 class="h6">Заголовок 6</h6>
                     </div>
                     <div class="col-12">
-                        <code class="code">
+                        <div class="code">
                             <div class="code-content">
                                 <div class="code-title">
                                     Пример использования
                                 </div>
-                                <div class="code-body">&lt;h1 class="h1"&gt; Заголовок 1 &lt;/h1&gt;</div>
+<pre class="hljs html code-body"><code>&lt;h1 class="h1"&gt; Заголовок 1 &lt;/h1&gt;</code></pre>
                             </div>
-                        </code>
+                        </div>
                     </div>
                     <div class="col-12">
                         <p>
                             Градация элементов заголовка представлена ниже:
                         </p>
-                        <blockquote class="blockquote">
-                            <div class="blockquote-content">
-                                <div class="blockquote-body">
-                                    <ul class="list list-nobullet m-0">
-                                        <li class="list-item">.h1</li>
-                                        <li class="list-item">.h2</li>
-                                        <li class="list-item">.h3</li>
-                                        <li class="list-item">.h4</li>
-                                        <li class="list-item">.h5</li>
-                                        <li class="list-item">.h6</li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="code">
+                            <div class="code-content">
+<pre class="hljs css code-body"><code>.h1
+.h2
+.h3
+.h4
+.h5
+.h6</code></pre>
                             </div>
-                        </blockquote>
+                        </div>
                     </div>
                     <div class="col-12">
                         <p>
                             Стандартно для всех заголовков заданы параметры стилей:
                         </p>
-                        <blockquote class="blockquote">
-                            <div class="blockquote-content">
-                                <div class="blockquote-body">
-                                    <div>
-                                        {<br>
-                                        &nbsp;    font-weight: 600;<br>
-                                        &nbsp;    font-style: normal;<br>
-                                        &nbsp;    line-height: 120%;<br>
-                                        &nbsp;    letter-spacing: -0.035rem;<br>
-                                        }
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="code">
+                            <div class="code-content">
+<pre class="hljs css code-body"><code>{
+    font-weight: 600;
+    font-style: normal;
+    line-height: 120%;
+    letter-spacing: -0.035rem;
+}</code></pre>
                             </div>
-                        </blockquote>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,17 +89,16 @@ window.addEventListener("DOMContentLoaded", () => {
                         </p>
                     </div>
                     <div class="col-12">
-                        <code class="code">
+                        <div class="code">
                             <div class="code-content">
                                 <div class="code-title">
                                     Пример использования
                                 </div>
-                                <div class="code-body">&lt;p&gt;
-                                        Это параграф.
-                                    &lt;/p&gt;
-                                </div>
+<pre class="hljs html code-body"><code>&lt;p&gt;
+    Это параграф.
+&lt;/p&gt;</code></pre>
                             </div>
-                        </code>
+                        </div>
                     </div>
                     <div class="col-12">
                         <p>
@@ -145,40 +140,37 @@ window.addEventListener("DOMContentLoaded", () => {
                         </p>
                     </div>
                     <div class="col-12">
-                        <code class="code">
+                        <div class="code">
                             <div class="code-content">
                                 <div class="code-title">
                                     Пример использования
                                 </div>
-                                <div class="code-body">&lt;p class="fw-100"&gt;
-                                        Ваш текст
-                                    &lt;/p&gt;
-                                </div>
+<pre class="hljs html code-body"><code>&lt;p class="fw-100"&gt;
+    Ваш текст
+&lt;/p&gt;</code></pre>
                             </div>
-                        </code>
+                        </div>
                     </div>
                     <div class="col-12">
                         <p>
                             Вот как числовые значения влияют на насыщенность шрифта:
                         </p>
-                        <blockquote class="blockquote">
-                            <div class="blockquote-content">
-                                <div class="blockquote-body">
-                                    <ul class="list list-nobullet m-0">
-                                        <li class="list-item">.fw-100</li>
-                                        <li class="list-item">.fw-200</li>
-                                        <li class="list-item">.fw-300</li>
-                                        <li class="list-item">.fw-400</li>
-                                        <li class="list-item">.fw-500</li>
-                                        <li class="list-item">.fw-600</li>
-                                        <li class="list-item">.fw-600</li>
-                                        <li class="list-item">.fw-700</li>
-                                        <li class="list-item">.fw-800</li>
-                                        <li class="list-item">.fw-900</li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="code">
+                            <div class="code-content">
+<pre class="hljs css code-body"><code>.fw-100
+.fw-200
+.fw-300
+.fw-400
+.fw-500
+.fw-600
+.fw-600
+.fw-700
+.fw-800
+.fw-900</code></pre>
                             </div>
-                        </blockquote>
+                        </div>
                     </div>
                     <div class="col-12">
                         <p>
@@ -226,17 +218,16 @@ window.addEventListener("DOMContentLoaded", () => {
                         </p>
                     </div>
                     <div class="col-12">
-                        <code class="code">
+                        <div class="code">
                             <div class="code-content">
                                 <div class="code-title">
                                     Пример использования
                                 </div>
-                                <div class="code-body">&lt;p class="text-primary"&gt;
-                                        Ваш текст
-                                    &lt;/p&gt;
-                                </div>
+<pre class="hljs html code-body"><code>&lt;p class="text-primary"&gt;
+    Ваш текст
+&lt;/p&gt;</code></pre>
                             </div>
-                        </code>
+                        </div>
                     </div>
                     <div class="col-12">
                         <p>
@@ -252,15 +243,14 @@ window.addEventListener("DOMContentLoaded", () => {
                         </p>
                     </div>
                     <div class="col-12">
-                        <code class="code">
+                        <div class="code">
                             <div class="code-content">
                                 <div class="code-title">
                                     Пример использования
                                 </div>
-                                <div class="code-body">&lt;p class="text-primary-50"&gt; Ваш текст &lt;/div&gt;
-                                </div>
+<pre class="hljs html code-body"><code>&lt;p class="text-primary-50"&gt; Ваш текст &lt;/div&gt;</code></pre>
                             </div>
-                        </code>
+                        </div>
                     </div>
                     <div class="col-12">
                         <p>

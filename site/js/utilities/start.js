@@ -15,20 +15,16 @@ window.addEventListener("DOMContentLoaded", () => {
                         Утилиты подключены в файле <code class="text-warning">app.scss</code> через <code class="text-blue">@import</code> следующим образом:
                     </div>
                     <div class="col-12">
-                        <blockquote class="blockquote">
-                            <div class="blockquote-content">
-                                <div class="blockquote-body">
-                                    <div>
-                                        <span class="text-secondary">// normalize</span><br>
-                                        @import "./utilities/normalize";<br>
-                                        <span class="text-secondary">// utility</span><br>
-                                        @import "./utilities/utility";<br>
-                                        <span class="text-secondary">// responsive</span><br>
-                                        @import "./utilities/responsive";
-                                    </div>
-                                </div>
+                        <div class="code">
+                            <div class="code-content">
+<pre class="hljs scss code-body"><code>// normalize
+@import "./utilities/normalize";
+// utility
+@import "./utilities/utility";
+// responsive
+@import "./utilities/responsive";</code></pre>
                             </div>
-                        </blockquote>
+                        </div>
                     </div>
                     <div class="col-12">
                         <p>
