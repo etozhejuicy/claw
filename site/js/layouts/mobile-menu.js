@@ -36,7 +36,7 @@ class MobileMenu {
                                 </div>
                                 <div class="col-auto">
                                     <div class="menu-header-button">
-                                        <button type="button" class="btn btn-grey-600 btn-dimmed btn-colored btn-icon btn-icon-burger position-relative" data-menu-close="">
+                                        <button type="button" class="btn btn-grey-600 btn-sm btn-dimmed btn-colored btn-icon btn-icon-burger rounded-3" data-menu-close="">
                                             <i class="cl-icon-cross"></i>
                                         </button>
                                     </div>

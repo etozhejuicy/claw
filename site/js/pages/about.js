@@ -1,12 +1,12 @@
 class About {
-  constructor() {
-    document.addEventListener("DOMContentLoaded", () => {
-      this.init();
-    });
-  }
+    constructor() {
+        document.addEventListener("DOMContentLoaded", () => {
+            this.init();
+        });
+    }
 
-  init() {
-    document.querySelector("#app").innerHTML = `
+    init() {
+        document.querySelector("#app").innerHTML = `
             <main class="content">
             <section>
                 <div class="container">
@@ -64,7 +64,7 @@ class About {
                                             <a href="https://t.me/claw_css" target="_blank" rel="follow" class="link"><strong>Присоединяйтесь</strong></a> к сообществу Клешни (Claw) уже сегодня и начните создавать быстрее, качественнее и эффективнее!
                                         </p>
                                         <p>
-                                            <a href="https://t.me/claw_css" target="_blank" rel="follow" class="btn btn-primary">Присоединиться</a>
+                                            <a href="https://t.me/claw_css" target="_blank" rel="follow" class="btn btn-primary px-md-10">Присоединиться</a>
                                         </p>
                                     </div>
                                 </p>
@@ -75,7 +75,7 @@ class About {
             </section>
             </main>
             `;
-  }
+    }
 }
 
 new About();

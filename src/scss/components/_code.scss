@@ -11,8 +11,7 @@
   --code-title-border-color: var(--grey-900-rgb);
   --code-title-border-opacity: 0.25;
   --code-body-padding: 0.5rem;
-  --code-body-font-family: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  --code-body-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --code-body-font-weight: 500;
   --code-body-font-size: 1rem;
   --code-body-background-color: var(--grey-200-rgb);
@@ -24,8 +23,7 @@
   --code-body-white-space: unset;
 }
 
-.code,
-code {
+.code {
   position: relative;
   display: block;
   width: 100%;
@@ -41,29 +39,21 @@ code {
     justify-content: space-between;
     font-weight: var(--code-title-font-weight);
     font-size: var(--code-title-font-size);
-    background-color: rgba(
-      var(--code-title-background-color),
-      var(--code-title-background-opacity)
-    );
+    background-color: rgba(var(--code-title-background-color), var(--code-title-background-opacity));
     color: var(--code-title-color);
     padding: var(--code-title-padding);
     border: var(--code-title-border-width) var(--code-title-border-style)
       rgba(var(--code-title-border-color), var(--code-title-border-opacity));
-    border-radius: var(--code-content-border-radius)
-      var(--code-content-border-radius) 0 0;
+    border-radius: var(--code-content-border-radius) var(--code-content-border-radius) 0 0;
     & + * {
       &:is(.code-body) {
         border-top: none;
-        border-radius: 0 0 var(--code-content-border-radius)
-          var(--code-content-border-radius) !important;
+        border-radius: 0 0 var(--code-content-border-radius) var(--code-content-border-radius) !important;
       }
     }
   }
   &-body {
-    background-color: rgba(
-      var(--code-body-background-color),
-      var(--code-body-background-opacity)
-    ) !important;
+    background-color: rgba(var(--code-body-background-color), var(--code-body-background-opacity)) !important;
     font-family: var(--code-body-font-family);
     font-weight: var(--code-body-font-weight);
     font-size: var(--code-body-font-size);

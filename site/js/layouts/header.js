@@ -31,7 +31,7 @@ class Header {
                         </div>
                         <div class="col-auto">
                             <div class="header-button">
-                                <button type="button" class="btn btn-grey-600 btn-dimmed btn-colored btn-icon btn-icon-burger position-relative" data-menu-open="">
+                                <button type="button" class="btn btn-sm btn-grey-600 btn-dimmed btn-colored btn-icon btn-icon-burger rounded-3" data-menu-open="">
                                     <i class="cl-icon-menu"></i>
                                 </button>
                             </div>
