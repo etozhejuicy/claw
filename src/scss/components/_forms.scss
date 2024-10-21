@@ -25,13 +25,13 @@
         position: absolute;
         z-index: 25;
         display: block;
-        padding: var(--padding-input-y) var(--padding-input-x);
+        padding: calc(var(--padding-input-y) / 1.25) calc(var(--padding-input-x) / 1.25);
         cursor: pointer;
         &-top {
-            top: calc(var(--padding-input-y) - 0.85rem);
+            top: calc(var(--padding-input-y) / 2.25);
         }
         &-bottom {
-            bottom: calc(var(--padding-input-y) - 0.65rem);
+            bottom: calc(var(--padding-input-y) / 2.25);
         }
         &-middle {
             top: 50%;
@@ -67,6 +67,7 @@
     &-control {
         display: block;
         width: 100%;
+        padding-block-start: var(--padding-input-y);
         padding: var(--padding-input-y) var(--padding-input-x);
         font-size: var(--form-font-size);
         font-weight: var(--form-font-weight);
