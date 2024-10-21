@@ -18,8 +18,53 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </p>
                                     </div>
                                     <div class="col-12">
-                                        <div class="row g-3">
-                                            <input type="text" class="form-control" placeholder="Введите текст..." />
+                                        <input type="text" class="form-control" placeholder="Введите текст..." />
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="code">
+                                            <div class="code-content">
+                                                <div class="code-title">
+                                                    Пример использования
+                                                </div>
+<pre class="hljs html code-body"><code>&lt;input type="text" class="form-control" placeholder="Введите текст..." /&gt;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>
+                                            Вы можете задать автоматический размер для вашего поля ввода, добавив класс <code class="text-warning">.w-auto</code>
+                                        </p>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="text" class="form-control w-auto" placeholder="Введите текст..." />
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="code">
+                                            <div class="code-content">
+                                                <div class="code-title">
+                                                    Пример использования
+                                                </div>
+<pre class="hljs html code-body"><code>&lt;input type="text" class="form-control w-auto" placeholder="Введите текст..." /&gt;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <p>
+                                            Текстовое поле ввода <code>textarea</code> также поддерживается. Пример с использованием трёх строк высоты поля:
+                                        </p>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea type="text" class="form-control w-auto" rows="3" value=""></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="code">
+                                            <div class="code-content">
+                                                <div class="code-title">
+                                                    Пример использования
+                                                </div>
+<pre class="hljs html code-body"><code>&lt;textarea type="text" class="form-control w-auto" rows="3" value=""&gt;&lt;/textarea&gt;</code></pre>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
