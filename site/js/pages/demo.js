@@ -119,12 +119,22 @@ class Demo {
                                         <div class="col-12">
                                             <div class="swiper-container swiper-demo">
                                                 <div class="swiper-wrapper align-items-stretch pb-5" items-list=""></div>
-                                                <div class="swiper-pagination fs-4 fw-bold"></div>
-                                                <div class="btn btn-primary btn-icon swiper-button-next" style="--swiper-navigation-size: 2.5rem;width:var(--swiper-navigation-size);height:var(--swiper-navigation-size);--swiper-navigation-color: var(--cl-btn-color);">
-                                                    <i class="cl-icon-arrow-right"></i>
-                                                </div>
-                                                <div class="btn btn-primary btn-icon swiper-button-prev" style="--swiper-navigation-size: 2.5rem;width:var(--swiper-navigation-size);height:var(--swiper-navigation-size);--swiper-navigation-color: var(--cl-btn-color);">
-                                                    <i class="cl-icon-arrow-left"></i>
+                                                <div class="">
+                                                  <div class="row g-3">
+                                                    <div class="col-auto">
+                                                      <div class="btn btn-sm btn-primary btn-dimmed btn-colored btn-icon rounded-3" swiper-button-prev="">
+                                                          <i class="cl-icon-arrow-left"></i>
+                                                      </div>
+                                                    </div>
+                                                    <div class="col">
+                                                      <div class="w-100 h-100 fs-4 fw-600 text-center text-primary-40 mt-2" swiper-pagination=""></div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                      <div class="btn btn-sm btn-primary btn-dimmed btn-colored btn-icon rounded-3" swiper-button-next="">
+                                                          <i class="cl-icon-arrow-right"></i>
+                                                      </div>
+                                                    </div>
+                                                  </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -155,8 +165,9 @@ class Demo {
       const colItem = document.createElement("div");
       colItem.className = "swiper-slide";
       colItem.innerHTML = `
-                  <div class="card card-primary card-outline d-flex flex-column" style="width: 20rem;max-width:20rem;min-height:30rem;" item-id="${item.id
-        }">
+                  <div class="card card-primary card-outline d-flex flex-column" style="width: 20rem;max-width:20rem;min-height:30rem;" item-id="${
+                    item.id
+                  }">
                     <div class="card-content d-flex flex-column flex-fill">
                         <div class="card-header">
                             <div class="card-title text-primary">
@@ -167,8 +178,9 @@ class Demo {
                             <div class="row g-3">
                                 <div class="col-12">
                                 <div class="card-image rounded ratio ratio-16x9 lazyload overflow-hidden">
-                                    <img data-src="${item.image
-        }" class="lazyload object-fit-cover" />
+                                    <img data-src="${
+                                      item.image
+                                    }" class="lazyload object-fit-cover" />
                                 </div>
                                 </div>
                                 <div class="col-12">
@@ -182,16 +194,17 @@ class Demo {
                         </div>
                         <div class="card-footer">
                                 <div class="row g-2">
-                                  ${item.link
-          ? `
+                                  ${
+                                    item.link
+                                      ? `
                                     <div class="col-auto">
                                       <a href="${item.link}" class="btn btn-primary btn-icon w-100" target="_blank" rel="noopener noreferrer">
                                         <i class="cl-icon-link"></i>
                                       </a>
                                     </div>
                                   `
-          : ""
-        }
+                                      : ""
+                                  }
                                 </div>
                             </div>
                         </div>
@@ -221,13 +234,13 @@ class Demo {
         },
         pagination: {
           enabled: true,
-          el: ".swiper-pagination",
+          el: "[swiper-pagination]",
           type: "fraction",
         },
         navigation: {
           enabled: true,
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: "[swiper-button-next]",
+          prevEl: "[swiper-button-prev]",
         },
         allowTouchMove: true,
         grabCursor: true,
