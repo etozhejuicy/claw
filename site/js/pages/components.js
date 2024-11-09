@@ -5,6 +5,7 @@ import "../components/checkbox.js";
 import "../components/radio.js";
 import "../components/switch.js";
 import "../components/forms.js";
+import "../components/select.js";
 
 import "../block/soon.js";
 
@@ -27,6 +28,7 @@ class Components {
             <div id="radio" class="col-12"></div>
             <div id="switch" class="col-12"></div>
             <div id="forms" class="col-12"></div>
+            <div id="select" class="col-12"></div>
             <div id="soon" class="col-12"></div>
           </div>
         </div>

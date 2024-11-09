@@ -282,40 +282,6 @@ window.addEventListener("DOMContentLoaded", () => {
                     </div>
                 </div>
             </div>
-            
-            <div class="col-12">
-                <div class="card shadow-none">
-                    <div class="card-body">
-                        <div class="row g-5">
-                            <div class="col-12">
-                                <div class="row g-3">
-                                    <div class="col-12">
-                                        <h5 class="h5">
-                                            Формы вариантов
-                                        </h5>
-                                    </div>
-                                    <div class="col-12">
-                                        <p>
-                                            Данный компонент представляет собой выбор из списка возможных вариантов.
-                                        </p>
-                                    </div>
-                                    <div class="col-12">
-                                        <select class="form-select">
-                                            <option value="">Пожалуйста, выберите вариант</option>
-                                            <option value="dog">Собака</option>
-                                            <option value="cat">Кот</option>
-                                            <option value="hamster">Хомяк</option>
-                                            <option value="parrot">Попугай</option>
-                                            <option value="spider">Паук</option>
-                                            <option value="goldfish">Золотая рыбка</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     `;
 });
