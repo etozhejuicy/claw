@@ -1,8 +1,9 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "./",
+  base: "/",
   build: {
+    base: "./",
     rollupOptions: {
       fallback: "/error.html",
       input: {
