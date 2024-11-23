@@ -10,7 +10,7 @@
     #{$prefix}-select-border-color-opacity: 0.8;
     #{$prefix}-select-border-radius: 0.5rem;
     #{$prefix}-select-padding-x: 1rem;
-    #{$prefix}-select-padding-y: 1rem;
+    #{$prefix}-select-padding-y: 0.75rem;
     #{$prefix}-select-font-size: 1rem;
     #{$prefix}-select-font-weight: 400;
     #{$prefix}-select-line-height: 1.25;
@@ -58,8 +58,13 @@
     }
     &[multiple],
     &[size]:not([size="1"]) {
-        padding-right: 0.75rem;
+        padding-top: calc(var(#{$prefix}-select-padding-y) / 2);
+        padding-bottom: calc(var(#{$prefix}-select-padding-y) / 2);
         background-image: none;
+    }
+    &[size="1"] {
+        padding-top: var(#{$prefix}-select-padding-y);
+        padding-bottom: var(#{$prefix}-select-padding-y);
     }
     &:disabled {
         background-color: var(#{$prefix}-secondary-bg);

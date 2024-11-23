@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#badge").innerHTML = `
+    document.querySelector("#badge").innerHTML = `
     <div class="row g-5">
         <div class="col-12">
             <div class="card shadow-none">
@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     <div class="row g-3">
                         <div class="col-12">
                             <h5 class="h5">
-                                Бейджи (обычные)
+                                Бейджи
                             </h5>
                         </div>
                         <div class="col-12">
@@ -112,7 +112,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <div class="col-12">
                             <h5 class="h5">
-                                Бейджи (с закрашенным текстом и тонами)
+                                Бейджи (цветные)
                             </h5>
                         </div>
                         <div class="col-12">
@@ -180,71 +180,56 @@ window.addEventListener("DOMContentLoaded", () => {
                                     <!-- badge-card: Бейдж с большими внутренними отступами, badge-rings: добавляет кольца в центр бейджа, badge-colored: в зависимости от цвета бейджа задает цвет текста и возвращает исходное значения для фона бейджа -->
                                     <div class="badge badge-card badge-colored badge-primary w-100">
                                         <div class="badge-content">
-                                            <div class="badge-title">
                                                 Социализация, <br>
                                                 коммуникации
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="badge badge-card badge-colored badge-orange w-100">
                                         <div class="badge-content">
-                                            <div class="badge-title">
                                                 Личностное <br>
                                                 развитие
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="badge badge-card badge-colored badge-warning w-100">
                                         <div class="badge-content">
-                                            <div class="badge-title">
                                                 Физическое <br>
                                                 состояние
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="badge badge-card badge-colored badge-danger w-100">
                                         <div class="badge-content">
-                                            <div class="badge-title">
                                                 Деятельность, <br>
                                                 финансы
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="badge badge-card badge-colored badge-success w-100">
                                         <div class="badge-content">
-                                            <div class="badge-title">
                                                 Свободное <br>
                                                 время
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="badge badge-card badge-colored badge-blue w-100">
                                         <div class="badge-content">
-                                            <div class="badge-title">
                                                 Отдых
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <!-- Если нужен градиент, то badge-#{$color} необходимо убрать и вместо него вставить: badge-gradient -->
                                     <div class="badge badge-black badge-colored badge-card w-100">
                                         <div class="badge-content">
-                                            <div class="badge-title">
                                                 Пространства, <br>
                                                 внешние атрибуты, <br>
                                                 комфорт
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -256,11 +241,9 @@ window.addEventListener("DOMContentLoaded", () => {
                                             </div>
 <pre class="hljs html code-body"><code>&lt;div class="badge badge-black badge-colored badge-card w-100"&gt;
     &lt;div class="badge-content"&gt;
-        &lt;div class="badge-title"&gt;
-            Пространства,
-            внешние атрибуты,
-            комфорт
-        &lt;/div&gt;
+        Пространства,
+        внешние атрибуты,
+        комфорт
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>

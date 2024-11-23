@@ -165,9 +165,8 @@ class Demo {
       const colItem = document.createElement("div");
       colItem.className = "swiper-slide";
       colItem.innerHTML = `
-                  <div class="card card-primary card-outline d-flex flex-column" style="width: 20rem;max-width:20rem;min-height:30rem;" item-id="${
-                    item.id
-                  }">
+                  <div class="card card-primary card-outline d-flex flex-column" style="width: 20rem;max-width:20rem;min-height:30rem;" item-id="${item.id
+        }">
                     <div class="card-content d-flex flex-column flex-fill">
                         <div class="card-header">
                             <div class="card-title text-primary">
@@ -178,9 +177,8 @@ class Demo {
                             <div class="row g-3">
                                 <div class="col-12">
                                 <div class="card-image rounded ratio ratio-16x9 lazyload overflow-hidden">
-                                    <img data-src="${
-                                      item.image
-                                    }" class="lazyload object-fit-cover" />
+                                    <img data-src="${item.image
+        }" class="lazyload object-fit-cover" />
                                 </div>
                                 </div>
                                 <div class="col-12">
@@ -194,17 +192,16 @@ class Demo {
                         </div>
                         <div class="card-footer">
                                 <div class="row g-2">
-                                  ${
-                                    item.link
-                                      ? `
+                                  ${item.link
+          ? `
                                     <div class="col-auto">
                                       <a href="${item.link}" class="btn btn-primary btn-icon w-100" target="_blank" rel="noopener noreferrer">
                                         <i class="cl-icon-link"></i>
                                       </a>
                                     </div>
                                   `
-                                      : ""
-                                  }
+          : ""
+        }
                                 </div>
                             </div>
                         </div>
@@ -219,7 +216,7 @@ class Demo {
   }
 
   swipers() {
-    if ($(".swiper-demo").length) {
+    if (document.querySelector('.swiper-demo')) {
       var swiperDemo = new Swiper(".swiper-demo", {
         slidesPerView: "auto",
         spaceBetween: 20,

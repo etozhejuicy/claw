@@ -1,7 +1,7 @@
 // styles
 import "../scss/app.scss";
 
-import "../../src/js/modules/jquery.js";
+import "../../src/js/addons/autosize.js";
 
 import "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit";

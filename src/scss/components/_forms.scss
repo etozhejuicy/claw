@@ -1,5 +1,5 @@
 :root {
-    --padding-input-y: 1rem;
+    --padding-input-y: 0.75rem;
     --padding-input-x: 1rem;
     --form-font-size: 1rem;
     --form-line-height: 1.2rem;
@@ -42,6 +42,9 @@
             & ~ .form-control {
                 padding: var(--padding-input-y) var(--padding-input-x) var(--padding-input-y)
                     calc(var(--padding-input-x) + (var(--form-icon-width) + var(--padding-input-x)));
+            }
+            & ~ label {
+                left: calc(var(--form-icon-width) + var(--padding-input-x)) !important;
             }
             & ~ .form-check-label {
                 padding-left: calc(var(--padding-input-x) + (var(--form-icon-width) + var(--padding-input-x)));
@@ -216,7 +219,7 @@
         }
         & > .form-control:not(:-moz-placeholder-shown) ~ label {
             opacity: 0.4;
-            transform: scale(0.65) translateY(calc(var(--padding-input-y) - 1.65rem))
+            transform: scale(0.65) translateY(calc(var(--padding-input-y) - 1.5rem))
                 translateX(calc(var(--padding-input-x) - 0.5rem));
         }
         & > .form-control:focus,
@@ -229,17 +232,17 @@
         & > .form-select ~ label {
             width: 100%;
             opacity: 1;
-            transform: scale(0.65) translateY(calc(var(--padding-input-y) - 1.65rem))
+            transform: scale(0.65) translateY(calc(var(--padding-input-y) - 1.5rem))
                 translateX(calc(var(--padding-input-x) - 0.5rem));
         }
         & > .form-control:-webkit-autofill ~ label {
             opacity: 0.4;
-            transform: scale(0.65) translateY(calc(var(--padding-input-y) - 1.65rem))
+            transform: scale(0.65) translateY(calc(var(--padding-input-y) - 1.5rem))
                 translateX(calc(var(--padding-input-x) - 0.5rem));
         }
         & > .form-control:-webkit-autofill ~ label {
             opacity: 0.4;
-            transform: scale(0.65) translateY(calc(var(--padding-input-y) - 1.65rem))
+            transform: scale(0.65) translateY(calc(var(--padding-input-y) - 1.5rem))
                 translateX(calc(var(--padding-input-x) - 0.5rem));
         }
         & > .form-control-plaintext ~ label {

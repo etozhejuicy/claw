@@ -97,6 +97,41 @@ window.addEventListener("DOMContentLoaded", () => {
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="col-12">
+                                        <p>
+                                            Компонент <code>select</code> имеет мультивыбор. Чтобы активировать мультивыбор, добавьте атрибут <code>multiple</code>:
+                                        </p>
+                                    </div>
+                                    <div class="col-12">
+                                        <select class="form-select" multiple>
+                                            <option value="" disabled selected>Пожалуйста, выберите вариант</option>
+                                            <option value="dog">Собака</option>
+                                            <option value="cat">Кот</option>
+                                            <option value="hamster">Хомяк</option>
+                                            <option value="parrot">Попугай</option>
+                                            <option value="spider">Паук</option>
+                                            <option value="goldfish">Золотая рыбка</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="code">
+                                            <div class="code-content">
+                                                <div class="code-title">
+                                                    Пример использования
+                                                </div>
+<pre class="hljs html code-body"><code>&lt;select class="form-select" multiple&gt;
+    &lt;option value="" disabled selected>Пожалуйста, выберите вариант&lt;/option&gt;
+    &lt;option value="dog"&gt;Собака&lt;/option&gt;
+    &lt;option value="cat"&gt;Кот&lt;/option&gt;
+    &lt;option value="hamster"&gt;Хомяк&lt;/option&gt;
+    &lt;option value="parrot"&gt;Попугай&lt;/option&gt;
+    &lt;option value="spider"&gt;Паук&lt;/option&gt;
+    &lt;option value="goldfish"&gt;Золотая рыбка&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
