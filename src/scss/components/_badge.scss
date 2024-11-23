@@ -31,30 +31,6 @@
         #{$prefix}-badge-font-size: 1.25rem;
         #{$prefix}-badge-font-weight: 600;
     }
-    &-rings {
-        --sphere-size: 8.75rem;
-        overflow: hidden;
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: -1;
-            width: var(--sphere-size);
-            height: var(--sphere-size);
-            border-radius: 100%;
-            opacity: 0.4;
-        }
-        &::before {
-            filter: blur(2.5rem);
-            transform: translate(-50%, -50%);
-        }
-        &::after {
-            border: 0.0625rem solid rgba(var(--grey-rgb), 0.2);
-            transform: translate(-50%, -50%) scale(1.15);
-        }
-    }
     &-content {
         position: relative;
         z-index: 1;

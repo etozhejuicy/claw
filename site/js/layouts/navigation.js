@@ -68,11 +68,9 @@ class Navigation {
           const navItem = document.createElement("div");
           navItem.className = "nav-item";
           navItem.innerHTML = `
-      <a href="./${item.path}" class="nav-link ${
-            item.path === lastURLSegment ? "active" : ""
-          }" url="/${item.path}" ${
-            item.childs ? `data-popover-open="${item.path}"` : ""
-          }>
+      <a href="${item.childs ? `/${item.path}/` : `/${item.path}`}" class="nav-link ${item.path === lastURLSegment ? "active" : ""
+            }" url="/${item.path}" ${item.childs ? `data-popover-open="${item.path}"` : ""
+            }>
         <div class="nav-link-inner">
           <div class="nav-link-text">
             ${item.name}

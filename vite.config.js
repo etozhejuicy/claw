@@ -8,7 +8,7 @@ export default defineConfig({
       input: {
         index: "/index.html",
         installation: "/installation.html",
-        components: "/components.html",
+        components: "/components/index.html",
         utilities: "/utilities.html",
         about: "/about.html",
         demo: "/demo.html",
