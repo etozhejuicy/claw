@@ -21,7 +21,7 @@ class Header {
                                 <img data-src="` +
       logo +
       `" class="lazyload" />
-                                <a href="/" class="stretched-link"></a>
+                                <a href="./" class="stretched-link"></a>
                             </div>
                         </div>
                         <div class="col">
