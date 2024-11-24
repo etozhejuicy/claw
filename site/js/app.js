@@ -2,6 +2,7 @@
 import "../scss/app.scss";
 
 import "../../src/js/addons/autosize.js";
+import "../../src/js/addons/modal.js";
 
 import "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit";
