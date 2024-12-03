@@ -19,48 +19,43 @@
     vertical-align: baseline;
     background-color: var(#{$prefix}-badge-background-color);
     border-radius: var(#{$prefix}-badge-border-radius);
+
     &:empty {
         display: none;
     }
-    & > a {
+
+    &>a {
         text-decoration: none;
     }
+
     &-card {
         #{$prefix}-badge-padding-x: 2.875rem;
         #{$prefix}-badge-padding-y: 2.875rem;
         #{$prefix}-badge-font-size: 1.25rem;
         #{$prefix}-badge-font-weight: 600;
     }
+
     &-content {
         position: relative;
         z-index: 1;
-        &::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: -1;
-            width: var(--sphere-size);
-            height: var(--sphere-size);
-            border-radius: 100%;
-            opacity: 0.4;
-            border: 0.0625rem solid rgba(var(--grey-rgb), 0.1);
-            transform: translate(-50%, -50%) scale(1.25);
-        }
     }
 }
 
-@each $color, $value in $colors {
+@each $color,
+$value in $colors {
     .badge-#{$value} {
         #{$prefix}-badge-background-color: var(--#{$value});
         #{$prefix}-badge-color: var(--white);
-        @if $value == "grey" {
+
+        @if $value=="grey" {
             #{$prefix}-badge-color: var(--body-text-color);
         }
-        @if $value == "danger" {
+
+        @if $value=="danger" {
             #{$prefix}-badge-color: var(--body-text-color);
         }
-        @if $value == "white" {
+
+        @if $value=="white" {
             #{$prefix}-badge-color: var(--body-text-color);
         }
     }

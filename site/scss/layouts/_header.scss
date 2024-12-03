@@ -1,77 +1,90 @@
 :root {
-  --header-height: 3.75rem;
-  --header-backdrop-filter: blur(0.5rem);
-  --header-background-color: var(--white-rgb);
-  --header-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
-    0rem -0.0625rem 0.0625rem 0rem rgba(var(--black-rgb), 0.15) inset;
-  --header-padding-y: 0.5rem;
-  --header-padding-x: 0;
+    --header-height: 3.75rem;
+    --header-backdrop-filter: blur(0.5rem);
+    --header-background-color: var(--white-rgb);
+    --header-background-opacity: 0.75;
+    --header-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--white-rgb), 0.15) inset,
+        0rem -0.0625rem 0.0625rem 0rem rgba(var(--black-rgb), 0.15) inset;
+    --header-padding-y: 0.5rem;
+    --header-padding-x: 0;
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: var(--header-height);
-  padding: var(--header-padding-y) var(--header-padding-x);
-  background-color: rgba(var(--header-background-color), 0.75);
-  backdrop-filter: var(--header-backdrop-filter);
-  box-shadow: var(--header-box-shadow);
-  overflow: hidden;
-  animation: show-in-bottom ease-in-out 0.6s forwards;
-  transition: all 0.6s ease-in-out;
-  &-transparent {
-    --header-backdrop-filter: blur(0);
-  }
-  &-nobackground {
-    --header-background-color: transparent;
-  }
-  &-noshadow {
-    --header-box-shadow: none;
-  }
-  &-inner {
-    display: block;
-    width: 100%;
-    margin: auto;
-    & > .row {
-      --bs-gutter-x: 0.5rem;
-      --bs-gutter-y: 0.5rem;
-      align-items: center;
-    }
-  }
-  &-logo {
-    position: relative;
-    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
     display: flex;
-    width: 2.15rem;
-    height: 2.15rem;
-    transform: none;
-    transform-origin: center;
-    transition: transform 0.4s;
-    & > svg,
-    & > img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+    align-items: center;
+    width: 100%;
+    height: var(--header-height);
+    padding: var(--header-padding-y) var(--header-padding-x);
+    background-color: rgba(var(--header-background-color), var(--header-background-opacity));
+    backdrop-filter: var(--header-backdrop-filter);
+    box-shadow: var(--header-box-shadow);
+    overflow: hidden;
+    animation: show-in-bottom ease-in-out 0.6s forwards;
+    transition: all 0.6s ease-in-out;
+
+    &-transparent {
+        --header-backdrop-filter: blur(0);
     }
-    &:hover {
-      transform: rotate(-90deg) scale3d(0.8, 0.8, 0.8);
+
+    &-nobackground {
+        --header-background-color: transparent;
     }
-  }
-  &-navigation {
-    display: none;
-    @media (min-width: 768px) {
-      display: block;
+
+    &-noshadow {
+        --header-box-shadow: none;
     }
-  }
-  &-button {
-    display: block;
-    @media (min-width: 768px) {
-      display: none;
+
+    &-inner {
+        display: block;
+        width: 100%;
+        margin: auto;
+
+        &>.row {
+            --bs-gutter-x: 0.5rem;
+            --bs-gutter-y: 0.5rem;
+            align-items: center;
+        }
     }
-  }
+
+    &-logo {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: 2.15rem;
+        height: 2.15rem;
+        transform: none;
+        transform-origin: center;
+        transition: transform 0.4s;
+
+        &>svg,
+        &>img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        &:hover {
+            transform: rotate(-90deg) scale3d(0.8, 0.8, 0.8);
+        }
+    }
+
+    &-navigation {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    &-button {
+        display: block;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
 }
