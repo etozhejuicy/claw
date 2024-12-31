@@ -24,7 +24,7 @@
         display: none;
     }
 
-    &>a {
+    & > a {
         text-decoration: none;
     }
 
@@ -41,22 +41,21 @@
     }
 }
 
-@each $color,
-$value in $colors {
+@each $color, $value in $colors {
     .badge-#{$value} {
         #{$prefix}-badge-background-color: var(--#{$value});
         #{$prefix}-badge-color: var(--white);
 
-        @if $value=="grey" {
+        @if $value== "grey" {
             #{$prefix}-badge-color: var(--body-text-color);
         }
 
-        @if $value=="danger" {
+        @if $value== "danger" {
             #{$prefix}-badge-color: var(--body-text-color);
         }
 
-        @if $value=="white" {
-            #{$prefix}-badge-color: var(--body-text-color);
+        @if $value== "white" {
+            #{$prefix}-badge-color: var(--black);
         }
     }
 
@@ -64,6 +63,10 @@ $value in $colors {
         &:is(.badge-#{$value}) {
             #{$prefix}-badge-background-color: rgba(var(--#{$value}-rgb), 0.125);
             #{$prefix}-badge-color: var(--#{$value});
+
+            @if $value == "black" {
+                #{$prefix}-badge-color: var(--body-text-color);
+            }
         }
     }
 }
