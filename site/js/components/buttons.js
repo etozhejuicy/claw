@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#buttons").innerHTML = `
+    document.querySelector("#buttons").innerHTML = `
     <div class="row g-5">
     <!-- Кнопки обычные -->
     <div class="col-12">
@@ -15,6 +15,80 @@ window.addEventListener("DOMContentLoaded", () => {
                                             Кнопки
                                         </h5>
                                     </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn">Пример кнопки</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="code">
+                                            <div class="code-content">
+                                                <div class="code-title">
+                                                    Пример использования
+                                                </div>
+                                                <pre class="hljs html code-body"><code>&lt;button type="button" class="btn"&gt;Пример кнопки&lt;/button&gt;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <p>
+                                            Кнопки могут иметь разные размеры в зависимости от задач интерфейса. Получить самый маленький размер возможно при помощи специального класса <code class="text-warning">.btn-xs</code> Для примера, так выглядит самая маленькая кнопка:
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-xs">Пример кнопки</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="code">
+                                            <div class="code-content">
+                                                <div class="code-title">
+                                                    Пример использования
+                                                </div>
+                                                <pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-xs"&gt;Пример кнопки&lt;/button&gt;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <p>
+                                            Можно получить размер чуть больше, чем предыдущий при помощи специального класса <code class="text-warning">.btn-sm</code> Для примера, так выглядит маленькая кнопка:
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-sm">Пример кнопки</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="code">
+                                            <div class="code-content">
+                                                <div class="code-title">
+                                                    Пример использования
+                                                </div>
+                                                <pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-sm"&gt;Пример кнопки&lt;/button&gt;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <p>
+                                            А, вот так выглядит большая кнопка с использованием специального класса <code class="text-warning">.btn-lg</code>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-lg">Пример кнопки</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="code">
+                                            <div class="code-content">
+                                                <div class="code-title">
+                                                    Пример использования
+                                                </div>
+                                                <pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-lg"&gt;Пример кнопки&lt;/button&gt;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row g-3">
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-primary">Кнопка 1</button>
                                     </div>
