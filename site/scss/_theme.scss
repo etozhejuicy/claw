@@ -38,19 +38,32 @@
     }
 
     .hljs {
-        color: light-dark(#24292e, var(--grey-400));
+        color: light-dark(#24292e, var(--grey-300));
     }
 
     .hljs-name,
     .hljs-quote,
     .hljs-selector-tag,
     .hljs-selector-pseudo {
-        color: light-dark(#22863a, var(--green));
+        color: light-dark(#22863a, var(--blue));
+    }
+
+    .hljs-attr,
+    .hljs-attribute,
+    .hljs-literal,
+    .hljs-meta,
+    .hljs-number,
+    .hljs-operator,
+    .hljs-variable,
+    .hljs-selector-attr,
+    .hljs-selector-class,
+    .hljs-selector-id {
+        color: light-dark(#005cc5, var(--green));
     }
 
     .hljs-regexp,
     .hljs-string,
     .hljs-meta .hljs-string {
-        color: light-dark(#032f62, var(--primary));
+        color: light-dark(var(--warning), var(--warning));
     }
 }

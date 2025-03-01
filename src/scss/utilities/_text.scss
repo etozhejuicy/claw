@@ -10,7 +10,7 @@ h6 {
   margin-bottom: 0;
   font-style: normal;
   font-weight: 600;
-  line-height: 120%;
+  line-height: 1.25;
   letter-spacing: -0.035rem;
 }
 
@@ -19,18 +19,23 @@ h,
   &1 {
     font-size: 3.5rem;
   }
+
   &2 {
     font-size: 2.85rem;
   }
+
   &3 {
     font-size: 1.75rem;
   }
+
   &4 {
     font-size: 1.5rem;
   }
+
   &5 {
     font-size: 1.25rem;
   }
+
   &6 {
     font-size: 1rem;
   }
@@ -149,6 +154,7 @@ h,
 @each $color, $value in $colors {
   .text-#{$value} {
     color: rgba(var(--#{$value}-rgb), 1) !important;
+
     @each $opacity, $level in $opacities {
       &-#{$opacity} {
         color: rgba(var(--#{$value}-rgb), #{$level}) !important;

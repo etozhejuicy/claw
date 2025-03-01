@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#text").innerHTML = `
+    document.querySelector("#text").innerHTML = `
     <div class="row g-5">
     <!-- Заголовки -->
     <div class="col-12" id="title">
@@ -62,7 +62,7 @@ window.addEventListener("DOMContentLoaded", () => {
 <pre class="hljs css code-body"><code>{
     font-weight: 600;
     font-style: normal;
-    line-height: 120%;
+    line-height: 1.25;
     letter-spacing: -0.035rem;
 }</code></pre>
                             </div>

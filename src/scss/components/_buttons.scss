@@ -1,15 +1,20 @@
 .btn {
-    #{$prefix}-btn-padding-x: 1rem;
-    #{$prefix}-btn-padding-y: 1rem;
+    #{$prefix}-btn-padding-x: 0.75rem;
+    #{$prefix}-btn-padding-y: 0.75rem;
     #{$prefix}-btn-font-size: 1rem;
     #{$prefix}-btn-font-weight: 600;
-    #{$prefix}-btn-line-height: 120%;
-    #{$prefix}-btn-color: var(--dark);
-    #{$prefix}-btn-bg: var(--grey);
+    #{$prefix}-btn-line-height: 1.25;
+    #{$prefix}-btn-color: var(--grey-900);
+    #{$prefix}-btn-bg: var(--grey-200);
     #{$prefix}-btn-border-width: 0;
-    #{$prefix}-btn-border-color: var(--grey);
+    #{$prefix}-btn-border-color: var(--grey-200);
     #{$prefix}-border-radius: 0.5rem;
-    #{$prefix}-btn-hover-border-color: transparent;
+    #{$prefix}-btn-hover-color: var(--grey-700);
+    #{$prefix}-btn-hover-bg: var(--grey-100);
+    #{$prefix}-btn-hover-border-color: var(--grey-100);
+    #{$prefix}-btn-active-color: var(--grey-900);
+    #{$prefix}-btn-active-bg: var(--grey-300);
+    #{$prefix}-btn-active-border-color: var(--grey-300);
     #{$prefix}-btn-filter: unset;
     #{$prefix}-btn-box-shadow: unset;
     #{$prefix}-btn-disabled-opacity: 0.65;
@@ -18,8 +23,8 @@
     display: inline-block;
     padding: var(#{$prefix}-btn-padding-y) var(#{$prefix}-btn-padding-x);
     font-feature-settings:
-        "clig"off,
-        "liga"off;
+        "clig" off,
+        "liga" off;
     font-family: var(#{$prefix}-btn-font-family);
     font-size: var(#{$prefix}-btn-font-size);
     font-weight: var(#{$prefix}-btn-font-weight);
@@ -118,42 +123,27 @@
     }
 
     &-xs {
-        font-size: calc(var(#{$prefix}-btn-font-size) - 35%);
-        padding: calc(var(#{$prefix}-btn-padding-y) / 1.65) calc(var(#{$prefix}-btn-padding-x) / 1.65);
-
-        &:is(.btn-icon) {
-            font-size: calc(var(#{$prefix}-btn-font-size) - 35%);
-
-            & i {
-                font-size: calc(var(#{$prefix}-btn-font-size) - 35%);
-            }
-        }
+        #{$prefix}-btn-padding-y: 0.5rem;
+        #{$prefix}-btn-padding-x: 0.5rem;
+        #{$prefix}-btn-font-size: 0.75rem;
     }
 
     &-sm {
-        font-size: calc(var(#{$prefix}-btn-font-size) - 15%);
-        padding: calc(var(#{$prefix}-btn-padding-y) / 1.25) calc(var(#{$prefix}-btn-padding-x) / 1.25);
-
-        &:is(.btn-icon) {
-            font-size: calc(var(#{$prefix}-btn-font-size) - 15%);
-
-            & i {
-                font-size: calc(var(#{$prefix}-btn-font-size) - 15%);
-            }
-        }
+        #{$prefix}-btn-padding-y: 0.65rem;
+        #{$prefix}-btn-padding-x: 0.65rem;
+        #{$prefix}-btn-font-size: 0.875rem;
     }
 
     &-lg {
-        font-size: calc(var(#{$prefix}-btn-font-size) + 35%);
-        padding: calc(var(#{$prefix}-btn-padding-y) * 1.25) calc(var(#{$prefix}-btn-padding-x) * 1.25);
+        #{$prefix}-btn-padding-y: 0.875rem;
+        #{$prefix}-btn-padding-x: 0.875rem;
+        #{$prefix}-btn-font-size: 1.125rem;
+    }
 
-        &:is(.btn-icon) {
-            font-size: calc(var(#{$prefix}-btn-font-size) + 35%);
-
-            & i {
-                font-size: calc(var(#{$prefix}-btn-font-size) + 35%);
-            }
-        }
+    &-xl {
+        #{$prefix}-btn-padding-y: 1rem;
+        #{$prefix}-btn-padding-x: 1rem;
+        #{$prefix}-btn-font-size: 1.25rem;
     }
 
     &-rounded {
@@ -163,18 +153,11 @@
     &-icon {
         #{$prefix}-btn-size: var(#{$prefix}-btn-font-size);
         #{$prefix}-btn-gap: 0.5rem;
-        // TODO
-        // #{$prefix}-btn-padding-x: 1rem;
-        // #{$prefix}-btn-padding-y: 1rem;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        // TODO
-        // &:has(> *:is(.btn-icon-text)) {
-        //   #{$prefix}-btn-padding-x: 1.62rem;
-        // }
         &>svg {
             display: inline-block;
             vertical-align: middle;
@@ -195,10 +178,6 @@
                     min-width: var(#{$prefix}-btn-size);
                     min-height: var(#{$prefix}-btn-size);
                 }
-
-                &:is(i) {
-                    aspect-ratio: 1 / 1;
-                }
             }
 
             &:last-child {
@@ -209,10 +188,6 @@
                 &:is(svg) {
                     min-width: var(#{$prefix}-btn-size);
                     min-height: var(#{$prefix}-btn-size);
-                }
-
-                &:is(i) {
-                    aspect-ratio: 1 / 1;
                 }
             }
 
@@ -361,26 +336,6 @@ $value in $colors {
     .btn-#{$value}-shadow {
         #{$prefix}-btn-box-shadow: 0rem 0.0625rem 0.0469rem 0rem rgba(var(--#{$value}-rgb), 0.15) inset,
         0rem -0.0625rem 0.0625rem 0rem rgba(var(--#{$value}-rgb), 0.33) inset !important;
-    }
-
-    .btn-progress {
-
-        &:is(.btn-#{$value}),
-        &:is(.btn-outline-#{$value}) {
-            & .btn-progress-round {
-                mix-blend-mode: hue;
-                border-radius: inherit;
-                background: radial-gradient(closest-side, transparent 79%, transparent 80% 100%),
-                conic-gradient(rgba(var(--#{$value}-rgb), 0.75) calc(var(--finish-value) * 1%), transparent 0);
-            }
-
-            @if $value=="secondary" {
-                & .btn-progress-round {
-                    background: radial-gradient(closest-side, transparent 79%, transparent 80% 100%),
-                        conic-gradient(lighten($color, 15) calc(var(--finish-value) * 1%), transparent 0);
-                }
-            }
-        }
 
         &.rounded-pill {
             #{$prefix}-border-radius: var(#{$prefix}-border-radius-pill);
@@ -446,178 +401,4 @@ $value in $colors {
             #{$prefix}-btn-active-border-color: #{lighten($color, 30%)};
         }
     }
-
-    .btn-tag {
-
-        &:is(.btn-#{$value}),
-        &:is(.btn-outline-#{$value}) {
-            #{$prefix}-btn-hover-bg: var(#{$prefix}-btn-bg);
-            #{$prefix}-btn-hover-color: var(#{$prefix}-btn-color);
-            #{$prefix}-btn-hover-border-color: var(#{$prefix}-btn-border-color);
-            #{$prefix}-btn-active-bg: var(#{$prefix}-btn-bg);
-            #{$prefix}-btn-active-color: var(#{$prefix}-btn-color);
-            #{$prefix}-btn-active-border-color: var(#{$prefix}-btn-border-color);
-
-            @if $value=="secondary" {
-                #{$prefix}-btn-color: #{lighten($color, 50%)};
-                #{$prefix}-btn-bg: rgba(var(--#{$value}-rgb), 0.45);
-            }
-        }
-    }
-}
-
-@property --progress-value {
-    syntax: "<percent>";
-    initial-value: 0%;
-    inherits: false;
-}
-
-@keyframes progress {
-    to {
-        --finish-value: var(--progress-value);
-    }
-}
-
-.btn-progress {
-    &-round {
-        position: absolute;
-        top: calc(-3 * var(#{$prefix}-border-width));
-        left: calc(-3 * var(#{$prefix}-border-width));
-        z-index: -1;
-        width: calc(100% + var(#{$prefix}-border-width) * 6);
-        height: calc(100% + var(#{$prefix}-border-width) * 6);
-        border-radius: var(#{$prefix}-border-radius);
-        animation: progress 2s 1 forwards;
-    }
-
-    &-spinner {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        height: 100%;
-        transform: translate(-50%, -50%);
-        transform-origin: center center;
-
-        & .spinner-border {
-            width: 100%;
-            height: 100%;
-            #{$prefix}-spinner-border-width: 0.2rem;
-        }
-    }
-}
-
-.btn-tag {
-    #{$prefix}-btn-padding-x: 0.75rem;
-    #{$prefix}-btn-padding-y: 0.62rem;
-    #{$prefix}-btn-font-size: 0.75rem;
-    #{$prefix}-btn-font-weight: 400;
-    #{$prefix}-btn-line-height: 120%;
-
-    &-card {
-        #{$prefix}-btn-padding-x: 0.5rem;
-        #{$prefix}-btn-padding-y: 0.22rem;
-        #{$prefix}-btn-font-size: 0.875rem;
-    }
-}
-
-.btn-group,
-.btn-group-vertical {
-    position: relative;
-    display: inline-flex;
-    vertical-align: middle;
-}
-
-.btn-group>.btn,
-.btn-group-vertical>.btn {
-    position: relative;
-    flex: 1 1 auto;
-}
-
-.btn-group>.btn-check:checked+.btn,
-.btn-group>.btn-check:focus+.btn,
-.btn-group>.btn:hover,
-.btn-group>.btn:focus,
-.btn-group>.btn:active,
-.btn-group>.btn.active,
-.btn-group-vertical>.btn-check:checked+.btn,
-.btn-group-vertical>.btn-check:focus+.btn,
-.btn-group-vertical>.btn:hover,
-.btn-group-vertical>.btn:focus,
-.btn-group-vertical>.btn:active,
-.btn-group-vertical>.btn.active {
-    z-index: 1;
-}
-
-.btn-group {
-    border-radius: var(#{$prefix}-border-radius);
-}
-
-.btn-group> :not(.btn-check:first-child)+.btn,
-.btn-group>.btn-group:not(:first-child) {
-    margin-left: calc(var(#{$prefix}-border-width) * -1);
-}
-
-.btn-group>.btn:not(:last-child):not(.dropdown-toggle),
-.btn-group>.btn.dropdown-toggle-split:first-child,
-.btn-group>.btn-group:not(:last-child)>.btn {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: var(#{$prefix}-btn-border-width);
-        height: 100%;
-        background-color: rgba(var(--grey-rgb), 0.5);
-    }
-}
-
-.btn-group>.btn:nth-child(n + 3),
-.btn-group> :not(.btn-check)+.btn,
-.btn-group>.btn-group:not(:first-child)>.btn {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.btn-sm+.dropdown-toggle-split,
-.btn-group-sm>.btn+.dropdown-toggle-split {
-    padding-right: 0.375rem;
-    padding-left: 0.375rem;
-}
-
-.btn-lg+.dropdown-toggle-split,
-.btn-group-lg>.btn+.dropdown-toggle-split {
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
-}
-
-.btn-group-vertical {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.btn-group-vertical>.btn,
-.btn-group-vertical>.btn-group {
-    width: 100%;
-}
-
-.btn-group-vertical>.btn:not(:first-child),
-.btn-group-vertical>.btn-group:not(:first-child) {
-    margin-top: calc(var(#{$prefix}-border-width) * -1);
-}
-
-.btn-group-vertical>.btn:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical>.btn-group:not(:last-child)>.btn {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.btn-group-vertical>.btn~.btn,
-.btn-group-vertical>.btn-group:not(:first-child)>.btn {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
 }

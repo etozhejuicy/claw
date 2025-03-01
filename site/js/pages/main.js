@@ -51,11 +51,10 @@ class Main {
                       </div>
                       <div class="col-12">
                         <ol class="list list-nobullet">
-                          <li class="fs-4">😏 Поддерживаются box-иконки <i class="cl-icon-unlocked text-success"></i></li>
-                          <li class="fs-4">🎏 Поддержка flexbox <i class="cl-icon-unlocked text-success"></i></li>
-                          <li class="fs-4 opacity-25">🧱 Поддержка grid <i class="cl-icon-lock text-warning"></i></li>
-                          <li class="fs-4">✨ Поддержка SCSS <i class="cl-icon-unlocked text-success"></i></li>
-                          <li class="fs-4 opacity-25">🎯 Отдельный .config для настройки темы <i class="cl-icon-lock text-warning"></i></li>
+                          <li class="card text-primary border-primary my-2 fs-4">🎏 Поддержка flexbox <i class="fa-solid fa-unlock text-success"></i></li>
+                          <li class="card text-black border-black my-2 fs-4 opacity-25">🧱 Поддержка grid <i class="fa-solid fa-lock text-warning"></i></li>
+                          <li class="card text-primary border-primary my-2 fs-4">✨ Поддержка SCSS <i class="fa-solid fa-unlock text-success"></i></li>
+                          <li class="card text-black border-black my-2 fs-4 opacity-25">🎯 Отдельный .config для настройки темы <i class="fa-solid fa-lock text-warning"></i></li>
                         </ol>
                       </div>
                       <div class="col-12">
@@ -63,20 +62,20 @@ class Main {
                           <div class="row g-3">
                             <div class="col-12">
                               <p class="fs-4 fw-600">
-                                <i class="cl-icon-clock"></i> &nbsp;Статус разработки фреймворка можно узнать по ссылке Github
+                                <i class="fa-solid fa-clock"></i> &nbsp;Статус разработки фреймворка можно узнать по ссылке Github
                               </p>
                             </div>
                             <div class="col-12">
                               <div class="row g-2">
                                 <div class="col-12 col-sm-6 col-md-6">
                                   <a class="btn btn-grey-700 btn-icon" href="https://github.com/etozhejuicy/claw?tab=readme-ov-file" target="_blank" title="Статус разработки утилит">
-                                    <i class="cl-icon-github"></i>
+                                    <i class="fa-brands fa-github"></i>
                                     <span class="btn-icon-text">Github</span>
                                   </a>
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-6">
                                   <a href="./installation" class="btn btn-icon btn-primary w-100 w-xs-100 w-sm-100 w-md-auto">
-                                    <i class="cl-icon-star-empty"></i>
+                                    <i class="fa-solid fa-flag-checkered"></i>
                                     <span class="btn-icon-text">Начать работу</span>
                                   </a>
                                 </div>

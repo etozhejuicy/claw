@@ -85,6 +85,25 @@ window.addEventListener("DOMContentLoaded", () => {
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="col-12">
+                                        <p>
+                                            Это самая большая кнопка с использованием специального класса <code class="text-warning">.btn-xl</code>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-xl">Пример кнопки</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="code">
+                                            <div class="code-content">
+                                                <div class="code-title">
+                                                    Пример использования
+                                                </div>
+                                                <pre class="hljs html code-body"><code>&lt;button type="button" class="btn btn-xl"&gt;Пример кнопки&lt;/button&gt;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -346,47 +365,47 @@ window.addEventListener("DOMContentLoaded", () => {
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-primary">
-                                            <i class="cl-icon-clock"></i>
+                                            <i class="fa-solid fa-clock"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-secondary">
-                                            <i class="cl-icon-keyboard"></i>
+                                            <i class="fa-solid fa-keyboard"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-danger">
-                                            <i class="cl-icon-cart"></i>
+                                            <i class="fa-solid fa-cart-shopping"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-warning">
-                                            <i class="cl-icon-copy"></i>
+                                            <i class="fa-solid fa-copy"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-success">
-                                            <i class="cl-icon-profile"></i>
+                                            <i class="fa-solid fa-user"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-white">
-                                            <i class="cl-icon-image"></i>
+                                            <i class="fa-solid fa-image"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-vk">
-                                            <i class="cl-icon-mobile"></i>
+                                            <i class="fa-solid fa-phone"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-orange">
-                                            <i class="cl-icon-pencil"></i>
+                                            <i class="fa-solid fa-pencil"></i>
                                         </button>
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-purple">
-                                            <i class="cl-icon-search"></i>
+                                            <i class="fa-solid fa-search"></i>
                                         </button>
                                     </div>
                                     <div class="col-12">
@@ -412,7 +431,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-primary">
-                                            <i class="cl-icon-hour-glass"></i>
+                                            <i class="fa-solid fa-hourglass-start"></i>
                                             <span class="btn-icon-text">Кнопка 1</span>
                                         </button>
                                     </div>
@@ -432,7 +451,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-secondary">
                                             <span class="btn-icon-text">Кнопка 2</span>
-                                            <i class="cl-icon-bubble"></i>
+                                            <i class="fa-solid fa-comment"></i>
                                         </button>
                                     </div>
                                     <div class="col-12">
@@ -450,9 +469,9 @@ window.addEventListener("DOMContentLoaded", () => {
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-icon btn-danger">
-                                            <i class="cl-icon-drawer"></i>
+                                            <i class="fa-solid fa-bars"></i>
                                             <span class="btn-icon-text">Кнопка 3</span>
-                                            <i class="cl-icon-upload"></i>
+                                            <i class="fa-solid fa-volume-high"></i>
                                         </button>
                                     </div>
                                     <div class="col-12">

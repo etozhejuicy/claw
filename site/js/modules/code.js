@@ -23,7 +23,7 @@ class CodeBlock {
         "btn btn-xs btn-icon btn-grey-500 btn-colored btn-dimmed rounded p-1"
       );
 
-      copyBtn.innerHTML = `<i class="cl-icon-copy"></i>`;
+      copyBtn.innerHTML = `<i class="fa-solid fa-copy"></i>`;
 
       if (codeTitle) {
         codeTitle.appendChild(copyBtn);

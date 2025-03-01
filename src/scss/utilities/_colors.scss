@@ -88,43 +88,43 @@ $transparent: transparent;
 
 // grey palette
 $grey-100: #f7f7f8;
-$grey-200: #e7e9eb;
-$grey-300: #d2d6da;
-$grey-400: #9fa6ad;
-$grey-500: #6e7881;
-$grey-600: #51585f;
-$grey-700: #3f4449;
+$grey-200: #e0e1e3;
+$grey-300: #ced1d4;
+$grey-400: #999ca0;
+$grey-500: #737a80;
+$grey-600: #585d61;
+$grey-700: #45474a;
 $grey-800: #2a2d2f;
 $grey-900: #222222;
 
 // exp
 $colors: (
   $primary: "primary",
-  $secondary: "secondary",
-  $success: "success",
-  $danger: "danger",
-  $warning: "warning",
-  $white: "white",
-  $black: "black",
-  $orange: "orange",
-  $purple: "purple",
-  $blue: "blue",
-  $vk: "vk",
-  $grey: "grey",
-  $green: "green",
-  $transparent: "transparent",
+    $secondary: "secondary",
+      $success: "success",
+        $danger: "danger",
+          $warning: "warning",
+            $white: "white",
+              $black: "black",
+                $orange: "orange",
+                  $purple: "purple",
+                    $blue: "blue",
+                      $vk: "vk",
+                        $grey: "grey",
+                          $green: "green",
+                            $transparent: "transparent",
 
-  $grey-100: "grey-100",
-  $grey-200: "grey-200",
-  $grey-300: "grey-300",
-  $grey-400: "grey-400",
-  $grey-500: "grey-500",
-  $grey-600: "grey-600",
-  $grey-700: "grey-700",
-  $grey-800: "grey-800",
-  $grey-900: "grey-900",
-);
+                              $grey-100: "grey-100",
+                                $grey-200: "grey-200",
+                                  $grey-300: "grey-300",
+                                    $grey-400: "grey-400",
+                                      $grey-500: "grey-500",
+                                        $grey-600: "grey-600",
+                                          $grey-700: "grey-700",
+                                            $grey-800: "grey-800",
+                                              $grey-900: "grey-900",
+                                              );
 
-@each $color, $value in $colors {
-  $color: $value;
-}
+                                            @each $color, $value in $colors {
+                                              $color: $value;
+                                            }
