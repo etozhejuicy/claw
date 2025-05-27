@@ -171,7 +171,11 @@
         &>* {
             &:first-child {
                 &:is(.btn-icon-text) {
-                    margin-right: var(#{$prefix}-btn-gap);
+                    margin: 0 var(#{$prefix}-btn-gap);
+                }
+
+                &:is(i) {
+                    margin: 0 var(#{$prefix}-btn-gap);
                 }
 
                 &:is(svg) {
@@ -182,7 +186,11 @@
 
             &:last-child {
                 &:is(.btn-icon-text) {
-                    margin-left: var(#{$prefix}-btn-gap);
+                    margin: 0 var(#{$prefix}-btn-gap);
+                }
+
+                &:is(i) {
+                    margin: 0 var(#{$prefix}-btn-gap);
                 }
 
                 &:is(svg) {
@@ -297,6 +305,12 @@ $value in $colors {
         &:is(.btn-#{$value}),
         &:is(.btn-outline-#{$value}) {
             #{$prefix}-btn-color: var(--#{$value});
+
+            @if $value=="danger" {
+                #{$prefix}-btn-color: darken($color, 10%);
+                #{$prefix}-btn-hover-color: darken($color, 50%);
+                #{$prefix}-btn-active-color: darken($color, 90%);
+            }
 
             @if $value=="white" {
                 #{$prefix}-btn-color: darken($color, 50%);

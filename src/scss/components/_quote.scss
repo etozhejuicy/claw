@@ -79,11 +79,11 @@ blockquote {
     border-radius: var(--blockquote-content-border-radius);
     white-space: var(--blockquote-body-white-space);
     &::after {
-      content: "\e977";
+      content: "\f10e";
       position: absolute;
       top: 0;
       right: 0;
-      font-family: "clawicons" !important;
+      font-family: "fontawesome" !important;
       font-style: normal;
       font-weight: normal;
       font-variant: normal;

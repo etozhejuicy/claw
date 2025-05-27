@@ -123,7 +123,7 @@ class Demo {
                                                   <div class="row g-3">
                                                     <div class="col-auto">
                                                       <div class="btn btn-sm btn-primary btn-dimmed btn-colored btn-icon rounded-3" swiper-button-prev="">
-                                                          <i class="cl-icon-arrow-left"></i>
+                                                          <i class="fa-solid fa-arrow-left"></i>
                                                       </div>
                                                     </div>
                                                     <div class="col">
@@ -131,7 +131,7 @@ class Demo {
                                                     </div>
                                                     <div class="col-auto">
                                                       <div class="btn btn-sm btn-primary btn-dimmed btn-colored btn-icon rounded-3" swiper-button-next="">
-                                                          <i class="cl-icon-arrow-right"></i>
+                                                          <i class="fa-solid fa-arrow-right"></i>
                                                       </div>
                                                     </div>
                                                   </div>
@@ -178,12 +178,12 @@ class Demo {
                                 <div class="col-12">
                                 <div class="card-image rounded ratio ratio-16x9 lazyload overflow-hidden">
                                     <img data-src="${item.image
-        }" class="lazyload object-fit-cover" />
+        }" class="lazyload object-fit-cover" alt="${item.title}" />
                                 </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="card-body">
-                                        <p class="">
+                                        <p>
                                             ${item.brief}
                                         </p>
                                     </div>
@@ -196,7 +196,7 @@ class Demo {
           ? `
                                     <div class="col-auto">
                                       <a href="${item.link}" class="btn btn-primary btn-icon w-100" target="_blank" rel="noopener noreferrer">
-                                        <i class="cl-icon-link"></i>
+                                        <i class="fa-solid fa-link"></i>
                                       </a>
                                     </div>
                                   `

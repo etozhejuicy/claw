@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <div class="col-12">
                             <div class="row g-3">
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge w-100">
                                         Простой бейдж
                                     </div>
@@ -27,42 +27,42 @@ window.addEventListener("DOMContentLoaded", () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <p>
                                         Бейджи имеют стандартный фон и цвет текста, который вы можете регулировать селекторами прямо в HTML. Но, если вы не хотите настраивать каждый параметр в HTML, можете воспользоваться набором тем, который предустановлен в фреймворк:
                                     </p>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-primary w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-secondary w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-success w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-danger w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-warning w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-black w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-white w-100">
                                         Простой бейдж
                                     </div>
@@ -117,42 +117,42 @@ window.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <div class="col-12">
                             <div class="row g-3">
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-primary badge-colored w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-secondary badge-colored w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-success badge-colored w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-danger badge-colored w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-warning badge-colored w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-orange badge-colored w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-blue badge-colored w-100">
                                         Простой бейдж
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-auto">
                                     <div class="badge badge-purple badge-colored w-100">
                                         Простой бейдж
                                     </div>

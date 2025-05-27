@@ -192,7 +192,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     <div class="col-auto">
                                         <div class="form-floating">
                                             <div class="form-icon form-icon-top form-icon-end">
-                                                <i class="cl-icon-arrow-left"></i>
+                                                <i class="fa-solid fa-arrow-left"></i>
                                             </div>
                                             <textarea type="text" class="form-control w-auto d-flex" rows="3" value="" id="floatingTextarea" placeholder="Введите текст"></textarea>
                                             <label for="floatingTextarea">Введите ваш текст</label>
@@ -206,7 +206,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                                 </div>
 <pre class="hljs html code-body"><code>&lt;div class="form-floating form-outline form-outline-primary"&gt;
     &lt;div class="form-icon form-icon-top form-icon-end"&gt;
-        &lt;i class="cl-icon-arrow-left"&gt;&lt;/i&gt;
+        &lt;i class="fa-solid fa-arrow-left"&gt;&lt;/i&gt;
     &lt;/div&gt;
     &lt;textarea type="text" class="form-control w-auto d-flex" rows="3" value="" id="floatingTextarea" placeholder="Введите текст">&lt;/textarea&gt;
     &lt;label for="floatingTextarea">Введите ваш текст&lt;/label&gt;
@@ -223,7 +223,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     <div class="col-auto">
                                         <div class="form-floating">
                                             <div class="form-icon form-icon-middle form-icon-end">
-                                                <i class="cl-icon-arrow-left"></i>
+                                                <i class="fa-solid fa-arrow-left"></i>
                                             </div>
                                             <textarea type="text" class="form-control w-auto d-flex" rows="3" value="" id="floatingTextarea" placeholder="Введите текст"></textarea>
                                             <label for="floatingTextarea">Введите ваш текст</label>
@@ -237,7 +237,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                                 </div>
 <pre class="hljs html code-body"><code>&lt;div class="form-floating form-outline form-outline-primary"&gt;
     &lt;div class="form-icon form-icon-middle form-icon-end"&gt;
-        &lt;i class="cl-icon-arrow-left"&gt;&lt;/i&gt;
+        &lt;i class="fa-solid fa-arrow-left"&gt;&lt;/i&gt;
     &lt;/div&gt;
     &lt;textarea type="text" class="form-control w-auto d-flex" rows="3" value="" id="floatingTextarea" placeholder="Введите текст">&lt;/textarea&gt;
     &lt;label for="floatingTextarea">Введите ваш текст&lt;/label&gt;
@@ -254,7 +254,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     <div class="col-auto">
                                         <div class="form-floating">
                                             <div class="form-icon form-icon-bottom form-icon-start">
-                                                <i class="cl-icon-arrow-left"></i>
+                                                <i class="fa-solid fa-arrow-left"></i>
                                             </div>
                                             <textarea type="text" class="form-control w-auto d-flex" rows="3" value="" id="floatingTextarea" placeholder="Введите текст"></textarea>
                                             <label for="floatingTextarea">Введите ваш текст</label>
@@ -268,7 +268,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                                 </div>
 <pre class="hljs html code-body"><code>&lt;div class="form-floating form-outline form-outline-primary"&gt;
     &lt;div class="form-icon form-icon-bottom form-icon-start"&gt;
-        &lt;i class="cl-icon-arrow-left"&gt;&lt;/i&gt;
+        &lt;i class="fa-solid fa-arrow-left"&gt;&lt;/i&gt;
     &lt;/div&gt;
     &lt;textarea type="text" class="form-control w-auto d-flex" rows="3" value="" id="floatingTextarea" placeholder="Введите текст">&lt;/textarea&gt;
     &lt;label for="floatingTextarea">Введите ваш текст&lt;/label&gt;
