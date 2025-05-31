@@ -12,7 +12,7 @@ class Utilities {
       <main class="content">
         <section>
           <div class="container">
-            <div class="row g-5">
+            <div class="row g-3">
               <div id="start" class="col-12"></div>
               <div id="colors" class="col-12"></div>
               <div id="text" class="col-12"></div>

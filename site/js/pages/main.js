@@ -12,7 +12,7 @@ class Main {
     <main class="content">
       <section>
         <div class="container">
-          <div class="row g-5">
+          <div class="row g-3">
             <div class="col-12">
               <div class="card">
                 <div class="card-content">
