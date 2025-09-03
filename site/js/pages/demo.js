@@ -169,7 +169,7 @@ class Demo {
         }">
                     <div class="card-content d-flex flex-column flex-fill">
                         <div class="card-header">
-                            <div class="card-title text-primary">
+                            <div class="card-title">
                                 ${item.title}
                             </div>
                         </div>

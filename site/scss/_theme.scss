@@ -67,3 +67,10 @@
         color: light-dark(var(--warning), var(--warning));
     }
 }
+
+@supports (color-scheme: light dark) {
+  :root {
+    --body-bg-color: light-dark(var(--white-rgb), var(--black-rgb));
+    --body-text-color: light-dark(var(--black-rgb), var(--white-rgb));
+  }
+}

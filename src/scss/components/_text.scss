@@ -1,16 +1,10 @@
 * {
   & p {
-    margin-block-start: 0.75rem;
-    margin-block-end: unset;
-    margin-top: 0.75rem;
-    margin-bottom: unset;
+    margin-block-start: unset;
+    margin-block-end: 1em;
+    margin-top: unset;
+    margin-bottom: 1em;
     letter-spacing: -0.02rem;
     line-height: 130%;
-    &:first-of-type {
-      margin-top: unset;
-    }
-    &:last-of-type {
-      margin-bottom: unset;
-    }
   }
 }
