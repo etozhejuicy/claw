@@ -65,3 +65,5 @@ Example: [https://etozhejuicy.github.io/claw/](https://etozhejuicy.github.io/cla
 - [ ] stretched
 - [ ] table
 - [ ] tabs
+
+#### Attention! This framework is under construction today. Please, stand by and take a time for a development.
