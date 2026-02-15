@@ -1,4 +1,4 @@
-import image from "../../../public/crab.svg";
+import image from "/crab.svg";
 
 class Error {
   constructor() {

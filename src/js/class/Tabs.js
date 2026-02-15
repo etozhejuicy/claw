@@ -362,4 +362,4 @@ class Tabs {
     }
 }
 
-new Tabs();
+export default Tabs;

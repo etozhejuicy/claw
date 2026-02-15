@@ -1,4 +1,5 @@
-// styles
+// framework
+import "../../src/js/app.js";
 import "../scss/app.scss";
 
 import "../../src/js/vendor/autosize.js";

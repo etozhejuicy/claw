@@ -313,4 +313,4 @@ class Collapse {
     }
 }
 
-new Collapse();
+export default Collapse;
