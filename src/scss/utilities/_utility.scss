@@ -1,23 +1,26 @@
+// use reset styles
+@import "./reset";
+
 @import "./functions";
 @import "./colors";
 @import "./align";
 @import "./border";
 @import "./cols";
 @import "./container";
-@import "./dimension";
 @import "./display";
 @import "./flex";
-@import "./filter";
+// @import "./filter";
 @import "./margin";
 @import "./object";
 @import "./opacity";
 @import "./order";
 @import "./overflow";
 @import "./ratio";
-@import "./rounded";
+@import "./radius";
 @import "./padding";
 @import "./position";
 @import "./pointer-events";
+@import "./size";
 @import "./stretched-link";
 @import "./text";
 @import "./visually";

@@ -1,9 +1,0 @@
-@each $blur, $value in $blurs {
-    .bdf {
-        &-blur {
-            &-#{$value} {
-                backdrop-filter: blur(#{$blur}) !important;
-            }
-        }
-    }
-}
