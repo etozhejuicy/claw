@@ -1,132 +1,40 @@
 :root {
-  color-scheme: light dark;
-  
-  --white: #ffffff;
-  --white-rgb: 255, 255, 255;
-  --dark-white: #fafafa;
-  --dark-white-rgb: 250, 250, 250;
-  --dark: #0e0e0e;
-  --dark-rgb: 14, 14, 14;
-  --light-grey: #f6f6f6;
-  --light-grey-rgb: 246, 246, 246;
-  --dark-grey: #2b2b2b;
-  --dark-grey-rgb: 43, 43, 43;
-  --grey: #dddddd;
-  --grey-rgb: 221, 221, 221;
-  --true-black: #000000;
-  --true-black-rgb: 0, 0, 0;
-  --black: #262122;
-  --black-rgb: 38, 33, 34;
-  --primary: #5144dd;
-  --primary-rgb: 81, 68, 221;
-  --cyan: #44fff4;
-  --cyan-rgb: 68, 255, 244;
-  --secondary: #808080;
-  --secondary-rgb: 128, 128, 128;
-  --success: #3eaf2e;
-  --success-rgb: 62, 175, 46;
-  --warning: #f24822;
-  --warning-rgb: 242, 72, 33;
-  --danger: #fccf19;
-  --danger-rgb: 252, 207, 25;
-  --orange: #ffa629;
-  --orange-rgb: 255, 166, 41;
-  --blue: #02a6e6;
-  --blue-rgb: 2, 166, 230;
-  --purple: #9747ff;
-  --purple-rgb: 151, 71, 255;
-  --vk: #0077ff;
-  --vk-rgb: 0, 119, 255;
-  --green: #65cb82;
-  --green-rgb: 101, 203, 130;
-  --red: #ec7a7a;
-  --red-rgb: 236, 122, 122;
-  --grey-100: #f7f7f8;
-  --grey-100-rgb: 247, 247, 248;
-  --grey-200: #e7e9eb;
-  --grey-200-rgb: 231, 233, 235;
-  --grey-300: #d2d6da;
-  --grey-300-rgb: 210, 214, 218;
-  --grey-400: #9fa6ad;
-  --grey-400-rgb: 159, 166, 173;
-  --grey-500: #6e7881;
-  --grey-500-rgb: 110, 120, 129;
-  --grey-600: #51585f;
-  --grey-600-rgb: 81, 88, 95;
-  --grey-700: #3f4449;
-  --grey-700-rgb: 63, 68, 73;
-  --grey-800: #2a2d2f;
-  --grey-800-rgb: 42, 45, 47;
-  --grey-900: #222222;
-  --grey-900-rgb: 34, 34, 34;
-
-  --body-bg-color: var(--white-rgb);
-  --body-text-color: var(--black-rgb);
+	--white: #ffffff;
+	--white-80: #ffffffcc;
+	--light-grey: #f2f3f6;
+	--grey-blue: #c9cfd4;
+	--primary: #B52A33;
+	--red: #b94141;
+	--black: #1d2123;
+	--black-80: #1d2123cc;
+	--black-50: #1d212380;
+	--error: #b94141;
 }
 
 $white: #ffffff;
-$dark-white: #fafafa;
-$grey: #eeeeee;
-$dark: #0e0e0e;
-$light-grey: #f6f6f6;
-$dark-grey: #2b2b2b;
-$normal-grey: #737373;
-$green: #65cb82;
-$dark-green: #092f39;
-$cyan: #44fff4 !default;
-$primary: #5144dd !default;
-$secondary: #808080 !default;
-$success: #3eaf2e !default;
-$warning: #f24822 !default;
-$danger: #fccf19 !default;
-$orange: #ffa629 !default;
-$purple: #9747ff !default;
-$blue: #02a6e6 !default;
-$error: #ec7a7a;
-$red: #ec7a7a;
-$black: #000000;
-$vk: #0077ff;
-$transparent: transparent;
+$white-80: #ffffffcc;
+$light-grey: #f2f3f6;
+$grey-blue: #c9cfd4;
+$primary: #B52A33;
+$black: #1d2123;
+$black-80: #1d2123cc;
+$black-50: #1d212380;
+$green: #4fac7f;
+$error: #b94141;
 
-// grey palette
-$grey-100: #f7f7f8;
-$grey-200: #e0e1e3;
-$grey-300: #ced1d4;
-$grey-400: #999ca0;
-$grey-500: #737a80;
-$grey-600: #585d61;
-$grey-700: #45474a;
-$grey-800: #2a2d2f;
-$grey-900: #222222;
-
-// exp
 $colors: (
-  $primary: "primary",
-    $secondary: "secondary",
-      $success: "success",
-        $danger: "danger",
-          $warning: "warning",
-            $white: "white",
-              $black: "black",
-                $orange: "orange",
-                  $purple: "purple",
-                    $blue: "blue",
-                      $vk: "vk",
-                        $grey: "grey",
-                          $green: "green",
-                            $transparent: "transparent",
+	$white: "white",
+		$white-80: "white-80",
+			$light-grey: "light-grey",
+				$grey-blue: "grey-blue",
+					$primary: "primary",
+						$black: "black",
+							$black-80: "black-80",
+								$black-50: "black-50",
+									$green: "green",
+										$error: "error",
+										);
 
-                              $grey-100: "grey-100",
-                                $grey-200: "grey-200",
-                                  $grey-300: "grey-300",
-                                    $grey-400: "grey-400",
-                                      $grey-500: "grey-500",
-                                        $grey-600: "grey-600",
-                                          $grey-700: "grey-700",
-                                            $grey-800: "grey-800",
-                                              $grey-900: "grey-900",
-                                              );
-
-                                            @each $color, $value in $colors {
-                                              $color: $value;
-                                            }
+									$default-body-color: $white;
+									$default-text-color: $black;
+									$default-primary-color: $primary;

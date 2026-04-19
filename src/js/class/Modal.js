@@ -2,7 +2,9 @@ class Modal {
     constructor() {
         this.openButtons = document.querySelectorAll("[data-modal-open]");
         this.closeButtons = document.querySelectorAll("[data-modal-close]");
-        this.generateButtons = document.querySelectorAll("[data-modal-generate]");
+        this.generateButtons = document.querySelectorAll(
+            "[data-modal-generate]",
+        );
         this.title = ``;
         this.content = "";
         this.selector = "";
@@ -41,7 +43,9 @@ class Modal {
             generateButton.addEventListener("click", (e) => {
                 try {
                     const existModal = document.querySelector(
-                        '[data-modal-id="' + e.currentTarget.dataset.modalGenerate + '"]',
+                        '[data-modal-id="' +
+                        e.currentTarget.dataset.modalGenerate +
+                        '"]',
                     );
 
                     this.title = e.currentTarget.dataset.modalTitle;
@@ -50,7 +54,8 @@ class Modal {
 
                     if (
                         existModal &&
-                        e.currentTarget.dataset.modalGenerate === existModal.dataset.modalId
+                        e.currentTarget.dataset.modalGenerate ===
+                        existModal.dataset.modalId
                     ) {
                         this.open(existModal);
                     } else {
@@ -136,18 +141,18 @@ class Modal {
             modal.dataset.modalId = id;
 
             modal.innerHTML = `
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							${title ? `<div class="modal-title">${title}</div>` : ""}
-							<button class="btn-outline-white btn-close aspected" data-modal-close>
-								<i class="icon-cross"></i>
-							</button>
-						</div>
-						${content ? `<div class="modal-body">${content}</div>` : ""}
-					</div>
-				</div>
-			`;
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        ${title ? `<div class="modal-title">${title}</div>` : ""}
+                        <button class="btn-outline-white btn-close aspected" data-modal-close>
+                            <i class="icon-cross"></i>
+                        </button>
+                    </div>
+                    ${content ? `<div class="modal-body">${content}</div>` : ""}
+                </div>
+            </div>
+        `;
 
             document.body.append(modal);
 
@@ -168,7 +173,6 @@ class Modal {
         return modal;
     }
 
-    // Обновленный метод setup для поддержки параметров
     setup(modal, title = null, content = null, selector = null) {
         if (modal) {
             const modalTitle = modal?.querySelector(".modal-title");
@@ -180,9 +184,13 @@ class Modal {
                 const titleToSet =
                     options.title !== undefined ? options.title : this.title;
                 const contentToSet =
-                    options.content !== undefined ? options.content : this.content;
+                    options.content !== undefined
+                        ? options.content
+                        : this.content;
                 const selectorToSet =
-                    options.selector !== undefined ? options.selector : this.selector;
+                    options.selector !== undefined
+                        ? options.selector
+                        : this.selector;
 
                 if (titleToSet && titleToSet !== "" && modalTitle) {
                     modalTitle.innerHTML = titleToSet;
@@ -199,7 +207,8 @@ class Modal {
                 // Иначе используем отдельные параметры
                 const titleToSet = title !== null ? title : this.title;
                 const contentToSet = content !== null ? content : this.content;
-                const selectorToSet = selector !== null ? selector : this.selector;
+                const selectorToSet =
+                    selector !== null ? selector : this.selector;
 
                 if (titleToSet && titleToSet !== "" && modalTitle) {
                     modalTitle.innerHTML = titleToSet;
@@ -258,4 +267,4 @@ class Modal {
     }
 }
 
-export default Modal;
+export default new Modal();

@@ -1,0 +1,68 @@
+.pagination {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+
+	&-dot {
+		@include pagination-button;
+		display: block;
+		width: 10px;
+		height: 10px;
+		border-radius: 100%;
+		text-align: center;
+		cursor: pointer;
+		user-select: none;
+		transition:
+			background-color 0.25s ease-in-out,
+			border-color 0.25s ease-in-out,
+			color 0.25s ease-in-out;
+	}
+
+	& .prev,
+	& .next {
+		@include pagination-arrow;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 35px;
+		height: 35px;
+		font-size: 12px;
+		text-align: center;
+		transition:
+			background-color 0.25s ease-in-out,
+			border-color 0.25s ease-in-out,
+			color 0.25s ease-in-out;
+
+		& > i {
+			display: flex;
+		}
+	}
+
+	&-select {
+		cursor: pointer;
+	}
+
+	// &.isNumbers {
+	// 	& .pagination-dot {
+	// 		@include pagination-button-number;
+	// 		display: flex;
+	// 		align-items: center;
+	// 		justify-content: center;
+	// 		width: 35px;
+	// 		height: 35px;
+	// 		flex: 0 0 35px;
+	// 		line-height: 100%;
+	// 	}
+
+	// 	& .prev,
+	// 	& .next {
+	// 		width: 35px;
+	// 		height: 35px;
+	// 	}
+	// }
+}
+
+.breadcrumbs {
+	@include breadcrumbs;
+}

@@ -1,0 +1,7 @@
+.dropdown {
+	@include dropdown;
+
+	&-wrapper {
+		position: relative;
+	}
+}

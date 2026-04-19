@@ -1,0 +1,97 @@
+.btn,
+button {
+	@include button;
+
+	&-xs {
+		@include button-xs;
+	}
+
+	&-sm {
+		@include button-sm;
+	}
+
+	&-md {
+		@include button-md;
+	}
+
+	&-lg {
+		@include button-lg;
+	}
+
+	&-outline {
+		@include button-outline;
+
+		&-grey {
+			&-blue {
+				@include button-outline-color($grey-blue,
+					$black-50,
+					$grey-blue,
+					$black);
+			}
+		}
+
+		&-white {
+			@include button-outline-color($white, $white, $white, $primary);
+		}
+	}
+
+	&-icon {
+		@include button-icon;
+	}
+
+	&-grey {
+		&-blue {
+			@include button-color($grey-blue, $black);
+		}
+	}
+
+	&-black {
+		@include button-color($black, $white);
+
+		&-50 {
+			@include button-color($black-50, $white);
+		}
+	}
+
+	&-light {
+		&-grey {
+			@include button-color($light-grey, $black-80);
+		}
+	}
+
+	&-green {
+		@include button-color($green, $white);
+	}
+
+	&-white {
+		@include button-color($white, $primary);
+	}
+
+	&-close {
+		--btn-size: 35px;
+		font-weight: 100;
+		font-size: 14px;
+		flex: 0 0 var(--btn-size);
+
+		&>i,
+		&>svg {
+			transform: rotate(0deg);
+		}
+
+		&:hover {
+
+			&>i,
+			&>svg {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&-burger {
+
+		& i,
+		& svg {
+			display: flex;
+		}
+	}
+}

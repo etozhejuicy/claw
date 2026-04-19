@@ -1,7 +1,0 @@
-@for $i from -9999 through 9999 {
-    .z-index {
-        &-#{$i} {
-            z-index: #{$i} !important;
-        }
-    }
-}

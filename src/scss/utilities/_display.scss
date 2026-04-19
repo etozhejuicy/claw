@@ -1,21 +1,49 @@
-@each $display, $value in $displays {
-    .d {
-        &-#{$value} {
-            display: #{$value} !important;
-        }
-    }
-}
+.d {
+	&-block {
+		display: block !important;
+	}
 
-@each $breakpointclass, $bpc in $breakpointclasses {
-    @each $display, $value in $displays {
-        .d {
-            @include breakpoint("breakpoint-#{$bpc}") {
-                &-#{$bpc} {
-                    &-#{$value} {
-                        display: #{$value} !important;
-                    }
-                }
-            }
-        }
-    }
+	&-flex {
+		display: flex !important;
+	}
+
+	&-none {
+		display: none !important;
+	}
+
+	&-inline {
+		display: inline !important;
+
+		&-block {
+			display: inline-block !important;
+		}
+	}
+
+	@each $breakpoint, $width in $breakpoints {
+		@if $breakpoint != "xs" {
+			@include breakpoint($breakpoint) {
+				&-#{$breakpoint} {
+					&-block {
+						display: block !important;
+					}
+
+					&-flex {
+						display: flex !important;
+					}
+
+					&-none {
+						display: none !important;
+					}
+
+					&-inline {
+						display: inline !important;
+
+						&-block {
+							display: inline-block !important;
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -1,16 +1,21 @@
-.rounded {
-    #{$prefix}-border-radius: #{$rounded} !important;
-    border-radius: var(#{$prefix}-border-radius) !important;
-    @for $i from 0 through 10 {
-        &-#{$i} {
-            #{$prefix}-border-radius: calc(#{$i}rem / 4) !important;
-            border-radius: var(#{$prefix}-border-radius) !important;
-        }
-    }
-    @each $rounded, $value in $roundeds {
-        &-#{$value} {
-            #{$prefix}-border-radius: #{$rounded} !important;
-            border-radius: var(#{$prefix}-border-radius) !important;
-        }
-    }
+.radius {
+	@each $radius, $value in $radiuses {
+		&-#{$radius} {
+			border-radius: $value !important;
+		}
+	}
+
+	@each $breakpoint, $width in $breakpoints {
+		@if $breakpoint != "xs" {
+			@include breakpoint($breakpoint) {
+				&-#{$breakpoint} {
+					@each $radius, $value in $radiuses {
+						&-#{$radius} {
+							border-radius: $value !important;
+						}
+					}
+				}
+			}
+		}
+	}
 }

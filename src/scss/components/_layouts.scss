@@ -1,0 +1,63 @@
+// layouts
+.layouts {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	flex-wrap: wrap;
+
+	&-2x {
+		@include flex-layout(50%, 2, 10px);
+
+		@include breakpoint("sm") {
+			@include flex-layout(100%, 1, 10px);
+		}
+	}
+
+	&-3x {
+		@include flex-layout(33.3333%, 3, 10px);
+
+		@include breakpoint("lg") {
+			@include flex-layout(50%, 2, 10px);
+		}
+
+		@include breakpoint("sm") {
+			@include flex-layout(100%, 1, 10px);
+		}
+	}
+
+	&-4x {
+		@include flex-layout(25%, 4, 10px);
+
+		@include breakpoint("xl") {
+			@include flex-layout(33.3333%, 3, 10px);
+		}
+
+		@include breakpoint("lg") {
+			@include flex-layout(50%, 2, 10px);
+		}
+
+		@include breakpoint("sm") {
+			@include flex-layout(100%, 1, 10px);
+		}
+	}
+
+	&-5x {
+		@include flex-layout(20%, 5, 10px);
+
+		@include breakpoint("xxl") {
+			@include flex-layout(25%, 4, 10px);
+		}
+
+		@include breakpoint("xl") {
+			@include flex-layout(33.3333%, 3, 10px);
+		}
+
+		@include breakpoint("lg") {
+			@include flex-layout(50%, 2, 10px);
+		}
+
+		@include breakpoint("sm") {
+			@include flex-layout(100%, 1, 10px);
+		}
+	}
+}

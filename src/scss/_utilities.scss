@@ -1,0 +1,14 @@
+// import's all utilities to the project
+@import "./utilities/reset"; // first step setup reset styles for project
+@import "./utilities/variables"; // second step to setup for all work
+
+@import "./utilities/animation";
+@import "./utilities/background";
+@import "./utilities/container";
+@import "./utilities/display";
+@import "./utilities/gap";
+@import "./utilities/flex";
+@import "./utilities/margin";
+@import "./utilities/padding";
+@import "./utilities/radius";
+@import "./utilities/size";

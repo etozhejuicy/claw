@@ -1,0 +1,1056 @@
+@use 'sass:color';
+@use 'sass:map';
+
+// root vars
+:root {
+	--btn-size: 40px;
+	--btn-padding-y: 16px;
+	--btn-padding-x: 25px;
+	--slides-gap: 10px;
+}
+
+// breakpoints system
+@mixin breakpoint($breakpoint) {
+	@if map.has-key($breakpoints, $breakpoint) {
+		$value: map.get($breakpoints, $breakpoint);
+
+		@if $value ==0 {
+			@content;
+		}
+
+		@else {
+			@media (max-width: ($value - 0.02px)) {
+				@content;
+			}
+		}
+	}
+
+	@else {
+		@warn "Неизвестный брейкпоинт: #{$breakpoint}";
+	}
+}
+
+@mixin break-up($breakpoint) {
+	@if map.has-key($breakpoints, $breakpoint) {
+		$value: map.get($breakpoints, $breakpoint);
+
+		@if $value ==0 {
+			@content;
+		}
+
+		@else {
+			@media (min-width: ($value)) {
+				@content;
+			}
+		}
+	}
+
+	@else {
+		@warn "Неизвестный брейкпоинт: #{$breakpoint}";
+	}
+}
+
+@mixin break-interval($breakpoint1, $breakpoint2) {
+	@if map.has-key($breakpoints, $breakpoint1) and map.has-key($breakpoints, $breakpoint2) {
+		$value1: map.get($breakpoints, $breakpoint1);
+		$value2: map.get($breakpoints, $breakpoint2);
+
+		@if $value1 ==0 {
+			@media (max-width: ($value2 - 0.02px)) {
+				@content;
+			}
+		}
+
+		@else if $value2 ==0 {
+			@warn "Некорректный диапазон: второй брейкпоинт не может быть '0' при заданном первом";
+		}
+
+		@else {
+			@media (min-width: $value1) and (max-width: ($value2 - 0.02px)) {
+				@content;
+			}
+		}
+	}
+
+	@else {
+		@if not map.has-key($breakpoints, $breakpoint1) {
+			@warn "Неизвестный брейкпоинт: #{$breakpoint1}";
+		}
+
+		@else {
+			@warn "Неизвестный брейкпоинт: #{$breakpoint2}";
+		}
+	}
+}
+
+@mixin custom-breakpoint($breakpoint) {
+	@if $breakpoint ==0 {
+		@content;
+	}
+
+	@else {
+		@media (max-width: ($breakpoint - 0.02px)) {
+			@content;
+		}
+	}
+}
+
+@mixin custom-break-up($breakpoint) {
+	@if $breakpoint ==0 {
+		@content;
+	}
+
+	@else {
+		@media (min-width: ($breakpoint)) {
+			@content;
+		}
+	}
+}
+
+@mixin custom-break-interval($breakpoint1, $breakpoint2) {
+	@if $breakpoint1 ==0 {
+		@media (max-width: ($breakpoint2 - 0.02px)) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint2 ==0 {
+		@warn "Некорректный диапазон: второй брейкпоинт не может быть '0' при заданном первом";
+	}
+
+	@else {
+		@media (min-width: $breakpoint1) and (max-width: ($breakpoint2 - 0.02px)) {
+			@content;
+		}
+	}
+}
+
+// light-dark
+@mixin light-theme {
+	$default-text-color: $black;
+	$default-body-color: $white;
+}
+
+// dark-theme
+@mixin dark-theme {
+	$default-text-color: $white;
+	$default-body-color: $black;
+}
+
+// for all texts
+@mixin h1 {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 115%;
+
+	@include breakpoint("lg") {
+		font-size: 32px;
+	}
+}
+
+@mixin h2 {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 115%;
+
+	@include breakpoint("lg") {
+		font-size: 20px;
+	}
+}
+
+@mixin h3 {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 115%;
+
+	@include breakpoint("lg") {
+		font-size: 18px;
+	}
+}
+
+@mixin h4 {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 115%;
+
+	@include breakpoint("lg") {
+		font-size: 16px;
+	}
+}
+
+@mixin h5 {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 115%;
+
+	@include breakpoint("lg") {
+		font-size: 14px;
+	}
+}
+
+@mixin paragraph {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 135%;
+
+	@include breakpoint("lg") {
+		font-size: 14px;
+	}
+}
+
+@mixin paragraph-small {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 135%;
+
+	@include breakpoint("lg") {
+		font-size: 12px;
+	}
+}
+
+@mixin t1 {
+	@include paragraph;
+}
+
+@mixin t1-bold {
+	@include paragraph;
+	font-weight: 700;
+}
+
+@mixin t2 {
+	@include paragraph-small;
+}
+
+// scrollbar
+@mixin webkit_scrollbar {
+	@supports (-moz-appearance: none) {
+		scrollbar-color: var(--black) var(--light-grey);
+		scrollbar-width: thin;
+	}
+
+	&::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: var(--light-grey);
+		border-radius: 8px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: var(--black);
+		border-radius: 8px;
+	}
+}
+
+// flex-layout
+@mixin flex-layout($elem-width, $elem-count, $gap) {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	flex-wrap: wrap;
+	gap: $gap;
+
+	&>* {
+		flex: 1 0 calc($elem-width - ($gap * ($elem-count - 1) / $elem-count));
+		max-width: calc($elem-width - ($gap * ($elem-count - 1) / $elem-count));
+		width: 100%;
+	}
+}
+
+// breadcrumbs
+@mixin breadcrumbs {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	@include breakpoint("md") {
+		margin-top: 0;
+		margin-bottom: 16px;
+	}
+
+	&>a {
+		color: var(--white) !important;
+		white-space: nowrap;
+
+		&:hover {
+			text-decoration: none !important;
+		}
+	}
+
+	&>span {
+		white-space: nowrap;
+	}
+
+	&>* {
+		pointer-events: all;
+		@include paragraph;
+		color: var(--white);
+
+		&:nth-child(even) {
+			position: relative;
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			align-self: center;
+			justify-content: center;
+			width: 8px;
+			font-size: 12px;
+
+			@include breakpoint("md") {
+				font-size: 10px;
+			}
+
+			&::before {
+				content: "/";
+				font-style: normal !important;
+				font-weight: normal !important;
+				font-variant: normal !important;
+				text-transform: none !important;
+				speak: none;
+				line-height: 1;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+		}
+	}
+}
+
+// button
+@mixin button {
+	@include paragraph;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--btn-padding-y) var(--btn-padding-x);
+	color: var(--white);
+	line-height: 1;
+	font-weight: 700;
+	font-family: $font-family;
+	font-size: $font-size;
+	text-align: center;
+	text-decoration: none !important;
+	vertical-align: middle;
+	cursor: pointer;
+	touch-action: manipulation;
+	user-select: none;
+	text-transform: none;
+	border-radius: 100px;
+	border: 1px solid;
+	border-color: var(--primary);
+	background-color: var(--primary);
+	white-space: nowrap;
+	transition: 0.25s ease-in-out;
+
+	@include breakpoint("lg") {
+		--btn-padding-y: 14.5px;
+		--btn-padding-x: 24px;
+	}
+
+	& * {
+		pointer-events: none;
+		user-select: none;
+	}
+
+	&:hover,
+	&.hover {
+		background-color: color.adjust($primary, $lightness: 5%);
+		border-color: color.adjust($primary, $lightness: 5%);
+		color: var(--white);
+	}
+
+	&:focus:active,
+	&.focus,
+	&.active {
+		background-color: color.adjust($primary, $lightness: -5%);
+		border-color: color.adjust($primary, $lightness: -5%);
+		color: var(--white);
+	}
+
+	&.disabled,
+	&:disabled {
+		background-color: var(--grey-blue);
+		color: var(--white);
+		border-color: var(--grey-blue);
+		box-shadow: none;
+		opacity: 0.35;
+		cursor: not-allowed;
+
+		&:hover,
+		&.hover,
+		&:focus:active,
+		&:focus,
+		&.focus,
+		&.active {
+			background-color: var(--grey-blue);
+			color: var(--white);
+			border-color: var(--grey-blue);
+		}
+	}
+
+	&.hidden,
+	&:hidden {
+		display: none;
+	}
+
+	&>i,
+	&>svg {
+		vertical-align: text-bottom;
+		transition: 0.25s ease-in-out;
+	}
+
+	&>svg {
+		max-height: 100%;
+		object-fit: contain;
+	}
+
+	&.aspected {
+		--btn-padding-x: 5px;
+		--btn-padding-y: 5px;
+		--btn-padding-x: var(--btn-padding-y);
+		width: var(--btn-size);
+		height: var(--btn-size);
+	}
+}
+
+@mixin button-outline {
+	color: var(--primary);
+	border-color: var(--primary);
+	background-color: transparent;
+
+	&.hover,
+	&:hover {
+		color: var(--white);
+		border-color: var(--primary);
+		background-color: var(--primary);
+	}
+
+	&:focus:active,
+	&.focus,
+	&.active {
+		background-color: color.adjust($primary, $lightness: -5%);
+		border-color: color.adjust($primary, $lightness: -5%);
+		color: var(--white);
+	}
+}
+
+@mixin button-xs {
+	--btn-size: 20px;
+	--btn-padding-y: 4px;
+	--btn-padding-x: 8px;
+	font-size: 14px;
+	min-height: 20px;
+
+	@include breakpoint("lg") {
+		font-size: 12px;
+	}
+
+	& i {
+		font-size: x-small;
+	}
+
+	&.aspected {
+		width: var(--btn-size);
+		height: var(--btn-size);
+	}
+}
+
+@mixin button-sm {
+	--btn-padding-y: 8.5px;
+	--btn-padding-x: 24px;
+	--btn-size: 35px;
+	min-height: 35px;
+
+	@include breakpoint("lg") {
+		--btn-padding-y: 9.5px;
+	}
+
+	&.aspected {
+		width: var(--btn-size);
+		height: var(--btn-size);
+	}
+}
+
+@mixin button-md {
+	--btn-padding-y: 10px;
+	--btn-padding-x: 24px;
+	min-height: 35px;
+
+	&.aspected {
+		width: var(--btn-size);
+		height: var(--btn-size);
+	}
+}
+
+@mixin button-lg {
+	--btn-padding-y: 16px;
+
+	&.aspected {
+		width: var(--btn-size, 40px);
+		height: var(--btn-size, 40px);
+		--btn-padding-x: 4px;
+		--btn-padding-y: 4px;
+	}
+}
+
+@mixin button-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	@include breakpoint("lg") {
+		gap: 5px;
+	}
+
+	&>svg,
+	&>image,
+	&>img,
+	&>object,
+	&>i {
+		display: flex;
+		align-self: center;
+		justify-content: center;
+		max-height: calc(var(--btn-size) - var(--btn-padding-y));
+		vertical-align: middle;
+	}
+
+	&>svg {
+		& * {
+			fill: currentColor;
+		}
+	}
+}
+
+@mixin button-color($fill, $color) {
+	color: $color;
+	border-color: $fill;
+	background-color: $fill;
+
+	&.hover,
+	&:hover {
+		@if $fill ==$white or $fill ==$light-grey {
+			color: $white;
+			border-color: $primary;
+			background-color: $primary;
+		}
+
+		@else {
+			color: $color;
+			border-color: color.adjust($fill, $lightness: 5%);
+			background-color: color.adjust($fill, $lightness: 5%);
+		}
+	}
+
+	&:focus:active,
+	&.focus,
+	&.active {
+		@if $fill ==$white or $fill ==$light-grey {
+			color: $white;
+			border-color: $black;
+			background-color: $black;
+		}
+
+		@else {
+			background-color: color.adjust($fill, $lightness: -5%);
+			border-color: color.adjust($fill, $lightness: -5%);
+			color: $color;
+		}
+	}
+}
+
+@mixin button-outline-color($fill, $color, $hover-fill, $hover-color) {
+	color: $color;
+	border-color: $fill;
+	background-color: transparent;
+
+	&.hover,
+	&:hover {
+		@if $fill ==$white or $fill ==$light-grey {
+			color: $black;
+			border-color: $white;
+			background-color: $white;
+		}
+
+		@else {
+			color: $hover-color;
+			border-color: $hover-fill;
+			background-color: $hover-fill;
+		}
+	}
+
+	&:focus:active,
+	&.focus,
+	&.active {
+		background-color: color.adjust($hover-fill, $lightness: -5%);
+		border-color: color.adjust($hover-fill, $lightness: -5%);
+		color: $hover-color;
+	}
+}
+
+// pagination
+@mixin pagination-button {
+	background-color: var(--grey-blue);
+	border: 1px solid;
+	border-color: var(--grey-blue);
+
+	&:hover:not(:active, .active) {
+		background-color: var(--black-50);
+		border-color: var(--black-50);
+	}
+
+	&.active,
+	&:active {
+		background-color: var(--primary);
+		border-color: var(--primary);
+	}
+}
+
+@mixin pagination-button-number {
+	background-color: var(--white);
+	color: var(--black);
+	border: 1px solid;
+	border-color: var(--black-50);
+
+	&:hover:not(:active, .active) {
+		background-color: var(--white);
+		color: var(--primary);
+		border-color: var(--primary);
+	}
+
+	&.active,
+	&:active {
+		background-color: var(--primary);
+		color: var(--white);
+		border-color: var(--primary);
+	}
+}
+
+@mixin pagination-arrow {
+	padding: 0 8px;
+	background-color: var(--white);
+	color: var(--primary);
+	border: 1px solid;
+	border-color: var(--white);
+
+	&:hover:not(:active, .active) {
+		background-color: var(--primary);
+		color: var(--white);
+		border-color: var(--primary);
+	}
+
+	&.active,
+	&:active {
+		background-color: color.adjust($primary, $lightness: -5%);
+		color: var(--white);
+		border-color: color.adjust($primary, $lightness: -5%);
+	}
+}
+
+// inputs
+@mixin input {
+	@include paragraph;
+	display: inline;
+	width: 100%;
+	min-height: 50px;
+	height: 100%;
+	padding: 5.5px 20px;
+	font-family: $font-family;
+	color: currentColor;
+	border-radius: 35px;
+	border: none;
+	border: 1px solid;
+	border-color: var(--grey-blue);
+	background-color: var(--white);
+	outline: none;
+	resize: vertical;
+	transition: 0.25s ease-in-out;
+
+	@include breakpoint("lg") {
+		min-height: 40px;
+		padding: 5.5px 15px;
+		font-size: 14px;
+	}
+
+	&:is(textarea) {
+		border-radius: 20px;
+	}
+
+	&::placeholder {
+		color: var(--black-50);
+		transition: 0.25s ease-in-out;
+	}
+
+	&:focus {
+		color: var(--black);
+		border-color: var(--primary);
+
+		&::placeholder {
+			color: transparent;
+			transition: 0.25s ease-in-out;
+		}
+	}
+
+	&:not(:placeholder-shown) {
+		color: var(--black);
+		border-color: var(--primary);
+	}
+
+	&:user-invalid {
+		border-color: var(--error);
+	}
+
+	&:user-valid {
+		border-color: var(--grey-blue);
+	}
+
+	&.error,
+	&::spelling-error {
+		color: var(--error);
+		border-color: var(--error);
+	}
+}
+
+@mixin input-file {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	gap: 8px;
+	width: 100%;
+	max-width: 100%;
+
+	&:is(.light) {
+		& .file-drop-area {
+			color: var(--white);
+			border-color: var(--white);
+		}
+
+		& .drag-drop-hint {
+			color: var(--black-50);
+		}
+	}
+
+	&:not(.light) {
+		& .file-drop-area {
+			color: var(--black-50);
+			border-color: var(--black-50);
+		}
+
+		& .drag-drop-hint {
+			color: var(--black-50);
+		}
+
+		& .file-item {
+			color: var(--black-80);
+		}
+	}
+
+	& .file-drop-area {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+		width: 100%;
+		min-height: 5em;
+		padding: 5px 20px;
+		background-color: transparent;
+		// color: var(--white);
+		border-width: 2px;
+		border-style: dashed;
+		// border-color: var(--white);
+		border-radius: 20px;
+		cursor: pointer;
+		transition: background-color 0.25s ease-in-out;
+
+		&.drag-over {
+			background-color: rgba(255, 121, 20, 0.2);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			border-color: var(--primary);
+		}
+
+		& label {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			flex: 1;
+			text-align: center;
+			cursor: pointer;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: visible;
+
+			&>input {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+				opacity: 0;
+				display: block;
+				width: 0;
+				height: 0;
+				margin: 0;
+				padding: 0;
+				border: none;
+				background-color: transparent;
+				border-radius: 0;
+			}
+
+			&>span {
+				font-size: inherit;
+				text-decoration: underline;
+				text-decoration-thickness: 1px;
+				text-decoration-style: dashed;
+				text-decoration-skip-ink: none;
+				text-underline-offset: 3px;
+			}
+		}
+	}
+
+	& .drag-drop-hint {
+		font-size: 14px;
+		// color: var(--color-grey);
+
+		@include breakpoint("lg") {
+			font-size: 12px;
+		}
+	}
+
+	& .file-list {
+		@include webkit_scrollbar;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		max-height: 200px;
+		margin: 0;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	& .file-item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		max-width: 100%;
+
+		&>span {
+			&:not(.remove-file) {
+				display: block;
+				width: 100%;
+				// height: 100%;
+				font-size: 14px;
+				text-align: left;
+				cursor: pointer;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+		}
+	}
+
+	& .remove-file {
+		position: relative;
+		z-index: 3;
+		display: flex;
+		font-size: 18px;
+		line-height: 1.25;
+		padding: 6px;
+		user-select: none;
+		cursor: pointer;
+	}
+}
+
+// badges
+@mixin badge {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	width: fit-content;
+	min-height: 35px;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 1000px;
+	font-size: 16px;
+	line-height: 100%;
+	color: $default-body-color;
+	background-color: $default-text-color;
+	vertical-align: middle;
+	user-select: none;
+	white-space: nowrap;
+	transition: 0.25s ease-in-out;
+
+	@include breakpoint("lg") {
+		font-size: 14px;
+	}
+
+	& i {
+		display: flex;
+		font-size: small;
+	}
+
+	&>svg {
+		display: flex;
+		width: 16px;
+		height: 16px;
+
+		@include breakpoint("lg") {
+			width: 14px;
+			height: 14px;
+		}
+	}
+}
+
+// card
+@mixin card {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 100%;
+	padding: 15px;
+	background-color: var(--white);
+	// border: 1px solid;
+	// border-color: var(--light-grey);
+	border: none;
+	border-radius: 15px;
+	color: var(--black);
+	transition: 0.25s ease-in-out;
+
+	& .card-header {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		justify-content: space-between;
+	}
+}
+
+// dropdown
+@mixin dropdown {
+	position: absolute;
+	z-index: 1020;
+	@include paragraph;
+	@include webkit_scrollbar;
+	display: none;
+	padding: 5px 15px;
+	font-family: $font-family;
+	color: currentColor;
+	border-radius: 15px;
+	border: 1px solid;
+	border-color: var(--white);
+	background-color: var(--white);
+	outline: none;
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+	transform: translate(0, 0);
+	transition: 0.25s ease-in-out;
+
+	@include breakpoint("lg") {
+		font-size: 14px;
+	}
+
+	&.open {
+		display: block;
+	}
+}
+
+// collapse
+@mixin collapse {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: fit-content;
+	padding: 15px;
+	background-color: var(--white);
+	border-radius: 10px;
+	overflow: hidden;
+
+	& [data-collapse-toggle] {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 10px;
+		padding: 0;
+		user-select: none;
+		cursor: pointer;
+
+		&::after {
+			content: "\0047";
+			font-family: "mig" !important;
+			font-style: normal !important;
+			font-weight: normal !important;
+			font-variant: normal !important;
+			text-transform: none !important;
+			display: flex;
+			align-items: center;
+			// align-self: center;
+			justify-content: center;
+			margin-left: auto;
+			padding: 6px;
+			font-size: 14px;
+			speak: none;
+			line-height: 1;
+			color: var(--primary);
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			transform: rotate(0deg);
+			transform-origin: center;
+			transition: 0.25s ease-in-out;
+
+			@include breakpoint("lg") {
+				font-size: 10px;
+			}
+		}
+
+		&.active {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&-header {
+		& i {
+			display: flex;
+		}
+
+		&>* {
+			margin: 0;
+		}
+	}
+
+	&-content {
+		width: 100%;
+		max-height: 100%;
+		padding: 10px 0 0;
+		opacity: 1;
+		overflow: hidden;
+		transition: 0.25s ease-in-out;
+
+		&.collapsed {
+			max-height: 0px;
+			opacity: 0;
+			padding: 0;
+		}
+	}
+}

@@ -1,187 +1,235 @@
-@use "./functions";
-
 .flex {
-    @each $flex-direction, $value in $flex-directions {
-        &-#{$value} {
-            flex-direction: #{$flex-direction} !important;
-        }
-    }
-    @each $flex-wrap, $value in $flex-wraps {
-        &-#{$value} {
-            flex-wrap: #{$flex-wrap} !important;
-        }
-    }
-    @each $flex-grow, $value in $flex-grows {
-        &-#{$value} {
-            flex-grow: #{$flex-grow} !important;
-        }
-    }
-    @each $flex-shrink, $value in $flex-shrinks {
-        &-#{$value} {
-            flex-shrink: #{$flex-shrink} !important;
-        }
-    }
-    @each $flex-fill, $value in $flex-fills {
-        &-#{$value} {
-            flex: #{$flex-fill} !important;
-        }
-    }
-}
+	&-row {
+		flex-direction: row !important;
+	}
 
-@each $breakpointclass, $bpc in $breakpointclasses {
-    @include breakpoint("breakpoint-#{$bpc}") {
-        .flex {
-            &-#{$bpc} {
-                @each $flex-direction, $value in $flex-directions {
-                    &-#{$value} {
-                        flex-direction: #{$flex-direction} !important;
-                    }
-                }
-                @each $flex-wrap, $value in $flex-wraps {
-                    &-#{$value} {
-                        flex-wrap: #{$flex-wrap} !important;
-                    }
-                }
-                @each $flex-grow, $value in $flex-grows {
-                    &-#{$value} {
-                        flex-grow: #{$flex-grow} !important;
-                    }
-                }
-                @each $flex-shrink, $value in $flex-shrinks {
-                    &-#{$value} {
-                        flex-shrink: #{$flex-shrink} !important;
-                    }
-                }
-                @each $flex-fill, $value in $flex-fills {
-                    &-#{$value} {
-                        flex: #{$flex-fill} !important;
-                    }
-                }
-            }
-        }
-    }
+	&-column {
+		flex-direction: column !important;
+	}
+
+	&-wrap {
+		flex-wrap: wrap !important;
+	}
+
+	&-nowrap {
+		flex-wrap: nowrap !important;
+	}
+
+	&-1 {
+		flex: 1;
+	}
+
+	&-fill {
+		flex: 1 0 0%;
+	}
+
+	&-fit {
+		flex: 1 1 0%;
+	}
+
+	@each $breakpoint, $width in $breakpoints {
+		@if $breakpoint !="xs" {
+			@include breakpoint($breakpoint) {
+				&-#{$breakpoint} {
+					&-row {
+						flex-direction: row !important;
+					}
+
+					&-column {
+						flex-direction: column !important;
+					}
+
+					&-wrap {
+						flex-wrap: wrap !important;
+					}
+
+					&-nowrap {
+						flex-wrap: nowrap !important;
+					}
+
+					&-1 {
+						flex: 1;
+					}
+
+					&-fill {
+						flex: 1 0 0%;
+					}
+
+					&-fit {
+						flex: 1 1 0%;
+					}
+				}
+			}
+		}
+	}
 }
 
 .align {
-    &-items {
-        @each $align-item, $value in $align-items {
-            &-#{$value} {
-                align-items: #{$align-item} !important;
-            }
-        }
-    }
-    &-content {
-        @each $align-content, $value in $align-contents {
-            &-#{$value} {
-                align-content: #{$align-content} !important;
-            }
-        }
-    }
-    &-self {
-        @each $align-self, $value in $align-selfs {
-            &-#{$value} {
-                align-self: #{$align-self} !important;
-            }
-        }
-    }
-}
+	&-self {
+		&-start {
+			align-self: flex-start !important;
+		}
 
-@each $breakpointclass, $bpc in $breakpointclasses {
-    .align {
-        &-items {
-            @include breakpoint("breakpoint-#{$bpc}") {
-                &-#{$bpc} {
-                    @each $align-item, $value in $align-items {
-                        &-#{$value} {
-                            align-items: #{$align-item} !important;
-                        }
-                    }
-                }
-            }
-        }
-        &-content {
-            @include breakpoint("breakpoint-#{$bpc}") {
-                &-#{$bpc} {
-                    @each $align-content, $value in $align-contents {
-                        &-#{$value} {
-                            align-content: #{$align-content} !important;
-                        }
-                    }
-                }
-            }
-        }
-        &-self {
-            @include breakpoint("breakpoint-#{$bpc}") {
-                &-#{$bpc} {
-                    @each $align-self, $value in $align-selfs {
-                        &-#{$value} {
-                            align-self: #{$align-self} !important;
-                        }
-                    }
-                }
-            }
-        }
-    }
+		&-end {
+			align-self: flex-end !important;
+		}
+
+		&-center {
+			align-self: center !important;
+		}
+
+		&-baseline {
+			align-self: baseline !important;
+		}
+
+		&-stretch {
+			align-self: stretch !important;
+		}
+	}
+
+	&-items {
+		&-start {
+			align-items: flex-start !important;
+		}
+
+		&-end {
+			align-items: flex-end !important;
+		}
+
+		&-center {
+			align-items: center !important;
+		}
+
+		&-baseline {
+			align-items: baseline !important;
+		}
+
+		&-stretch {
+			align-items: stretch !important;
+		}
+	}
+
+	@each $breakpoint, $width in $breakpoints {
+		@if $breakpoint !="xs" {
+			@include breakpoint($breakpoint) {
+				&-self {
+					&-#{$breakpoint} {
+						&-start {
+							align-self: flex-start !important;
+						}
+
+						&-end {
+							align-self: flex-end !important;
+						}
+
+						&-center {
+							align-self: center !important;
+						}
+
+						&-baseline {
+							align-self: baseline !important;
+						}
+
+						&-stretch {
+							align-self: stretch !important;
+						}
+					}
+				}
+
+				&-items {
+					&-#{$breakpoint} {
+						&-start {
+							align-items: flex-start !important;
+						}
+
+						&-end {
+							align-items: flex-end !important;
+						}
+
+						&-center {
+							align-items: center !important;
+						}
+
+						&-baseline {
+							align-items: baseline !important;
+						}
+
+						&-stretch {
+							align-items: stretch !important;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .justify {
-    &-items {
-        @each $align-item, $value in $align-items {
-            &-#{$value} {
-                justify-items: #{$align-item} !important;
-            }
-        }
-    }
-    &-content {
-        @each $align-content, $value in $align-contents {
-            &-#{$value} {
-                justify-content: #{$align-content} !important;
-            }
-        }
-    }
-    &-self {
-        @each $align-self, $value in $align-selfs {
-            &-#{$value} {
-                justify-self: #{$align-self} !important;
-            }
-        }
-    }
-}
+	&-content {
+		&-start {
+			justify-content: flex-start !important;
+		}
 
-@each $breakpointclass, $bpc in $breakpointclasses {
-    .justify {
-        &-items {
-            @include breakpoint("breakpoint-#{$bpc}") {
-                &-#{$bpc} {
-                    @each $align-item, $value in $align-items {
-                        &-#{$value} {
-                            justify-items: #{$align-item} !important;
-                        }
-                    }
-                }
-            }
-        }
-        &-content {
-            @include breakpoint("breakpoint-#{$bpc}") {
-                &-#{$bpc} {
-                    @each $align-content, $value in $align-contents {
-                        &-#{$value} {
-                            justify-content: #{$align-content} !important;
-                        }
-                    }
-                }
-            }
-        }
-        &-self {
-            @include breakpoint("breakpoint-#{$bpc}") {
-                &-#{$bpc} {
-                    @each $align-self, $value in $align-selfs {
-                        &-#{$value} {
-                            justify-self: #{$align-self} !important;
-                        }
-                    }
-                }
-            }
-        }
-    }
+		&-center {
+			justify-content: center !important;
+		}
+
+		&-end {
+			justify-content: flex-end !important;
+		}
+
+		&-around {
+			justify-content: space-around !important;
+		}
+
+		&-between {
+			justify-content: space-between !important;
+		}
+
+		&-evenly {
+			justify-content: space-evenly !important;
+		}
+
+		&-stretch {
+			justify-content: stretch !important;
+		}
+	}
+
+	@each $breakpoint, $width in $breakpoints {
+		@if $breakpoint !="xs" {
+			@include breakpoint($breakpoint) {
+				&-#{$breakpoint} {
+					&-content {
+						&-start {
+							justify-content: flex-start !important;
+						}
+
+						&-center {
+							justify-content: center !important;
+						}
+
+						&-end {
+							justify-content: flex-end !important;
+						}
+
+						&-around {
+							justify-content: space-around !important;
+						}
+
+						&-between {
+							justify-content: space-between !important;
+						}
+
+						&-evenly {
+							justify-content: space-evenly !important;
+						}
+
+						&-stretch {
+							justify-content: stretch !important;
+						}
+					}
+				}
+			}
+		}
+	}
 }

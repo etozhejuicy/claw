@@ -1,0 +1,44 @@
+.footer {
+	padding: 10px 0;
+	border-top: 1px solid var(--primary);
+
+	&-inner {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 30px;
+
+		@include breakpoint("md") {
+			align-items: stretch;
+			flex-wrap: wrap;
+			gap: 30px 10px;
+		}
+	}
+
+	&-logo {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+		gap: 20px;
+
+		&>a {
+			width: 60px;
+			height: 60px;
+			text-decoration: none !important;
+
+			@include breakpoint('lg') {
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}

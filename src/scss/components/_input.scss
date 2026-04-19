@@ -1,0 +1,16 @@
+.input,
+input:not([type="checkbox"]),
+input:not([type="radio"]),
+input[type="text"].input,
+textarea.input,
+input[type="text"],
+input[type="number"],
+textarea {
+	@include input;
+}
+
+.input {
+	&-file {
+		@include input-file;
+	}
+}

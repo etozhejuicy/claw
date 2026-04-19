@@ -1,396 +1,138 @@
 .p {
-    @for $i from 0 through 12 {
-        &-#{$i} {
-            padding: divide($i, 4) + rem;
-        }
-        @include breakpoint("breakpoint-xs") {
-            &-xs {
-                &-#{$i} {
-                    padding: divide($i, 4) + rem !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-sm") {
-            &-sm {
-                &-#{$i} {
-                    padding: divide($i, 4) + rem !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-md") {
-            &-md {
-                &-#{$i} {
-                    padding: divide($i, 4) + rem !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-lg") {
-            &-lg {
-                &-#{$i} {
-                    padding: divide($i, 4) + rem !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xl") {
-            &-xl {
-                &-#{$i} {
-                    padding: divide($i, 4) + rem !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xxl") {
-            &-xxl {
-                &-#{$i} {
-                    padding: divide($i, 4) + rem !important;
-                }
-            }
-        }
-        @include breakpoint("breakpoint-xxxl") {
-            &-xxxl {
-                &-#{$i} {
-                    padding: divide($i, 4) + rem !important;
-                }
-            }
-        }
-        &t {
-            &-#{$i} {
-                padding-top: divide($i, 4) + rem;
-            }
-            @include breakpoint("breakpoint-xs") {
-                &-xs {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-sm") {
-                &-sm {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-md") {
-                &-md {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-lg") {
-                &-lg {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxl") {
-                &-xxl {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxxl") {
-                &-xxxl {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-        }
-        &b {
-            &-#{$i} {
-                padding-bottom: divide($i, 4) + rem;
-            }
-            @include breakpoint("breakpoint-xs") {
-                &-xs {
-                    &-#{$i} {
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-sm") {
-                &-sm {
-                    &-#{$i} {
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-md") {
-                &-md {
-                    &-#{$i} {
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-lg") {
-                &-lg {
-                    &-#{$i} {
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$i} {
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxl") {
-                &-xxl {
-                    &-#{$i} {
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxxl") {
-                &-xxxl {
-                    &-#{$i} {
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-        }
-        &l {
-            &-#{$i} {
-                padding-left: divide($i, 4) + rem;
-            }
-            @include breakpoint("breakpoint-xs") {
-                &-xs {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-sm") {
-                &-sm {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-md") {
-                &-md {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-lg") {
-                &-lg {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxl") {
-                &-xxl {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxxl") {
-                &-xxxl {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-        }
-        &r {
-            &-#{$i} {
-                padding-right: divide($i, 4) + rem;
-            }
-            @include breakpoint("breakpoint-xs") {
-                &-xs {
-                    &-#{$i} {
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-sm") {
-                &-sm {
-                    &-#{$i} {
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-md") {
-                &-md {
-                    &-#{$i} {
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-lg") {
-                &-lg {
-                    &-#{$i} {
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$i} {
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxl") {
-                &-xxl {
-                    &-#{$i} {
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxxl") {
-                &-xxxl {
-                    &-#{$i} {
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-        }
-        &y {
-            &-#{$i} {
-                padding-top: divide($i, 4) + rem;
-                padding-bottom: divide($i, 4) + rem;
-            }
-            @include breakpoint("breakpoint-xs") {
-                &-xs {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-sm") {
-                &-sm {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-md") {
-                &-md {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-lg") {
-                &-lg {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxl") {
-                &-xxl {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxxl") {
-                &-xxxl {
-                    &-#{$i} {
-                        padding-top: divide($i, 4) + rem !important;
-                        padding-bottom: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-        }
-        &x {
-            &-#{$i} {
-                padding-left: divide($i, 4) + rem;
-                padding-right: divide($i, 4) + rem;
-            }
-            @include breakpoint("breakpoint-xs") {
-                &-xs {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-sm") {
-                &-sm {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-md") {
-                &-md {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-lg") {
-                &-lg {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xl") {
-                &-xl {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxl") {
-                &-xxl {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-            @include breakpoint("breakpoint-xxxl") {
-                &-xxxl {
-                    &-#{$i} {
-                        padding-left: divide($i, 4) + rem !important;
-                        padding-right: divide($i, 4) + rem !important;
-                    }
-                }
-            }
-        }
-    }
+	@each $padding, $value in $steps {
+		@if $padding != "auto" {
+			&-#{$padding} {
+				padding: $value !important;
+			}
+			&t {
+				&-#{$padding} {
+					padding-top: $value !important;
+				}
+			}
+			&b {
+				&-#{$padding} {
+					padding-bottom: $value !important;
+				}
+			}
+			&l {
+				&-#{$padding} {
+					padding-left: $value !important;
+				}
+			}
+			&r {
+				&-#{$padding} {
+					padding-right: $value !important;
+				}
+			}
+			&x {
+				&-#{$padding} {
+					padding-left: $value !important;
+					padding-right: $value !important;
+				}
+			}
+			&y {
+				&-#{$padding} {
+					padding-top: $value !important;
+					padding-bottom: $value !important;
+				}
+			}
+		}
+	}
+
+	@each $breakpoint, $width in $breakpoints {
+		@if $breakpoint != "xs" {
+			@include breakpoint($breakpoint) {
+				&-#{$breakpoint} {
+					@each $padding, $value in $steps {
+						@if $padding != "auto" {
+							&-#{$padding} {
+								padding: $value !important;
+							}
+						}
+					}
+				}
+			}
+
+			&t {
+				@include breakpoint($breakpoint) {
+					&-#{$breakpoint} {
+						@each $padding, $value in $steps {
+							@if $padding != "auto" {
+								&-#{$padding} {
+									padding-top: $value !important;
+								}
+							}
+						}
+					}
+				}
+			}
+			&b {
+				@include breakpoint($breakpoint) {
+					&-#{$breakpoint} {
+						@each $padding, $value in $steps {
+							@if $padding != "auto" {
+								&-#{$padding} {
+									padding-bottom: $value !important;
+								}
+							}
+						}
+					}
+				}
+			}
+			&l {
+				@include breakpoint($breakpoint) {
+					&-#{$breakpoint} {
+						@each $padding, $value in $steps {
+							@if $padding != "auto" {
+								&-#{$padding} {
+									padding-left: $value !important;
+								}
+							}
+						}
+					}
+				}
+			}
+			&r {
+				@include breakpoint($breakpoint) {
+					&-#{$breakpoint} {
+						@each $padding, $value in $steps {
+							@if $padding != "auto" {
+								&-#{$padding} {
+									padding-right: $value !important;
+								}
+							}
+						}
+					}
+				}
+			}
+			&x {
+				@include breakpoint($breakpoint) {
+					&-#{$breakpoint} {
+						@each $padding, $value in $steps {
+							@if $padding != "auto" {
+								&-#{$padding} {
+									padding-left: $value !important;
+									padding-right: $value !important;
+								}
+							}
+						}
+					}
+				}
+			}
+			&y {
+				@include breakpoint($breakpoint) {
+					&-#{$breakpoint} {
+						@each $padding, $value in $steps {
+							@if $padding != "auto" {
+								&-#{$padding} {
+									padding-top: $value !important;
+									padding-bottom: $value !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

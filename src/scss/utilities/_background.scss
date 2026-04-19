@@ -1,0 +1,21 @@
+.bg {
+	@each $color, $value in $colors {
+		&-#{$value} {
+			background-color: $color !important;
+		}
+	}
+
+	@each $breakpoint, $width in $breakpoints {
+		@if $breakpoint != "xs" {
+			@include breakpoint($breakpoint) {
+				&-#{$breakpoint} {
+					@each $color, $value in $colors {
+						&-#{$value} {
+							background-color: $color !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

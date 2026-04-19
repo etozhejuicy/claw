@@ -1,0 +1,18 @@
+.link {
+	&-icon {
+		display: inline;
+
+		& i {
+			display: inline-flex;
+			vertical-align: middle;
+		}
+
+		& svg {
+			display: inline-flex;
+			vertical-align: center;
+			max-width: $font-size;
+			max-height: $font-size;
+			object-fit: contain;
+		}
+	}
+}

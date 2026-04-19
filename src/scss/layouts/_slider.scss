@@ -1,0 +1,457 @@
+.slider {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 20px;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	user-select: none;
+	-webkit-user-drag: none;
+
+	&[data-orientation="vertical"] {
+		& .slides {
+			flex-direction: column;
+		}
+
+		& .slide {
+			width: 100%;
+			max-width: 100%;
+			margin-right: 0;
+			margin-bottom: var(--slides-gap);
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	& .slides {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: stretch;
+		flex-wrap: nowrap;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		touch-action: pan-y;
+		transition-property: transform;
+		transition: transform 0.3s ease;
+		will-change: transform;
+		// cursor: pointer;
+		overflow: visible;
+
+		// Если ориентация слайдера горизонтальная, то отключаем touch по оси Y
+		&[data-orientation="horizontal"] {
+			touch-action: pan-y;
+		}
+
+		// Если ориентация слайдера вертикальная, то отключаем touch по оси X
+		&[data-orientation="vertical"] {
+			touch-action: pan-x;
+		}
+
+		& .glightbox {
+			pointer-events: all;
+		}
+
+		&.isDragging {
+			cursor: grabbing;
+			touch-action: none;
+			transition: none;
+
+			// При перетаскивании любого элемента меняем курсор на grabbing
+			& * {
+				cursor: grabbing;
+			}
+
+			& .glightbox {
+				pointer-events: none;
+			}
+		}
+	}
+
+	.slide {
+		flex: 1 0 auto;
+		width: 100%;
+		max-width: 100%;
+		margin-right: var(--slides-gap);
+		display: flex;
+		// align-items: center;
+		// justify-content: center;
+		border-radius: 4px;
+		user-select: none;
+
+		&>.card {
+			height: 100%;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&.active {
+			position: relative;
+		}
+
+		&>picture {
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			user-select: none;
+			overflow: hidden;
+
+			&>* {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+
+	&-button {
+		@include pagination-arrow;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 35px;
+		height: 35px;
+		font-size: 12px;
+		text-align: center;
+		transition:
+			background-color 0.25s ease-in-out,
+			border-color 0.25s ease-in-out,
+			color 0.25s ease-in-out;
+
+		&>i {
+			display: flex;
+		}
+	}
+
+	& .navigation {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
+
+		&.isMain,
+		&.isPartners {
+			& .slider {
+				&-button {
+					@include button-color($primary, $white);
+
+					@include breakpoint("sm") {
+						@include button-color($white, $primary);
+					}
+				}
+			}
+		}
+	}
+
+	& .scrollbar {
+		position: relative;
+		height: 3px;
+		background: var(--light-grey);
+		border-radius: 8px;
+		pointer-events: none;
+		overflow: hidden;
+
+		&-thumb {
+			position: absolute;
+			min-width: 180px;
+			height: 100%;
+			background: var(--primary);
+			border-radius: 8px;
+			cursor: pointer;
+			transition: 0.25s ease-in-out;
+		}
+	}
+}
+
+// slider-block
+.slider-block {
+	position: relative;
+	overflow: hidden;
+
+	&-centered {
+		& .slider-button {
+
+			&.prev,
+			&.next {
+				position: absolute;
+				top: 50%;
+				z-index: 10;
+				transform: translate(0, -50%);
+			}
+
+			&.prev {
+				left: 20px;
+
+				@include breakpoint("lg") {
+					left: 10px;
+				}
+			}
+
+			&.next {
+				right: 20px;
+
+				@include breakpoint("lg") {
+					right: 10px;
+				}
+			}
+		}
+
+		&.nav-centered {
+			@include break-up("lg") {
+				overflow: visible;
+
+				& .masked {
+					max-width: calc(100% - 40px);
+					margin-left: 20px;
+				}
+
+				& .navigation {
+					position: unset;
+					top: unset;
+					left: unset;
+					right: unset;
+					bottom: 0;
+					margin-top: -21.5px;
+					transform: unset;
+				}
+
+				& .slider-button {
+					position: absolute;
+					top: 50%;
+					z-index: 10;
+					transform: translate(0, calc(-1 * 50% + 21.5px));
+
+					&.prev {
+						left: -20px;
+
+						@include breakpoint("lg") {
+							left: 0;
+						}
+					}
+
+					&.next {
+						right: -20px;
+
+						@include breakpoint("lg") {
+							right: 0;
+						}
+					}
+				}
+			}
+
+			@include break-up("lg") {
+				& .masked {
+					max-width: unset;
+					margin-left: unset;
+				}
+			}
+		}
+	}
+
+	&-top {
+		& .navigation {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translateY(2.5%);
+
+			@include breakpoint("lg") {
+				position: relative;
+				top: unset;
+				left: unset;
+				right: unset;
+				bottom: unset;
+				justify-content: center;
+				transform: none;
+			}
+		}
+
+		&.nav-centered {
+			@include break-up("xxl") {
+				overflow: visible;
+
+				& .masked {
+					max-width: calc(100% - 40px);
+					margin-left: 20px;
+				}
+
+				& .navigation {
+					position: unset;
+					top: unset;
+					left: unset;
+					right: unset;
+					bottom: 0;
+					margin-top: 20px;
+					// margin-top: -21.5px;
+					transform: unset;
+				}
+
+				& .slider-button {
+					position: absolute;
+					top: 50%;
+					z-index: 10;
+					transform: translate(0, calc(-1 * 50% + 21.5px));
+
+					&.prev {
+						left: -20px;
+
+						@include breakpoint("lg") {
+							left: 0;
+						}
+					}
+
+					&.next {
+						right: -20px;
+
+						@include breakpoint("lg") {
+							right: 0;
+						}
+					}
+				}
+			}
+
+			@include break-up("lg") {
+				& .masked {
+					max-width: unset;
+					margin-left: unset;
+				}
+			}
+		}
+	}
+
+	&-cover {
+		& .slider {
+			border-radius: 15px;
+			overflow: hidden;
+
+			@include breakpoint("sm") {
+				min-height: 375px;
+			}
+
+			&:is([data-thumbnail-slider-id]) {
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 2;
+					width: 100%;
+					height: 100%;
+					background: linear-gradient(180deg,
+							rgba(43, 47, 53, 0) 0%,
+							#2b2f35 100%);
+					pointer-events: none;
+					user-select: none;
+				}
+			}
+
+			& .slides {
+				z-index: 1;
+
+				@include breakpoint("sm") {
+					flex: 1;
+				}
+
+				& .slide {
+					&>a {
+						width: 100%;
+						height: 100%;
+
+						& img,
+						& picture {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							object-position: center;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-thumbnail {
+		& .slide {
+			box-shadow: 0 0 0 1px var(--white);
+			border-radius: 5px;
+			aspect-ratio: 16 / 9;
+			transition: 0.25s ease-in-out;
+
+			&:hover {
+				box-shadow: 0 0 0 3px var(--white);
+			}
+
+			&.active {
+				box-shadow: 0 0 0 3px var(--primary);
+			}
+
+			&>a {
+				width: 100%;
+				height: 100%;
+				border-radius: 5px;
+				overflow: hidden;
+
+				& img,
+				& picture {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					object-position: center;
+				}
+			}
+		}
+	}
+
+	&-mini {
+		& .slider {
+			& .slides {
+				& .slide {
+					&>a {
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
+
+		& .slider-button {
+			position: absolute;
+			top: 50%;
+			z-index: 1;
+			transform: translateY(-50%);
+
+			@include breakpoint("lg") {
+				--btn-size: 20px;
+				top: 10px;
+				width: 20px;
+				height: 20px;
+				transform: translateY(0);
+			}
+
+			&.prev {
+				left: 5px;
+
+				@include breakpoint("lg") {
+					left: auto;
+					right: 40px;
+				}
+			}
+
+			&.next {
+				right: 10px;
+
+				@include breakpoint("lg") {}
+			}
+		}
+	}
+}

@@ -1,644 +1,97 @@
-// prefix
-$prefix: "--cl";
-// prefix
+@use 'sass:map';
 
-// default font-size for responsive
-$root-fs: 16;
-// default font-size for responsive
+// import's colors
+@import "./colors";
 
-// Breakpoints
-$breakpoint-xs: 0;
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
-$breakpoint-xxl: 1400px;
-$breakpoint-xxxl: 1600px;
+// import's mixins
+@import "./mixin";
 
 $breakpoints: (
-  "breakpoint-xs": 0,
-  "breakpoint-sm": 576px,
-  "breakpoint-md": 768px,
-  "breakpoint-lg": 992px,
-  "breakpoint-xl": 1200px,
-  "breakpoint-xxl": 1400px,
-  "breakpoint-xxxl": 1600px,
-);
-// Breakpoints
-
-// Breakpoints class
-$breakpointclass-xs: xs;
-$breakpointclass-sm: sm;
-$breakpointclass-md: md;
-$breakpointclass-lg: lg;
-$breakpointclass-xl: xl;
-$breakpointclass-xxl: xxl;
-$breakpointclass-xxxl: xxxl;
-
-$breakpointclasses: (
-  "breakpointclass-xs": "xs",
-  "breakpointclass-sm": "sm",
-  "breakpointclass-md": "md",
-  "breakpointclass-lg": "lg",
-  "breakpointclass-xl": "xl",
-  "breakpointclass-xxl": "xxl",
-  "breakpointclass-xxxl": "xxxl",
-);
-// Breakpoints class
-
-// responsive
-$r-xs: 375;
-$r-sm: 576;
-$r-md: 768;
-$r-lg: 992;
-$r-xl: 1440;
-$r-xxxl: 1600;
-
-$responsives: (
-  $r-xs: 375,
-  $r-sm: 576,
-  $r-md: 768,
-  $r-lg: 992,
-  $r-xl: 1440,
-  $r-xxxl: 1600,
-);
-// responsive
-
-// borders
-$border-1: 0.0625rem;
-$border-2: 0.125rem;
-$border-3: 0.25rem;
-
-$borders: (
-  $border-1: "1",
-  $border-2: "2",
-  $border-3: "3",
+	"xxxl": 1600px,
+	"xxl": 1440px,
+	"xl": 1200px,
+	"lg": 1000px,
+	"md": 720px,
+	"sm": 576px,
+	"xs": 0,
 );
 
-$border-none: none;
-$border-solid: solid;
-$border-dotted: dotted;
-$border-dashed: dashed;
-$border-double: double;
+$gutter: 4;
+$steps-count: 25;
 
-$borderStyles: (
-  $border-none: "none",
-  $border-solid: "solid",
-  $border-dotted: "dotted",
-  $border-dashed: "dashed",
-  $border-double: "double",
-);
-// borders
-
-// cols
-$col-auto: auto;
-
-$cols: (
-  $col-auto: "auto",
+$steps: (
+	auto: auto,
+	0: 0,
 );
 
-$row-col-auto: auto;
+@for $i from 1 through $steps-count {
+	$key: $i * $gutter;
+	$value: #{$key}px;
+	$steps: map.merge($steps, ($key: $value));
+}
 
-$row-cols: (
-  $row-col-auto: "auto",
+$rates-gutter: 4;
+$rates-count: 25;
+
+$rates: (
+	auto: auto,
+	fit: fit-content,
+	fill: fill-available,
+	0: 0,
 );
 
-$gutter-0: 0rem;
-$gutter-1: 0.25rem;
-$gutter-2: 0.5rem;
-$gutter-3: 1rem;
-$gutter-4: 1.5rem;
-$gutter-5: 3rem;
+@for $i from 1 through $rates-count {
+	$key: $i * $rates-gutter;
+	$value: $key * 1%;
+	$rates: map.merge($rates, ($key: $value));
+}
 
-$gutters: (
-  $gutter-0: "0",
-  $gutter-1: "1",
-  $gutter-2: "2",
-  $gutter-3: "3",
-  $gutter-4: "4",
-  $gutter-5: "5",
+$radiuses: (
+	0: 0px,
+	10: 10px,
+	15: 15px,
+	pill: 1000px,
 );
-// cols
-
-// dimensions
-$dimension-0: 0;
-$dimension-5: 5;
-$dimension-10: 10;
-$dimension-15: 15;
-$dimension-20: 20;
-$dimension-25: 25;
-$dimension-30: 30;
-$dimension-35: 35;
-$dimension-40: 40;
-$dimension-45: 45;
-$dimension-50: 50;
-$dimension-55: 55;
-$dimension-60: 60;
-$dimension-65: 65;
-$dimension-70: 70;
-$dimension-75: 75;
-$dimension-80: 80;
-$dimension-85: 85;
-$dimension-90: 90;
-$dimension-95: 95;
-$dimension-100: 100;
-$dimension-auto: auto;
-$dimension-fit: fit;
-$dimension-fill: fill;
-$dimension-min: min;
-$dimension-max: max;
-
-$dimensions: (
-  $dimension-0: 0%,
-  $dimension-5: 5%,
-  $dimension-10: 10%,
-  $dimension-15: 15%,
-  $dimension-20: 20%,
-  $dimension-25: 25%,
-  $dimension-30: 30%,
-  $dimension-35: 35%,
-  $dimension-40: 40%,
-  $dimension-45: 45%,
-  $dimension-50: 50%,
-  $dimension-55: 55%,
-  $dimension-60: 60%,
-  $dimension-65: 65%,
-  $dimension-70: 70%,
-  $dimension-75: 75%,
-  $dimension-80: 80%,
-  $dimension-85: 85%,
-  $dimension-90: 90%,
-  $dimension-95: 95%,
-  $dimension-100: 100%,
-  $dimension-auto: auto,
-  $dimension-fit: fit-content,
-  $dimension-fill: fill-available,
-  $dimension-min: min-content,
-  $dimension-max: max-content,
-);
-// dimensions
-
-// display
-$display-block: block;
-$display-inline: inline;
-$display-inline-block: inline-block;
-$display-flex: flex;
-$display-inline-flex: inline-flex;
-$display-grid: grid;
-$display-inline-grid: inline-grid;
-$display-list: list;
-$display-table: table;
-$display-table-row: table-row;
-$display-table-cell: table-cell;
-$display-none: none;
-
-$displays: (
-  $display-block: "block",
-  $display-inline: "inline",
-  $display-inline-block: "inline-block",
-  $display-flex: "flex",
-  $display-inline-flex: "inline-flex",
-  $display-grid: "grid",
-  $display-inline-grid: "inline-grid",
-  $display-list: "list",
-  $display-table: "table",
-  $display-table-row: "table-row",
-  $display-table-cell: "table-cell",
-  $display-none: "none",
-);
-// display
-
-// flexbox
-$flex-fill: 1 1 auto;
-$flex-row: row;
-$flex-column: column;
-$flex-row-reverse: row-reverse;
-$flex-column-reverse: column-reverse;
-$flex-grow-0: 0;
-$flex-grow-1: 1;
-$flex-shrink-0: 0;
-$flex-shrink-1: 1;
-$flex-wrap: wrap;
-$flex-nowrap: nowrap;
-$flex-wrap-reverse: wrap-reverse;
-
-$flex-directions: (
-  $flex-row: "row",
-  $flex-column: "column",
-  $flex-row-reverse: "row-reverse",
-  $flex-column-reverse: "column-reverse",
-);
-
-$flex-wraps: (
-  $flex-wrap: "wrap",
-  $flex-nowrap: "nowrap",
-  $flex-wrap-reverse: "wrap-reverse",
-);
-
-$flex-grows: (
-  $flex-grow-0: "0",
-  $flex-grow-1: "1",
-);
-
-$flex-shrinks: (
-  $flex-shrink-0: "0",
-  $flex-shrink-1: "1",
-);
-
-$flex-fills: (
-  $flex-fill: "fill",
-);
-// flexbox
-
-// positions
-$position-absolute: absolute;
-$position-relative: relative;
-$position-fixed: fixed;
-$position-sticky: sticky;
-$position-static: static;
-$position-unset: unset;
 
 $positions: (
-  $position-absolute: "absolute",
-  $position-relative: "relative",
-  $position-fixed: "fixed",
-  $position-sticky: "sticky",
-  $position-static: "static",
-  $position-unset: "unset",
-);
-// positions
-
-// directions
-$direction-top: top;
-$direction-left: left;
-$direction-right: right;
-$direction-bottom: bottom;
-
-$directions: (
-  $direction-top: "top",
-  $direction-left: "left",
-  $direction-right: "right",
-  $direction-bottom: "bottom",
-);
-// directions
-
-// text
-// text align
-$text-left: left;
-$text-right: right;
-$text-center: center;
-$text-justify: justify;
-$text-start: start;
-$text-end: end;
-
-$aligns: (
-  $text-left: "left",
-  $text-right: "right",
-  $text-center: "center",
-  $text-justify: "justify",
-  $text-start: "start",
-  $text-end: "end",
+	absolute: absolute,
+	fixed: fixed,
+	sticky: sticky,
+	relative: relative,
 );
 
-// font-variant
-$fvp-sub: sub;
-$fvp-super: super;
-$fvp-normal: normal;
+$font-size: 16px;
 
-$fv-positions: (
-  $fvp-sub: "sub",
-  $fvp-super: "super",
-  $fvp-normal: "normal",
+@include breakpoint('lg') {
+	$font-size: 14px;
+}
+
+$font-weights: (
+	"400": 400,
+	"500": 500,
+	"700": 700,
+	"light": 400,
+	"medium": 500,
+	"bold": 700,
 );
 
-// font-weight
-$fw-100: 100;
-$fw-200: 200;
-$fw-300: 300;
-$fw-400: 400;
-$fw-500: 500;
-$fw-600: 600;
-$fw-700: 700;
-$fw-800: 800;
-$fw-900: 900;
-$fw-bold: bold;
-$fw-bolder: bolder;
-$fw-lighter: lighter;
+$font-family: system-ui,
+	-apple-system,
+	"Segoe UI",
+	Roboto,
+	"Helvetica Neue",
+	"Noto Sans",
+	"Liberation Sans",
+	Arial,
+	sans-serif,
+	"Apple Color Emoji",
+	"Segoe UI Emoji",
+	"Segoe UI Symbol",
+	"Noto Color Emoji";
 
-$weights: (
-  $fw-100: "100",
-  $fw-200: "200",
-  $fw-300: "300",
-  $fw-400: "400",
-  $fw-500: "500",
-  $fw-600: "600",
-  $fw-700: "700",
-  $fw-800: "800",
-  $fw-900: "900",
-  $fw-bold: "bold",
-  $fw-bolder: "bolder",
-  $fw-lighter: "lighter",
-);
-
-// font-size
-$fs-1: 0.25rem;
-$fs-2: 0.5rem;
-$fs-3: 0.75rem;
-$fs-4: 1rem;
-$fs-5: 1.25rem;
-$fs-6: 1.5rem;
-$fs-xs: 0.875rem;
-$fs-lg: 1.125rem;
-
-$sizes: (
-  $fs-1: "1",
-  $fs-2: "2",
-  $fs-3: "3",
-  $fs-4: "4",
-  $fs-5: "5",
-  $fs-6: "6",
-  $fs-xs: "xs",
-  $fs-lg: "lg",
-);
-
-// line-height
-$ln-0: 0;
-$ln-1: 1;
-$ln-2: 2;
-$ln-3: 3;
-$ln-4: 4;
-$ln-xs: 0.25;
-$ln-sm: 0.5;
-$ln-md: 0.75;
-$ln-lg: 1.25;
-
-$lineHeights: (
-  $ln-0: "0",
-  $ln-1: "1",
-  $ln-2: "2",
-  $ln-3: "3",
-  $ln-4: "4",
-  $ln-xs: "xs",
-  $ln-sm: "sm",
-  $ln-md: "md",
-  $ln-lg: "lg",
-);
-// text
-
-// vertical-align
-$va-baseline: baseline;
-$va-top: top;
-$va-middle: middle;
-$va-bottom: bottom;
-$va-text-bottom: text-bottom;
-$va-text-top: text-top;
-
-$vertical-aligns: (
-  $va-baseline: "baseline",
-  $va-top: "top",
-  $va-middle: "middle",
-  $va-bottom: "bottom",
-  $va-text-bottom: "text-bottom",
-  $va-text-top: "text-top",
-);
-// vertical-align
-
-// flexbox
-// align-items
-$align-items-baseline: baseline;
-$align-items-center: center;
-$align-items-normal: normal;
-$align-items-start: flex-start;
-$align-items-end: flex-end;
-$align-items-stretch: stretch;
-$align-items-self-start: self-start;
-$align-items-self-end: self-end;
-$align-items-unset: unset;
-
-$align-items: (
-  $align-items-baseline: "baseline",
-  $align-items-center: "center",
-  $align-items-normal: "normal",
-  $align-items-start: "start",
-  $align-items-end: "end",
-  $align-items-stretch: "stretch",
-  $align-items-self-start: "self-start",
-  $align-items-self-end: "self-end",
-  $align-items-unset: "unset",
-);
-
-// align-content
-$align-contents-baseline: baseline;
-$align-contents-center: center;
-$align-contents-normal: normal;
-$align-contents-start: flex-start;
-$align-contents-end: flex-end;
-$align-contents-stretch: stretch;
-$align-contents-space-around: space-around;
-$align-contents-space-between: space-between;
-$align-contents-space-evenly: space-evenly;
-$align-contents-unset: unset;
-
-$align-contents: (
-  $align-contents-baseline: "baseline",
-  $align-contents-center: "center",
-  $align-contents-normal: "normal",
-  $align-contents-start: "start",
-  $align-contents-end: "end",
-  $align-contents-stretch: "stretch",
-  $align-contents-space-around: "around",
-  $align-contents-space-between: "between",
-  $align-contents-space-evenly: "evenly",
-  $align-contents-unset: "unset",
-);
-
-// align-self
-$align-selfs-baseline: baseline;
-$align-selfs-center: center;
-$align-selfs-normal: normal;
-$align-selfs-start: flex-start;
-$align-selfs-end: flex-end;
-$align-selfs-stretch: stretch;
-$align-selfs-self-start: self-start;
-$align-selfs-self-end: self-end;
-$align-selfs-unset: unset;
-
-$align-selfs: (
-  $align-selfs-baseline: "baseline",
-  $align-selfs-center: "center",
-  $align-selfs-normal: "normal",
-  $align-selfs-start: "start",
-  $align-selfs-end: "end",
-  $align-selfs-stretch: "stretch",
-  $align-selfs-self-start: "self-start",
-  $align-selfs-self-end: "self-end",
-  $align-selfs-unset: "unset",
-);
-// flexbox
-
-// margin
-$m-auto: auto;
-
-$margins: (
-  $m-auto: "auto",
-);
-// margin
-
-// radius
-$rounded: 0.375rem;
-$rounded-pill: 50rem;
-$rounded-circle: 50%;
-
-$roundeds: (
-  $rounded: "",
-  $rounded-pill: "pill",
-  $rounded-circle: "circle",
-);
-// radius
-
-// shadows
-$shadow-initial: var(--shadow-initial);
-$shadow-none: var(--shadow-none);
-
-$shadows: (
-  $shadow-initial: "initial",
-  $shadow-none: "none",
-);
-// shadows
-
-// order
-$order-first: "first";
-
-$orders: (
-  $order-first: -1,
-);
-// order
-
-// object-fit
-$object-fit-contain: contain;
-$object-fit-cover: cover;
-$object-fit-fill: fill;
-$object-fit-scale: scale-down;
-$object-fit-none: none;
-
-$object-fits: (
-  $object-fit-contain: contain,
-  $object-fit-cover: cover,
-  $object-fit-fill: fill,
-  $object-fit-scale: scale,
-  $object-fit-none: none,
-);
-// object-fit
-
-// object-position
-$object-position-top: top;
-$object-position-left: left;
-$object-position-right: right;
-$object-position-bottom: bottom;
-$object-position-center: center;
-
-$object-positions: (
-  $object-position-top: top,
-  $object-position-left: left,
-  $object-position-right: right,
-  $object-position-bottom: bottom,
-  $object-position-center: center,
-);
-// object-position
-
-// opacity
-$opacity-0: 0;
-$opacity-5: 5;
-$opacity-10: 10;
-$opacity-15: 15;
-$opacity-20: 20;
-$opacity-25: 25;
-$opacity-30: 30;
-$opacity-35: 35;
-$opacity-40: 40;
-$opacity-45: 45;
-$opacity-50: 50;
-$opacity-55: 55;
-$opacity-60: 60;
-$opacity-65: 65;
-$opacity-70: 70;
-$opacity-75: 75;
-$opacity-80: 80;
-$opacity-85: 85;
-$opacity-90: 90;
-$opacity-95: 95;
-$opacity-100: 100;
-
-$opacities: (
-  $opacity-0: 0,
-  $opacity-5: 5,
-  $opacity-10: 0.1,
-  $opacity-15: 0.15,
-  $opacity-20: 0.2,
-  $opacity-25: 0.25,
-  $opacity-30: 0.3,
-  $opacity-35: 0.35,
-  $opacity-40: 0.4,
-  $opacity-45: 0.45,
-  $opacity-50: 0.5,
-  $opacity-55: 0.55,
-  $opacity-60: 0.6,
-  $opacity-65: 0.65,
-  $opacity-70: 0.7,
-  $opacity-75: 0.75,
-  $opacity-80: 0.8,
-  $opacity-85: 0.85,
-  $opacity-90: 0.9,
-  $opacity-95: 0.95,
-  $opacity-100: 1,
-);
-// opacity
-
-// overflow
-$overflow-hidden: hidden;
-$overflow-auto: auto;
-$overflow-scroll: scroll;
-$overflow-visible: visible;
-$overflow-clip: clip;
-
-$overflows: (
-  $overflow-hidden: "hidden",
-  $overflow-auto: "auto",
-  $overflow-scroll: "scroll",
-  $overflow-visible: "visible",
-  $overflow-clip: "clip",
-);
-// overflow
-
-// ratio
-$aspect-ratio-1x1: 1x1;
-$aspect-ratio-4x3: 4x3;
-$aspect-ratio-16x9: 16x9;
-$aspect-ratio-21x9: 21x9;
-
-$aspect-ratios: (
-  $aspect-ratio-1x1: "100%",
-  $aspect-ratio-4x3: "75%",
-  $aspect-ratio-16x9: "56.25%",
-  $aspect-ratio-21x9: "42.8571428571%",
-);
-// ratio
-
-// pointer-events
-$pointer-event-none: none;
-$pointer-event-auto: auto;
-$pointer-event-all: all;
-$pointer-event-fill: fill;
-
-$pointer-events: (
-  $pointer-event-none: "none",
-  $pointer-event-auto: "auto",
-  $pointer-event-all: "all",
-  $pointer-event-fill: "fill",
-);
-// pointer-events
-
-// stretched-link
-$stretched-link-pseudo-element: after !default;
-$stretched-link-z-index: 1 !default;
-// stretched-link
+// Создать несколько :root-частей для выбора тематики стилей
+// Несколько разных :root-частей можно будет легко собирать в темы и манипулировать ими
+// Например, в config.scss возможно переключить на одну из стандартных тем для скруглений, теней, палитры цветов и т.д.
+// Это создаст быстрый старт для разработки простых проектов и лендингов
+// Разработчику будет доступно гибкое изменение параметров закруглений, теней, палитры цветов и т.д.
+// Возможность создавать свою тему для фреймворка с поддержкой темной цветовой схемы

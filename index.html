@@ -1,18 +1,327 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-  <link rel="image" type="image/svg+xml" href="./sprite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claw - CSS-Framework</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1, shrink-to-fit=no, user-scalable=no" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon-180x180.png">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon-192x192.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon-144x144.png">
+    <meta name="msapplication-config" content="./browserconfig.xml">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- TD -->
+    <title>
+        Клешня — CSS-фреймворк для лендинга
+    </title>
+    <meta name="description"
+        content="Клешня — это CSS-фреймворк, который поможет вам быстро создать базовую структуру веб-сайта с необходимыми компонентами на вашем сервере. " />
+
+    <!-- styles -->
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+    </style>
 </head>
 
-<body id="app">
-  <script type="module" src="./site/js/app.js"></script>
-  <script type="module" src="./site/js/pages/main.js"></script>
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="./" class="header-logo" title="Качественная металлообработка под ваши задачи">
+                    <img src="./logo.svg" alt="Качественная металлообработка под ваши задачи" />
+                </a>
+
+                <!-- Навигация в шапке -->
+                <div class="menu">
+                    <ul class="menu-list" aria-label="Основное меню">
+                        <li>
+                            <a href="./install/index.html">
+                                Установка
+                            </a>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="./components/index.html">Компоненты</a>
+                            <input type="checkbox" id="menu-dropdown-list-1" aria-haspopup="true" aria-expanded="false">
+                            <label for="menu-dropdown-list-1" aria-label="Открыть подменю">
+                                <i>▼</i>
+                            </label>
+                            <!-- Здесь добавить иконку chevron-down -->
+                            <ul>
+                                <li>
+                                    <a href="./components/buttons.html">Кнопки</a>
+                                </li>
+                                <li>
+                                    <a href="./components/cards.html">Карточки</a>
+                                </li>
+                                <li>
+                                    <a href="./components/checkboxes.html">Чекбоксы и радио</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./utilities/index.html">
+                                Утилиты
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./about/index.html">
+                                О нас
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Контакты в шапке -->
+                    <div class="d-flex flex-row align-items-center gap-16 mx-auto ml-lg-0">
+                        <a href="https://github.com/etozhejuicy/claw" class="btn btn-icon aspected"
+                            title="Разработка Клешни в Github" target="_blank">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <use xlink:href="./sprite.svg#icon-github"></use>
+                            </svg>
+                        </a>
+                        <a href="https://t.me/claw_css" class="btn btn-icon aspected" title="Сообщество в Телеграмм"
+                            target="_blank">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <use xlink:href="./sprite.svg#icon-telegram"></use>
+                            </svg>
+                        </a>
+                        <a href="https://vk.com/club30855702" class="btn btn-icon aspected"
+                            title="Сообщество в Вконтакте" target="_blank">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <use xlink:href="./sprite.svg#icon-vk"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Дополнительные кнопки -->
+                    <div class="header-actions">
+                        <button type="button" class="w-sm-100" data-modal-open="modal-application"
+                            data-modal-title="Обратная связь">
+                            Обратная связь
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <!-- Кнопка вызова меню -->
+                <button type="button" class="btn-burger aspected" aria-label="menu" data-menu="">
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <use xlink:href="./sprite.svg#icon-menu"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="d-flex flex-column align-items-center">
+                    <svg class="mb-30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                        focusable="false">
+                        <use xlink:href="./sprite.svg#icon-claw"></use>
+                    </svg>
+
+                    <h1 class="text-center mx-auto" style="max-width:860px;">
+                        Создавайте быстрые и&nbsp;отзывчивые сайты с&nbsp;помощью <strong>Клешни</strong>
+                    </h1>
+
+                    <h2 class="h3 fw-500 text-center mx-auto" style="max-width:660px;">
+                        🦀 Легкий, гибкий, простой и расширяемый набор инструментов. Работайте и создавайте свои наборы
+                        правил с помощью Sass. Используйте готовые компоненты и утилиты, чтобы воплощать ваши идеи в
+                        жизнь.
+                    </h2>
+
+                    <p class="fw-bold text-center">
+                        Текущая версия:
+                    </p>
+
+                    <span class="badge bg-primary">0.0.2 beta</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center">
+            <div class="container">
+                <h2>Начинате свой проект так, как Вы&nbsp;хотите</h2>
+
+                <p class="h4 fw-500">
+                    Окунитесь в разработку, прыгнув в&nbsp;документацию. Выбирайте, на&nbsp;чьей стороне Вы.
+                </p>
+
+                <p>
+                    <a href="./install/index.html">
+                        Документация по установке
+                        <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <use xlink:href="./sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </p>
+
+                <div class="layouts layouts-2x w-100">
+                    <div>
+                        <p>
+                            <svg class="h4" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                focusable="false">
+                                <use xlink:href="./sprite.svg#box"></use>
+                            </svg>
+                        </p>
+
+                        <div class="d-flex flex-column gap-20">
+                            <div class="badge px-25">
+                                npm
+                            </div>
+
+                            <div class="card">
+                                <code>
+                                    npm i claw-css
+                                </code>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>
+                            <svg class="h4" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                focusable="false">
+                                <use xlink:href="./sprite.svg#glob"></use>
+                            </svg>
+                        </p>
+
+                        <div class="d-flex flex-column gap-20">
+                            <div class="badge px-25">
+                                file
+                            </div>
+
+                            <div class="card">
+                                <code>
+                                    <link rel="stylesheet" type="text/css" href="./styles/claw.min.css" />
+                                </code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <a href="./" title="Клешня — это CSS-фреймворк">
+                        <img src="./logo.svg" alt="logo" />
+                    </a>
+                    <span class="t1-bold">
+                        Клешня
+                    </span>
+                </div>
+
+                <div
+                    class="d-flex flex-row flex-lg-column align-items-center align-items-lg-start gap-16 gap-lg-8 w-lg-100 mx-auto ml-lg-0">
+                    <a href="mailto:example@mail.ru" class="link-icon" title="example@mail.ru">
+                        <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <use xlink:href="./sprite.svg#icon-mail"></use>
+                        </svg>
+                        <span>example@mail.ru</span>
+                    </a>
+                    <a href="https://github.com/etozhejuicy/claw" class="link-icon" target="_blank" title="Claw Github">
+                        <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <use xlink:href="./sprite.svg#icon-github"></use>
+                        </svg>
+                        <span>
+                            Claw Gihthub
+                        </span>
+                    </a>
+                </div>
+
+                <div class="d-flex flex-row align-items-center gap-16 mx-auto ml-lg-0">
+                    <a href="https://t.me/claw_css" class="btn btn-icon aspected" title="Сообщество в Телеграмм"
+                        target="_blank">
+                        <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <use xlink:href="./sprite.svg#icon-telegram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://vk.com/club30855702" class="btn btn-icon aspected" title="Сообщество в Вконтакте"
+                        target="_blank">
+                        <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <use xlink:href="./sprite.svg#icon-vk"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- copyright -->
+                <div class="align-self-center ml-md-auto">
+                    <a href="https://etozhejuicy.github.io/portfolio/" class="btn btn-xs" target="_blank"
+                        title="Mr.CrabsYeah Portfolio">
+                        <span class="d-sm-none">made by</span> <b>Mr.CrabsYeah</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- modals -->
+    <div class="modal modal-min" data-modal-id="modal-application" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        Обратная связь
+                    </div>
+                    <button class="btn-outline-white btn-close aspected" data-modal-close>
+                        <i>✕</i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Если есть вопросы, мы готовы ответить на все. Свяжитесь с нами любым удобным для Вас способом.
+                    </p>
+
+                    <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+                        <a href="https://t.me/claw_css" class="btn btn-icon aspected" title="Сообщество в Телеграмм"
+                            target="_blank">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <use xlink:href="./sprite.svg#icon-telegram"></use>
+                            </svg>
+                        </a>
+                        <a href="https://vk.com/club30855702" class="btn btn-icon aspected"
+                            title="Сообщество в Вконтакте" target="_blank">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <use xlink:href="./sprite.svg#icon-vk"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script type="module" src="./src/js/app.js"></script>
 </body>
 
 </html>
