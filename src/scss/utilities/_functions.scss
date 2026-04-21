@@ -1,0 +1,44 @@
+@function hex-to-rgb($hex) {
+  // Удаляем символ #, если он есть
+  $hex: str-slice($hex, if(str-slice($hex, 1, 1) == '#', 2, -1), -1);
+
+  // Определяем длину HEX‑кода
+  $length: str-length($hex);
+
+  // Расширяем сокращённые HEX‑коды (например, #fff → #ffffff)
+  @if $length == 3 {
+    $hex: str-slice($hex, 1, 1) + str-slice($hex, 1, 1) +
+          str-slice($hex, 2, 2) + str-slice($hex, 2, 2) +
+          str-slice($hex, 3, 3) + str-slice($hex, 3, 3);
+  }
+
+  // Извлекаем компоненты цвета (каждая пара символов — один канал)
+  $red:   str-slice($hex, 1, 2);
+  $green: str-slice($hex, 3, 4);
+  $blue:  str-slice($hex, 5, 6);
+
+  // Преобразуем шестнадцатеричные значения в десятичные
+  $red-dec:   hex-component-to-decimal($red);
+  $green-dec: hex-component-to-decimal($green);
+  $blue-dec:  hex-component-to-decimal($blue);
+
+  // Возвращаем RGB
+  @return rgb($red-dec, $green-dec, $blue-dec);
+}
+
+// Вспомогательная функция для преобразования HEX‑компонента в десятичное число
+@function hex-component-to-decimal($hex-part) {
+  $digits: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'A' 'B' 'C' 'D' 'E' 'F';
+  $result: 0;
+  $multiplier: 1; // Начнём с 16⁰ = 1
+
+  // Обрабатываем каждый символ справа налево (младший разряд сначала)
+  @for $i from 2 through 1 {
+    $char: str-slice($hex-part, $i, $i);
+    $index: index($digits, to-upper-case($char)) - 1;
+    $result: $result + $index * $multiplier;
+    $multiplier: $multiplier * 16; // Следующая степень 16
+  }
+
+  @return $result;
+}

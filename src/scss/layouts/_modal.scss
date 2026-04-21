@@ -1,3 +1,15 @@
+:root {
+	--modal-padding: 10px;
+	--modal-dialog-padding: 15px;
+	--modal-dialog-radius: 15px;
+
+	@include break-up('lg') {
+		--modal-padding: 20px;
+		--modal-dialog-padding: 25px;
+		--modal-dialog-radius: 30px;
+	}
+}
+
 .modal {
 	@include webkit_scrollbar;
 	position: fixed;
@@ -11,7 +23,7 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	padding: 20px;
+	padding: var(--modal-padding);
 	visibility: hidden;
 	opacity: 0;
 	overflow-x: hidden;
@@ -24,10 +36,6 @@
 		backdrop-filter 0.4s ease-in-out,
 		filter 0.4s ease-in-out;
 	will-change: transform, opacity;
-
-	@include breakpoint("lg") {
-		padding: 10px;
-	}
 
 	// для модалки
 	&.show {
@@ -58,18 +66,13 @@
 		max-width: 738px;
 		height: auto;
 		margin: auto;
-		padding: 25px;
-		border-radius: 30px;
-		color: $default-text-color;
-		background-color: $default-body-color;
+		padding: var(--modal-dialog-padding);
+		border-radius: var(--modal-dialog-radius);
+		color: var(--default-text-color);
+		background-color: var(--default-body-color);
 		transform: scale(0.75) translateY(25%);
 		transition: 0.4s ease;
 		will-change: transform;
-
-		@include breakpoint("lg") {
-			padding: 15px;
-			border-radius: 15px;
-		}
 	}
 
 	&-content {

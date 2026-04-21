@@ -8,7 +8,7 @@
 	width: 100%;
 	padding: 20px 0;
 	background-color: transparent;
-	border-bottom: 1px solid $default-primary-color;
+	border-bottom: 1px solid color-mix(in srgb, var(--default-text-color) 15%, transparent);
 	transition: 0.25s ease-in-out;
 
 	@include breakpoint("lg") {
@@ -18,7 +18,7 @@
 
 	&.scrolled {
 		padding: 10px 0;
-		background-color: transparentize($default-body-color, 0.125);
+		background-color: color-mix(in srgb, var(--default-body-color) 85%, transparent);
 		backdrop-filter: blur(4px);
 	}
 

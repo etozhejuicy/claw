@@ -1,40 +1,61 @@
-:root {
-	--white: #ffffff;
-	--white-80: #ffffffcc;
-	--light-grey: #f2f3f6;
-	--grey-blue: #c9cfd4;
-	--primary: #B52A33;
-	--red: #b94141;
-	--black: #1d2123;
-	--black-80: #1d2123cc;
-	--black-50: #1d212380;
-	--error: #b94141;
-}
-
 $white: #ffffff;
 $white-80: #ffffffcc;
 $light-grey: #f2f3f6;
 $grey-blue: #c9cfd4;
-$primary: #B52A33;
+$primary: #b52a33;
+$red: #b52a33;
 $black: #1d2123;
 $black-80: #1d2123cc;
 $black-50: #1d212380;
 $green: #4fac7f;
 $error: #b94141;
+$default-body-color: $white;
+$default-text-color: $black;
+$default-primary-color: $primary;
 
 $colors: (
-	$white: "white",
-		$white-80: "white-80",
-			$light-grey: "light-grey",
-				$grey-blue: "grey-blue",
-					$primary: "primary",
-						$black: "black",
-							$black-80: "black-80",
-								$black-50: "black-50",
-									$green: "green",
-										$error: "error",
-										);
+  $white: "white",
+  $white-80: "white-80",
+  $light-grey: "light-grey",
+  $grey-blue: "grey-blue",
+  $primary: "primary",
+  $black: "black",
+  $black-80: "black-80",
+  $black-50: "black-50",
+  $green: "green",
+  $error: "error",
+);
 
-									$default-body-color: $white;
-									$default-text-color: $black;
-									$default-primary-color: $primary;
+$color-palettes: (
+  "default": (
+    "primary": $primary,
+    "background": $white,
+    "text": $black,
+  ),
+  "dark": (
+    "primary": $primary,
+    "background": $black,
+    "text": $white,
+  ),
+);
+
+:root {
+  --white: #ffffff;
+  --white-80: #ffffffcc;
+  --light-grey: #f2f3f6;
+  --grey-blue: #c9cfd4;
+  --primary: #b52a33;
+  --red: #b52a33;
+  --black: #1d2123;
+  --black-80: #1d2123cc;
+  --black-50: #1d212380;
+  --green: #4fac7f;
+  --error: #b94141;
+  --default-body-color: var(--white);
+  --default-text-color: var(--black);
+  --default-primary-color: var(--primary);
+}
+
+$default-body-color: var(--default-body-color);
+$default-text-color: var(--default-text-color);
+$default-primary-color: var(--default-primary-color);

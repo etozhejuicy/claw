@@ -6,6 +6,13 @@
 // import's mixins
 @import "./mixin";
 
+:root {
+	--btn-size: 40px;
+	--btn-padding-y: 16px;
+	--btn-padding-x: 25px;
+	--slides-gap: 10px;
+}
+
 $breakpoints: (
 	"xxxl": 1600px,
 	"xxl": 1440px,

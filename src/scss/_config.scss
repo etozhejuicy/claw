@@ -1,12 +1,17 @@
-// default switch for dark theme
 $dark-theme: false;
 
-@include dark-theme;
-
-@if ($dark-theme ==true) {
+@mixin dark-mode {
+  @if $dark-theme {
     @include dark-theme;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include dark-theme;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-    @include dark-theme;
+html.dark {
+  @include dark-theme;
 }
+
+@include dark-mode;
