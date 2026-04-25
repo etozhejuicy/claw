@@ -1,6 +1,6 @@
 # Claw
 
-![logo](public/logo-min.svg)
+![logo](public/logo.svg)
 
 Notice: **I'm doing a complete redesign of the framework**
 
