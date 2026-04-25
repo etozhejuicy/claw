@@ -61,7 +61,7 @@ class Menu {
         this.triggers.forEach((trigger) => {
             const icon = trigger.querySelector("svg");
             if (icon) {
-                icon.innerHTML = this.currentState === "open" ? `<use xlink:href="./sprite.svg#icon-cross"></use>` : `<use xlink:href="./sprite.svg#icon-menu"></use>`;
+                icon.innerHTML = this.currentState === "open" ? `<use xlink:href="/sprite.svg#icon-cross"></use>` : `<use xlink:href="/sprite.svg#icon-menu"></use>`;
             }
         });
     }
