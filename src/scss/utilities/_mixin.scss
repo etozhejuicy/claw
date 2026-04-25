@@ -8,12 +8,16 @@
 
     @if $value ==0 {
       @content;
-    } @else {
+    }
+
+    @else {
       @media (max-width: ($value - 0.02px)) {
         @content;
       }
     }
-  } @else {
+  }
+
+  @else {
     @warn "Неизвестный брейкпоинт: #{$breakpoint}";
   }
 }
@@ -24,20 +28,22 @@
 
     @if $value ==0 {
       @content;
-    } @else {
+    }
+
+    @else {
       @media (min-width: ($value)) {
         @content;
       }
     }
-  } @else {
+  }
+
+  @else {
     @warn "Неизвестный брейкпоинт: #{$breakpoint}";
   }
 }
 
 @mixin break-interval($breakpoint1, $breakpoint2) {
-  @if map.has-key($breakpoints, $breakpoint1) and
-    map.has-key($breakpoints, $breakpoint2)
-  {
+  @if map.has-key($breakpoints, $breakpoint1) and map.has-key($breakpoints, $breakpoint2) {
     $value1: map.get($breakpoints, $breakpoint1);
     $value2: map.get($breakpoints, $breakpoint2);
 
@@ -45,17 +51,25 @@
       @media (max-width: ($value2 - 0.02px)) {
         @content;
       }
-    } @else if $value2 ==0 {
+    }
+
+    @else if $value2 ==0 {
       @warn "Некорректный диапазон: второй брейкпоинт не может быть '0' при заданном первом";
-    } @else {
+    }
+
+    @else {
       @media (min-width: $value1) and (max-width: ($value2 - 0.02px)) {
         @content;
       }
     }
-  } @else {
+  }
+
+  @else {
     @if not map.has-key($breakpoints, $breakpoint1) {
       @warn "Неизвестный брейкпоинт: #{$breakpoint1}";
-    } @else {
+    }
+
+    @else {
       @warn "Неизвестный брейкпоинт: #{$breakpoint2}";
     }
   }
@@ -64,7 +78,9 @@
 @mixin custom-breakpoint($breakpoint) {
   @if $breakpoint ==0 {
     @content;
-  } @else {
+  }
+
+  @else {
     @media (max-width: ($breakpoint - 0.02px)) {
       @content;
     }
@@ -74,7 +90,9 @@
 @mixin custom-break-up($breakpoint) {
   @if $breakpoint ==0 {
     @content;
-  } @else {
+  }
+
+  @else {
     @media (min-width: ($breakpoint)) {
       @content;
     }
@@ -86,9 +104,13 @@
     @media (max-width: ($breakpoint2 - 0.02px)) {
       @content;
     }
-  } @else if $breakpoint2 ==0 {
+  }
+
+  @else if $breakpoint2 ==0 {
     @warn "Некорректный диапазон: второй брейкпоинт не может быть '0' при заданном первом";
-  } @else {
+  }
+
+  @else {
     @media (min-width: $breakpoint1) and (max-width: ($breakpoint2 - 0.02px)) {
       @content;
     }
@@ -228,7 +250,7 @@
   flex-wrap: wrap;
   gap: $gap;
 
-  & > * {
+  &>* {
     flex: 1 0 calc($elem-width - ($gap * ($elem-count - 1) / $elem-count));
     max-width: calc($elem-width - ($gap * ($elem-count - 1) / $elem-count));
     width: 100%;
@@ -252,7 +274,7 @@
     margin-bottom: 16px;
   }
 
-  & > a {
+  &>a {
     color: var(--white) !important;
     white-space: nowrap;
 
@@ -261,11 +283,11 @@
     }
   }
 
-  & > span {
+  &>span {
     white-space: nowrap;
   }
 
-  & > * {
+  &>* {
     pointer-events: all;
     @include paragraph;
     color: var(--white);
@@ -378,13 +400,13 @@
     display: none;
   }
 
-  & > i,
-  & > svg {
+  &>i,
+  &>svg {
     vertical-align: text-bottom;
     transition: transform 0.25s ease-in-out, color 0.05s ease-in-out;
   }
 
-  & > svg {
+  &>svg {
     max-height: 100%;
     object-fit: contain;
   }
@@ -488,11 +510,11 @@
     gap: 5px;
   }
 
-  & > svg,
-  & > image,
-  & > img,
-  & > object,
-  & > i {
+  &>svg,
+  &>image,
+  &>img,
+  &>object,
+  &>i {
     display: flex;
     align-self: center;
     justify-content: center;
@@ -500,7 +522,7 @@
     vertical-align: middle;
   }
 
-  & > svg {
+  &>svg {
     & * {
       fill: currentColor;
     }
@@ -518,7 +540,9 @@
       color: $white;
       border-color: $primary;
       background-color: $primary;
-    } @else {
+    }
+
+    @else {
       color: $color;
       border-color: color.adjust($fill, $lightness: 5%);
       background-color: color.adjust($fill, $lightness: 5%);
@@ -532,7 +556,9 @@
       color: $white;
       border-color: $black;
       background-color: $black;
-    } @else {
+    }
+
+    @else {
       background-color: color.adjust($fill, $lightness: -5%);
       border-color: color.adjust($fill, $lightness: -5%);
       color: $color;
@@ -551,7 +577,9 @@
       color: $black;
       border-color: $white;
       background-color: $white;
-    } @else {
+    }
+
+    @else {
       color: $hover-color;
       border-color: $hover-fill;
       background-color: $hover-fill;
@@ -763,7 +791,7 @@
       text-overflow: ellipsis;
       overflow: visible;
 
-      & > input {
+      &>input {
         position: absolute;
         top: 0;
         left: 0;
@@ -779,7 +807,7 @@
         border-radius: 0;
       }
 
-      & > span {
+      &>span {
         font-size: inherit;
         text-decoration: underline;
         text-decoration-thickness: 1px;
@@ -818,7 +846,7 @@
     width: 100%;
     max-width: 100%;
 
-    & > span {
+    &>span {
       &:not(.remove-file) {
         display: block;
         width: 100%;
@@ -875,7 +903,7 @@
     font-size: small;
   }
 
-  & > svg {
+  &>svg {
     display: flex;
     width: 16px;
     height: 16px;
@@ -909,34 +937,6 @@
     flex-direction: row;
     gap: 10px;
     justify-content: space-between;
-  }
-}
-
-// dropdown
-@mixin dropdown {
-  position: absolute;
-  z-index: 1020;
-  @include paragraph;
-  @include webkit_scrollbar;
-  display: none;
-  padding: 5px 15px;
-  font-family: $font-family;
-  color: currentColor;
-  border-radius: 15px;
-  border: 1px solid;
-  border-color: var(--white);
-  background-color: var(--white);
-  outline: none;
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
-  transform: translate(0, 0);
-  transition: 0.25s ease-in-out;
-
-  @include breakpoint("lg") {
-    font-size: 14px;
-  }
-
-  &.open {
-    display: block;
   }
 }
 
@@ -1002,7 +1002,7 @@
       display: flex;
     }
 
-    & > * {
+    &>* {
       margin: 0;
     }
   }

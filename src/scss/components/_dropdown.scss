@@ -1,7 +1,37 @@
+:root {
+	--dropdown-color: var(--default-text-color);
+	--dropdown-background-color: var(--default-body-color);
+	--dropdown-border-color: var(--default-body-color);
+	--dropdown-shadow-size: 0 4px 8px 0;
+	--dropdown-shadow-color: var(--default-text-color);
+
+}
+
 .dropdown {
-	@include dropdown;
+	position: relative;
 
 	&-wrapper {
-		position: relative;
+		position: absolute;
+		z-index: 1020;
+		@include paragraph;
+		@include webkit_scrollbar;
+		padding: 5px 15px;
+		font-family: $font-family;
+		color: var(--dropdown-color);
+		border-radius: 15px;
+		background-color: var(--dropdown-background-color);
+		border: 1px solid;
+		border-color: var(--dropdown-border-color);
+		outline: none;
+		box-shadow: var(--dropdown-shadow-size) color-mix(in srgb, var(--dropdown-shadow-color) 15%, transparent);
+		visibility: hidden;
+		opacity: 0;
+		transform: translate(0, 0);
+		transition: 0.25s ease-in-out;
+
+		&--visible {
+			visibility: visible;
+			opacity: 1;
+		}
 	}
 }
