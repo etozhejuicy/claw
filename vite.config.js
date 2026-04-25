@@ -2,9 +2,9 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
     appType: 'mpa',
-    base: './',
+    base: mode === 'production' ? '/claw/' : '/',
     root: '.',
     build: {
         rollupOptions: {
@@ -17,10 +17,11 @@ export default defineConfig({
                 componentsButtons: resolve(__dirname, 'components/buttons.html'),
                 componentsCards: resolve(__dirname, 'components/cards.html'),
                 componentsCheckboxes: resolve(__dirname, 'components/checkboxes.html'),
+                componentsDropdowns: resolve(__dirname, 'components/dropdowns.html'),
                 utilities: resolve(__dirname, 'utilities/index.html'),
                 utilitiesApi: resolve(__dirname, 'utilities/api.html'),
             },
         },
     },
     refresh: true,
-});
+}));

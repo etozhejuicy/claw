@@ -105,7 +105,7 @@ class Modal {
 									<div class="modal-title"></div>
 									<button class="btn-outline-white btn-close aspected" data-modal-close>
 										<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                            <use xlink:href="./sprite.svg#icon-cross"></use>
+                                            <use xlink:href="/sprite.svg#icon-cross"></use>
                                         </svg>
 									</button>
 								</div>
@@ -149,7 +149,7 @@ class Modal {
                         ${title ? `<div class="modal-title">${title}</div>` : ""}
                         <button class="btn-outline-white btn-close aspected" data-modal-close>
                             <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <use xlink:href="./sprite.svg#icon-cross"></use>
+                                <use xlink:href="/sprite.svg#icon-cross"></use>
                             </svg>
                         </button>
                     </div>
