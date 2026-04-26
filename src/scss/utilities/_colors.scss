@@ -1,13 +1,16 @@
+$dark-theme: false;
+
 $white: #ffffff;
-$white-80: #ffffffcc;
-$light-grey: #f2f3f6;
-$grey-blue: #c9cfd4;
+$light-grey: #ecf0f1;
+$grey-blue: #bdc3c7;
 $primary: #b52a33;
 $red: #b52a33;
-$black: #1d2123;
-$black-80: #1d2123cc;
-$black-50: #1d212380;
-$green: #4fac7f;
+$yellow: #f1c40f;
+$orange: #f39c12;
+$black: #1d1d1d;
+$cyan: #00BCD4;
+$green: #2ecc71;
+$purple: #9b59b6;
 $error: #b94141;
 $default-body-color: $white;
 $default-text-color: $black;
@@ -15,41 +18,43 @@ $default-primary-color: $primary;
 
 $colors: (
   $white: "white",
-  $white-80: "white-80",
   $light-grey: "light-grey",
   $grey-blue: "grey-blue",
   $primary: "primary",
+  $yellow: "yellow",
+  $orange: "orange",
+  $cyan: "cyan",
   $black: "black",
-  $black-80: "black-80",
-  $black-50: "black-50",
   $green: "green",
+  $purple: "purple",
   $error: "error",
 );
 
-$color-palettes: (
-  "default": (
-    "primary": $primary,
-    "background": $white,
-    "text": $black,
-  ),
-  "dark": (
-    "primary": $primary,
-    "background": $black,
-    "text": $white,
-  ),
-);
+// $color-palettes: (
+//   "default": (
+//     "primary": $primary,
+//     "background": $white,
+//     "text": $black,
+//   ),
+//   "dark": (
+//     "primary": $primary,
+//     "background": $black,
+//     "text": $white,
+//   ),
+// );
 
 :root {
   --white: #ffffff;
-  --white-80: #ffffffcc;
-  --light-grey: #f2f3f6;
-  --grey-blue: #c9cfd4;
+  --light-grey: #ecf0f1;
+  --grey-blue: #bdc3c7;
   --primary: #b52a33;
   --red: #b52a33;
-  --black: #1d2123;
-  --black-80: #1d2123cc;
-  --black-50: #1d212380;
-  --green: #4fac7f;
+  --black: #1d1d1d;
+  --yellow: #f1c40f;
+  --orange: #f39c12;
+  --cyan: #00BCD4;
+  --green: #2ecc71;
+  --purple: #9b59b6;
   --error: #b94141;
   --default-body-color: var(--white);
   --default-text-color: var(--black);

@@ -130,6 +130,8 @@
   :root {
     --default-body-color: var(--black);
     --default-text-color: var(--white);
+    --primary: #ca353f;
+    --red: #ca353f;
   }
 }
 
@@ -322,104 +324,6 @@
 }
 
 // button
-@mixin button {
-  @include paragraph;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--btn-padding-y) var(--btn-padding-x);
-  color: var(--white);
-  line-height: 1;
-  font-weight: 700;
-  font-family: $font-family;
-  font-size: $font-size;
-  text-align: center;
-  text-decoration: none !important;
-  vertical-align: middle;
-  cursor: pointer;
-  touch-action: manipulation;
-  user-select: none;
-  text-transform: none;
-  border-radius: 100px;
-  border: 1px solid;
-  border-color: var(--primary);
-  background-color: var(--primary);
-  white-space: nowrap;
-  transition: 0.25s ease-in-out;
-
-  @include breakpoint("lg") {
-    --btn-padding-y: 14.5px;
-    --btn-padding-x: 24px;
-  }
-
-  & * {
-    pointer-events: none;
-    user-select: none;
-  }
-
-  &:hover,
-  &.hover {
-    background-color: color.adjust($primary, $lightness: 5%);
-    border-color: color.adjust($primary, $lightness: 5%);
-    color: var(--white);
-  }
-
-  &:focus:active,
-  &.focus,
-  &.active {
-    background-color: color.adjust($primary, $lightness: -5%);
-    border-color: color.adjust($primary, $lightness: -5%);
-    color: var(--white);
-  }
-
-  &.disabled,
-  &:disabled {
-    background-color: var(--grey-blue);
-    color: var(--white);
-    border-color: var(--grey-blue);
-    box-shadow: none;
-    opacity: 0.35;
-    cursor: not-allowed;
-
-    &:hover,
-    &.hover,
-    &:focus:active,
-    &:focus,
-    &.focus,
-    &.active {
-      background-color: var(--grey-blue);
-      color: var(--white);
-      border-color: var(--grey-blue);
-    }
-  }
-
-  &.hidden,
-  &:hidden {
-    display: none;
-  }
-
-  &>i,
-  &>svg {
-    vertical-align: text-bottom;
-    transition: transform 0.25s ease-in-out, color 0.05s ease-in-out;
-  }
-
-  &>svg {
-    max-height: 100%;
-    object-fit: contain;
-  }
-
-  &.aspected {
-    --btn-padding-x: 5px;
-    --btn-padding-y: 5px;
-    --btn-padding-x: var(--btn-padding-y);
-    width: var(--btn-size);
-    height: var(--btn-size);
-  }
-}
-
 @mixin button-outline {
   color: var(--primary);
   border-color: var(--primary);
@@ -438,65 +342,6 @@
     background-color: color.adjust($primary, $lightness: -5%);
     border-color: color.adjust($primary, $lightness: -5%);
     color: var(--white);
-  }
-}
-
-@mixin button-xs {
-  --btn-size: 20px;
-  --btn-padding-y: 4px;
-  --btn-padding-x: 8px;
-  font-size: 14px;
-  min-height: 20px;
-
-  @include breakpoint("lg") {
-    font-size: 12px;
-  }
-
-  & i {
-    font-size: x-small;
-  }
-
-  &.aspected {
-    width: var(--btn-size);
-    height: var(--btn-size);
-  }
-}
-
-@mixin button-sm {
-  --btn-padding-y: 8.5px;
-  --btn-padding-x: 24px;
-  --btn-size: 35px;
-  min-height: 35px;
-
-  @include breakpoint("lg") {
-    --btn-padding-y: 9.5px;
-  }
-
-  &.aspected {
-    width: var(--btn-size);
-    height: var(--btn-size);
-  }
-}
-
-@mixin button-md {
-  --btn-padding-y: 10px;
-  --btn-padding-x: 24px;
-  min-height: 35px;
-
-  &.aspected {
-    width: var(--btn-size);
-    height: var(--btn-size);
-  }
-}
-
-@mixin button-lg {
-  --btn-padding-y: 16px;
-
-  &.aspected {
-    width: var(--btn-size, 40px);
-    height: var(--btn-size, 40px);
-    --btn-padding-x: 4px;
-    --btn-padding-y: 4px;
   }
 }
 

@@ -1,97 +1,214 @@
+:root {
+  --btn-size: 40px;
+  --btn-padding-y: 16px;
+  --btn-padding-x: 25px;
+  --btn-font-family: $font-family;
+  --btn-font-size: $font-size;
+  --btn-background-color: var(--primary);
+  --btn-color: var(--white);
+  --btn-border-color: var(--primary);
+
+  @include breakpoint("lg") {
+    --btn-padding-y: 12px;
+    --btn-padding-x: 24px;
+  }
+}
+
 .btn,
 button {
-	@include button;
+  @include paragraph;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  color: var(--btn-color);
+  line-height: 1;
+  font-weight: 700;
+  font-family: var(--btn-font-family);
+  font-size: var(--btn-font-size);
+  text-align: center;
+  text-decoration: none !important;
+  vertical-align: middle;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  text-transform: none;
+  border-radius: 100px;
+  border: 1px solid;
+  border-color: var(--btn-border-color);
+  background-color: var(--btn-background-color);
+  white-space: nowrap;
+  transition: 0.25s ease-in-out;
 
-	&-xs {
-		@include button-xs;
-	}
+  & * {
+    pointer-events: none;
+    user-select: none;
+  }
 
-	&-sm {
-		@include button-sm;
-	}
+  &:hover,
+  &.hover {
+    --btn-background-color: color-mix(
+      in srgb,
+      var(--primary) 100%,
+      var(--default-body-color) 20%
+    );
+    --btn-border-color: color-mix(
+      in srgb,
+      var(--primary) 100%,
+      var(--default-body-color) 20%
+    );
+    --btn-color: var(--white);
+  }
 
-	&-md {
-		@include button-md;
-	}
+  &:focus:active,
+  &.focus,
+  &.active {
+    --btn-background-color: color-mix(
+      in srgb,
+      var(--primary) 100%,
+      var(--default-text-color) 20%
+    );
+    --btn-border-color: color-mix(
+      in srgb,
+      var(--primary) 100%,
+      var(--default-text-color) 20%
+    );
+    --btn-color: var(--white);
+  }
 
-	&-lg {
-		@include button-lg;
-	}
+  &.disabled,
+  &:disabled {
+    --btn-background-color: color-mix(
+      in srgb,
+      var(--default-body-color) 60%,
+      var(--default-text-color) 20%
+    );
+    --btn-color: color-mix(
+      in srgb,
+      var(--default-text-color) 60%,
+      var(--default-body-color) 20%
+    );
+    --btn-border-color: color-mix(
+      in srgb,
+      var(--default-body-color) 60%,
+      var(--default-text-color) 20%
+    );
+    cursor: not-allowed;
 
-	&-outline {
-		@include button-outline;
+    &:hover,
+    &.hover,
+    &:focus:active,
+    &:focus,
+    &.focus,
+    &.active {
+      --btn-background-color: color-mix(
+        in srgb,
+        var(--default-body-color) 60%,
+        var(--default-text-color) 20%
+      );
+      --btn-color: color-mix(
+        in srgb,
+        var(--default-text-color) 60%,
+        var(--default-body-color) 20%
+      );
+      --btn-border-color: color-mix(
+        in srgb,
+        var(--default-body-color) 60%,
+        var(--default-text-color) 20%
+      );
+    }
+  }
 
-		&-grey {
-			&-blue {
-				@include button-outline-color($grey-blue,
-					$black-50,
-					$grey-blue,
-					$black);
-			}
-		}
+  &.hidden,
+  &:hidden {
+    display: none;
+  }
 
-		&-white {
-			@include button-outline-color($white, $white, $white, $primary);
-		}
-	}
+  & > i,
+  & > svg {
+    vertical-align: text-bottom;
+    transition:
+      transform 0.25s ease-in-out,
+      color 0.05s ease-in-out;
+  }
 
-	&-icon {
-		@include button-icon;
-	}
+  & > svg {
+    max-height: 100%;
+    object-fit: contain;
+  }
 
-	&-grey {
-		&-blue {
-			@include button-color($grey-blue, $black);
-		}
-	}
+  &.aspected {
+    --btn-padding-x: 5px;
+    --btn-padding-y: 5px;
+    --btn-padding-x: var(--btn-padding-y);
+    width: var(--btn-size);
+    height: var(--btn-size);
+  }
 
-	&-black {
-		@include button-color($black, $white);
+  &-icon {
+    @include button-icon;
+  }
 
-		&-50 {
-			@include button-color($black-50, $white);
-		}
-	}
+  &-close {
+    & > i,
+    & > svg {
+      transform: rotate(0deg);
+    }
 
-	&-light {
-		&-grey {
-			@include button-color($light-grey, $black-80);
-		}
-	}
+    &:hover {
+      & > i,
+      & > svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
 
-	&-green {
-		@include button-color($green, $white);
-	}
+  &-burger {
+    & i,
+    & svg {
+      display: flex;
+    }
+  }
 
-	&-white {
-		@include button-color($white, $primary);
-	}
+  // use color pallet
+  @each $color, $value in $colors {
+    &-#{$value} {
+      --btn-background-color: var(--#{$value});
+      --btn-color: var(--white);
+      --btn-border-color: var(--#{$value});
 
-	&-close {
-		--btn-size: 35px;
-		font-weight: 100;
-		font-size: 14px;
-		flex: 0 0 var(--btn-size);
+      &:hover,
+      &.hover {
+        --btn-background-color: color-mix(
+          in srgb,
+          var(--#{$value}) 100%,
+          var(--default-body-color) 20%
+        );
+        --btn-border-color: color-mix(
+          in srgb,
+          var(--#{$value}) 100%,
+          var(--default-body-color) 20%
+        );
+        --btn-color: var(--white);
+      }
 
-		&>i,
-		&>svg {
-			transform: rotate(0deg);
-		}
-
-		&:hover {
-
-			&>i,
-			&>svg {
-				transform: rotate(180deg);
-			}
-		}
-	}
-
-	&-burger {
-
-		& i,
-		& svg {
-			display: flex;
-		}
-	}
+      &:focus:active,
+      &.focus,
+      &.active {
+        --btn-background-color: color-mix(
+          in srgb,
+          var(--#{$value}) 100%,
+          var(--default-text-color) 20%
+        );
+        --btn-border-color: color-mix(
+          in srgb,
+          var(--#{$value}) 100%,
+          var(--default-text-color) 20%
+        );
+        --btn-color: var(--white);
+      }
+    }
+  }
 }

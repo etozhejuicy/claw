@@ -1,7 +1,7 @@
 .bg {
 	@each $color, $value in $colors {
 		&-#{$value} {
-			background-color: $color !important;
+			background-color: var(--#{$value}) !important;
 		}
 	}
 
@@ -11,7 +11,7 @@
 				&-#{$breakpoint} {
 					@each $color, $value in $colors {
 						&-#{$value} {
-							background-color: $color !important;
+							background-color: var(--#{$value}) !important;
 						}
 					}
 				}
