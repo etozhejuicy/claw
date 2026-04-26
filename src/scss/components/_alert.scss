@@ -1,0 +1,51 @@
+:root {
+  --alert-padding-x: 1rem;
+  --alert-padding-y: 1rem;
+  --alert-font-family: $font-family;
+  --alert-font-size: $font-size;
+  --alert-background-color: color-mix(
+        in srgb,
+        var(--default-body-color) 35%,
+        var(--default-text-color) 20%
+      );
+  --alert-color: var(--default-text-color);
+  --alert-border-color: color-mix(
+        in srgb,
+        var(--default-text-color) 35%,
+        var(--default-body-color) 20%
+      );
+  --alert-border-radius: 1rem;
+}
+
+.alert {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: var(--alert-padding-x) var(--alert-padding-y);
+  color: var(--alert-color);
+  line-height: 1;
+  font-weight: 700;
+  font-family: var(--alert-font-family);
+  font-size: var(--alert-font-size);
+  background-color: var(--alert-background-color);
+  border: 1px solid;
+  border-color: var(--alert-border-color);
+  border-radius: var(--alert-border-radius);
+  transition: 0.25s ease-in-out;
+
+  @each $color, $value in $colors {
+    &-#{$value} {
+      --alert-background-color: color-mix(
+        in srgb,
+        var(--#{$value}) 35%,
+        var(--default-body-color) 20%
+      );
+      --alert-color: var(--default-text-color);
+      --alert-border-color: color-mix(
+        in srgb,
+        var(--#{$value}) 35%,
+        var(--default-text-color) 20%
+      );
+    }
+  }
+}

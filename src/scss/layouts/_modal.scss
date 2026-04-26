@@ -94,11 +94,6 @@
 		z-index: 10;
 		margin-left: auto;
 		transform: translate(0, 0);
-		@include button-outline-color($primary, $primary, $primary, $white);
-
-		@include breakpoint("lg") {
-			--btn-size: 35px;
-		}
 
 		& i {
 			display: flex;

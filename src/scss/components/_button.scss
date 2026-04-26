@@ -4,9 +4,17 @@
   --btn-padding-x: 25px;
   --btn-font-family: $font-family;
   --btn-font-size: $font-size;
-  --btn-background-color: var(--primary);
-  --btn-color: var(--white);
-  --btn-border-color: var(--primary);
+  --btn-background-color: color-mix(
+      in srgb,
+      var(--default-body-color) 100%,
+      var(--default-text-color) 10%
+    );
+  --btn-color: var(--default-text-color);
+  --btn-border-color: color-mix(
+      in srgb,
+      var(--default-body-color) 100%,
+      var(--default-text-color) 10%
+    );
 
   @include breakpoint("lg") {
     --btn-padding-y: 12px;
@@ -51,15 +59,15 @@ button {
   &.hover {
     --btn-background-color: color-mix(
       in srgb,
-      var(--primary) 100%,
-      var(--default-body-color) 20%
+      var(--default-body-color) 100%,
+      var(--default-text-color) 5%
     );
     --btn-border-color: color-mix(
       in srgb,
-      var(--primary) 100%,
-      var(--default-body-color) 20%
+      var(--default-body-color) 100%,
+      var(--default-text-color) 5%
     );
-    --btn-color: var(--white);
+    --btn-color: var(--default-text-color);
   }
 
   &:focus:active,
@@ -67,15 +75,15 @@ button {
   &.active {
     --btn-background-color: color-mix(
       in srgb,
-      var(--primary) 100%,
+      var(--default-body-color) 100%,
       var(--default-text-color) 20%
     );
     --btn-border-color: color-mix(
       in srgb,
-      var(--primary) 100%,
+      var(--default-body-color) 100%,
       var(--default-text-color) 20%
     );
-    --btn-color: var(--white);
+    --btn-color: var(--default-text-color);
   }
 
   &.disabled,
