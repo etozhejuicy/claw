@@ -1,0 +1,10 @@
+:root {
+  --block-margin: 1em;
+}
+
+.quote {
+  &-block {
+    @include card;
+    margin: var(--block-margin) 0;
+  }
+}

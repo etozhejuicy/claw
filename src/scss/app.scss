@@ -48,17 +48,22 @@ main {
 }
 
 section {
+	--section-spacer: 100px;
 	position: relative;
 	z-index: 1;
 	display: block;
-	padding: 100px 0;
+	padding: var(--section-spacer) 0;
 
 	@include breakpoint("xl") {
-		padding: 80px 0;
+		--section-spacer: 80px;
 	}
 
 	@include breakpoint("md") {
-		padding: 60px 0;
+		--section-spacer: 60px;
+	}
+
+	&:first-of-type {
+		padding: calc(var(--section-spacer) / 2) 0 var(--section-spacer);
 	}
 }
 

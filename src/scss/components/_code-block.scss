@@ -1,0 +1,10 @@
+:root {
+  --block-margin: 1em;
+}
+
+.code {
+  &-block {
+    @include card;
+    margin: var(--block-margin) 0;
+  }
+}

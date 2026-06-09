@@ -1,3 +1,14 @@
 .card {
-	@include card;
+  @include card;
+
+  &-glass {
+    border-color: color-mix(in srgb, var(--default-text-color) 15%, transparent);
+    background-color: color-mix(
+      in srgb,
+      var(--default-body-color) 85%,
+      transparent
+    );
+	color: var(--default-text-color);
+    backdrop-filter: blur(4px);
+  }
 }

@@ -1,0 +1,27 @@
+.position {
+  @each $position, $value in $positions {
+    &-#{$value} {
+      position: $value !important;
+    }
+  }
+
+  @each $breakpoint, $width in $breakpoints {
+    @if $breakpoint != "xs" {
+      @include breakpoint($breakpoint) {
+        &-#{$breakpoint} {
+          @each $position, $value in $positions {
+            &-#{$value} {
+              position: $value !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sticky {
+    &-top {
+        top: 90px;
+    }
+}

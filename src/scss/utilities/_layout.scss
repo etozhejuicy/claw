@@ -1,0 +1,27 @@
+:root {
+    --layout-gap: 20px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--layout-gap);
+
+    &-left {
+        @include break-up('lg') {
+            grid-template-columns: minmax(360px, 25%) 1fr;
+        }
+    }
+
+    &-center {
+        @include break-up('lg') {
+            grid-template-columns: minmax(360px, 25%) 1fr minmax(360px, 25%);
+        }
+    }
+
+    &-right {
+        @include break-up('lg') {
+            grid-template-columns: 1fr minmax(360px, 25%);
+        }
+    }
+}
