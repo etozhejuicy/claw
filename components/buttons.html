@@ -107,8 +107,8 @@
                                 <use xlink:href="/sprite.svg#icon-github"></use>
                             </svg>
                         </a>
-                        <a href="https://t.me/claw_css" class="btn btn-cyan btn-icon aspected" title="Сообщество в Телеграмм"
-                            target="_blank">
+                        <a href="https://t.me/claw_css" class="btn btn-cyan btn-icon aspected"
+                            title="Сообщество в Телеграмм" target="_blank">
                             <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                 <use xlink:href="/sprite.svg#icon-telegram"></use>
                             </svg>
@@ -146,21 +146,87 @@
     <main>
         <section>
             <div class="container">
-                <div class="d-flex flex-column align-items-center">
-                    <h1 class="text-center mx-auto" style="max-width:860px;">
-                        Пример использования кнопок
-                    </h1>
+                <div class="layout layout-left">
+                    <aside data-table-row="">
+                        <div class="card card-glass position-sticky sticky-top">
+                            <p>
+                                <strong>
+                                    Список
+                                </strong>
+                            </p>
 
-                    <div class="d-flex flex-row flex-wrap gap-20">
-                        <button type="button" class="btn">Кнопка</button>
-                        <button type="button" class="btn btn-primary">Кнопка</button>
-                        <button type="button" class="btn btn-cyan">Кнопка</button>
-                        <button type="button" class="btn btn-black">Кнопка</button>
-                        <button type="button" class="btn btn-green">Кнопка</button>
-                        <button type="button" class="btn btn-yellow">Кнопка</button>
-                        <button type="button" class="btn btn-orange">Кнопка</button>
-                        <button type="button" class="btn btn-purple">Кнопка</button>
-                        <button type="button" class="btn" disabled>Кнопка</button>
+                            <ul>
+                                <li>
+                                    <a href="#button">Простая кнопка</a>
+                                </li>
+                                <li>
+                                    <a href="#button-color">Цвет кнопок</a>
+                                </li>
+                                <li>
+                                    <a href="#button-state">Состояние кнопок</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <div class="content">
+                        <h1>
+                            Кнопки
+                        </h1>
+
+                        <article>
+                            <h2 id="button">
+                                Простая кнопка <a href="#button">#</a>
+                            </h2>
+
+                            <button type="button" class="btn">Кнопка</button>
+
+                            <div class="code-block" data-code-block>
+                                <code>
+                                &lt;button type="button" class="btn"&gt;Кнопка&lt;/button&gt;
+                            </code>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h2 id="button-colors">
+                                Цвета кнопок <a href="#button-colors">#</a>
+                            </h2>
+
+                            <div class="d-flex flex-row flex-wrap gap-20 mb-20">
+                                <button type="button" class="btn">Кнопка</button>
+                                <button type="button" class="btn btn-primary">Кнопка</button>
+                                <button type="button" class="btn btn-cyan">Кнопка</button>
+                                <button type="button" class="btn btn-black">Кнопка</button>
+                                <button type="button" class="btn btn-green">Кнопка</button>
+                                <button type="button" class="btn btn-yellow">Кнопка</button>
+                                <button type="button" class="btn btn-orange">Кнопка</button>
+                                <button type="button" class="btn btn-purple">Кнопка</button>
+                            </div>
+
+                            <p>
+                                Задать цветовую схему для компонента кнопок можно, опираясь на таблицу цветов, добавив в
+                                конце после дефиса цвет:
+                            </p>
+
+                            <div class="quote-block" data-quote-block>
+                                <quote>
+                                    .btn-{color}
+                                </quote>
+                        </article>
+
+                        <article>
+                            <h2 id="button-state">
+                                Состояния кнопок <a href="#button-state">#</a>
+                            </h2>
+
+                            <div class="d-flex flex-row flex-wrap gap-20">
+                                <button type="button" class="btn active">active</button>
+                                <button type="button" class="btn hover">hover</button>
+                                <button type="button" class="btn focus">focus</button>
+                                <button type="button" class="btn" disabled>disabled</button>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -199,14 +265,14 @@
                 </div>
 
                 <div class="d-flex flex-row align-items-center gap-16 mx-auto ml-lg-0">
-                    <a href="https://t.me/claw_css" class="btn btn-cyan btn-icon aspected" title="Сообщество в Телеграмм"
-                        target="_blank">
+                    <a href="https://t.me/claw_css" class="btn btn-cyan btn-icon aspected"
+                        title="Сообщество в Телеграмм" target="_blank">
                         <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                             <use xlink:href="/sprite.svg#icon-telegram"></use>
                         </svg>
                     </a>
-                    <a href="https://vk.com/club30855702" class="btn btn-blue btn-icon aspected" title="Сообщество в Вконтакте"
-                        target="_blank">
+                    <a href="https://vk.com/club30855702" class="btn btn-blue btn-icon aspected"
+                        title="Сообщество в Вконтакте" target="_blank">
                         <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                             <use xlink:href="/sprite.svg#icon-vk"></use>
                         </svg>
