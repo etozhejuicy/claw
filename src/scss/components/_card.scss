@@ -1,14 +1,49 @@
+:root {
+  --card-padding-x: 1rem;
+  --card-padding-y: 1rem;
+  --card-font-family: $font-family;
+  --card-font-size: $font-size;
+  --card-background-color: color-mix(
+    in srgb,
+    var(--default-body-color) 100%,
+    var(--default-text-color) 0%
+  );
+  --card-color: var(--default-text-color);
+  --card-border-color: color-mix(
+    in srgb,
+    var(--default-text-color) 20%,
+    var(--default-body-color) 80%
+  );
+  --card-border-radius: 1rem;
+}
+
 .card {
   @include card;
 
   &-glass {
-    border-color: color-mix(in srgb, var(--default-text-color) 15%, transparent);
-    background-color: color-mix(
+    --card-border-color: color-mix(
+      in srgb,
+      var(--default-text-color) 15%,
+      transparent
+    );
+    --card-background-color: color-mix(
       in srgb,
       var(--default-body-color) 85%,
       transparent
     );
-	color: var(--default-text-color);
+    --card-color: var(--default-text-color);
     backdrop-filter: blur(4px);
+  }
+
+  @each $color, $value in $colors {
+    &-#{$value} {
+      --card-background-color: var(--#{$value});
+      --card-color: var(--default-text-color);
+      --card-border-color: color-mix(
+        in srgb,
+        var(--#{$value}) 35%,
+        var(--default-text-color) 20%
+      );
+    }
   }
 }

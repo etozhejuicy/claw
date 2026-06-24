@@ -1,0 +1,11 @@
+:root {
+    --border-style: solid;
+    --border-width: 1px;
+    --border-color: var(--body-text-color);
+}
+
+.border {
+    border-width: var(--border-width) !important;
+    border-style: var(--border-style) !important;
+    border-color: var(--border-color) !important;
+}

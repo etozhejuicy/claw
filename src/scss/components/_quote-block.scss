@@ -6,5 +6,6 @@
   &-block {
     @include card;
     margin: var(--block-margin) 0;
+    font-style: italic;
   }
 }
