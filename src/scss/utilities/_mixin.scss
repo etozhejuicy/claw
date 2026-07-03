@@ -764,8 +764,7 @@
 @mixin card {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
+  display: block;
   max-width: 100%;
   padding: var(--card-padding-y) var(--card-padding-x);
   background-color: var(--card-background-color);
