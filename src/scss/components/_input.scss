@@ -1,3 +1,22 @@
+:root {
+  --input-padding-x: 1rem;
+  --input-padding-y: 0.75rem;
+  --input-border-radius: 16px;
+  --input-border-style: solid;
+  --input-border-width: 1px;
+  --input-border-color: color-mix(
+    in srgb,
+    var(--default-text-color) 20%,
+    var(--default-body-color) 80%
+  );
+  --input-background-color: color-mix(
+    in srgb,
+    var(--default-body-color) 100%,
+    var(--default-text-color) 0%
+  );
+  --input-color: var(--default-text-color);
+}
+
 .input,
 input:not([type="checkbox"]),
 input:not([type="radio"]),
@@ -6,11 +25,62 @@ textarea.input,
 input[type="text"],
 input[type="number"],
 textarea {
-	@include input;
+  @include input;
+
+  &:is(textarea) {
+    --input-border-radius: 16px;
+  }
+
+  &:disabled,
+  &[disabled] {
+    opacity: 0.9;
+  }
+
+  &::placeholder {
+    color: var(--input-color);
+    transition: 0.25s ease-in-out;
+  }
+
+  &:focus {
+    color: var(--input-color);
+    border-color: var(--input-border-color);
+
+    &::placeholder {
+      color: transparent;
+      transition: 0.25s ease-in-out;
+    }
+  }
+
+  &:not(:placeholder-shown) {
+    color: color-mix(
+      in srgb,
+      var(--default-text-color) 30%,
+      var(--input-color) 70%
+    );
+    border-color: color-mix(
+      in srgb,
+      var(--default-text-color) 30%,
+      var(--input-color) 70%
+    );
+  }
+
+  &:user-invalid {
+    --input-border-color: var(--error);
+  }
+
+  &:user-valid {
+    --input-border-color: var(--green);
+  }
+
+  &.error,
+  &::spelling-error {
+    color: var(--error);
+    border-color: var(--error);
+  }
 }
 
 .input {
-	&-file {
-		@include input-file;
-	}
+  &-file {
+    @include input-file;
+  }
 }

@@ -504,63 +504,15 @@
   @include paragraph;
   display: inline;
   width: 100%;
-  min-height: 50px;
-  height: 100%;
-  padding: 5.5px 20px;
+  padding: var(--input-padding-y) var(--input-padding-x);
   font-family: $font-family;
-  color: currentColor;
-  border-radius: 35px;
-  border: none;
-  border: 1px solid;
-  border-color: var(--grey-blue);
-  background-color: var(--white);
+  color: var(--input-color);
+  border-radius: var(--input-border-radius);
+  border: var(--input-border-width) var(--input-border-style) var(--input-border-color);
+  background-color: var(--input-background-color);
   outline: none;
-  resize: vertical;
+  resize: var(--input-resize-direction);
   transition: 0.25s ease-in-out;
-
-  @include breakpoint("lg") {
-    min-height: 40px;
-    padding: 5.5px 15px;
-    font-size: 14px;
-  }
-
-  &:is(textarea) {
-    border-radius: 20px;
-  }
-
-  &::placeholder {
-    color: var(--black-50);
-    transition: 0.25s ease-in-out;
-  }
-
-  &:focus {
-    color: var(--black);
-    border-color: var(--primary);
-
-    &::placeholder {
-      color: transparent;
-      transition: 0.25s ease-in-out;
-    }
-  }
-
-  &:not(:placeholder-shown) {
-    color: var(--black);
-    border-color: var(--primary);
-  }
-
-  &:user-invalid {
-    border-color: var(--error);
-  }
-
-  &:user-valid {
-    border-color: var(--grey-blue);
-  }
-
-  &.error,
-  &::spelling-error {
-    color: var(--error);
-    border-color: var(--error);
-  }
 }
 
 @mixin input-file {
