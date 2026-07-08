@@ -1,11 +1,53 @@
 :root {
-    --border-style: solid;
-    --border-width: 1px;
-    --border-color: var(--body-text-color);
+  --border-style: solid;
+  --border-width: 1px;
+  --border-color: var(--body-text-color);
 }
 
 .border {
-    border-width: var(--border-width) !important;
-    border-style: var(--border-style) !important;
-    border-color: var(--border-color) !important;
+  border-width: var(--border-width) !important;
+  border-style: var(--border-style) !important;
+  border-color: var(--border-color) !important;
+
+  @each $color, $value in $colors {
+    &-#{$value} {
+      border-color: var(--#{$value}) !important;
+    }
+  }
+
+  @each $border-width, $value in $border-widths {
+    &-#{$border-width} {
+      border-width: $value !important;
+    }
+  }
+
+  @each $border-style, $value in $border-styles {
+    &-#{$border-style} {
+      border-style: $value !important;
+    }
+  }
+
+  @each $breakpoint, $width in $breakpoints {
+    @include break-up($breakpoint) {
+      &-#{$breakpoint} {
+        @each $color, $value in $colors {
+          &-#{$value} {
+            border-color: var(--#{$value}) !important;
+          }
+        }
+
+        @each $border-width, $value in $border-widths {
+          &-#{$border-width} {
+            border-width: $value !important;
+          }
+        }
+
+        @each $border-style, $value in $border-styles {
+          &-#{$border-style} {
+            border-style: $value !important;
+          }
+        }
+      }
+    }
+  }
 }

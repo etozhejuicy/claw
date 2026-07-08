@@ -1,24 +1,24 @@
 :root {
   --btn-size: 40px;
-  --btn-padding-y: 16px;
-  --btn-padding-x: 25px;
+  --btn-padding-y: 12px;
+  --btn-padding-x: 24px;
   --btn-font-family: $font-family;
   --btn-font-size: $font-size;
   --btn-background-color: color-mix(
-      in srgb,
-      var(--default-body-color) 100%,
-      var(--default-text-color) 10%
-    );
+    in srgb,
+    var(--default-body-color) 100%,
+    var(--default-text-color) 10%
+  );
   --btn-color: var(--default-text-color);
   --btn-border-color: color-mix(
-      in srgb,
-      var(--default-body-color) 100%,
-      var(--default-text-color) 10%
-    );
+    in srgb,
+    var(--default-body-color) 100%,
+    var(--default-text-color) 10%
+  );
 
-  @include breakpoint("lg") {
-    --btn-padding-y: 12px;
-    --btn-padding-x: 24px;
+  @include break-up("lg") {
+    --btn-padding-y: 16px;
+    --btn-padding-x: 25px;
   }
 }
 

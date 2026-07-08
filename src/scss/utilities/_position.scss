@@ -6,13 +6,11 @@
   }
 
   @each $breakpoint, $width in $breakpoints {
-    @if $breakpoint != "xs" {
-      @include breakpoint($breakpoint) {
-        &-#{$breakpoint} {
-          @each $position, $value in $positions {
-            &-#{$value} {
-              position: $value !important;
-            }
+    @include break-up($breakpoint) {
+      &-#{$breakpoint} {
+        @each $position, $value in $positions {
+          &-#{$value} {
+            position: $value !important;
           }
         }
       }
@@ -21,7 +19,7 @@
 }
 
 .sticky {
-    &-top {
-        top: 90px;
-    }
+  &-top {
+    top: 90px;
+  }
 }

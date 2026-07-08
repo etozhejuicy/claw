@@ -2,30 +2,30 @@
 
 h,
 .h {
-	&1 {
-		@include h1;
-	}
+  &1 {
+    @include h1;
+  }
 
-	&2 {
-		@include h2;
-	}
+  &2 {
+    @include h2;
+  }
 
-	&3 {
-		@include h3;
-	}
+  &3 {
+    @include h3;
+  }
 
-	&4 {
-		@include h4;
-	}
+  &4 {
+    @include h4;
+  }
 
-	&5 {
-		@include h5;
-	}
+  &5 {
+    @include h5;
+  }
 }
 
 p,
 .p {
-	@include paragraph;
+  @include paragraph;
 }
 
 h1,
@@ -35,172 +35,170 @@ h4,
 h5,
 h6,
 p {
-	margin-block-start: 0;
-	margin-block-end: 1em;
+  margin-block-start: 0;
+  margin-block-end: 1em;
 }
 
 a {
-	color: inherit;
-	text-decoration-skip-ink: none;
-	text-underline-offset: 2px;
-	text-decoration: none;
-	transition: 0.25s ease-in-out;
+  color: inherit;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 2px;
+  text-decoration: none;
+  transition: 0.25s ease-in-out;
 
-	&:hover {
-		text-decoration: underline;
-	}
+  &:hover {
+    text-decoration: underline;
+  }
 
-	&:not([class]) {
-		color: var(--primary);
-		text-decoration: underline;
+  &:not([class]) {
+    color: var(--primary);
+    text-decoration: underline;
 
-		&:hover {
-			text-decoration: none;
-		}
+    &:hover {
+      text-decoration: none;
+    }
 
-		&>i {
-			margin-right: 4px;
-			vertical-align: middle;
-		}
+    & > i {
+      margin-right: 4px;
+      vertical-align: middle;
+    }
 
-		& svg {
-			display: inline-flex;
-			vertical-align: center;
-			max-width: $font-size;
-			max-height: $font-size;
-			object-fit: contain;
-		}
-	}
+    & svg {
+      display: inline-flex;
+      vertical-align: center;
+      max-width: $font-size;
+      max-height: $font-size;
+      object-fit: contain;
+    }
+  }
 }
 
 .small,
 small {
-	@include paragraph-small;
+  @include paragraph-small;
 }
 
 .strong,
 strong,
 .b,
 b {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .t {
-	&1 {
-		@include t1;
+  &1 {
+    @include t1;
 
-		&-bold {
-			@include t1-bold;
-		}
-	}
+    &-bold {
+      @include t1-bold;
+    }
+  }
 
-	&2 {
-		@include t2;
-	}
+  &2 {
+    @include t2;
+  }
 }
 
 // font-weight settings
 .fw {
-	@each $fw, $value in $font-weights {
-		&-#{$fw} {
-			font-weight: $value;
-		}
-	}
+  @each $fw, $value in $font-weights {
+    &-#{$fw} {
+      font-weight: $value;
+    }
+  }
 }
 
 // for text-colors
 .text {
-	@each $color, $value in $colors {
-		&-#{$value} {
-			color: $color;
-		}
-	}
+  @each $color, $value in $colors {
+    &-#{$value} {
+      color: $color;
+    }
+  }
 
-	&-left {
-		text-align: left;
-	}
+  &-left {
+    text-align: left;
+  }
 
-	&-right {
-		text-align: right;
-	}
+  &-right {
+    text-align: right;
+  }
 
-	&-center {
-		text-align: center;
-	}
+  &-center {
+    text-align: center;
+  }
 
-	&-uppercase {
-		text-transform: uppercase;
-	}
+  &-uppercase {
+    text-transform: uppercase;
+  }
 
-	&-lowercase {
-		text-transform: lowercase;
-	}
+  &-lowercase {
+    text-transform: lowercase;
+  }
 
-	&-underline {
-		text-decoration: underline;
+  &-underline {
+    text-decoration: underline;
 
-		&:is(a) {
-			&:hover {
-				text-decoration: none;
-			}
-		}
-	}
+    &:is(a) {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 
-	&-nowrap {
-		white-space: nowrap;
-	}
+  &-nowrap {
+    white-space: nowrap;
+  }
 
-	&-decoration {
-		&-none {
-			text-decoration: none !important;
-		}
-	}
+  &-decoration {
+    &-none {
+      text-decoration: none !important;
+    }
+  }
 
-	@each $breakpoint, $width in $breakpoints {
-		@if $breakpoint !="xs" {
-			@include breakpoint($breakpoint) {
-				&-#{$breakpoint} {
-					&-left {
-						text-align: left;
-					}
+  @each $breakpoint, $width in $breakpoints {
+    @include break-up($breakpoint) {
+      &-#{$breakpoint} {
+        &-left {
+          text-align: left;
+        }
 
-					&-right {
-						text-align: right;
-					}
+        &-right {
+          text-align: right;
+        }
 
-					&-center {
-						text-align: center;
-					}
+        &-center {
+          text-align: center;
+        }
 
-					&-uppercase {
-						text-transform: uppercase;
-					}
+        &-uppercase {
+          text-transform: uppercase;
+        }
 
-					&-lowercase {
-						text-transform: lowercase;
-					}
+        &-lowercase {
+          text-transform: lowercase;
+        }
 
-					&-underline {
-						text-decoration: underline;
+        &-underline {
+          text-decoration: underline;
 
-						&:is(a) {
-							&:hover {
-								text-decoration: none;
-							}
-						}
-					}
+          &:is(a) {
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
 
-					&-nowrap {
-						white-space: nowrap;
-					}
+        &-nowrap {
+          white-space: nowrap;
+        }
 
-					&-decoration {
-						&-none {
-							text-decoration: none !important;
-						}
-					}
-				}
-			}
-		}
-	}
+        &-decoration {
+          &-none {
+            text-decoration: none !important;
+          }
+        }
+      }
+    }
+  }
 }

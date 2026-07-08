@@ -24,31 +24,29 @@
   }
 
   @each $breakpoint, $width in $breakpoints {
-    @if $breakpoint != "xs" {
-      @include breakpoint($breakpoint) {
-        &-#{$breakpoint} {
+    @include breakpoint($breakpoint) {
+      &-#{$breakpoint} {
+        &-block {
+          display: block !important;
+        }
+
+        &-flex {
+          display: flex !important;
+        }
+
+        &-grid {
+          display: grid !important;
+        }
+
+        &-none {
+          display: none !important;
+        }
+
+        &-inline {
+          display: inline !important;
+
           &-block {
-            display: block !important;
-          }
-
-          &-flex {
-            display: flex !important;
-          }
-
-          &-grid {
-            display: grid !important;
-          }
-
-          &-none {
-            display: none !important;
-          }
-
-          &-inline {
-            display: inline !important;
-
-            &-block {
-              display: inline-block !important;
-            }
+            display: inline-block !important;
           }
         }
       }

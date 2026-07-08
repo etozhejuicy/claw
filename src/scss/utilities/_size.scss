@@ -1,87 +1,79 @@
 .w {
-	@each $rate, $value in $rates {
-		&-#{$rate} {
-			width: $value !important;
-		}
-	}
+  @each $rate, $value in $rates {
+    &-#{$rate} {
+      width: $value !important;
+    }
+  }
 
-	@each $breakpoint, $width in $breakpoints {
-		@if $breakpoint != "xs" {
-			@include breakpoint($breakpoint) {
-				&-#{$breakpoint} {
-					@each $rate, $value in $rates {
-						&-#{$rate} {
-							width: $value !important;
-						}
-					}
-				}
-			}
-		}
-	}
+  @each $breakpoint, $width in $breakpoints {
+    @include breakpoint($breakpoint) {
+      &-#{$breakpoint} {
+        @each $rate, $value in $rates {
+          &-#{$rate} {
+            width: $value !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 .mw {
-	@each $rate, $value in $rates {
-		&-#{$rate} {
-			max-width: $value !important;
-		}
-	}
+  @each $rate, $value in $rates {
+    &-#{$rate} {
+      max-width: $value !important;
+    }
+  }
 
-	@each $breakpoint, $width in $breakpoints {
-		@if $breakpoint != "xs" {
-			@include breakpoint($breakpoint) {
-				&-#{$breakpoint} {
-					@each $rate, $value in $rates {
-						&-#{$rate} {
-							max-width: $value !important;
-						}
-					}
-				}
-			}
-		}
-	}
+  @each $breakpoint, $width in $breakpoints {
+    @include breakpoint($breakpoint) {
+      &-#{$breakpoint} {
+        @each $rate, $value in $rates {
+          &-#{$rate} {
+            max-width: $value !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 .h {
-	@each $rate, $value in $rates {
-		&-#{$rate} {
-			height: $value !important;
-		}
-	}
+  @each $rate, $value in $rates {
+    &-#{$rate} {
+      height: $value !important;
+    }
+  }
 
-	@each $breakpoint, $height in $breakpoints {
-		@if $breakpoint != "xs" {
-			@include breakpoint($breakpoint) {
-				&-#{$breakpoint} {
-					@each $rate, $value in $rates {
-						&-#{$rate} {
-							height: $value !important;
-						}
-					}
-				}
-			}
-		}
-	}
+  @each $breakpoint, $height in $breakpoints {
+    @include breakpoint($breakpoint) {
+      &-#{$breakpoint} {
+        @each $rate, $value in $rates {
+          &-#{$rate} {
+            height: $value !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 .mh {
-	@each $rate, $value in $rates {
-		&-#{$rate} {
-			max-height: $value !important;
-		}
-	}
+  @each $rate, $value in $rates {
+    &-#{$rate} {
+      max-height: $value !important;
+    }
+  }
 
-	@each $breakpoint, $height in $breakpoints {
-		@if $breakpoint != "xs" {
-			@include breakpoint($breakpoint) {
-				&-#{$breakpoint} {
-					@each $rate, $value in $rates {
-						&-#{$rate} {
-							max-height: $value !important;
-						}
-					}
-				}
-			}
-		}
-	}
+  @each $breakpoint, $height in $breakpoints {
+    @include breakpoint($breakpoint) {
+      &-#{$breakpoint} {
+        @each $rate, $value in $rates {
+          &-#{$rate} {
+            max-height: $value !important;
+          }
+        }
+      }
+    }
+  }
 }

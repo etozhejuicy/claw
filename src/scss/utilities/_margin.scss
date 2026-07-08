@@ -1,122 +1,120 @@
 .m {
-	@each $margin, $value in $steps {
-		&-#{$margin} {
-			margin: $value !important;
-		}
-		&t {
-			&-#{$margin} {
-				margin-top: $value !important;
-			}
-		}
-		&b {
-			&-#{$margin} {
-				margin-bottom: $value !important;
-			}
-		}
-		&l {
-			&-#{$margin} {
-				margin-left: $value !important;
-			}
-		}
-		&r {
-			&-#{$margin} {
-				margin-right: $value !important;
-			}
-		}
-		&x {
-			&-#{$margin} {
-				margin-left: $value !important;
-				margin-right: $value !important;
-			}
-		}
-		&y {
-			&-#{$margin} {
-				margin-top: $value !important;
-				margin-bottom: $value !important;
-			}
-		}
-	}
+  @each $margin, $value in $steps {
+    &-#{$margin} {
+      margin: $value !important;
+    }
+    &t {
+      &-#{$margin} {
+        margin-top: $value !important;
+      }
+    }
+    &b {
+      &-#{$margin} {
+        margin-bottom: $value !important;
+      }
+    }
+    &l {
+      &-#{$margin} {
+        margin-left: $value !important;
+      }
+    }
+    &r {
+      &-#{$margin} {
+        margin-right: $value !important;
+      }
+    }
+    &x {
+      &-#{$margin} {
+        margin-left: $value !important;
+        margin-right: $value !important;
+      }
+    }
+    &y {
+      &-#{$margin} {
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+      }
+    }
+  }
 
-	@each $breakpoint, $width in $breakpoints {
-		@if $breakpoint != "xs" {
-			@include breakpoint($breakpoint) {
-				&-#{$breakpoint} {
-					@each $margin, $value in $steps {
-						&-#{$margin} {
-							margin: $value !important;
-						}
-					}
-				}
-			}
+  @each $breakpoint, $width in $breakpoints {
+    @include break-up($breakpoint) {
+      &-#{$breakpoint} {
+        @each $margin, $value in $steps {
+          &-#{$margin} {
+            margin: $value !important;
+          }
+        }
+      }
+    }
 
-			&t {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $margin, $value in $steps {
-							&-#{$margin} {
-								margin-top: $value !important;
-							}
-						}
-					}
-				}
-			}
-			&b {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $margin, $value in $steps {
-							&-#{$margin} {
-								margin-bottom: $value !important;
-							}
-						}
-					}
-				}
-			}
-			&l {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $margin, $value in $steps {
-							&-#{$margin} {
-								margin-left: $value !important;
-							}
-						}
-					}
-				}
-			}
-			&r {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $margin, $value in $steps {
-							&-#{$margin} {
-								margin-right: $value !important;
-							}
-						}
-					}
-				}
-			}
-			&x {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $margin, $value in $steps {
-							&-#{$margin} {
-								margin-left: $value !important;
-								margin-right: $value !important;
-							}
-						}
-					}
-				}
-			}
-			&y {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $margin, $value in $steps {
-							&-#{$margin} {
-								margin-top: $value !important;
-								margin-bottom: $value !important;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+    &t {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $margin, $value in $steps {
+            &-#{$margin} {
+              margin-top: $value !important;
+            }
+          }
+        }
+      }
+    }
+    &b {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $margin, $value in $steps {
+            &-#{$margin} {
+              margin-bottom: $value !important;
+            }
+          }
+        }
+      }
+    }
+    &l {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $margin, $value in $steps {
+            &-#{$margin} {
+              margin-left: $value !important;
+            }
+          }
+        }
+      }
+    }
+    &r {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $margin, $value in $steps {
+            &-#{$margin} {
+              margin-right: $value !important;
+            }
+          }
+        }
+      }
+    }
+    &x {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $margin, $value in $steps {
+            &-#{$margin} {
+              margin-left: $value !important;
+              margin-right: $value !important;
+            }
+          }
+        }
+      }
+    }
+    &y {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $margin, $value in $steps {
+            &-#{$margin} {
+              margin-top: $value !important;
+              margin-bottom: $value !important;
+            }
+          }
+        }
+      }
+    }
+  }
 }

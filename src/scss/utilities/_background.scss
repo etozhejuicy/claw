@@ -1,21 +1,19 @@
 .bg {
-	@each $color, $value in $colors {
-		&-#{$value} {
-			background-color: var(--#{$value}) !important;
-		}
-	}
+  @each $color, $value in $colors {
+    &-#{$value} {
+      background-color: var(--#{$value}) !important;
+    }
+  }
 
-	@each $breakpoint, $width in $breakpoints {
-		@if $breakpoint != "xs" {
-			@include breakpoint($breakpoint) {
-				&-#{$breakpoint} {
-					@each $color, $value in $colors {
-						&-#{$value} {
-							background-color: var(--#{$value}) !important;
-						}
-					}
-				}
-			}
-		}
-	}
+  @each $breakpoint, $width in $breakpoints {
+    @include break-up($breakpoint) {
+      &-#{$breakpoint} {
+        @each $color, $value in $colors {
+          &-#{$value} {
+            background-color: var(--#{$value}) !important;
+          }
+        }
+      }
+    }
+  }
 }

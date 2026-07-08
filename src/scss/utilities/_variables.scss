@@ -10,6 +10,7 @@
 	--slides-gap: 10px;
 }
 
+// breakpoints
 $breakpoints: (
 	"xxxl": 1600px,
 	"xxl": 1440px,
@@ -20,6 +21,7 @@ $breakpoints: (
 	"xs": 0,
 );
 
+// steps
 $gutter: 4;
 $steps-count: 25;
 
@@ -34,6 +36,7 @@ $steps: (
 	$steps: map.merge($steps, ($key: $value));
 }
 
+// columns
 $columns-count: 12;
 
 $columns: (
@@ -47,6 +50,7 @@ $columns: (
 	$columns: map.merge($columns, ($key: $value));
 }
 
+// rows
 $rows-count: 12;
 
 $rows: (
@@ -60,6 +64,7 @@ $rows: (
 	$rows: map.merge($rows, ($key: $value));
 }
 
+// rates
 $rates-gutter: 4;
 $rates-count: 25;
 
@@ -76,13 +81,44 @@ $rates: (
 	$rates: map.merge($rates, ($key: $value));
 }
 
+// border-width
+$border-width-count: 12;
+
+$border-widths: (
+	auto: auto,
+	0: 0,
+);
+
+@for $i from 1 through $border-width-count {
+	$key: $i;
+	$value: #{$key}px;
+	$border-widths: map.merge($border-widths, ($key: $value));
+}
+
+// border-styles
+$border-styles: (
+	solid: solid,
+	dashed: dashed,
+	dotted: dotted,
+	none: none,
+);
+
+// radius
+$radiuses-gutter: 4;
+$radiuses-count: 25;
+
 $radiuses: (
-	0: 0px,
-	10: 10px,
-	15: 15px,
+	auto: auto,
 	pill: 1000px,
 );
 
+@for $i from 1 through $radiuses-count {
+	$key: $i * $radiuses-gutter;
+	$value: $key * 1px;
+	$radiuses: map.merge($radiuses, ($key: $value));
+}
+
+// position
 $positions: (
 	absolute: absolute,
 	fixed: fixed,
@@ -90,12 +126,14 @@ $positions: (
 	relative: relative,
 );
 
+// font-size
 $font-size: 16px;
 
 @include breakpoint('lg') {
 	$font-size: 14px;
 }
 
+// font-weight
 $font-weights: (
 	"400": 400,
 	"500": 500,
@@ -105,6 +143,7 @@ $font-weights: (
 	"bold": 700,
 );
 
+// font-family
 $font-family: system-ui,
 	-apple-system,
 	"Segoe UI",

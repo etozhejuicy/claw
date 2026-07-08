@@ -1,138 +1,136 @@
 .p {
-	@each $padding, $value in $steps {
-		@if $padding != "auto" {
-			&-#{$padding} {
-				padding: $value !important;
-			}
-			&t {
-				&-#{$padding} {
-					padding-top: $value !important;
-				}
-			}
-			&b {
-				&-#{$padding} {
-					padding-bottom: $value !important;
-				}
-			}
-			&l {
-				&-#{$padding} {
-					padding-left: $value !important;
-				}
-			}
-			&r {
-				&-#{$padding} {
-					padding-right: $value !important;
-				}
-			}
-			&x {
-				&-#{$padding} {
-					padding-left: $value !important;
-					padding-right: $value !important;
-				}
-			}
-			&y {
-				&-#{$padding} {
-					padding-top: $value !important;
-					padding-bottom: $value !important;
-				}
-			}
-		}
-	}
+  @each $padding, $value in $steps {
+    @if $padding != "auto" {
+      &-#{$padding} {
+        padding: $value !important;
+      }
+      &t {
+        &-#{$padding} {
+          padding-top: $value !important;
+        }
+      }
+      &b {
+        &-#{$padding} {
+          padding-bottom: $value !important;
+        }
+      }
+      &l {
+        &-#{$padding} {
+          padding-left: $value !important;
+        }
+      }
+      &r {
+        &-#{$padding} {
+          padding-right: $value !important;
+        }
+      }
+      &x {
+        &-#{$padding} {
+          padding-left: $value !important;
+          padding-right: $value !important;
+        }
+      }
+      &y {
+        &-#{$padding} {
+          padding-top: $value !important;
+          padding-bottom: $value !important;
+        }
+      }
+    }
+  }
 
-	@each $breakpoint, $width in $breakpoints {
-		@if $breakpoint != "xs" {
-			@include breakpoint($breakpoint) {
-				&-#{$breakpoint} {
-					@each $padding, $value in $steps {
-						@if $padding != "auto" {
-							&-#{$padding} {
-								padding: $value !important;
-							}
-						}
-					}
-				}
-			}
+  @each $breakpoint, $width in $breakpoints {
+    @include break-up($breakpoint) {
+      &-#{$breakpoint} {
+        @each $padding, $value in $steps {
+          @if $padding != "auto" {
+            &-#{$padding} {
+              padding: $value !important;
+            }
+          }
+        }
+      }
+    }
 
-			&t {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $padding, $value in $steps {
-							@if $padding != "auto" {
-								&-#{$padding} {
-									padding-top: $value !important;
-								}
-							}
-						}
-					}
-				}
-			}
-			&b {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $padding, $value in $steps {
-							@if $padding != "auto" {
-								&-#{$padding} {
-									padding-bottom: $value !important;
-								}
-							}
-						}
-					}
-				}
-			}
-			&l {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $padding, $value in $steps {
-							@if $padding != "auto" {
-								&-#{$padding} {
-									padding-left: $value !important;
-								}
-							}
-						}
-					}
-				}
-			}
-			&r {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $padding, $value in $steps {
-							@if $padding != "auto" {
-								&-#{$padding} {
-									padding-right: $value !important;
-								}
-							}
-						}
-					}
-				}
-			}
-			&x {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $padding, $value in $steps {
-							@if $padding != "auto" {
-								&-#{$padding} {
-									padding-left: $value !important;
-									padding-right: $value !important;
-								}
-							}
-						}
-					}
-				}
-			}
-			&y {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $padding, $value in $steps {
-							@if $padding != "auto" {
-								&-#{$padding} {
-									padding-top: $value !important;
-									padding-bottom: $value !important;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+    &t {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $padding, $value in $steps {
+            @if $padding != "auto" {
+              &-#{$padding} {
+                padding-top: $value !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    &b {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $padding, $value in $steps {
+            @if $padding != "auto" {
+              &-#{$padding} {
+                padding-bottom: $value !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    &l {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $padding, $value in $steps {
+            @if $padding != "auto" {
+              &-#{$padding} {
+                padding-left: $value !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    &r {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $padding, $value in $steps {
+            @if $padding != "auto" {
+              &-#{$padding} {
+                padding-right: $value !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    &x {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $padding, $value in $steps {
+            @if $padding != "auto" {
+              &-#{$padding} {
+                padding-left: $value !important;
+                padding-right: $value !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    &y {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $padding, $value in $steps {
+            @if $padding != "auto" {
+              &-#{$padding} {
+                padding-top: $value !important;
+                padding-bottom: $value !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

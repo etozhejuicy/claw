@@ -20,26 +20,24 @@
   }
 
   @each $breakpoint, $width in $breakpoints {
-    @if $breakpoint != "xs" {
-      @include breakpoint($breakpoint) {
-        &-#{$breakpoint} {
-          &-cols {
-            grid-template-columns: auto;
+    @include break-up($breakpoint) {
+      &-#{$breakpoint} {
+        &-cols {
+          grid-template-columns: auto;
 
-            @each $column, $value in $columns {
-              &-#{$column} {
-                grid-template-columns: $value !important;
-              }
+          @each $column, $value in $columns {
+            &-#{$column} {
+              grid-template-columns: $value !important;
             }
           }
+        }
 
-          &-rows {
-            grid-template-rows: auto;
+        &-rows {
+          grid-template-rows: auto;
 
-            @each $row, $value in $rows {
-              &-#{$row} {
-                grid-template-rows: $value !important;
-              }
+          @each $row, $value in $rows {
+            &-#{$row} {
+              grid-template-rows: $value !important;
             }
           }
         }

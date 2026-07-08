@@ -1,57 +1,55 @@
 .gap {
-	@each $gap, $value in $steps {
-		&-#{$gap} {
-			gap: $value !important;
-		}
+  @each $gap, $value in $steps {
+    &-#{$gap} {
+      gap: $value !important;
+    }
 
-		&-x {
-			&-#{$gap} {
-				column-gap: $value !important;
-			}
-		}
+    &-x {
+      &-#{$gap} {
+        column-gap: $value !important;
+      }
+    }
 
-		&-y {
-			&-#{$gap} {
-				row-gap: $value !important;
-			}
-		}
-	}
+    &-y {
+      &-#{$gap} {
+        row-gap: $value !important;
+      }
+    }
+  }
 
-	@each $breakpoint, $width in $breakpoints {
-		@if $breakpoint != "xs" {
-			@include breakpoint($breakpoint) {
-				&-#{$breakpoint} {
-					@each $gap, $value in $steps {
-						&-#{$gap} {
-							gap: $value !important;
-						}
-					}
-				}
-			}
+  @each $breakpoint, $width in $breakpoints {
+    @include break-up($breakpoint) {
+      &-#{$breakpoint} {
+        @each $gap, $value in $steps {
+          &-#{$gap} {
+            gap: $value !important;
+          }
+        }
+      }
+    }
 
-			&-x {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $gap, $value in $steps {
-							&-#{$gap} {
-								column-gap: $value !important;
-							}
-						}
-					}
-				}
-			}
+    &-x {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $gap, $value in $steps {
+            &-#{$gap} {
+              column-gap: $value !important;
+            }
+          }
+        }
+      }
+    }
 
-			&-y {
-				@include breakpoint($breakpoint) {
-					&-#{$breakpoint} {
-						@each $gap, $value in $steps {
-							&-#{$gap} {
-								row-gap: $value !important;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+    &-y {
+      @include break-up($breakpoint) {
+        &-#{$breakpoint} {
+          @each $gap, $value in $steps {
+            &-#{$gap} {
+              row-gap: $value !important;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -42,25 +42,6 @@
 	&-select {
 		cursor: pointer;
 	}
-
-	// &.isNumbers {
-	// 	& .pagination-dot {
-	// 		@include pagination-button-number;
-	// 		display: flex;
-	// 		align-items: center;
-	// 		justify-content: center;
-	// 		width: 35px;
-	// 		height: 35px;
-	// 		flex: 0 0 35px;
-	// 		line-height: 100%;
-	// 	}
-
-	// 	& .prev,
-	// 	& .next {
-	// 		width: 35px;
-	// 		height: 35px;
-	// 	}
-	// }
 }
 
 .breadcrumbs {

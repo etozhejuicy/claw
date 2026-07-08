@@ -1,21 +1,19 @@
 .radius {
-	@each $radius, $value in $radiuses {
-		&-#{$radius} {
-			border-radius: $value !important;
-		}
-	}
+  @each $radius, $value in $radiuses {
+    &-#{$radius} {
+      border-radius: $value !important;
+    }
+  }
 
-	@each $breakpoint, $width in $breakpoints {
-		@if $breakpoint != "xs" {
-			@include breakpoint($breakpoint) {
-				&-#{$breakpoint} {
-					@each $radius, $value in $radiuses {
-						&-#{$radius} {
-							border-radius: $value !important;
-						}
-					}
-				}
-			}
-		}
-	}
+  @each $breakpoint, $width in $breakpoints {
+    @include break-up($breakpoint) {
+      &-#{$breakpoint} {
+        @each $radius, $value in $radiuses {
+          &-#{$radius} {
+            border-radius: $value !important;
+          }
+        }
+      }
+    }
+  }
 }
