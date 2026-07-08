@@ -59,8 +59,8 @@ textarea {
     );
     border-color: color-mix(
       in srgb,
-      var(--default-text-color) 30%,
-      var(--input-color) 70%
+      var(--default-body-color) 40%,
+      var(--input-color) 60%
     );
   }
 
