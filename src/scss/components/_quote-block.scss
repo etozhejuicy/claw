@@ -1,11 +1,28 @@
 :root {
   --block-margin: 1em;
+  --block-padding: 1em;
+  --quote-after-color: var(--primary);
 }
 
 .quote {
   &-block {
+    position: relative;
     @include card;
     margin: var(--block-margin) 0;
     font-style: italic;
+
+    & quote {
+      padding-right: var(--block-padding);
+    }
+
+    &::after {
+      content: '❞';
+      position: absolute;
+      top: var(--card-padding-y);
+      right: var(--card-padding-x);
+      color: var(--quote-after-color);
+      user-select: none;
+      pointer-events: none;
+    }
   }
 }

@@ -6,10 +6,6 @@
 // import's mixins
 @import "./mixin";
 
-:root {
-	--slides-gap: 10px;
-}
-
 // breakpoints
 $breakpoints: (
 	"xxxl": 1600px,
@@ -131,6 +127,14 @@ $font-size: 16px;
 
 @include breakpoint('lg') {
 	$font-size: 14px;
+}
+
+:root {
+	--font-size: 14px;
+
+	@include break-up('lg') {
+		--font-size: 16px;
+	}
 }
 
 // font-weight

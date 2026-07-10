@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1, shrink-to-fit=no, user-scalable=no" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon-144x144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- TD -->
+    <title>
+        Чекбоксы и переключатели — Клешня — CSS-фреймворк для лендинга
+    </title>
+    <meta name="description"
+        content="Клешня — это CSS-фреймворк, который поможет вам быстро создать базовую структуру веб-сайта с необходимыми компонентами на вашем сервере. " />
+
+    <!-- styles -->
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="header-logo"
+                    title="Клешня — это CSS-фреймворк, который поможет вам быстро создать базовую структуру веб-сайта">
+                    <img src="/logo.svg" alt="Клешня" />
+                </a>
+
+                <!-- Навигация в шапке -->
+                <div class="menu">
+                    <ul class="menu-list" aria-label="Основное меню">
+                        <li>
+                            <a href="/install/index.html">
+                                Установка
+                            </a>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="/components/index">Компоненты</a>
+                            <input type="checkbox" id="menu-dropdown-list-1" aria-haspopup="true" aria-expanded="false">
+                            <label for="menu-dropdown-list-1" aria-label="Открыть подменю">
+                                <i>▼</i>
+                            </label>
+                            <!-- Здесь добавить иконку chevron-down -->
+                            <ul>
+                                <li>
+                                    <a href="/components/alerts">Алерты</a>
+                                </li>
+                                <li>
+                                    <a href="/components/buttons">Кнопки</a>
+                                </li>
+                                <li>
+                                    <a href="/components/cards">Карточки</a>
+                                </li>
+                                <li>
+                                    <a href="/components/checkboxes">Чекбоксы и радио</a>
+                                </li>
+                                <li>
+                                    <a href="/components/dropdowns">Выпадающие списки</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/utilities/index">
+                                Утилиты
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/about/index">
+                                О нас
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Контакты в шапке -->
+                    <div class="d-flex flex-row align-items-center gap-16 mx-auto ml-lg-16">
+                        <a href="https://github.com/etozhejuicy/claw" class="btn btn-icon aspected"
+                            title="Разработка Клешни в Github" target="_blank">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <use xlink:href="/sprite.svg#icon-github"></use>
+                            </svg>
+                        </a>
+                        <a href="https://t.me/claw_css" class="btn btn-cyan btn-icon aspected"
+                            title="Сообщество в Телеграмм" target="_blank">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <use xlink:href="/sprite.svg#icon-telegram"></use>
+                            </svg>
+                        </a>
+                        <a href="https://vk.com/club30855702" class="btn btn-blue btn-icon aspected"
+                            title="Сообщество в Вконтакте" target="_blank">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <use xlink:href="/sprite.svg#icon-vk"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Дополнительные кнопки -->
+                    <div class="header-actions">
+                        <button type="button" class="btn-primary w-sm-100" data-modal-open="modal-application"
+                            data-modal-title="Обратная связь">
+                            Обратная связь
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <!-- Кнопка вызова меню -->
+                <button type="button" class="btn-burger btn-primary aspected" aria-label="menu" data-menu="">
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <use xlink:href="/sprite.svg#icon-menu"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main>
+        <section>
+            <div class="container">
+                <div class="layout layout-left">
+                    <aside data-table-row="">
+                        <div class="card card-glass position-sticky sticky-top">
+                            <p>
+                                <strong>
+                                    Список
+                                </strong>
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#checkboxes">Чекбоксы</a>
+                                </li>
+                                <li>
+                                    <a href="#radios">Радио</a>
+                                </li>
+                                <li>
+                                    <a href="#switches">Переключатели</a>
+                                </li>
+                                <li>
+                                    <a href="#checkboxes-state">Состояние чекбоксов</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <div class="content">
+                        <h1>
+                            Чекбоксы и переключатели
+                        </h1>
+
+                        <article>
+                            <h2 id="checkboxes">
+                                Чекбоксы <a href="#checkboxes">#</a>
+                            </h2>
+
+                            <input id="example-checkbox" type="checkbox" />
+                            <label for="example-checkbox" class="checkbox">Пример чекбокса</label>
+
+                            <div class="code-block" data-code-block>
+                                <code>
+                                    &lt;input id="example-checkbox" type="checkbox" /&gt;
+                                    &lt;label for="example-checkbox" class="checkbox"&gt;Пример чекбокса&lt;/label&gt;
+                                </code>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h2 id="radios">
+                                Радио-кнопки <a href="#radios">#</a>
+                            </h2>
+
+                            <input id="example-radio-1" type="radio" name="example-radio" />
+                            <label for="example-radio-1" class="radio">Пример радио</label>
+
+                            <input id="example-radio-2" type="radio" name="example-radio" />
+                            <label for="example-radio-2" class="radio">Пример радио</label>
+
+                            <div class="code-block" data-code-block>
+                                <code>
+                                    &lt;input id="example-radio-1" type="radio" name="example-radio" /&gt;
+                                    &lt;label for="example-radio-1" class="radio"&gt;Пример радио&lt;/label&gt;
+                                </code>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h2 id="switches">
+                                Переключатели <a href="#switches">#</a>
+                            </h2>
+
+                            <input id="example-switch-1" type="checkbox" class="switch" />
+                            <label for="example-switch-1">Пример переключателя</label>
+
+                            <div class="code-block" data-code-block>
+                                <code>
+                                    &lt;input id="example-switch-1" type="checkbox" class="switch" /&gt;
+                                    &lt;label for="example-switch-1"&gt;Пример переключателя&lt;/label&gt;
+                                </code>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <a href="/" title="Клешня — это CSS-фреймворк">
+                        <img src="/logo.svg" alt="logo" />
+                    </a>
+                    <span class="t1-bold">
+                        Клешня
+                    </span>
+                </div>
+
+                <div
+                    class="d-flex flex-row flex-lg-column align-items-center align-items-lg-start gap-16 gap-lg-8 w-lg-100 mx-auto ml-lg-0">
+                    <a href="mailto:example@mail.ru" class="link-icon" title="example@mail.ru">
+                        <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <use xlink:href="/sprite.svg#icon-mail"></use>
+                        </svg>
+                        <span>example@mail.ru</span>
+                    </a>
+                    <a href="https://github.com/etozhejuicy/claw" class="link-icon" target="_blank" title="Claw Github">
+                        <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <use xlink:href="/sprite.svg#icon-github"></use>
+                        </svg>
+                        <span>
+                            Claw Gihthub
+                        </span>
+                    </a>
+                </div>
+
+                <div class="d-flex flex-row align-items-center gap-16 mx-auto ml-lg-16">
+                    <a href="https://t.me/claw_css" class="btn btn-cyan btn-icon aspected"
+                        title="Сообщество в Телеграмм" target="_blank">
+                        <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <use xlink:href="/sprite.svg#icon-telegram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://vk.com/club30855702" class="btn btn-blue btn-icon aspected"
+                        title="Сообщество в Вконтакте" target="_blank">
+                        <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <use xlink:href="/sprite.svg#icon-vk"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- copyright -->
+                <div class="align-self-center ml-md-auto">
+                    <a href="https://etozhejuicy.github.io/portfolio/" class="btn btn-xs btn-primary" target="_blank"
+                        title="Mr.CrabsYeah Portfolio">
+                        <span class="d-sm-none">made by</span>&NonBreakingSpace;<b>Mr.CrabsYeah</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- modals -->
+    <div class="modal modal-min" data-modal-id="modal-application" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        Обратная связь
+                    </div>
+                    <button class="btn-primary btn-close aspected" data-modal-close>
+                        <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <use xlink:href="/sprite.svg#icon-cross"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Если есть вопросы, мы готовы ответить на все. Свяжитесь с нами любым удобным для Вас способом.
+                    </p>
+
+                    <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+                        <a href="https://t.me/claw_css" class="btn btn-icon aspected" title="Сообщество в Телеграмм"
+                            target="_blank">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <use xlink:href="/sprite.svg#icon-telegram"></use>
+                            </svg>
+                        </a>
+                        <a href="https://vk.com/club30855702" class="btn btn-icon aspected"
+                            title="Сообщество в Вконтакте" target="_blank">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <use xlink:href="/sprite.svg#icon-vk"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script type="module" src="/src/js/app.js"></script>
+</body>
+
+</html>

@@ -1,153 +1,165 @@
+:root {
+  --checkbox-size: var(--font-size);
+  --checkbox-background-color: transparent;
+  --checkbox-background-image: unset;
+  --checkbox-border-size: 1px;
+  --checkbox-border-style: solid;
+  --checkbox-border-color: var(--default-text-color);
+  --checkbox-border-radius: 2px;
+  --checkbox-gutter: 4px;
+  --checkbox-color: var(--default-text-color);
+  --checkbox-shadow: none;
+  --label-color: var(--default-text-color);
+}
+
 // Общие стили для скрытых чекбоксов и радиокнопок
 input[type="checkbox"],
 input[type="radio"] {
+  &:checked,
+  &:not(:checked) {
+    position: absolute;
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
 
-	&:checked,
-	&:not(:checked) {
-		position: absolute;
-		width: 14px;
-		height: 14px;
-		margin: 0;
-		opacity: 0;
-		pointer-events: none;
-	}
+  // Стили для label
+  &:checked + label,
+  &:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    color: var(--label-color);
+    cursor: pointer;
 
-	// Стили для label
-	&:checked+label,
-	&:not(:checked)+label {
-		display: inline-block;
-		position: relative;
-		padding-left: 28px;
-		// line-height: 1;
-		color: var(--black);
-		cursor: pointer;
+    // Псевдоэлемент ::before (фон)
+    &::before {
+      content: "";
+      display: inline-block;
+      width: var(--checkbox-size);
+      height: var(--checkbox-size);
+      margin-top: 1px;
+      margin-right: var(--checkbox-gutter);
+      border: var(--checkbox-border-size) var(--checkbox-border-style)
+        var(--checkbox-border-color);
+      border-radius: var(--checkbox-border-radius);
+      background-color: var(--checkbox-background-color);
+      background-image: var(--checkbox-background-image);
+      box-shadow: var(--checkbox-shadow);
+      line-height: 0.85;
+      color: var(--checkbox-color);
+      vertical-align: text-top;
+      transition: 0.25s ease;
+    }
+  }
 
-		@include breakpoint("lg") {
-			padding-left: 20px;
-		}
+  // &:is(:user-valid) {
+  // 	&+label {
+  // 		color: var(--black);
 
-		// Псевдоэлемент ::before (фон)
-		&::before {
-			content: "";
-			position: absolute;
-			left: 0;
-			top: 2px;
-			width: 16px;
-			height: 16px;
-			border: 1px solid var(--primary);
-			border-radius: 2px;
-			background-color: var(--white);
+  // 		&::before {
+  // 			border-color: var(--primary);
+  // 		}
+  // 	}
+  // }
 
-			@include breakpoint("lg") {
-				width: 14px;
-				height: 14px;
-			}
-		}
+  // &:is(.error),
+  // &:is(:user-invalid) {
+  // 	&+label {
+  // 		--checkbox-color: var(--error);
 
-		// Псевдоэлемент ::after (индикатор выбора)
-		&::after {
-			content: "";
-			position: absolute;
-			top: 2px;
-			border-radius: 2px;
-			transition: all 0.2s ease;
-		}
-	}
-
-	&:user-valid {
-		&+label {
-			color: var(--black);
-
-			&::before {
-				border-color: var(--primary);
-			}
-		}
-	}
-
-	&.error,
-	&:user-invalid {
-		&+label {
-			color: var(--error);
-
-			&::before {
-				border-color: var(--error);
-			}
-		}
-	}
+  // 		&::before {
+  // 			--checkbox-border-color: var(--error);
+  // 		}
+  // 	}
+  // }
 }
 
 // Специфичные стили для чекбоксов
 input[type="checkbox"] {
+  &:checked + label {
+    --label-color: var(--primary);
 
-	&:checked+label,
-	&:not(:checked)+label {
-		&::before {
-			border-radius: 2px;
-		}
+    &::before {
+      content: "✓";
+      --checkbox-color: var(--white);
+      --checkbox-background-color: var(--primary);
+      --checkbox-border-color: var(--primary);
+    }
+  }
 
-		&::after {
-			// top: 0;
-			left: 0;
-			width: 18px;
-			height: 16px;
-			background-image: url("data:image/svg+xml,%3Csvg width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5 0.5H1.75C1.05964 0.5 0.5 1.05964 0.5 1.75V10.5C0.5 11.1904 1.05964 11.75 1.75 11.75H10.5C11.1904 11.75 11.75 11.1904 11.75 10.5V1.75C11.75 1.05964 11.1904 0.5 10.5 0.5Z' fill='%23FF7914' stroke='%23FF7914' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.25 5.5L6.125 7.375L12.375 1.125' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-			background-size: contain;
-			background-position: center;
-			background-repeat: no-repeat;
+  // Стили для переключателей
+  &.switch {
+    & + label {
+      &::before {
+        content: "";
+        width: calc(var(--checkbox-size) * 2.35);
+        height: calc(var(--checkbox-size) * 1.0625);
+        --checkbox-border-radius: 1000px;
+        --checkbox-shadow: none;
+        --checkbox-background-color: transparent;
+        --checkbox-shadow: none;
+      }
+    }
 
-			@include breakpoint("lg") {
-				width: 16px;
-				height: 14px;
-			}
-		}
-	}
+    &:not(:checked) + label {
+      &::before {
+        --checkbox-background-image:
+          radial-gradient(
+            circle at 25% 50%,
+            var(--default-text-color) 25%,
+            transparent 0%
+          ),
+          linear-gradient(to right, transparent, transparent);
+      }
+    }
 
-	&:checked+label {
-		&::before {
-			background-color: var(--primary);
-		}
-	}
+    &:checked + label {
+      &::before {
+        --checkbox-background-image:
+          radial-gradient(
+            circle at 75% 50%,
+            var(--white) 25%,
+            transparent 0%
+          ),
+          linear-gradient(to right, var(--primary), var(--primary));
+      }
+    }
+  }
 }
 
 // Специфичные стили для радиокнопок
 input[type="radio"] {
+  &:checked + label,
+  &:not(:checked) + label {
+    --checkbox-border-radius: 100%;
+  }
 
-	&:checked+label,
-	&:not(:checked)+label {
-		&::before {
-			border-radius: 100%;
-		}
-
-		&::after {
-			top: 4px;
-			left: 4px;
-			width: 8px;
-			height: 8px;
-			border-radius: 100%;
-			background-color: var(--primary);
-		}
-	}
+  &:checked + label {
+    &::before {
+      --checkbox-background-color: var(--default-text-color);
+      --checkbox-shadow: inset 0 0 0 calc(var(--checkbox-size) / 4)
+        var(--primary);
+    }
+  }
 }
 
 // Состояния
 input[type="checkbox"],
 input[type="radio"] {
+  // Не выбрано
+  &:not(:checked) + label::after {
+    opacity: 0;
+  }
 
-	// Не выбрано
-	&:not(:checked)+label::after {
-		opacity: 0;
-	}
+  // Выбрано
+  &:checked + label {
+    --checkbox-color: var(--primary);
+    --label-color: var(--primary);
 
-	// Выбрано
-	&:checked+label {
-		color: var(--primary);
-
-		&::before {
-			border-color: var(--primary);
-		}
-
-		&::after {
-			opacity: 1;
-		}
-	}
+    &::before {
+      --checkbox-border-color: var(--primary);
+    }
+  }
 }

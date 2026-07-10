@@ -1,11 +1,29 @@
 :root {
   --block-margin: 1em;
+  --block-padding: 1em;
+  --code-font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+  --code-after-color: var(--primary);
 }
 
 .code {
   &-block {
     @include card;
     margin: var(--block-margin) 0;
-    font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+    font-family: var(--code-font-family);
+    word-break: keep-all;
+
+    & code {
+      padding-right: var(--block-padding);
+    }
+
+    &::after {
+      content: "⛯";
+      position: absolute;
+      top: var(--card-padding-y);
+      right: var(--card-padding-x);
+      color: var(--code-after-color);
+      user-select: none;
+      pointer-events: none;
+    }
   }
 }
