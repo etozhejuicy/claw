@@ -139,7 +139,7 @@ input[type="radio"] {
   &:checked + label {
     &::before {
       --checkbox-background-color: var(--default-text-color);
-      --checkbox-shadow: inset 0 0 0 calc(var(--checkbox-size) / 4)
+      --checkbox-shadow: inset 0 0 0 calc(var(--checkbox-size) / 5)
         var(--primary);
     }
   }
