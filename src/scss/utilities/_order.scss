@@ -1,0 +1,19 @@
+.order {
+  @for $i from -10 through 10 {
+    &-#{$i} {
+      order: #{$i} !important;
+    }
+  }
+
+  @each $breakpoint, $width in $breakpoints {
+    @include break-up($breakpoint) {
+      &-#{$breakpoint} {
+        @for $i from -10 through 10 {
+          &-#{$i} {
+            order: #{$i} !important;
+          }
+        }
+      }
+    }
+  }
+}
