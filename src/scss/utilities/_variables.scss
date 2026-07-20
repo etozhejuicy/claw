@@ -1,4 +1,4 @@
-@use 'sass:map';
+@use "sass:map";
 
 // import's colors
 @import "./colors";
@@ -8,13 +8,13 @@
 
 // breakpoints
 $breakpoints: (
-	"xxxl": 1600px,
-	"xxl": 1440px,
-	"xl": 1200px,
-	"lg": 1000px,
-	"md": 720px,
-	"sm": 576px,
-	"xs": 0,
+  "xxxl": 1600px,
+  "xxl": 1440px,
+  "xl": 1200px,
+  "lg": 1000px,
+  "md": 720px,
+  "sm": 576px,
+  "xs": 0,
 );
 
 // steps
@@ -22,42 +22,57 @@ $gutter: 4;
 $steps-count: 25;
 
 $steps: (
-	auto: auto,
-	0: 0,
+  auto: auto,
+  0: 0,
 );
 
 @for $i from 1 through $steps-count {
-	$key: $i * $gutter;
-	$value: #{$key}px;
-	$steps: map.merge($steps, ($key: $value));
+  $key: $i * $gutter;
+  $value: #{$key}px;
+  $steps: map.merge(
+    $steps,
+    (
+      $key: $value,
+    )
+  );
 }
 
 // columns
 $columns-count: 12;
 
 $columns: (
-	auto: auto,
-	0: 0,
+  auto: auto,
+  0: 0,
 );
 
 @for $i from 1 through $columns-count {
-	$key: $i;
-	$value: #{$key}fr;
-	$columns: map.merge($columns, ($key: $value));
+  $key: $i;
+  $value: #{$key}fr;
+  $columns: map.merge(
+    $columns,
+    (
+      $key: $value,
+    )
+  );
 }
 
 // rows
 $rows-count: 12;
 
 $rows: (
-	auto: auto,
-	0: 0,
+  auto: auto,
+  0: 0,
 );
 
 @for $i from 1 through $rows-count {
-	$key: $i;
-	$value: #{$key}fr;
-	$rows: map.merge($rows, ($key: $value));
+  $key: $i;
+  $value: #{$key}fr;
+  $rows: map.merge(
+    $rows,
+    (
+      $key: $value,
+    )
+  );
 }
 
 // rates
@@ -65,38 +80,48 @@ $rates-gutter: 4;
 $rates-count: 25;
 
 $rates: (
-	auto: auto,
-	fit: fit-content,
-	fill: fill-available,
-	0: 0,
+  auto: auto,
+  fit: fit-content,
+  fill: fill-available,
+  0: 0,
 );
 
 @for $i from 1 through $rates-count {
-	$key: $i * $rates-gutter;
-	$value: $key * 1%;
-	$rates: map.merge($rates, ($key: $value));
+  $key: $i * $rates-gutter;
+  $value: $key * 1%;
+  $rates: map.merge(
+    $rates,
+    (
+      $key: $value,
+    )
+  );
 }
 
 // border-width
 $border-width-count: 12;
 
 $border-widths: (
-	auto: auto,
-	0: 0,
+  auto: auto,
+  0: 0,
 );
 
 @for $i from 1 through $border-width-count {
-	$key: $i;
-	$value: #{$key}px;
-	$border-widths: map.merge($border-widths, ($key: $value));
+  $key: $i;
+  $value: #{$key}px;
+  $border-widths: map.merge(
+    $border-widths,
+    (
+      $key: $value,
+    )
+  );
 }
 
 // border-styles
 $border-styles: (
-	solid: solid,
-	dashed: dashed,
-	dotted: dotted,
-	none: none,
+  solid: solid,
+  dashed: dashed,
+  dotted: dotted,
+  none: none,
 );
 
 // radius
@@ -104,67 +129,88 @@ $radiuses-gutter: 4;
 $radiuses-count: 25;
 
 $radiuses: (
-	auto: auto,
-	pill: 1000px,
+  auto: auto,
+  pill: 1000px,
 );
 
 @for $i from 1 through $radiuses-count {
-	$key: $i * $radiuses-gutter;
-	$value: $key * 1px;
-	$radiuses: map.merge($radiuses, ($key: $value));
+  $key: $i * $radiuses-gutter;
+  $value: $key * 1px;
+  $radiuses: map.merge(
+    $radiuses,
+    (
+      $key: $value,
+    )
+  );
 }
 
 // position
 $positions: (
-	absolute: absolute,
-	fixed: fixed,
-	sticky: sticky,
-	relative: relative,
+  absolute: absolute,
+  fixed: fixed,
+  sticky: sticky,
+  relative: relative,
+);
+
+// overflow
+$overflows: (
+  auto: auto,
+  scroll: scroll,
+  hidden: hidden,
+  clip: clip,
+  revert: revert,
+  unset: unset,
+  visible: visible,
 );
 
 // font-size
 $font-size: 16px;
 
-@include breakpoint('lg') {
-	$font-size: 14px;
+@include breakpoint("lg") {
+  $font-size: 14px;
 }
 
 :root {
-	--font-size: 14px;
+  --font-size: 14px;
 
-	@include break-up('lg') {
-		--font-size: 16px;
-	}
+  @include break-up("lg") {
+    --font-size: 16px;
+  }
 }
 
 // font-weight
 $font-weights: (
-	"400": 400,
-	"500": 500,
-	"700": 700,
-	"light": 400,
-	"medium": 500,
-	"bold": 700,
+  "400": 400,
+  "500": 500,
+  "700": 700,
+  "light": 400,
+  "medium": 500,
+  "bold": 700,
 );
 
 // font-family
-$font-family: system-ui,
-	-apple-system,
-	"Segoe UI",
-	Roboto,
-	"Helvetica Neue",
-	"Noto Sans",
-	"Liberation Sans",
-	Arial,
-	sans-serif,
-	"Apple Color Emoji",
-	"Segoe UI Emoji",
-	"Segoe UI Symbol",
-	"Noto Color Emoji";
+$font-family:
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  "Noto Sans",
+  "Liberation Sans",
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji";
 
-// Создать несколько :root-частей для выбора тематики стилей
-// Несколько разных :root-частей можно будет легко собирать в темы и манипулировать ими
-// Например, в config.scss возможно переключить на одну из стандартных тем для скруглений, теней, палитры цветов и т.д.
-// Это создаст быстрый старт для разработки простых проектов и лендингов
-// Разработчику будет доступно гибкое изменение параметров закруглений, теней, палитры цветов и т.д.
-// Возможность создавать свою тему для фреймворка с поддержкой темной цветовой схемы
+/* 
+Что предстоит разработать в ближайшем будущем:
+
+- Создать несколько :root-частей для выбора тематики стилей
+- Несколько разных :root-частей можно будет легко собирать в темы и манипулировать ими
+- Например, в config.scss возможно переключить на одну из стандартных тем для скруглений, теней, палитры цветов и т.д.
+- Это создаст быстрый старт для разработки простых проектов и лендингов
+- Разработчику будет доступно гибкое изменение параметров закруглений, теней, палитры цветов и т.д.
+- Возможность создавать свою тему для фреймворка с поддержкой темной цветовой схемы 
+*/
